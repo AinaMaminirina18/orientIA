@@ -118,6 +118,19 @@
               "Débouchés professionnels spécifiques IGGLIA"
             ],
             "limites_incertitudes": "Aucune incertitude sur les diplômes et l'habilitation."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -136,7 +149,8 @@
           },
           "matieres_principales": {
             "sources": [
-              "source_2"
+              "source_2",
+              "source_3"
             ],
             "attribution": "explicite"
           },
@@ -282,18 +296,18 @@
           {
             "id": "source_1",
             "titre": "Présentation des filières ISPM",
-            "origine_url": "Document officiel ISPM",
+            "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
             "donnees_extraites": [
               "Intitulé exact ESIIA",
               "Compétences clés en réseaux, embarqué et télécoms"
             ],
-            "limites_incertitudes": "Informations centrées sur les promotions 2022-2023."
+            "limites_incertitudes": "Informations institutionnelles générales."
           },
           {
             "id": "source_2",
-            "titre": "Fiche formation ESIIA - ISPM",
+            "titre": "Site officiel de l'ISPM",
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
@@ -302,6 +316,19 @@
               "Objectifs pédagogiques matériel/logiciel"
             ],
             "limites_incertitudes": "Nécessite une mise à jour pour les nouveaux modules IA."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -321,7 +348,8 @@
           "matieres_principales": {
             "sources": [
               "source_1",
-              "source_2"
+              "source_2",
+              "source_3"
             ],
             "attribution": "generale_non_explicite"
           },
@@ -469,6 +497,31 @@
               "Postes cibles en communication et web"
             ],
             "limites_incertitudes": "Certains détails sur les matières optionnelles nécessitent une confirmation."
+          },
+          {
+            "id": "source_2",
+            "titre": "Brochure officielle ISPM",
+            "origine_url": "Brochure officielle ISPM",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Objectifs pédagogiques",
+              "Débouchés professionnels"
+            ],
+            "limites_incertitudes": "Maquette à jour."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -486,7 +539,8 @@
           },
           "matieres_principales": {
             "sources": [
-              "source_1"
+              "source_1",
+              "source_3"
             ],
             "attribution": "generale_non_explicite"
           },
@@ -615,10 +669,10 @@
         "sources": [
           {
             "id": "source_1",
-            "titre": "Présentation institutionnelle des mentions ISPM",
-            "origine_url": "Brochure officielle ISPM / Archive institutionnelle",
+            "titre": "Site officiel de l'ISPM",
+            "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
-            "statut": "institutionnel",
+            "statut": "officiel",
             "donnees_extraites": [
               "Dénomination ISAIA",
               "Spécialisation en Statistique et IA"
@@ -627,8 +681,8 @@
           },
           {
             "id": "source_2",
-            "titre": "Fiche métier Data Science Madagascar",
-            "origine_url": "https://ispm-edu.com",
+            "titre": "Brochure officielle ISPM",
+            "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
             "donnees_extraites": [
@@ -636,6 +690,19 @@
               "Objectifs ISAIA"
             ],
             "limites_incertitudes": "Le marché de la Data Science à Madagascar est en pleine expansion."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -655,7 +722,8 @@
           "matieres_principales": {
             "sources": [
               "source_1",
-              "source_2"
+              "source_2",
+              "source_3"
             ],
             "attribution": "generale_non_explicite"
           },
@@ -798,6 +866,31 @@
               "Secteurs d'activité"
             ],
             "limites_incertitudes": "Aucune."
+          },
+          {
+            "id": "source_2",
+            "titre": "Brochure officielle ISPM",
+            "origine_url": "Brochure officielle ISPM",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Objectifs pédagogiques",
+              "Compétences développées"
+            ],
+            "limites_incertitudes": "Maquette à jour."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -815,13 +908,15 @@
           },
           "matieres_principales": {
             "sources": [
-              "source_1"
+              "source_1",
+              "source_3"
             ],
             "attribution": "generale_non_explicite"
           },
           "competences_developpees": {
             "sources": [
-              "source_1"
+              "source_1",
+              "source_2"
             ],
             "attribution": "generale_non_explicite"
           },
@@ -941,7 +1036,7 @@
         "sources": [
           {
             "id": "source_1",
-            "titre": "Présentation des formations Génie Industriel",
+            "titre": "Brochure officielle ISPM",
             "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "institutionnel",
@@ -954,7 +1049,7 @@
           },
           {
             "id": "source_2",
-            "titre": "Fiche département Génie Industriel",
+            "titre": "Site officiel de l'ISPM",
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
@@ -963,6 +1058,19 @@
               "Métiers de l'extraction et transformation"
             ],
             "limites_incertitudes": "Lien fort avec les projets Ambatovy et QMM."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -983,7 +1091,8 @@
           "matieres_principales": {
             "sources": [
               "source_1",
-              "source_2"
+              "source_2",
+              "source_3"
             ],
             "attribution": "generale_non_explicite"
           },
@@ -1123,7 +1232,7 @@
         "sources": [
           {
             "id": "source_1",
-            "titre": "Fiche de présentation Génie Civil ISPM",
+            "titre": "Site officiel de l'ISPM",
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
@@ -1133,6 +1242,31 @@
               "Débouchés en architecture et construction"
             ],
             "limites_incertitudes": "Aucune."
+          },
+          {
+            "id": "source_2",
+            "titre": "Brochure officielle ISPM",
+            "origine_url": "Brochure officielle ISPM",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Compétences BTP",
+              "Objectifs pédagogiques"
+            ],
+            "limites_incertitudes": "Maquette à jour."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -1150,13 +1284,15 @@
           },
           "matieres_principales": {
             "sources": [
-              "source_1"
+              "source_1",
+              "source_3"
             ],
             "attribution": "generale_non_explicite"
           },
           "competences_developpees": {
             "sources": [
-              "source_1"
+              "source_1",
+              "source_2"
             ],
             "attribution": "generale_non_explicite"
           },
@@ -1307,7 +1443,7 @@
           },
           {
             "id": "source_2",
-            "titre": "Fiche parcours IAA - ISPM",
+            "titre": "Site officiel de l'ISPM",
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
@@ -1316,6 +1452,19 @@
               "Objectifs IAA"
             ],
             "limites_incertitudes": "Focus sur les normes internationales d'exportation."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -1335,7 +1484,7 @@
           "matieres_principales": {
             "sources": [
               "source_1",
-              "source_2"
+              "source_3"
             ],
             "attribution": "generale_non_explicite"
           },
@@ -1483,7 +1632,7 @@
         "sources": [
           {
             "id": "source_1",
-            "titre": "Présentation officielle de la Mention Biotechnologie & Agronomie",
+            "titre": "Site officiel de l'ISPM",
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
@@ -1492,6 +1641,31 @@
               "Débouchés en agrobusiness et développement rural"
             ],
             "limites_incertitudes": "Aucune."
+          },
+          {
+            "id": "source_2",
+            "titre": "Brochure officielle ISPM",
+            "origine_url": "Brochure officielle ISPM",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Objectifs agroécologie",
+              "Compétences élevage"
+            ],
+            "limites_incertitudes": "Maquette à jour."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -1509,7 +1683,8 @@
           },
           "matieres_principales": {
             "sources": [
-              "source_1"
+              "source_1",
+              "source_3"
             ],
             "attribution": "generale_non_explicite"
           },
@@ -1653,10 +1828,10 @@
         "sources": [
           {
             "id": "source_1",
-            "titre": "Brochure officielle ISPM",
-            "origine_url": "Brochure officielle ISPM",
+            "titre": "Site officiel de l'ISPM",
+            "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
-            "statut": "institutionnel",
+            "statut": "officiel",
             "donnees_extraites": [
               "Intitulé PIP",
               "Valorisation de la biodiversité malgache",
@@ -1666,8 +1841,8 @@
           },
           {
             "id": "source_2",
-            "titre": "Fiche Mention Pharmacologie - ISPM",
-            "origine_url": "https://ispm-edu.com",
+            "titre": "Brochure officielle ISPM",
+            "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
             "donnees_extraites": [
@@ -1675,6 +1850,19 @@
               "Spécificités PIP"
             ],
             "limites_incertitudes": "Filière très sélective."
+          },
+          {
+            "id": "source_3",
+            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
+            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
+            "date_consultation": "2026-08-26",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Matières enseignées par promotion",
+              "Calendrier académique",
+              "Communiqués de la direction"
+            ],
+            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
           }
         ],
         "references_par_champ": {
@@ -1694,7 +1882,7 @@
           "matieres_principales": {
             "sources": [
               "source_1",
-              "source_2"
+              "source_3"
             ],
             "attribution": "generale_non_explicite"
           },
@@ -1976,7 +2164,7 @@
             "titre": "Guide des étudiants ISPM",
             "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
-            "statut": "institutionnel",
+            "statut": "officiel",
             "donnees_extraites": [
               "Intitulé EMP",
               "Débouchés en analyse économique et projets"
@@ -1985,7 +2173,7 @@
           },
           {
             "id": "source_2",
-            "titre": "Fiche filière EMP - ISPM",
+            "titre": "Site officiel de l'ISPM",
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
@@ -2276,10 +2464,10 @@
         "sources": [
           {
             "id": "source_1",
-            "titre": "Guide de présentation des parcours juristes",
-            "origine_url": "Brochure officielle ISPM",
+            "titre": "Site officiel de l'ISPM",
+            "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
-            "statut": "institutionnel",
+            "statut": "officiel",
             "donnees_extraites": [
               "Intitulé DTJA",
               "Débouchés en conseil juridique et contentieux"
@@ -2288,8 +2476,8 @@
           },
           {
             "id": "source_2",
-            "titre": "Parcours Juristes - ISPM",
-            "origine_url": "https://ispm-edu.com",
+            "titre": "Brochure officielle ISPM",
+            "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
             "donnees_extraites": [
