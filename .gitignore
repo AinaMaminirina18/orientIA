@@ -42,3 +42,9 @@ yarn-error.log*
 next-env.d.ts
 SKILL.md
 SKILL-2.md
+.idea/markdown.xml
+.idea/caches/deviceStreaming.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/orientIA.iml
+.idea/vcs.xml

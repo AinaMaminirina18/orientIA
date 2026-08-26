@@ -1,0 +1,27 @@
+1. Unicité des profil_id : OK (1600/1600 uniques)
+2. Notes hors bornes [0,20] : 0 valeur(s) -> OK
+3. Champs listes trop courts / vides : 0 -> OK
+4. Séries de bac hors référentiel connu : 0 -> OK
+5. Cohérence moyenne_generale recalculée vs stockée : 0 écart(s) -> OK
+6. Distribution des parcours (classe cible) :
+   - IGGLIA (Informatique de Gestion, Génie Logiciel ...): 150 (9.4%)
+   - ISAIA (Informatique, Statistique Appliquée et I...): 147 (9.2%)
+   - CAA (Commerce et Administration des Affaires...): 130 (8.1%)
+   - EMP (Économie et Management de Projet...): 124 (7.8%)
+   - TEH (Tourisme, Environnement et Hôtellerie...): 122 (7.6%)
+   - IMTICIA (Informatique Multimédia, Technologie de ...): 119 (7.4%)
+   - IAA (Industries Agroalimentaires...): 117 (7.3%)
+   - FIC (Finances et Comptabilité...): 111 (6.9%)
+   - ESIIA (Électronique, Systèmes Informatiques et ...): 107 (6.7%)
+   - DTJA (Droit et Techniques Juridiques des Affai...): 101 (6.3%)
+   - EMII (Électromécanique et Informatique Industr...): 94 (5.9%)
+   - GCA (Génie Civil et Architecture...): 84 (5.2%)
+   - AEE (Agriculture et Élevage...): 75 (4.7%)
+   - PIP (Pharmacologie et Industries Pharmaceutiq...): 65 (4.1%)
+   - ICMP (Industries Chimiques, Minières et Pétrol...): 54 (3.4%)
+7. Taux de profils ambigus (deux parcours plausibles) : 22.3% (cible ~20%)
+8. Contrôle anti-biais sexe/parcours : écart max à la parité = 10.0 points -> OK (aléatoire, pas de corrélation injectée)
+9. Taux de séries de bac hors du référentiel attendu pour le parcours : 5.9% (cible ~12%)
+10. Profils à notes globalement plates (proxy 'généraliste') : 35.5%
+
+RÉSULTAT GLOBAL : AUCUNE ERREUR BLOQUANTE DÉTECTÉE
