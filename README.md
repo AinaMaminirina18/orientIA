@@ -1,5 +1,9 @@
-<h1 align="center">orient'IA</h1>
-<h2 align="center">Team NOOBIA</h2>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+
+<h1 align="center" style="font-family: 'Lexend', sans-serif;">orient'IA</h1>
+<h2 align="center" style="font-family: 'Lexend', sans-serif;">Team NOOBIA</h2>
 
 <p align="center">
   <strong>Plateforme d'assistant virtuel d'orientation pédagogique</strong>
