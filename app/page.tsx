@@ -177,9 +177,11 @@ export default function DashboardPage() {
           <Card className="p-6 border-l-4 border-l-emerald-600 bg-white">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
               <div className="space-y-2">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
                   <Badge variant="emerald">{primary.code}</Badge>
-                  <Badge variant="secondary">{primary.degreeLevel.toUpperCase()}</Badge>
+                  <span className="text-[10px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                    Mention : {primary.mention}
+                  </span>
                   <span className="text-xs text-emerald-800 font-bold bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200">
                     {recommendation.overallMatchScore}% Adéquation
                   </span>

@@ -132,8 +132,16 @@ export default function ProfilePage() {
       </div>
 
       {/* Completeness Gauge Card */}
-      <Card className="bg-emerald-950 text-white border-emerald-900 p-6">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div
+        className="rounded-xl text-white p-6 relative overflow-hidden shadow-lg border border-slate-800 bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/abstract-dark-blue-vector-futuristic-digital-grid-background_53876-110562.avif')`,
+        }}
+      >
+        {/* Dark Overlay for contrast */}
+        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-[2px]" aria-hidden="true" />
+
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2 flex-1">
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
@@ -143,13 +151,13 @@ export default function ProfilePage() {
                 {profile.completenessPercentage}%
               </span>
             </div>
-            <div className="w-full h-3 bg-emerald-900 rounded-full overflow-hidden p-0.5 border border-emerald-700">
+            <div className="w-full h-3 bg-slate-900/90 rounded-full overflow-hidden p-0.5 border border-slate-700">
               <div
                 className="h-full bg-emerald-500 rounded-full transition-all duration-500"
                 style={{ width: `${profile.completenessPercentage}%` }}
               />
             </div>
-            <p className="text-xs text-emerald-200/80 leading-relaxed">
+            <p className="text-xs text-slate-300 leading-relaxed">
               {profile.completenessPercentage >= 80
                 ? "Profil suffisamment renseigné pour produire une recommandation à haute confiance."
                 : "Renseignez vos notes et compétences pour augmenter la précision du modèle ML."}
@@ -157,7 +165,7 @@ export default function ProfilePage() {
           </div>
 
           {profile.missingInfo && profile.missingInfo.length > 0 && (
-            <div className="p-3.5 bg-emerald-900/60 rounded-lg border border-emerald-700 text-xs space-y-1 max-w-xs shrink-0">
+            <div className="p-3.5 bg-slate-900/80 rounded-lg border border-slate-700 text-xs space-y-1 max-w-xs shrink-0 backdrop-blur-sm">
               <span className="font-semibold text-emerald-300 flex items-center gap-1.5">
                 <AlertTriangle className="w-4 h-4 text-amber-400" />
                 Informations conseillées :
@@ -170,7 +178,7 @@ export default function ProfilePage() {
             </div>
           )}
         </div>
-      </Card>
+      </div>
 
       {/* Form Sections */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -200,14 +208,19 @@ export default function ProfilePage() {
             />
 
             <Select
-              label="Environnement de travail recherché"
+              label="Environnement de travail & Domaine visé"
               value={preferredWorkEnv}
               onChange={(e) => setPreferredWorkEnv(e.target.value as UserProfile["preferredWorkEnvironment"])}
               options={[
-                { value: "data_ia", label: "Intelligence Artificielle & Data Science" },
-                { value: "developpement", label: "Développement Logiciel & Cloud" },
-                { value: "reseaux_cloud", label: "Réseaux, IoT & Cybersécurité" },
-                { value: "management", label: "Gestion de Projet & Data Analytics" },
+                { value: "data_ia", label: "Informatique : IA, Data Science & Statistiques (ISAIA)" },
+                { value: "developpement", label: "Informatique : Génie Logiciel, Cloud & Systèmes (IGGLIA)" },
+                { value: "reseaux_cloud", label: "Informatique : Électronique & Systèmes Embarqués (ESIIA)" },
+                { value: "multimedia_digital", label: "Informatique : Multimédia, TIC & Web (IMTICIA)" },
+                { value: "industrial", label: "Génie Industriel : Électromécanique, Mines & Chimie (EMII, ICMP)" },
+                { value: "civil_archi", label: "Génie Civil & Architecture (GCA)" },
+                { value: "management_finance", label: "Droit, Commerce, Finance & Management (CAA, EMP, FIC, DTJA)" },
+                { value: "biotech_agri", label: "Biotechnologie, Agronomie & Pharmacie (IAA, AEE, PIP)" },
+                { value: "tourisme", label: "Tourisme, Hôtellerie & Environnement (TEE, TEH)" },
               ]}
             />
           </CardContent>
@@ -293,6 +306,45 @@ export default function ProfilePage() {
                     <Trash2 className="w-4 h-4" />
                   </button>
                 </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Section 4: Compétences Déclarées */}
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle className="text-sm">4. Compétences & Savoir-faire maîtrisés</CardTitle>
+            <CardDescription>
+              Ajoutez vos compétences pratiques (programmation, outils, logiciels, langues, techniques).
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex gap-2 max-w-md">
+              <Input
+                placeholder="ex: Python, AutoCAD, SEO, IFRS, Marketing Digital"
+                value={newSkill}
+                onChange={(e) => setNewSkill(e.target.value)}
+              />
+              <Button size="sm" onClick={handleAddSkill} leftIcon={<Plus className="w-4 h-4" />}>
+                Ajouter
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap gap-2 pt-1">
+              {skills.map((sk) => (
+                <span
+                  key={sk}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-100 text-slate-800 border border-slate-200 rounded-full text-xs font-medium"
+                >
+                  {sk}
+                  <button
+                    onClick={() => handleRemoveSkill(sk)}
+                    className="hover:text-rose-600 p-0.5 rounded"
+                  >
+                    ×
+                  </button>
+                </span>
               ))}
             </div>
           </CardContent>

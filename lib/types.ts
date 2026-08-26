@@ -16,6 +16,17 @@ export interface ISPMFormation {
   matchScore?: number; // 0 - 100
 }
 
+export type WorkEnvironment =
+  | "data_ia"
+  | "developpement"
+  | "reseaux_cloud"
+  | "multimedia_digital"
+  | "industrial"
+  | "civil_archi"
+  | "management_finance"
+  | "biotech_agri"
+  | "tourisme";
+
 export interface UserProfile {
   id: string;
   name: string;
@@ -25,7 +36,7 @@ export interface UserProfile {
   declaredSkills: string[];
   interests: string[];
   completedProjects: string[];
-  preferredWorkEnvironment: "recherche" | "developpement" | "reseaux_cloud" | "management" | "data_ia";
+  preferredWorkEnvironment: WorkEnvironment;
   completenessPercentage: number; // 0 - 100
   missingInfo: string[];
   updatedAt: string;
