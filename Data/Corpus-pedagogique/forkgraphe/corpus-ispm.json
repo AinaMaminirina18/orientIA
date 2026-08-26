@@ -1,0 +1,143 @@
+{
+  "@context": "https://ispm-edu.com/",
+  "@id": "urn:university:ispm",
+  "@type": "University",
+  "nomComplet": "Institut Supérieur Polytechnique de Madagascar",
+  "nomAbrege": "ISPM",
+  "recteur": {
+    "@id": "urn:person:julien_amedee_raboanary",
+    "@type": "Person",
+    "nom": "RABOANARY Julien Amédée",
+    "titre": "Professeur"
+  },
+  "source": {
+    "nom": "Site officiel de l'ISPM",
+    "url": "https://ispm-edu.com/",
+    "statut": "officiel",
+    "date_consultation": "2026-08-26"
+  },
+  "mentions": [
+    {
+      "@id": "urn:mention:infotel",
+      "@type": "EducationalOccupationalProgram",
+      "nom": "Informatique et Télécommunications",
+      "parcours": [
+        {
+          "@id": "urn:parcours:igglia",
+          "nomComplet": "Informatique de Gestion, Génie Logiciel et Intelligence Artificielle",
+          "sigle": "IGGLIA"
+        },
+        {
+          "@id": "urn:parcours:esiia",
+          "nomComplet": "Électronique, Systèmes Informatiques et Intelligence Artificielle",
+          "sigle": "ESIIA"
+        },
+        {
+          "@id": "urn:parcours:imticia",
+          "nomComplet": "Informatique, Multimédia, Technologie de l'Information, de la Communication et Intelligence Artificielle",
+          "sigle": "IMTICIA"
+        },
+        {
+          "@id": "urn:parcours:isaia",
+          "nomComplet": "Informatique, Statistique Appliquée et Intelligence Artificielle",
+          "sigle": "ISAIA"
+        }
+      ]
+    },
+    {
+      "@id": "urn:mention:biotech_agronomie",
+      "@type": "EducationalOccupationalProgram",
+      "nom": "Biotechnologie et Agronomie",
+      "parcours": [
+        {
+          "@id": "urn:parcours:iaa",
+          "nomComplet": "Industrie Agro-Alimentaire",
+          "sigle": "IAA"
+        },
+        {
+          "@id": "urn:parcours:pip",
+          "nomComplet": "Pharmacologie et Industries Pharmaceutiques",
+          "sigle": "PIP"
+        },
+        {
+          "@id": "urn:parcours:aee",
+          "nomComplet": "Agriculture et Élevage",
+          "sigle": "AEE"
+        }
+      ]
+    },
+    {
+      "@id": "urn:mention:droit_techniques_affaires",
+      "@type": "EducationalOccupationalProgram",
+      "nom": "Droit et Techniques des Affaires",
+      "parcours": [
+        {
+          "@id": "urn:parcours:caa",
+          "nomComplet": "Commerce et Administration des Affaires",
+          "sigle": "CAA"
+        },
+        {
+          "@id": "urn:parcours:dtja",
+          "nomComplet": "Droit et Techniques Juridiques des Affaires",
+          "sigle": "DTJA"
+        },
+        {
+          "@id": "urn:parcours:fic",
+          "nomComplet": "Finances et Comptabilité",
+          "sigle": "FIC"
+        },
+        {
+          "@id": "urn:parcours:emp",
+          "nomComplet": "Économie et Management de Projet",
+          "sigle": "EMP"
+        }
+      ]
+    },
+    {
+      "@id": "urn:mention:genie_industriel",
+      "@type": "EducationalOccupationalProgram",
+      "nom": "Génie Industriel",
+      "parcours": [
+        {
+          "@id": "urn:parcours:emii",
+          "nomComplet": "Électromécanique et Informatique Industrielle",
+          "sigle": "EMII"
+        },
+        {
+          "@id": "urn:parcours:icmp",
+          "nomComplet": "Industries Chimiques, Minières et Pétrolières",
+          "sigle": "ICMP"
+        }
+      ]
+    },
+    {
+      "@id": "urn:mention:tourisme",
+      "@type": "EducationalOccupationalProgram",
+      "nom": "Tourisme",
+      "parcours": [
+        {
+          "@id": "urn:parcours:tee",
+          "nomComplet": "Tourisme et Environnement",
+          "sigle": "TEE"
+        },
+        {
+          "@id": "urn:parcours:teh",
+          "nomComplet": "Tourisme, Environnement et Hôtellerie",
+          "sigle": "TEH"
+        }
+      ]
+    },
+    {
+      "@id": "urn:mention:genie_civil_architecture",
+      "@type": "EducationalOccupationalProgram",
+      "nom": "Génie Civil et Architecture",
+      "parcours": [
+        {
+          "@id": "urn:parcours:gc",
+          "nomComplet": "Génie Civil et Architecture",
+          "sigle": "GCA"
+        }
+      ]
+    }
+  ]
+}
