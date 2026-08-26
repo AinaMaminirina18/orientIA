@@ -113,7 +113,7 @@
     {
       "@id": "urn:mention:tourisme",
       "@type": "EducationalOccupationalProgram",
-      "nom": "Techniques de Tourisme / Tourisme",
+      "nom": "Tourisme",
       "parcours": [
         {
           "@id": "urn:parcours:tee",
@@ -122,7 +122,7 @@
         },
         {
           "@id": "urn:parcours:teh",
-          "nomComplet": "Tourisme et Hôtellerie",
+          "nomComplet": "Tourisme, Environnement et Hôtellerie",
           "sigle": "TEH"
         }
       ]
