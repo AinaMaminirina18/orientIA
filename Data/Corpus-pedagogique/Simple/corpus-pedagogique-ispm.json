@@ -5,18 +5,73 @@
       {
         "code_parcours": "IGGLIA",
         "nom_parcours": "Informatique de Gestion, Génie Logiciel et Intelligence Artificielle",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Unified Modeling Language", "Réseaux de Neurones Artificiels", "Informatique Scientifique", "HTML/CSS", "Base de Données", "Algorithme", "Pascal", "Structure de données", "Réseaux informatiques", "Langage C", "JavaScript", "Java", "Merise", "PHP", "Gestion de Projet", "Intelligence Artificielle", "Codage", "Cryptographie", "C#", "Linux", "UI/UX", "Algorithme Avancé", "SGBDR", "GPI", "Processus Stochastique", "Informatique Décisionnelle", "GLCIA", "Cybersécurité", "Théorie des jeux", "Recherche Opérationnelle", "Programmation Logique", "Informatique Quantique", "Systèmes Multi-Agents", "Management", "Deep Learning", "Machine Learning" ],
-        "competences_developpees": ["Conception et modélisation logicielle (UML)", "Développement d'architectures orientées IA", "Administration de bases de données complexes (SGBDR)", "Ingénierie du logiciel et génie logiciel"],
-        "prerequis": ["Baccalauréat Scientifique (C, D, S) ou Technique"],
-        "debouches_professionnels": ["Ingénieur en génie logiciel", "Développeur d'applications", "Administrateur de bases de données", "Chef de projet informatique", "Consultant en systèmes d'information et IA"],
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
+        ],
+        "matieres_principales": [
+          "Unified Modeling Language",
+          "Réseaux de Neurones Artificiels",
+          "Informatique Scientifique",
+          "HTML/CSS",
+          "Base de Données",
+          "Algorithme",
+          "Pascal",
+          "Structure de données",
+          "Réseaux informatiques",
+          "Langage C",
+          "JavaScript",
+          "Java",
+          "Merise",
+          "PHP",
+          "Gestion de Projet",
+          "Intelligence Artificielle",
+          "Codage",
+          "Cryptographie",
+          "C#",
+          "Linux",
+          "UI/UX",
+          "Algorithme Avancé",
+          "SGBDR",
+          "GPI",
+          "Processus Stochastique",
+          "Informatique Décisionnelle",
+          "GLCIA",
+          "Cybersécurité",
+          "Théorie des jeux",
+          "Recherche Opérationnelle",
+          "Programmation Logique",
+          "Informatique Quantique",
+          "Systèmes Multi-Agents",
+          "Management",
+          "Deep Learning",
+          "Machine Learning"
+        ],
+        "competences_developpees": [
+          "Conception et modélisation logicielle (UML)",
+          "Développement d'architectures orientées IA",
+          "Administration de bases de données complexes (SGBDR)",
+          "Ingénierie du logiciel et génie logiciel"
+        ],
+        "prerequis": [
+          "Baccalauréat Scientifique (C, D, S) ou Technique"
+        ],
+        "debouches_professionnels": [
+          "Ingénieur en génie logiciel",
+          "Développeur d'applications",
+          "Administrateur de bases de données",
+          "Chef de projet informatique",
+          "Consultant en systèmes d'information et IA"
+        ],
         "relations_competences_metiers": [
           {
             "competence": "Génie Logiciel & POO",
             "metier_cible": "Ingénieur Génie Logiciel"
           }
         ],
-        "passerelles_possibles": ["Passerelle vers d'autres parcours Informatique (ex: IMTICIA) en début de cycle"],
+        "passerelles_possibles": [
+          "Passerelle vers d'autres parcours Informatique (ex: IMTICIA) en début de cycle"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -24,7 +79,11 @@
             "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "institutionnel",
-            "donnees_extraites": ["Intitulé exact du parcours (IGGLIA)", "Mention d'attachement (Informatique et Télécommunications)", "Diplômes délivrés (Bac+3 / Bac+5)"],
+            "donnees_extraites": [
+              "Intitulé exact du parcours (IGGLIA)",
+              "Mention d'attachement (Informatique et Télécommunications)",
+              "Diplômes délivrés (Bac+3 / Bac+5)"
+            ],
             "limites_incertitudes": "La maquette détaillée des volumes horaires des UE n'est pas précisée dans la brochure."
           },
           {
@@ -33,26 +92,152 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Validation de l'habilitation MESUPRES et Fonction Publique", "Matières et prérequis généraux", "Débouchés professionnels spécifiques IGGLIA"],
+            "donnees_extraites": [
+              "Validation de l'habilitation MESUPRES et Fonction Publique",
+              "Matières et prérequis généraux",
+              "Débouchés professionnels spécifiques IGGLIA"
+            ],
             "limites_incertitudes": "Aucune incertitude sur les diplômes et l'habilitation."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       },
       {
         "code_parcours": "ESIIA",
         "nom_parcours": "Électronique, Systèmes Informatiques et Intelligence Artificielle",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Electronique", "Structures des ordinateurs","Electricité", "Maintenance des Systèmes Electroniques", "Maintenance des Systèmes Informatiques", "Maintenance des Systèmes Informatiques Hardware", "Théorie des Signales", "Assembleur", "Réseaux de Neurones Artificiels", "Automatique", "Capteurs", "Unified Modeling Language", "Géométrie appliquée aux Formes et Images", "Microcontroleur", "Global System for Mobile Communication", "HTML/CSS", "Base de Données", "Algorithme", "Pascal", "Structure de données", "Réseaux informatiques", "Langage C", "JavaScript", "Java", "Merise", "PHP", "Gestion de Projet", "Intelligence Artificielle", "Codage", "Cryptographie", "C#", "Linux", "UI/UX", "Algorithme Avancé", "SGBDR", "GPI", "Processus Stochastique", "Informatique Décisionnelle", "GLCIA", "Cybersécurité", "Théorie des jeux", "Recherche Opérationnelle", "Programmation Logique", "Informatique Quantique", "Systèmes Multi-Agents", "Management", "Deep Learning", "Machine Learning" ],
-        "competences_developpees": ["Conception de systèmes embarqués et microcontrôleurs", "Maintenance et architecture matérielle (Hardware)", "Configuration et administration réseaux complexes", "Traitement du signal et automatisme"],
-        "prerequis": ["Baccalauréat C, D, S, T, F2, F3"],
-        "debouches_professionnels": ["Ingénieur système et réseau", "Spécialiste en maintenance électronique", "Expert en systèmes embarqués (IoT)", "Ingénieur en télécommunications", "Architecte Hardware"],
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
+        ],
+        "matieres_principales": [
+          "Electronique",
+          "Structures des ordinateurs",
+          "Electricité",
+          "Maintenance des Systèmes Electroniques",
+          "Maintenance des Systèmes Informatiques",
+          "Maintenance des Systèmes Informatiques Hardware",
+          "Théorie des Signals",
+          "Assembleur",
+          "Réseaux de Neurones Artificiels",
+          "Automatique",
+          "Capteurs",
+          "Unified Modeling Language",
+          "Géométrie appliquée aux Formes et Images",
+          "Microcontroleur",
+          "Global System for Mobile Communication",
+          "HTML/CSS",
+          "Base de Données",
+          "Algorithme",
+          "Pascal",
+          "Structure de données",
+          "Réseaux informatiques",
+          "Langage C",
+          "JavaScript",
+          "Java",
+          "Merise",
+          "PHP",
+          "Gestion de Projet",
+          "Intelligence Artificielle",
+          "Codage",
+          "Cryptographie",
+          "C#",
+          "Linux",
+          "UI/UX",
+          "Algorithme Avancé",
+          "SGBDR",
+          "GPI",
+          "Processus Stochastique",
+          "Informatique Décisionnelle",
+          "GLCIA",
+          "Cybersécurité",
+          "Théorie des jeux",
+          "Recherche Opérationnelle",
+          "Programmation Logique",
+          "Informatique Quantique",
+          "Systèmes Multi-Agents",
+          "Management",
+          "Deep Learning",
+          "Machine Learning"
+        ],
+        "competences_developpees": [
+          "Conception de systèmes embarqués et microcontrôleurs",
+          "Maintenance et architecture matérielle (Hardware)",
+          "Configuration et administration réseaux complexes",
+          "Traitement du signal et automatisme"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, S, Technique recommandés",
+          "Une base en électronique, mathématique et électricité est aussi un bon atout."
+        ],
+        "debouches_professionnels": [
+          "Ingénieur système et réseau",
+          "Spécialiste en maintenance électronique",
+          "Expert en systèmes embarqués (IoT)",
+          "Ingénieur en télécommunications",
+          "Architecte Hardware"
+        ],
         "relations_competences_metiers": [
           {
             "competence": "Systèmes embarqués & IoT",
             "metier_cible": "Ingénieur IoT / Embarqué"
           }
         ],
-        "passerelles_possibles": ["Passerelle vers EMII (Génie Industriel) sous réserve d'équivalence"],
+        "passerelles_possibles": [
+          "Passerelle vers EMII (Génie Industriel) sous réserve d'équivalence"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -60,7 +245,10 @@
             "origine_url": "Document officiel ISPM / Archive LevelMind L3 (ESIIA)",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Intitulé exact ESIIA", "Compétences clés en réseaux, embarqué et télécoms"],
+            "donnees_extraites": [
+              "Intitulé exact ESIIA",
+              "Compétences clés en réseaux, embarqué et télécoms"
+            ],
             "limites_incertitudes": "Informations centrées sur les promotions 2022-2023."
           },
           {
@@ -69,26 +257,144 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Débouchés en maintenance et télécommunications", "Objectifs pédagogiques matériel/logiciel"],
+            "donnees_extraites": [
+              "Débouchés en maintenance et télécommunications",
+              "Objectifs pédagogiques matériel/logiciel"
+            ],
             "limites_incertitudes": "Nécessite une mise à jour pour les nouveaux modules IA."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       },
       {
         "code_parcours": "IMTICIA",
         "nom_parcours": "Informatique Multimédia, Technologie de l'Information et de la Communication et Intelligence Artificielle",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Son", "Télécommunication","Travail Audiovisuel", "Photo", "Ondes et Propagations", "Théorie des Signales", "Réseaux de Neurones Artificiels", "Musique", "Publication Assistée par Ordinateur", "Informatique Scientifique", "HTML/CSS", "Base de Données", "Algorithme", "Pascal", "Structure de données", "Réseaux informatiques", "Langage C", "JavaScript", "Java", "Merise", "PHP", "Gestion de Projet", "Intelligence Artificielle", "Codage", "Cryptographie", "C#", "Linux", "UI/UX", "Algorithme Avancé", "SGBDR", "GPI", "Processus Stochastique", "Informatique Décisionnelle", "GLCIA", "Cybersécurité", "Théorie des jeux", "Recherche Opérationnelle", "Programmation Logique", "Informatique Quantique", "Systèmes Multi-Agents", "Management", "Deep Learning", "Machine Learning" ],
-        "competences_developpees": ["Production et traitement de contenus audiovisuels", "Design d'interfaces UI/UX et multimédia", "Gestion des technologies de l'information et communication", "Développement web et mobile interactif"],
-        "prerequis": ["Baccalauréat C, D, S, A2"],
-        "debouches_professionnels": ["Développeur multimédia / Webmaster", "Ingénieur en technologies de la communication", "Spécialiste en communication digitale", "Expert en réseaux de transmission"],
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
+        ],
+        "matieres_principales": [
+          "Son",
+          "Télécommunication",
+          "Travail Audiovisuel",
+          "Photo",
+          "Ondes et Propagations",
+          "Théorie des Signales",
+          "Réseaux de Neurones Artificiels",
+          "Musique",
+          "Publication Assistée par Ordinateur",
+          "Informatique Scientifique",
+          "HTML/CSS",
+          "Base de Données",
+          "Algorithme",
+          "Pascal",
+          "Structure de données",
+          "Réseaux informatiques",
+          "Langage C",
+          "JavaScript",
+          "Java",
+          "Merise",
+          "PHP",
+          "Gestion de Projet",
+          "Intelligence Artificielle",
+          "Codage",
+          "Cryptographie",
+          "C#",
+          "Linux",
+          "UI/UX",
+          "Algorithme Avancé",
+          "SGBDR",
+          "GPI",
+          "Processus Stochastique",
+          "Informatique Décisionnelle",
+          "GLCIA",
+          "Cybersécurité",
+          "Théorie des jeux",
+          "Recherche Opérationnelle",
+          "Programmation Logique",
+          "Informatique Quantique",
+          "Systèmes Multi-Agents",
+          "Management",
+          "Deep Learning",
+          "Machine Learning"
+        ],
+        "competences_developpees": [
+          "Production et traitement de contenus audiovisuels",
+          "Design d'interfaces UI/UX et multimédia",
+          "Gestion des technologies de l'information et communication",
+          "Développement web et mobile interactif"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, S, A2"
+        ],
+        "debouches_professionnels": [
+          "Développeur multimédia / Webmaster",
+          "Ingénieur en technologies de la communication",
+          "Spécialiste en communication digitale",
+          "Expert en réseaux de transmission"
+        ],
         "relations_competences_metiers": [
           {
             "competence": "Design UI/UX & Web",
             "metier_cible": "UX Designer / Développeur Multimédia"
           }
         ],
-        "passerelles_possibles": ["Passerelle vers IGGLIA"],
+        "passerelles_possibles": [
+          "Passerelle vers IGGLIA"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -96,23 +402,134 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Dénomination exacte du parcours IMTICIA", "Habilitation Bac+3/Bac+5", "Postes cibles en communication et web"],
+            "donnees_extraites": [
+              "Dénomination exacte du parcours IMTICIA",
+              "Habilitation Bac+3/Bac+5",
+              "Postes cibles en communication et web"
+            ],
             "limites_incertitudes": "Certains détails sur les matières optionnelles nécessitent une confirmation."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       },
       {
         "code_parcours": "ISAIA",
         "nom_parcours": "Informatique, Statistique Appliquée et Intelligence Artificielle",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Combinatoire et probabilités", "Informatique Scientifique", "HTML/CSS", "Base de Données", "Algorithme", "Pascal", "Structure de données", "Statistiques appliquées", "Réseaux informatiques", "Langage C", "JavaScript", "Java", "Merise", "PHP", "Gestion de Projet", "Intelligence Artificielle", "Codage", "Cryptographie", "C#", "Linux", "UI/UX", "Algorithme Avancé", "SGBDR", "GPI", "Processus Stochastique", "Informatique Décisionnelle", "GLCIA", "Cybersécurité", "Théorie des jeux", "Recherche Opérationnelle", "Programmation Logique", "Informatique Quantique", "Systèmes Multi-Agents", "Management", "Deep Learning", "Machine Learning" ],
-        "competences_developpees": ["Analyse statistique et modélisation prédictive", "Exploitation des algorithmes de Machine Learning et Deep Learning", "Mise en œuvre de solutions d'Informatique Décisionnelle", "Gestion et traitement de données massives (Big Data)"],
-        "prerequis": ["Baccalauréat Scientifique (C, D, S)"],
-        "debouches_professionnels": ["Data Scientist / Data Analyst", "Ingénieur Machine Learning", "Statisticien financier", "Responsable de planification stratégique"],
-        "relations_competences_metiers": [
-          {"competence": "Machine Learning & Data Science", "metier_cible": "Data Scientist"}
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
         ],
-        "passerelles_possibles": ["Passerelle vers IGGLIA"],
+        "matieres_principales": [
+          "Combinatoire et probabilités",
+          "Informatique Scientifique",
+          "HTML/CSS",
+          "Base de Données",
+          "Algorithme",
+          "Pascal",
+          "Structure de données",
+          "Statistiques appliquées",
+          "Réseaux informatiques",
+          "Langage C",
+          "JavaScript",
+          "Java",
+          "Merise",
+          "PHP",
+          "Gestion de Projet",
+          "Intelligence Artificielle",
+          "Codage",
+          "Cryptographie",
+          "C#",
+          "Linux",
+          "UI/UX",
+          "Algorithme Avancé",
+          "SGBDR",
+          "GPI",
+          "Processus Stochastique",
+          "Informatique Décisionnelle",
+          "GLCIA",
+          "Cybersécurité",
+          "Théorie des jeux",
+          "Recherche Opérationnelle",
+          "Programmation Logique",
+          "Informatique Quantique",
+          "Systèmes Multi-Agents",
+          "Management",
+          "Deep Learning",
+          "Machine Learning"
+        ],
+        "competences_developpees": [
+          "Analyse statistique et modélisation prédictive",
+          "Exploitation des algorithmes de Machine Learning et Deep Learning",
+          "Mise en œuvre de solutions d'Informatique Décisionnelle",
+          "Gestion et traitement de données massives (Big Data)"
+        ],
+        "prerequis": [
+          "Baccalauréat Scientifique (C, D, S)"
+        ],
+        "debouches_professionnels": [
+          "Data Scientist / Data Analyst",
+          "Ingénieur Machine Learning",
+          "Statisticien financier",
+          "Responsable de planification stratégique"
+        ],
+        "relations_competences_metiers": [
+          {
+            "competence": "Machine Learning & Data Science",
+            "metier_cible": "Data Scientist"
+          }
+        ],
+        "passerelles_possibles": [
+          "Passerelle vers IGGLIA"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -120,7 +537,10 @@
             "origine_url": "Brochure officielle ISPM / Archive institutionnelle",
             "date_consultation": "2026-08-26",
             "statut": "institutionnel",
-            "donnees_extraites": ["Dénomination ISAIA", "Spécialisation en Statistique et IA"],
+            "donnees_extraites": [
+              "Dénomination ISAIA",
+              "Spécialisation en Statistique et IA"
+            ],
             "limites_incertitudes": "Maquette de cours détaillée à compléter avec le secrétariat académique."
           },
           {
@@ -129,10 +549,69 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Débouchés Big Data et Finance", "Objectifs ISAIA"],
+            "donnees_extraites": [
+              "Débouchés Big Data et Finance",
+              "Objectifs ISAIA"
+            ],
             "limites_incertitudes": "Le marché de la Data Science à Madagascar est en pleine expansion."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       }
     ]
   },
@@ -142,15 +621,68 @@
       {
         "code_parcours": "EMII",
         "nom_parcours": "Électromécanique et Informatique Industrielle",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Maintenance avion", "Moteur à combustion interne", "Technologie ferroviaire", "Microcontroleur", "Vibration", "Metallurgie", "Management", "Electronique de puissance", "Elasticité et plasticité", "Technologie des froids", "Thermodynamique", "Automatique", "Grafcet", "Mécanique appliquée", "Aéronautique", "Dessin", "Géometrie analytique", "Ouvrage métallique", "Mécanique analytique", "Electronique", "Fabrication mécanique", "Capteurs", "Electricité Industrielle", "Fabrication Mécanique", "Mécanique rationnelle", "Résistance des matériaux", "Thermodynamique", "AUTOCAD", "Mécanique Génerale", "Electricité", "Electronique"],
-        "competences_developpees": ["Maintenance industrielle multi-technique (mécanique, électrique)", "Conception et pilotage de systèmes automatisés", "Gestion de l'énergie et électronique de puissance", "Conception assistée par ordinateur (AutoCAD)"],
-        "prerequis": ["Baccalauréat C, D, S, Tech (F1, F2, F3)"],
-        "debouches_professionnels": ["Ingénieur en maintenance industrielle", "Responsable de production", "Ingénieur en automatisme et robotique", "Concepteur de systèmes IoT industriels"],
-        "relations_competences_metiers": [
-          {"competence": "Automatisme & Électrotechnique", "metier_cible": "Ingénieur en Automatismes"}
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
         ],
-        "passerelles_possibles": ["Passerelle vers ESIIA"],
+        "matieres_principales": [
+          "Maintenance avion",
+          "Moteur à combustion interne",
+          "Technologie ferroviaire",
+          "Microcontroleur",
+          "Vibration",
+          "Metallurgie",
+          "Management",
+          "Electronique de puissance",
+          "Elasticité et plasticité",
+          "Technologie des froids",
+          "Thermodynamique",
+          "Automatique",
+          "Grafcet",
+          "Mécanique appliquée",
+          "Aéronautique",
+          "Dessin",
+          "Géometrie analytique",
+          "Ouvrage métallique",
+          "Mécanique analytique",
+          "Electronique",
+          "Fabrication mécanique",
+          "Capteurs",
+          "Electricité Industrielle",
+          "Fabrication Mécanique",
+          "Mécanique rationnelle",
+          "Résistance des matériaux",
+          "Thermodynamique",
+          "AUTOCAD",
+          "Mécanique Génerale",
+          "Electricité",
+          "Electronique"
+        ],
+        "competences_developpees": [
+          "Maintenance industrielle multi-technique (mécanique, électrique)",
+          "Conception et pilotage de systèmes automatisés",
+          "Gestion de l'énergie et électronique de puissance",
+          "Conception assistée par ordinateur (AutoCAD)"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D et Technique Scientifique récommandés",
+          "Une bonne base en "
+        ],
+        "debouches_professionnels": [
+          "Ingénieur en maintenance industrielle",
+          "Responsable de production",
+          "Ingénieur en automatisme et robotique",
+          "Concepteur de systèmes IoT industriels"
+        ],
+        "relations_competences_metiers": [
+          {
+            "competence": "Automatisme & Électrotechnique",
+            "metier_cible": "Ingénieur en Automatismes"
+          }
+        ],
+        "passerelles_possibles": [
+          "Passerelle vers ESIIA"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -158,23 +690,132 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Intitulé du parcours EMII", "Débouchés en maintenance et robotique", "Secteurs d'activité"],
+            "donnees_extraites": [
+              "Intitulé du parcours EMII",
+              "Débouchés en maintenance et robotique",
+              "Secteurs d'activité"
+            ],
             "limites_incertitudes": "Aucune."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       },
       {
         "code_parcours": "ICMP",
         "nom_parcours": "Industries Chimiques, Minières et Pétrolières",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Chimie Minérale", "Mines", "Géodynamique Minière", "Atomistique", "Dessin", "AUTOCAD", "Chimie Organique", "Petrochimie", "Thermochimie", "Chimie industrielle", "Metallurgie", "Thermophysique", "Electricité Industrielle", "Resistance des matériaux", "Chimie minerale", "Petrologie", "Cartographie", "Géometrie analytique", "Géologie de Madagascar", "Chimie industrielle", "Metallurgie", "Science et technique petrolières", "Elasticité et plasticité", "Chimie analytique", "Technologie des materiaux", "Mine avancée", "Chimie analytique", "Mécanique des fluides", "Chimie verte", "Droit minier", "Ressources minieres", "Management", "Physique nucléaire", "Technologie des matériaux"],
-        "competences_developpees": ["Gestion des procédés chimiques et industriels", "Exploitation et gestion des ressources minières", "Analyse et raffinage pétrolier", "Conformité réglementaire et droit minier"],
-        "prerequis": ["Baccalauréat C, D, S"],
-        "debouches_professionnels": ["Ingénieur minier", "Ingénieur pétrolier (raffinage/forage)", "Ingénieur en génie des procédés", "Responsable HSE"],
-        "relations_competences_metiers": [
-          {"competence": "Génie des procédés & Chimie", "metier_cible": "Ingénieur Chimiste"}
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
         ],
-        "passerelles_possibles": ["Passerelle vers IAA"],
+        "matieres_principales": [
+          "Chimie Minérale",
+          "Mines",
+          "Géodynamique Minière",
+          "Atomistique",
+          "Dessin",
+          "AUTOCAD",
+          "Chimie Organique",
+          "Petrochimie",
+          "Thermochimie",
+          "Chimie industrielle",
+          "Metallurgie",
+          "Thermophysique",
+          "Electricité Industrielle",
+          "Resistance des matériaux",
+          "Chimie minerale",
+          "Petrologie",
+          "Cartographie",
+          "Géometrie analytique",
+          "Géologie de Madagascar",
+          "Chimie industrielle",
+          "Metallurgie",
+          "Science et technique petrolières",
+          "Elasticité et plasticité",
+          "Chimie analytique",
+          "Technologie des materiaux",
+          "Mine avancée",
+          "Chimie analytique",
+          "Mécanique des fluides",
+          "Chimie verte",
+          "Droit minier",
+          "Ressources minieres",
+          "Management",
+          "Physique nucléaire",
+          "Technologie des matériaux"
+        ],
+        "competences_developpees": [
+          "Gestion des procédés chimiques et industriels",
+          "Exploitation et gestion des ressources minières",
+          "Analyse et raffinage pétrolier",
+          "Conformité réglementaire et droit minier"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, S"
+        ],
+        "debouches_professionnels": [
+          "Ingénieur minier",
+          "Ingénieur pétrolier (raffinage/forage)",
+          "Ingénieur en génie des procédés",
+          "Responsable HSE"
+        ],
+        "relations_competences_metiers": [
+          {
+            "competence": "Génie des procédés & Chimie",
+            "metier_cible": "Ingénieur Chimiste"
+          }
+        ],
+        "passerelles_possibles": [
+          "Passerelle vers IAA"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -182,7 +823,11 @@
             "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "institutionnel",
-            "donnees_extraites": ["Intitulé du parcours ICMP", "Débouchés miniers et pétroliers", "Secteurs extractifs"],
+            "donnees_extraites": [
+              "Intitulé du parcours ICMP",
+              "Débouchés miniers et pétroliers",
+              "Secteurs extractifs"
+            ],
             "limites_incertitudes": "Programme détaillé du Master 2 à confirmer."
           },
           {
@@ -191,10 +836,70 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Parcours ICMP", "Métiers de l'extraction et transformation"],
+            "donnees_extraites": [
+              "Parcours ICMP",
+              "Métiers de l'extraction et transformation"
+            ],
             "limites_incertitudes": "Lien fort avec les projets Ambatovy et QMM."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       }
     ]
   },
@@ -204,18 +909,76 @@
       {
         "code_parcours": "GCA",
         "nom_parcours": "Génie Civil et Architecture",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Géologie Appliquée", "Technologie des bâtiments", "Métré", "Dessin", "Hydraulique", "Topographie", "Route", "Electricité des batiments", "Mécanique des sols", "Assainissement", "Résistance des matériaux", "Technique des batiments", "Constructions Métalliques", "Hydraulique routière", "Thermodynamique", "AUTOCAD", "Mécanique des sols", "Geometrie Analytique", "Mecanique analytique", "ARCHICAD", "Architecture", "Géotechnie", "Elasticité et plasticité", "Hydrologie", "Aménagement aéroportuaire", "Ossatures bois", "Aménagement hydrogricole", "Metier des batiments", "Fondation", "Maintenance des bâtiments", "Acoustique", "Mécanique des fluides", "Elements finis", "Amenagement portuaire", "Gestion de chantier", "Amenagement hydroagricole", "Port", "Management", "Calcul des structures"],
-        "competences_developpees": ["Conception architecturale et dessin technique (AutoCAD/ArchiCAD)", "Dimensionnement et calcul de structures (RDM/Génie Civil)", "Gestion et conduite de chantiers BTP", "Ingénierie routière et hydraulique"],
-        "prerequis": ["Baccalauréat C, D, S, Tech (F4)"],
-        "debouches_professionnels": ["Ingénieur en Bureau d'Études (Structure)", "Architecte junior", "Conducteur de travaux", "Urbaniste", "Entrepreneur en BTP"],
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
+        ],
+        "matieres_principales": [
+          "Géologie Appliquée",
+          "Technologie des bâtiments",
+          "Métré",
+          "Dessin",
+          "Hydraulique",
+          "Topographie",
+          "Route",
+          "Electricité des batiments",
+          "Mécanique des sols",
+          "Assainissement",
+          "Résistance des matériaux",
+          "Technique des batiments",
+          "Constructions Métalliques",
+          "Hydraulique routière",
+          "Thermodynamique",
+          "AUTOCAD",
+          "Mécanique des sols",
+          "Geometrie Analytique",
+          "Mecanique analytique",
+          "ARCHICAD",
+          "Architecture",
+          "Géotechnie",
+          "Elasticité et plasticité",
+          "Hydrologie",
+          "Aménagement aéroportuaire",
+          "Ossatures bois",
+          "Aménagement hydrogricole",
+          "Metier des batiments",
+          "Fondation",
+          "Maintenance des bâtiments",
+          "Acoustique",
+          "Mécanique des fluides",
+          "Elements finis",
+          "Amenagement portuaire",
+          "Gestion de chantier",
+          "Amenagement hydroagricole",
+          "Port",
+          "Management",
+          "Calcul des structures"
+        ],
+        "competences_developpees": [
+          "Conception architecturale et dessin technique (AutoCAD/ArchiCAD)",
+          "Dimensionnement et calcul de structures (RDM/Génie Civil)",
+          "Gestion et conduite de chantiers BTP",
+          "Ingénierie routière et hydraulique"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, S, Technique recommandées"
+        ],
+        "debouches_professionnels": [
+          "Ingénieur en Bureau d'Études (Structure)",
+          "Architecte junior",
+          "Conducteur de travaux",
+          "Urbaniste",
+          "Entrepreneur en BTP"
+        ],
         "relations_competences_metiers": [
           {
             "competence": "Calcul de structures & RDM",
             "metier_cible": "Ingénieur d'études BTP"
           }
         ],
-        "passerelles_possibles": ["N/A"],
+        "passerelles_possibles": [
+          "N/A"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -223,10 +986,64 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Intitulé GCA", "Niveaux de formation", "Débouchés en architecture et construction"],
+            "donnees_extraites": [
+              "Intitulé GCA",
+              "Niveaux de formation",
+              "Débouchés en architecture et construction"
+            ],
             "limites_incertitudes": "Aucune."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       }
     ]
   },
@@ -236,15 +1053,83 @@
       {
         "code_parcours": "IAA",
         "nom_parcours": "Industries Agroalimentaires",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Biochimie", "Virologie", "Bactériologie", "Génétique", "Physiologie Animale", "Physiologie Vegetale", "Enzymologie", "Biotechnologie", "Biologie Animale", "Biologie Cellulaire", "Biologie Vegetale", "Génétique", "Atomistique", "Chimie organique", "Physiologie animale", "Biologie cellulaire", "Biologie végétale", "Microbiologie", "Biochimie", "Technologie des pectines", "Etude d'impact environnemental", "Génie industriel alimentaire", "emballage alimentaire", "technologie et transformation du café et cacao", "Management", "Securité alimentaire", "Technologie des proteines", "Additifs alimentaires", "Toxicologie alimentaire", "Matieres grasses", "Viandes", "Sucre", "Chimie analytique", "Bio-informatique", "Fruits et légumes", "Biochimie alimentaire", "Nutrition humaine", "Additifs alimentaires", "Chimie organique", "Elevage", "Science des aliments", "Thermo physique", "Genie fermentaire", "Traitement des eaux", "Microbiologie alimentaire", "Lait", "Securité alimentaire"],
-        "competences_developpees": ["Maîtrise des procédés de transformation agroalimentaire", "Gestion de la sécurité sanitaire (HACCP)", "Analyse biochimique et microbiologique des aliments", "Formulation de nouveaux produits alimentaires"],
-        "prerequis": ["Baccalauréat C, D, S"],
-        "debouches_professionnels": ["Ingénieur de production agroalimentaire", "Responsable Qualité HACCP", "Chargé de R&D alimentaire", "Gestionnaire d'unités de transformation"],
-        "relations_competences_metiers": [
-          {"competence": "Normes HACCP & Microbiologie", "metier_cible": "Responsable Qualité"}
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
         ],
-        "passerelles_possibles": ["Passerelle vers PIP"],
+        "matieres_principales": [
+          "Biochimie",
+          "Virologie",
+          "Bactériologie",
+          "Génétique",
+          "Physiologie Animale",
+          "Physiologie Vegetale",
+          "Enzymologie",
+          "Biotechnologie",
+          "Biologie Animale",
+          "Biologie Cellulaire",
+          "Biologie Vegetale",
+          "Génétique",
+          "Atomistique",
+          "Chimie organique",
+          "Physiologie animale",
+          "Biologie cellulaire",
+          "Biologie végétale",
+          "Microbiologie",
+          "Biochimie",
+          "Technologie des pectines",
+          "Etude d'impact environnemental",
+          "Génie industriel alimentaire",
+          "emballage alimentaire",
+          "technologie et transformation du café et cacao",
+          "Management",
+          "Securité alimentaire",
+          "Technologie des proteines",
+          "Additifs alimentaires",
+          "Toxicologie alimentaire",
+          "Matieres grasses",
+          "Viandes",
+          "Sucre",
+          "Chimie analytique",
+          "Bio-informatique",
+          "Fruits et légumes",
+          "Biochimie alimentaire",
+          "Nutrition humaine",
+          "Additifs alimentaires",
+          "Chimie organique",
+          "Elevage",
+          "Science des aliments",
+          "Thermo physique",
+          "Genie fermentaire",
+          "Traitement des eaux",
+          "Microbiologie alimentaire",
+          "Lait",
+          "Securité alimentaire"
+        ],
+        "competences_developpees": [
+          "Maîtrise des procédés de transformation agroalimentaire",
+          "Gestion de la sécurité sanitaire (HACCP)",
+          "Analyse biochimique et microbiologique des aliments",
+          "Formulation de nouveaux produits alimentaires"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, S"
+        ],
+        "debouches_professionnels": [
+          "Ingénieur de production agroalimentaire",
+          "Responsable Qualité HACCP",
+          "Chargé de R&D alimentaire",
+          "Gestionnaire d'unités de transformation"
+        ],
+        "relations_competences_metiers": [
+          {
+            "competence": "Normes HACCP & Microbiologie",
+            "metier_cible": "Responsable Qualité"
+          }
+        ],
+        "passerelles_possibles": [
+          "Passerelle vers PIP"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -252,7 +1137,11 @@
             "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "institutionnel",
-            "donnees_extraites": ["Intitulé IAA", "Débouchés agroalimentaires", "Secteurs industriels"],
+            "donnees_extraites": [
+              "Intitulé IAA",
+              "Débouchés agroalimentaires",
+              "Secteurs industriels"
+            ],
             "limites_incertitudes": "Nécessite la mise à jour des maquettes récentes."
           },
           {
@@ -261,23 +1150,155 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Métiers de la transformation et qualité", "Objectifs IAA"],
+            "donnees_extraites": [
+              "Métiers de la transformation et qualité",
+              "Objectifs IAA"
+            ],
             "limites_incertitudes": "Focus sur les normes internationales d'exportation."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       },
       {
         "code_parcours": "AEE",
         "nom_parcours": "Agriculture et Élevage",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Biochimie", "Virologie", "Bactériologie", "Génétique", "Physiologie Animale", "Physiologie Vegetale", "Enzymologie", "Biotechnologie", "Biologie Animale", "Biologie Cellulaire", "Biologie Vegetale", "Génétique", "Atomistique", "Chimie organique", "Physiologie animale", "Biologie cellulaire", "Biologie végétale", "Microbiologie", "Biochimie", "Nutrition animale", "Developpement rural", "Hydrobiologie", "Agronomie", "Immunologie", "Zootechnie", "Traitement des eaux", "Chimie organique", "Physiologie Animale", "Securité alimentaire", "Agronomie tropicale", "Pisciculture", "Culture industrielle", "Petits ruminants", "Culture des plantes", "Serriculture", "Experimentation biometrique", "Aviculture", "Apiculture", "Hydrologie appliquée", "Bio-informatique", "Culture vivrière", "Agroecologie", "Vulgarisation agricole et animation rurale", "Methodologie des recherches experimentales", "Agriculture biologique", "Arboriculture fruitiere", "Protection intégrée des cultures et denrées", "Crevetticulture", "Culture de rentes", "Elevage", "Management", "Securité alimentaire"],
-        "competences_developpees": ["Conduite de productions végétales et animales", "Gestion de projets de développement rural", "Mise en œuvre de pratiques agroécologiques et biologiques", "Optimisation des rendements et gestion des sols"],
-        "prerequis": ["Baccalauréat C, D, S, A2 (selon profil)"],
-        "debouches_professionnels": ["Gestionnaire d'exploitation agricole", "Conseiller agricole", "Responsable de projet développement rural", "Expert en agri-business"],
-        "relations_competences_metiers": [
-          {"competence": "Agronomie & Zootechnie", "metier_cible": "Ingénieur Agronome"}
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
         ],
-        "passerelles_possibles": ["Passerelle vers IAA"],
+        "matieres_principales": [
+          "Biochimie",
+          "Virologie",
+          "Bactériologie",
+          "Génétique",
+          "Physiologie Animale",
+          "Physiologie Vegetale",
+          "Enzymologie",
+          "Biotechnologie",
+          "Biologie Animale",
+          "Biologie Cellulaire",
+          "Biologie Vegetale",
+          "Génétique",
+          "Atomistique",
+          "Chimie organique",
+          "Physiologie animale",
+          "Biologie cellulaire",
+          "Biologie végétale",
+          "Microbiologie",
+          "Biochimie",
+          "Nutrition animale",
+          "Developpement rural",
+          "Hydrobiologie",
+          "Agronomie",
+          "Immunologie",
+          "Zootechnie",
+          "Traitement des eaux",
+          "Chimie organique",
+          "Physiologie Animale",
+          "Securité alimentaire",
+          "Agronomie tropicale",
+          "Pisciculture",
+          "Culture industrielle",
+          "Petits ruminants",
+          "Culture des plantes",
+          "Serriculture",
+          "Experimentation biometrique",
+          "Aviculture",
+          "Apiculture",
+          "Hydrologie appliquée",
+          "Bio-informatique",
+          "Culture vivrière",
+          "Agroecologie",
+          "Vulgarisation agricole et animation rurale",
+          "Methodologie des recherches experimentales",
+          "Agriculture biologique",
+          "Arboriculture fruitiere",
+          "Protection intégrée des cultures et denrées",
+          "Crevetticulture",
+          "Culture de rentes",
+          "Elevage",
+          "Management",
+          "Securité alimentaire"
+        ],
+        "competences_developpees": [
+          "Conduite de productions végétales et animales",
+          "Gestion de projets de développement rural",
+          "Mise en œuvre de pratiques agroécologiques et biologiques",
+          "Optimisation des rendements et gestion des sols"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, S, A2 (selon profil)"
+        ],
+        "debouches_professionnels": [
+          "Gestionnaire d'exploitation agricole",
+          "Conseiller agricole",
+          "Responsable de projet développement rural",
+          "Expert en agri-business"
+        ],
+        "relations_competences_metiers": [
+          {
+            "competence": "Agronomie & Zootechnie",
+            "metier_cible": "Ingénieur Agronome"
+          }
+        ],
+        "passerelles_possibles": [
+          "Passerelle vers IAA"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -285,23 +1306,149 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Intitulé AEE", "Débouchés en agrobusiness et développement rural"],
+            "donnees_extraites": [
+              "Intitulé AEE",
+              "Débouchés en agrobusiness et développement rural"
+            ],
             "limites_incertitudes": "Aucune."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       },
       {
         "code_parcours": "PIP",
         "nom_parcours": "Pharmacologie et Industries Pharmaceutiques",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Ethnopharmacologie", "Methodologie des recherches experimentales", "Virologie medicale", "Industrie pharmaceutique", "Pharmacocinétique", "Chimie analytique", "Management", "Pharmacologie moléculaire et cellulaire", "Physiopathologie", "phytochimie", "Bactériologie medicale", "Immunopathologie", "Sémiologie", "Immuno clinique", "Phytochimie", "Pharmacologie des grandes fonctions", "Pharmacocinétique", "Bio-Informatique", "Pharmacotechnie", "Plantes médicales", "Toxicologie Générale", "Physiopathologie", "Pharmacologie moléculaire", "Anatomie et physiologie humaine", "Thermo physique", "Immunologie", "Physiologie médicale", "physiologie nutritionnelle", "Traitement des eaux", "Pharmacologie", "Microbiologie médicale", "Pharmacologie generale", "Biochimie médicale", "Biochimie", "Virologie", "Bactériologie", "Génétique", "Physiologie Animale", "Physiologie Vegetale", "Enzymologie", "Biotechnologie", "Biologie Animale", "Biologie Cellulaire", "Biologie Vegetale", "Génétique", "Atomistique", "Chimie organique", "Physiologie animale", "Biologie cellulaire", "Biologie végétale", "Microbiologie", "Biochimie"],
-        "competences_developpees": ["Formulation et fabrication de médicaments", "Analyse phytochimique et ethnopharmacologique", "Contrôle qualité et réglementation pharmaceutique", "Études pharmacocinétiques et physiopathologiques"],
-        "prerequis": ["Baccalauréat C, D, S"],
-        "debouches_professionnels": ["Responsable de production pharmaceutique", "Ingénieur formulation", "Spécialiste valorisation plantes médicinales", "Technicien de laboratoire médical"],
-        "relations_competences_metiers": [
-          {"competence": "Pharmacologie & Galénique", "metier_cible": "Ingénieur formulation"}
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
         ],
-        "passerelles_possibles": ["Passerelle vers ICMP"],
+        "matieres_principales": [
+          "Ethnopharmacologie",
+          "Methodologie des recherches experimentales",
+          "Virologie medicale",
+          "Industrie pharmaceutique",
+          "Pharmacocinétique",
+          "Chimie analytique",
+          "Management",
+          "Pharmacologie moléculaire et cellulaire",
+          "Physiopathologie",
+          "phytochimie",
+          "Bactériologie medicale",
+          "Immunopathologie",
+          "Sémiologie",
+          "Immuno clinique",
+          "Phytochimie",
+          "Pharmacologie des grandes fonctions",
+          "Pharmacocinétique",
+          "Bio-Informatique",
+          "Pharmacotechnie",
+          "Plantes médicales",
+          "Toxicologie Générale",
+          "Physiopathologie",
+          "Pharmacologie moléculaire",
+          "Anatomie et physiologie humaine",
+          "Thermo physique",
+          "Immunologie",
+          "Physiologie médicale",
+          "physiologie nutritionnelle",
+          "Traitement des eaux",
+          "Pharmacologie",
+          "Microbiologie médicale",
+          "Pharmacologie generale",
+          "Biochimie médicale",
+          "Biochimie",
+          "Virologie",
+          "Bactériologie",
+          "Génétique",
+          "Physiologie Animale",
+          "Physiologie Vegetale",
+          "Enzymologie",
+          "Biotechnologie",
+          "Biologie Animale",
+          "Biologie Cellulaire",
+          "Biologie Vegetale",
+          "Génétique",
+          "Atomistique",
+          "Chimie organique",
+          "Physiologie animale",
+          "Biologie cellulaire",
+          "Biologie végétale",
+          "Microbiologie",
+          "Biochimie"
+        ],
+        "competences_developpees": [
+          "Formulation et fabrication de médicaments",
+          "Analyse phytochimique et ethnopharmacologique",
+          "Contrôle qualité et réglementation pharmaceutique",
+          "Études pharmacocinétiques et physiopathologiques"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, S"
+        ],
+        "debouches_professionnels": [
+          "Responsable de production pharmaceutique",
+          "Ingénieur formulation",
+          "Spécialiste valorisation plantes médicinales",
+          "Technicien de laboratoire médical"
+        ],
+        "relations_competences_metiers": [
+          {
+            "competence": "Pharmacologie & Galénique",
+            "metier_cible": "Ingénieur formulation"
+          }
+        ],
+        "passerelles_possibles": [
+          "Passerelle vers ICMP"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -309,7 +1456,11 @@
             "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "institutionnel",
-            "donnees_extraites": ["Intitulé PIP", "Valorisation de la biodiversité malgache", "Postes en pharmacie"],
+            "donnees_extraites": [
+              "Intitulé PIP",
+              "Valorisation de la biodiversité malgache",
+              "Postes en pharmacie"
+            ],
             "limites_incertitudes": "Préciser la maquette détaillée avec les enseignants du département."
           },
           {
@@ -318,10 +1469,69 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Métiers de l'industrie pharmaceutique", "Spécificités PIP"],
+            "donnees_extraites": [
+              "Métiers de l'industrie pharmaceutique",
+              "Spécificités PIP"
+            ],
             "limites_incertitudes": "Filière très sélective."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       }
     ]
   },
@@ -331,15 +1541,66 @@
       {
         "code_parcours": "CAA",
         "nom_parcours": "Commerce et Administration des Affaires",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Mathematique financiere", "Informatique", "Organisation", "Marketing", "Economie", "Fiscalité", "Comptabilité financière", "Finance publique", "Gestion financiere", "Gestion budgetaire", "Macroéconomie", "Marketing International", "Gestion de projet", "Negociaiton commerciale", "Economie bleu", "Technique de vente", "Economie rurale", "Economie mathematique", "Gestion prévisionnelle", "Analyse financiere", "Economie monetaire", "Finance mathématique", "Economie internationale", "Gestion d'entreprise", "Politique economique", "Gestion de projet de developpement", "Economie de l'environnement", "Analyse financiere", "Neuro-marketing", "Economie rurale"],
-        "competences_developpees": ["Stratégie marketing et gestion commerciale", "Analyse financière et gestion budgétaire", "Techniques de négociation et vente internationale", "Gestion administrative des entreprises"],
-        "prerequis": ["Baccalauréat C, D, A1, A2, G"],
-        "debouches_professionnels": ["Responsable marketing", "Gestionnaire administratif", "Chef de produit commercial", "Administrateur des ventes"],
-        "relations_competences_metiers": [
-          {"competence": "Marketing & Négociation", "metier_cible": "Chef de produit marketing"}
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
         ],
-        "passerelles_possibles": ["Passerelle vers EMP"],
+        "matieres_principales": [
+          "Mathematique financiere",
+          "Informatique",
+          "Organisation",
+          "Marketing",
+          "Economie",
+          "Fiscalité",
+          "Comptabilité financière",
+          "Finance publique",
+          "Gestion financiere",
+          "Gestion budgetaire",
+          "Macroéconomie",
+          "Marketing International",
+          "Gestion de projet",
+          "Negociaiton commerciale",
+          "Economie bleu",
+          "Technique de vente",
+          "Economie rurale",
+          "Economie mathematique",
+          "Gestion prévisionnelle",
+          "Analyse financiere",
+          "Economie monetaire",
+          "Finance mathématique",
+          "Economie internationale",
+          "Gestion d'entreprise",
+          "Politique economique",
+          "Gestion de projet de developpement",
+          "Economie de l'environnement",
+          "Analyse financiere",
+          "Neuro-marketing",
+          "Economie rurale"
+        ],
+        "competences_developpees": [
+          "Stratégie marketing et gestion commerciale",
+          "Analyse financière et gestion budgétaire",
+          "Techniques de négociation et vente internationale",
+          "Gestion administrative des entreprises"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, A1, A2, G"
+        ],
+        "debouches_professionnels": [
+          "Responsable marketing",
+          "Gestionnaire administratif",
+          "Chef de produit commercial",
+          "Administrateur des ventes"
+        ],
+        "relations_competences_metiers": [
+          {
+            "competence": "Marketing & Négociation",
+            "metier_cible": "Chef de produit marketing"
+          }
+        ],
+        "passerelles_possibles": [
+          "Passerelle vers EMP"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -347,23 +1608,127 @@
             "origine_url": "https://ispm-edu.com/",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Intitulé CAA", "Débouchés en marketing et administration"],
+            "donnees_extraites": [
+              "Intitulé CAA",
+              "Débouchés en marketing et administration"
+            ],
             "limites_incertitudes": "Aucune."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       },
       {
         "code_parcours": "EMP",
         "nom_parcours": "Économie et Management de Projet",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Management", "Economie internationale", "Gestion d'entreprise", "Politique economique", "Gestion de projet de developpement", "Marketing", "Economie de l'environnement", "Neuro-marketing", "Economie rurale", "Economie bleu", "Economie mathematique", "Gestion prévisionnelle", "Informatique", "Analyse financiere", "Gestion financiere"," Economie de developpement", "Gestion budgetaire", "Economie industrielle", "Econometrie", "Economie monetaire", "Economie internationale", "Marketing International", "Gestion de projet", "Macroeconomie", "Microeconomie", "Organisation", "Marketing", "Finance publique", "Mathematique financiere", "Informatique"],
-        "competences_developpees": ["Pilotage et évaluation de projets complexes", "Planification stratégique et management d'équipe", "Analyse économétrique et socio-économique", "Gestion du changement organisationnel"],
-        "prerequis": ["Baccalauréat C, D, A1, A2, G"],
-        "debouches_professionnels": ["Chef de projet (public/privé)", "Analyste économique", "Consultant en développement", "Responsable suivi-évaluation"],
-        "relations_competences_metiers": [
-          {"competence": "Gestion de projet & Analyse financière", "metier_cible": "Chef de projet"}
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
         ],
-        "passerelles_possibles": ["Passerelle vers CAA ou FIC"],
+        "matieres_principales": [
+          "Management",
+          "Economie internationale",
+          "Gestion d'entreprise",
+          "Politique economique",
+          "Gestion de projet de developpement",
+          "Marketing",
+          "Economie de l'environnement",
+          "Neuro-marketing",
+          "Economie rurale",
+          "Economie bleu",
+          "Economie mathematique",
+          "Gestion prévisionnelle",
+          "Informatique",
+          "Analyse financiere",
+          "Gestion financiere",
+          " Economie de developpement",
+          "Gestion budgetaire",
+          "Economie industrielle",
+          "Econometrie",
+          "Economie monetaire",
+          "Economie internationale",
+          "Marketing International",
+          "Gestion de projet",
+          "Macroeconomie",
+          "Microeconomie",
+          "Organisation",
+          "Marketing",
+          "Finance publique",
+          "Mathematique financiere",
+          "Informatique"
+        ],
+        "competences_developpees": [
+          "Pilotage et évaluation de projets complexes",
+          "Planification stratégique et management d'équipe",
+          "Analyse économétrique et socio-économique",
+          "Gestion du changement organisationnel"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, A1, A2, G"
+        ],
+        "debouches_professionnels": [
+          "Chef de projet (public/privé)",
+          "Analyste économique",
+          "Consultant en développement",
+          "Responsable suivi-évaluation"
+        ],
+        "relations_competences_metiers": [
+          {
+            "competence": "Gestion de projet & Analyse financière",
+            "metier_cible": "Chef de projet"
+          }
+        ],
+        "passerelles_possibles": [
+          "Passerelle vers CAA ou FIC"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -371,7 +1736,10 @@
             "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "institutionnel",
-            "donnees_extraites": ["Intitulé EMP", "Débouchés en analyse économique et projets"],
+            "donnees_extraites": [
+              "Intitulé EMP",
+              "Débouchés en analyse économique et projets"
+            ],
             "limites_incertitudes": "Vérifier la liste exacte des certifications proposées en cours de Cursus."
           },
           {
@@ -380,23 +1748,132 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Métiers du management de projet", "Compétences économiques"],
+            "donnees_extraites": [
+              "Métiers du management de projet",
+              "Compétences économiques"
+            ],
             "limites_incertitudes": "Forte orientation vers les ONG."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       },
       {
         "code_parcours": "FIC",
         "nom_parcours": "Finances et Comptabilité",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Management", "Informatique", "Institutions financières", "Choix d'investissement", "Finance d'entreprise", "Organisation", "Economie", "Technique bancaire", "Fiscalité", "Comptabilité financière", "Finance publique", "Gestion financiere", "Gestion budgetaire", "Macroéconomie"," Marketing international", "Gestion de projet", "Economie bleu", "Economie rurale", "Economie mathematique", "Gestion prévisionnelle", "Analyse financière", "Economie monétaire", "Economie internationale", "Gestion d'entreprise", "Politique economique", "Gestion de projet de developpement", "Economie de l'environnement", "Analyse financiere", "Neuro-marketing", "Economie rurale"],
-        "competences_developpees": ["Expertise en comptabilité générale et analytique", "Audit et contrôle de gestion financière", "Maîtrise de la fiscalité d'entreprise", "Gestion de trésorerie et ingénierie financière"],
-        "prerequis": ["Baccalauréat C, D, G"],
-        "debouches_professionnels": ["Comptable / Chef Comptable", "Directeur Administratif et Financier (DAF)", "Auditeur financier", "Analyste financier"],
-        "relations_competences_metiers": [
-          {"competence": "Comptabilité analytique & Finance", "metier_cible": "Auditeur financier"}
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
         ],
-        "passerelles_possibles": ["Passerelle vers CAA"],
+        "matieres_principales": [
+          "Management",
+          "Informatique",
+          "Institutions financières",
+          "Choix d'investissement",
+          "Finance d'entreprise",
+          "Organisation",
+          "Economie",
+          "Technique bancaire",
+          "Fiscalité",
+          "Comptabilité financière",
+          "Finance publique",
+          "Gestion financiere",
+          "Gestion budgetaire",
+          "Macroéconomie",
+          " Marketing international",
+          "Gestion de projet",
+          "Economie bleu",
+          "Economie rurale",
+          "Economie mathematique",
+          "Gestion prévisionnelle",
+          "Analyse financière",
+          "Economie monétaire",
+          "Economie internationale",
+          "Gestion d'entreprise",
+          "Politique economique",
+          "Gestion de projet de developpement",
+          "Economie de l'environnement",
+          "Analyse financiere",
+          "Neuro-marketing",
+          "Economie rurale"
+        ],
+        "competences_developpees": [
+          "Expertise en comptabilité générale et analytique",
+          "Audit et contrôle de gestion financière",
+          "Maîtrise de la fiscalité d'entreprise",
+          "Gestion de trésorerie et ingénierie financière"
+        ],
+        "prerequis": [
+          "Baccalauréat C, D, G"
+        ],
+        "debouches_professionnels": [
+          "Comptable / Chef Comptable",
+          "Directeur Administratif et Financier (DAF)",
+          "Auditeur financier",
+          "Analyste financier"
+        ],
+        "relations_competences_metiers": [
+          {
+            "competence": "Comptabilité analytique & Finance",
+            "metier_cible": "Auditeur financier"
+          }
+        ],
+        "passerelles_possibles": [
+          "Passerelle vers CAA"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -404,26 +1881,117 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Intitulé FIC", "Débouchés en audit et direction financière"],
+            "donnees_extraites": [
+              "Intitulé FIC",
+              "Débouchés en audit et direction financière"
+            ],
             "limites_incertitudes": "Aucune."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       },
       {
         "code_parcours": "DTJA",
         "nom_parcours": "Droit et Techniques Juridiques des Affaires",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Management", "Droit civil", "Droit constitutionnel", "Introduction au droit", "Droit administratif", "Droit pénal", "Droit commercial", "Droit de travail", "Droit des biens", "Droit de la concurrence", "Procedure pénale", "Droit social", "Droit des sociétés", "Droit des suretés", "Droit de la communication", "Droit des douanes", "Contrat d'entreprise", "Droit de la procedure collective", "Droit Minier", "Droit foncier"],
-        "competences_developpees": ["Conseil juridique et défense des intérêts de l'entreprise", "Rédaction d'actes juridiques et de contrats", "Gestion des litiges commerciaux et sociaux", "Expertise en droit foncier et minier"],
-        "prerequis": ["Baccalauréat A1,A2 et L recommandés, mais accessible aussi pour les bacheliers C, D, S et OSE"],
-        "debouches_professionnels": ["Conseiller juridique en entreprise", "Juriste d'affaires", "Assistant juridique", "Expert en contentieux d'affaires"],
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
+        ],
+        "matieres_principales": [
+          "Management",
+          "Droit civil",
+          "Droit constitutionnel",
+          "Introduction au droit",
+          "Droit administratif",
+          "Droit pénal",
+          "Droit commercial",
+          "Droit de travail",
+          "Droit des biens",
+          "Droit de la concurrence",
+          "Procedure pénale",
+          "Droit social",
+          "Droit des sociétés",
+          "Droit des suretés",
+          "Droit de la communication",
+          "Droit des douanes",
+          "Contrat d'entreprise",
+          "Droit de la procedure collective",
+          "Droit Minier",
+          "Droit foncier"
+        ],
+        "competences_developpees": [
+          "Conseil juridique et défense des intérêts de l'entreprise",
+          "Rédaction d'actes juridiques et de contrats",
+          "Gestion des litiges commerciaux et sociaux",
+          "Expertise en droit foncier et minier"
+        ],
+        "prerequis": [
+          "Baccalauréat A1,A2 et L recommandés, mais accessible aussi pour les bacheliers C, D, S et OSE"
+        ],
+        "debouches_professionnels": [
+          "Conseiller juridique en entreprise",
+          "Juriste d'affaires",
+          "Assistant juridique",
+          "Expert en contentieux d'affaires"
+        ],
         "relations_competences_metiers": [
           {
             "competence": "Droit des contrats & Sociétés",
             "metier_cible": "Juriste d'entreprise"
           }
         ],
-        "passerelles_possibles": ["N/A"],
+        "passerelles_possibles": [
+          "N/A"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -431,7 +1999,10 @@
             "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "institutionnel",
-            "donnees_extraites": ["Intitulé DTJA", "Débouchés en conseil juridique et contentieux"],
+            "donnees_extraites": [
+              "Intitulé DTJA",
+              "Débouchés en conseil juridique et contentieux"
+            ],
             "limites_incertitudes": "Consulter le département Droit pour la maquette exacte de M2."
           },
           {
@@ -440,10 +2011,69 @@
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Filière DTJA", "Métiers du droit des affaires à Madagascar"],
+            "donnees_extraites": [
+              "Filière DTJA",
+              "Métiers du droit des affaires à Madagascar"
+            ],
             "limites_incertitudes": "Particularité logicielle appliquée au droit à l'ISPM."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       }
     ]
   },
@@ -453,18 +2083,58 @@
       {
         "code_parcours": "TEH",
         "nom_parcours": "Tourisme, Environnement et Hôtellerie",
-        "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
-        "matieres_principales": ["Management", "Anglais", "Allemand", "Français", "Environnement", "Sites touristiques", "Technique d'agence", "Technique d'accueil", "Hygiène", "Nutrition humaine", "Art culinaire", "Science des aliments", "Ecologie animale", "Gestion hôteliere", "Ecotourisme", "Eco marine", "Techno Restau", "Marketing International", "Civilisation appliquée", "Géographie Rurale", "Economie rurale" ],
-        "competences_developpees": ["Management opérationnel en hôtellerie et restauration", "Conception et promotion de produits écotouristiques", "Maîtrise de l'accueil et de la relation client multilingue", "Gestion environnementale des sites touristiques"],
-        "prerequis": ["Baccalauréat A1, A2, L, C, D", "Une bonne base en langues (Français, Anglais) est recommandée"],
-        "debouches_professionnels": ["Directeur d'établissement hôtelier", "Manager d'agence de voyage", "Responsable écotourisme", "Organisateur d'événements (MICE)"],
+        "niveaux_diplomes": [
+          "Licence (Bac+3)",
+          "Master (Bac+5)"
+        ],
+        "matieres_principales": [
+          "Management",
+          "Anglais",
+          "Allemand",
+          "Français",
+          "Environnement",
+          "Sites touristiques",
+          "Technique d'agence",
+          "Technique d'accueil",
+          "Hygiène",
+          "Nutrition humaine",
+          "Art culinaire",
+          "Science des aliments",
+          "Ecologie animale",
+          "Gestion hôteliere",
+          "Ecotourisme",
+          "Eco marine",
+          "Techno Restau",
+          "Marketing International",
+          "Civilisation appliquée",
+          "Géographie Rurale",
+          "Economie rurale"
+        ],
+        "competences_developpees": [
+          "Management opérationnel en hôtellerie et restauration",
+          "Conception et promotion de produits écotouristiques",
+          "Maîtrise de l'accueil et de la relation client multilingue",
+          "Gestion environnementale des sites touristiques"
+        ],
+        "prerequis": [
+          "Baccalauréat A1, A2, L, C, D",
+          "Une bonne base en langues (Français, Anglais) est recommandée"
+        ],
+        "debouches_professionnels": [
+          "Directeur d'établissement hôtelier",
+          "Manager d'agence de voyage",
+          "Responsable écotourisme",
+          "Organisateur d'événements (MICE)"
+        ],
         "relations_competences_metiers": [
           {
             "competence": "Management hôtelier & Restauration",
             "metier_cible": "Directeur d'établissement hôtelier"
           }
         ],
-        "passerelles_possibles": ["Passerelle vers TEE"],
+        "passerelles_possibles": [
+          "Passerelle vers TEE"
+        ],
         "sources": [
           {
             "id": "source_1",
@@ -472,19 +2142,82 @@
             "origine_url": "Brochure officielle ISPM",
             "date_consultation": "2026-08-26",
             "statut": "institutionnel",
-            "donnees_extraites": ["Intitulé TEH", "Débouchés en hôtellerie et écotourisme"],
+            "donnees_extraites": [
+              "Intitulé TEH",
+              "Débouchés en hôtellerie et écotourisme"
+            ],
             "limites_incertitudes": "Informations de la brochure de présentation globale."
           },
           {
             "id": "source_2",
-            "titre": "Fiche Mention Tourisme - ISPM",
+            "titre": "Mention Tourisme - ISPM",
             "origine_url": "https://ispm-edu.com",
             "date_consultation": "2026-08-26",
             "statut": "officiel",
-            "donnees_extraites": ["Parcours TEH", "Métiers du tourisme durable"],
+            "donnees_extraites": [
+              "Parcours TEH",
+              "Métiers du tourisme durable"
+            ],
             "limites_incertitudes": "Secteur très dépendant de la conjoncture économique."
           }
-        ]
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_2"
+            ],
+            "attribution": "explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [
+              "source_1",
+              "source_2"
+            ],
+            "attribution": "generale_non_explicite"
+          }
+        }
       }
     ]
   }
