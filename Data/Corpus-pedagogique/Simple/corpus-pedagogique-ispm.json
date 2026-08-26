@@ -44,7 +44,7 @@
         "niveaux_diplomes": ["Licence (Bac+3)", "Master (Bac+5)"],
         "matieres_principales": ["Electronique", "Structures des ordinateurs","Electricité", "Maintenance des Systèmes Electroniques", "Maintenance des Systèmes Informatiques", "Maintenance des Systèmes Informatiques Hardware", "Théorie des Signales", "Assembleur", "Réseaux de Neurones Artificiels", "Automatique", "Capteurs", "Unified Modeling Language", "Géométrie appliquée aux Formes et Images", "Microcontroleur", "Global System for Mobile Communication", "HTML/CSS", "Base de Données", "Algorithme", "Pascal", "Structure de données", "Réseaux informatiques", "Langage C", "JavaScript", "Java", "Merise", "PHP", "Gestion de Projet", "Intelligence Artificielle", "Codage", "Cryptographie", "C#", "Linux", "UI/UX", "Algorithme Avancé", "SGBDR", "GPI", "Processus Stochastique", "Informatique Décisionnelle", "GLCIA", "Cybersécurité", "Théorie des jeux", "Recherche Opérationnelle", "Programmation Logique", "Informatique Quantique", "Systèmes Multi-Agents", "Management", "Deep Learning", "Machine Learning" ],
         "competences_developpees": ["Conception de systèmes embarqués et microcontrôleurs", "Maintenance et architecture matérielle (Hardware)", "Configuration et administration réseaux complexes", "Traitement du signal et automatisme"],
-        "prerequis": ["Baccalauréat C, D, S, T, F2, F3"],
+        "prerequis": ["Baccalauréat C, D, S, Technique"],
         "debouches_professionnels": ["Ingénieur système et réseau", "Spécialiste en maintenance électronique", "Expert en systèmes embarqués (IoT)", "Ingénieur en télécommunications", "Architecte Hardware"],
         "relations_competences_metiers": [
           {

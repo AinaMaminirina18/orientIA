@@ -223,7 +223,7 @@ export default function DashboardPage() {
                   <UserCheck className="w-4 h-4" />
                 </div>
                 <div className="flex-1 text-xs">
-                  <span className="font-bold text-slate-900 block">Mon Profil Candidate</span>
+                  <span className="font-bold text-slate-900 block">Mon Profil Candidat</span>
                   <span className="text-slate-500 text-[11px]">Renseignez vos notes et compétences</span>
                 </div>
                 <ArrowRight className="w-4 h-4 text-slate-400" />

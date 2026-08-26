@@ -19,13 +19,13 @@ import {
 } from "./mockData";
 
 const KEYS = {
-  PROFILE: "orientia_user_profile_v5",
-  FORMATIONS: "orientia_formations_v5",
-  SOURCES: "orientia_sources_v5",
-  RECOMMENDATION: "orientia_recommendation_v5",
-  CHAT: "orientia_chat_messages_v5",
-  EVALUATION: "orientia_evaluation_tests_v5",
-  TRACES: "orientia_execution_traces_v5",
+  PROFILE: "orientia_user_profile_v7",
+  FORMATIONS: "orientia_formations_v7",
+  SOURCES: "orientia_sources_v7",
+  RECOMMENDATION: "orientia_recommendation_v7",
+  CHAT: "orientia_chat_messages_v7",
+  EVALUATION: "orientia_evaluation_tests_v7",
+  TRACES: "orientia_execution_traces_v7",
 };
 
 type Listener = () => void;

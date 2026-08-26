@@ -38,8 +38,13 @@ export function AppShellContent({ children }: { children: React.ReactNode }) {
         <div className="flex flex-col flex-1 min-w-0 h-full overflow-hidden z-10">
           <Header onOpenGlobalSearch={() => setIsSearchOpen(true)} />
 
-          <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 scroll-smooth">
-            <div className="max-w-7xl mx-auto space-y-6">{children}</div>
+          <main className="flex-1 overflow-y-auto p-2 sm:p-3 lg:p-6 scroll-smooth">
+            <div className="max-w-7xl mx-auto space-y-6 min-h-full flex flex-col justify-between">
+              <div className="space-y-6">{children}</div>
+              <footer className="pt-6 pb-3 border-t border-slate-200/80 text-center text-xs text-slate-500 font-medium">
+                <p>© 2026 noobia ISPM — ORIENT’IA Platform. Tous droits réservés.</p>
+              </footer>
+            </div>
           </main>
         </div>
 

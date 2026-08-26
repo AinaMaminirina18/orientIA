@@ -22,8 +22,10 @@ import { useFormations, useSources } from "@/lib/useStore";
 export default function FormationDetailPage() {
   const params = useParams();
   const id = params.id as string;
-  const { getFormation } = useFormations();
+  const { getFormation, isMounted } = useFormations();
   const { sources } = useSources();
+
+  if (!isMounted) return null;
 
   const formation = getFormation(id);
 
@@ -158,6 +160,17 @@ export default function FormationDetailPage() {
                 {out}
               </div>
             ))}
+
+            {formation.passerelles && formation.passerelles.length > 0 && (
+              <div className="mt-3 pt-3 border-t border-slate-200">
+                <span className="text-[11px] font-bold text-slate-700 block mb-1">Passerelles Académiques :</span>
+                {formation.passerelles.map((pass, i) => (
+                  <p key={i} className="text-[11px] text-emerald-800 bg-emerald-50 p-2 rounded border border-emerald-200">
+                    {pass}
+                  </p>
+                ))}
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
