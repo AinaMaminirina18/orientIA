@@ -1,4 +1,10 @@
-export type DegreeLevel = "licence" | "master";
+export type DataOriginTag =
+  | "real_corpus_ispm"
+  | "synthetic_dataset"
+  | "calculated_recommendation"
+  | "simulated_feature";
+
+export type DegreeLevel = "licence" | "master" | "doctorat" | "Licence (Bac+3)" | "Master (Bac+5)" | string;
 
 export interface ISPMFormation {
   id: string;
@@ -17,6 +23,8 @@ export interface ISPMFormation {
   passerelles?: string[];
   sourceRefs: string[]; // IDs of RAGSource
   matchScore?: number; // 0 - 100
+  matchReasons?: string[];
+  originTag?: DataOriginTag;
 }
 
 export type WorkEnvironment =
@@ -34,6 +42,7 @@ export interface UserProfile {
   id: string;
   name: string;
   currentLevel: string; // e.g. "Bac Scientifique", "Licence Informatique"
+  bacSeries?: string;
   preferredSubjects: string[];
   academicGrades: { subject: string; grade: number }[]; // 0 - 20
   declaredSkills: string[];
@@ -88,6 +97,7 @@ export interface RAGSource {
   extractedSnippet: string;
   reliabilityStatus: "verified" | "review_needed";
   limitations?: string;
+  originTag?: DataOriginTag;
 }
 
 export type ToolStatus = "idle" | "running" | "success" | "error" | "skipped";
