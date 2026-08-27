@@ -100,8 +100,8 @@ export async function POST(req: NextRequest) {
       final_response: finalResponse,
       execution_time_ms: Date.now() - startTime,
       safety_checks: {
-        injection_detected: question.toLowerCase().includes("ignore"),
-        profiling_refused: finalResponse.includes("psychologique")
+        injection_detected: /(ignore|system|instruction|prompt)/i.test(question) && /(previous|all)/i.test(question),
+        profiling_refused: /(profilage|psychologique|personnalité|caractère|émotion|leadership)/i.test(finalResponse.toLowerCase())
       }
     });
 

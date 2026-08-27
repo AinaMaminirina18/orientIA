@@ -466,10 +466,9 @@ export default function AssistantChatPage() {
           </Button>
         </form>
 
-        {/* Mandatory Disclaimer */}
-        <p className="text-[10px] text-slate-400 text-center leading-relaxed">
-          ORIENT&apos;IA est un outil d&apos;aide à l&apos;orientation. Ses réponses ne constituent pas une décision officielle d&apos;admission. ·{" "}
-          <span className="font-mono">https://fastapifororientia.onrender.com</span>
+        {/* Mandatory Disclaimer (Article 16) */}
+        <p className="text-[10px] text-slate-500 text-center leading-relaxed bg-slate-50 py-1.5 px-3 rounded-lg border border-slate-100">
+          <span className="font-bold text-slate-700">Mention obligatoire :</span> ORIENT’IA constitue un outil d’aide à l’orientation. Ses recommandations ne remplacent ni l’avis d’un conseiller pédagogique ni une décision officielle d’admission.
         </p>
       </div>
     </div>
