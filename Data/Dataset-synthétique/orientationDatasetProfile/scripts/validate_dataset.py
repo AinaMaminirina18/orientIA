@@ -3,7 +3,7 @@
 import json
 from collections import Counter, defaultdict
 import statistics as stats
-from reference_parcours import PARCOURS
+from reference_parcours import BAC_SERIES_REFERENCE, PARCOURS
 
 profiles = [json.loads(l) for l in open("../data/ispm_orientation_dataset.jsonl", encoding="utf-8")]
 
@@ -45,11 +45,20 @@ if empty_issues:
     errors.append("Des champs listes sont vides ou incomplets.")
 
 # 4. Série de bac dans un référentiel connu
-bad_bac = sum(1 for p in profiles if p["serie_bac"] not in
-              {"C", "D", "S", "A1", "A2", "L", "Technique", "OSE"})
+bad_bac = sum(1 for p in profiles if p["serie_bac"] not in BAC_SERIES_REFERENCE)
 log(f"4. Séries de bac hors référentiel connu : {bad_bac}" + (" -> OK" if bad_bac == 0 else " -> ERREUR"))
 if bad_bac:
     errors.append("Séries de bac non reconnues détectées.")
+
+# 4b. Cohérence voie/série, indispensable pour les baccalauréats techniques
+bad_voie = sum(
+    p.get("voie_bac") not in {"Général", "Technologique", "Professionnel et technique"}
+    or (p["voie_bac"] == "Général") != (p["serie_bac"] in {"A1", "A2", "C", "D", "L", "OSE", "S"})
+    for p in profiles
+)
+log(f"4b. Cohérence voie_bac / serie_bac : {bad_voie}" + (" -> OK" if bad_voie == 0 else " -> ERREUR"))
+if bad_voie:
+    errors.append("Voie de baccalauréat incohérente.")
 
 # 5. Cohérence moyenne_generale vs notes détaillées
 mismatch = 0
@@ -84,13 +93,19 @@ for code, counter in sex_by_class.items():
 log(f"8. Contrôle anti-biais sexe/parcours : écart max à la parité = {max_skew*100:.1f} points"
     + (" -> OK (aléatoire, pas de corrélation injectée)" if max_skew < 0.12 else " -> À surveiller"))
 
-# 9. Taux de bac 'hors famille' (réorientation / cas limites)
-outfam = 0
+# 9. Respect des conditions d'admission publiées par l'ISPM
+admission_issues = 0
 for p in profiles:
-    allowed = PARCOURS[p["parcours_recommande"]]["bac_series"]
+    parcours = PARCOURS[p["parcours_recommande"]]
+    allowed = parcours["bac_series"]
     if p["serie_bac"] not in allowed:
-        outfam += 1
-log(f"9. Taux de séries de bac hors du référentiel attendu pour le parcours : {100*outfam/len(profiles):.1f}% (cible ~12%)")
+        admission_issues += 1
+    if p["serie_bac"] == "A2" and "condition_a2" in parcours and p["note_mathematiques"] < 12:
+        admission_issues += 1
+log(f"9. Conditions d'admission ISPM non respectées : {admission_issues}"
+    + (" -> OK" if admission_issues == 0 else " -> ERREUR"))
+if admission_issues:
+    errors.append("Profils non admissibles selon les règles ISPM publiées.")
 
 # 10. Taux de profils 'généralistes' (notes plates, sans matière dominante nette)
 # Reconstruit approximativement via l'écart-type des notes de chaque profil
