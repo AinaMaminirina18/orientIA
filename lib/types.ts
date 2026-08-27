@@ -123,9 +123,20 @@ export interface ChatMessage {
   confidence?: ConfidenceLevel;
 }
 
+export type EvaluationCategory =
+  | "factual"
+  | "comparison"
+  | "ml_recommendation"
+  | "multi_step"
+  | "missing_info"
+  | "ambiguity"
+  | "security"
+  | "bias"
+  | "provenance_profiling";
+
 export interface EvaluationTestCase {
   id: number;
-  category: "factual" | "comparison" | "ml_recommendation" | "multi_source" | "missing_info" | "ambiguity" | "prompt_injection" | "safety_guardrail";
+  category: EvaluationCategory;
   questionOrPrompt: string;
   expectedBehavior: string;
   status: "passed" | "failed" | "pending";
@@ -138,12 +149,14 @@ export interface ExecutionTrace {
   timestamp: string;
   userQuery: string;
   profileSnapshot: Partial<UserProfile>;
-  retrievedDocuments: { title: string; score: number }[];
+  retrievedDocuments: { title: string; score: number; contentSnippet?: string }[];
   toolExecutions: AgentToolCall[];
+  mlInput?: string;
   mlOutput: string;
   finalResponseSnippet: string;
   totalDurationMs: number;
   safetyPassed: boolean;
+  errors?: string[];
 }
 
 export interface ToastMessage {
