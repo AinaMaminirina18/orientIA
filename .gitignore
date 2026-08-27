@@ -48,4 +48,22 @@ SKILL-2.md
 .idea/misc.xml
 .idea/orientIA.iml
 .idea/vcs.xml
-Data/Dataset-synthétique/orientationDatasetProfile/scripts/__pycache__/reference_parcours.cpython-314.pyc
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
