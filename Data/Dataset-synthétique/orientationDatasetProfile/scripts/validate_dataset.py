@@ -5,7 +5,7 @@ from collections import Counter, defaultdict
 import statistics as stats
 from reference_parcours import PARCOURS
 
-profiles = [json.loads(l) for l in open("ispm_orientation_dataset.jsonl", encoding="utf-8")]
+profiles = [json.loads(l) for l in open("../data/ispm_orientation_dataset.jsonl", encoding="utf-8")]
 
 report = []
 errors = []
@@ -46,7 +46,7 @@ if empty_issues:
 
 # 4. Série de bac dans un référentiel connu
 bad_bac = sum(1 for p in profiles if p["serie_bac"] not in
-              {"C", "D", "S", "A1", "A2", "L", "G", "Technique", "OSE"})
+              {"C", "D", "S", "A1", "A2", "L", "Technique", "OSE"})
 log(f"4. Séries de bac hors référentiel connu : {bad_bac}" + (" -> OK" if bad_bac == 0 else " -> ERREUR"))
 if bad_bac:
     errors.append("Séries de bac non reconnues détectées.")
@@ -106,7 +106,7 @@ log("RÉSULTAT GLOBAL : " + ("AUCUNE ERREUR BLOQUANTE DÉTECTÉE" if not errors 
 for e in errors:
     log(" - " + e)
 
-with open("dataset_validation_report.txt", "w", encoding="utf-8") as f:
+with open("../reports/dataset_validation_report.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(report))
 
 print("\n".join(report))

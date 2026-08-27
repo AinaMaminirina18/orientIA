@@ -23,7 +23,7 @@ OUTOF_FAMILY_BAC_RATE = 0.12  # candidats avec une série de bac hors du profil-
 GENERALIST_RATE = 0.15  # profils sans préférence marquée (notes plates)
 
 LYCEE_SUBJECTS = [
-    "Mathematiques", "Physique_Chimie", "SVT", "Francais", "Anglais",
+    "Mathematiques", "Physique_Chimie", "SVT", "Francais", "Malgache", "Anglais",
     "Histoire_Geo", "Philosophie", "Economie", "Informatique", "Arts", "EPS",
 ]
 
@@ -43,8 +43,8 @@ AFFINITY = {
     "CAA":    {"Economie": 4, "Francais": 2, "Anglais": 2, "Mathematiques": 1},
     "EMP":    {"Economie": 4, "Mathematiques": 2, "Histoire_Geo": 1},
     "FIC":    {"Economie": 4, "Mathematiques": 3},
-    "DTJA":   {"Francais": 3, "Philosophie": 3, "Histoire_Geo": 2},
-    "TEH":    {"Anglais": 3, "Francais": 2, "Histoire_Geo": 2, "Arts": 1},
+    "DTJA":   {"Francais": 3, "Malgache": 2, "Philosophie": 3, "Histoire_Geo": 2},
+    "TEH":    {"Anglais": 3, "Francais": 2, "Malgache": 1, "Histoire_Geo": 2, "Arts": 1},
 }
 
 INTERESTS_BY_MENTION = {
@@ -117,11 +117,13 @@ GENERIC_ACTIVITIES = [
 ]
 
 REGIONS = [
-    "Analamanga", "Atsinanana", "Boeny", "Haute Matsiatra", "Vakinankaratra",
-    "Diana", "Atsimo-Andrefana", "Alaotra-Mangoro", "Itasy", "Menabe",
+    "Alaotra-Mangoro", "Amoron'i Mania", "Analamanga", "Analanjirofo", "Androy",
+    "Anosy", "Atsimo-Andrefana", "Atsimo-Atsinanana", "Atsinanana", "Betsiboka",
+    "Boeny", "Bongolava", "Diana", "Haute Matsiatra", "Ihorombe", "Itasy",
+    "Melaky", "Menabe", "Sava", "Sofia", "Vakinankaratra", "Vatovavy", "Fitovinany",
 ]
 
-ALL_BAC_SERIES = ["C", "D", "S", "A1", "A2", "L", "G", "Technique", "OSE"]
+ALL_BAC_SERIES = ["C", "D", "S", "A1", "A2", "L", "Technique", "OSE"]
 
 CODES = list(PARCOURS.keys())
 
@@ -274,7 +276,7 @@ def main():
     profiles = [build_profile(i) for i in range(1, N_PROFILES + 1)]
 
     # ---------- Écriture JSONL (format riche, listes natives) ----------
-    with open("ispm_orientation_dataset.jsonl", "w", encoding="utf-8") as f:
+    with open("../data/ispm_orientation_dataset.jsonl", "w", encoding="utf-8") as f:
         for p in profiles:
             f.write(json.dumps(p, ensure_ascii=False) + "\n")
 
@@ -291,7 +293,7 @@ def main():
         csv_rows.append(row)
 
     fieldnames = list(csv_rows[0].keys())
-    with open("ispm_orientation_dataset.csv", "w", encoding="utf-8", newline="") as f:
+    with open("../data/ispm_orientation_dataset.csv", "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(csv_rows)

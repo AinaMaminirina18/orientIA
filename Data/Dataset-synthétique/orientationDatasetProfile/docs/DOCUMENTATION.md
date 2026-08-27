@@ -34,8 +34,8 @@ Pour chaque profil :
    construit à cheval entre le parcours cible et un parcours proche (passerelle
    documentée dans la source, ou parcours de la même mention à défaut).
    Le champ `parcours_alternatif_plausible` conserve ce second parcours.
-3. **Notes de lycée** (`note_*`, 11 matières classiques du secondaire
-   malgache : Mathématiques, Physique-Chimie, SVT, Français, Anglais,
+3. **Notes de lycée** (`note_*`, 12 matières classiques du secondaire
+   malgache : Mathématiques, Physique-Chimie, SVT, Français, Malgache, Anglais,
    Histoire-Géo, Philosophie, Économie, Informatique, Arts, EPS) : tirées
    autour d'une moyenne de base (loi normale), puis **rehaussées** pour les
    matières jugées proches du parcours cible (table `AFFINITY`), avec un bruit
@@ -43,9 +43,11 @@ Pour chaque profil :
    (sans rehaussement) pour représenter des candidats sans dominante nette.
    Toutes les notes sont bornées à [0, 20].
 4. **Série de baccalauréat** : tirée dans la liste des séries associées au
-   parcours cible dans le document source, avec ~12 % de tirage **hors
-   famille** (candidats en réorientation ou cas limites), pour éviter que le
-   modèle n'apprenne une simple table de correspondance bac → parcours.
+   parcours cible dans le document source (L, A1, A2, C, D, Technique, S, OSE),
+   avec ~12 % de tirage **hors famille** (candidats en réorientation ou cas
+   limites), pour éviter que le modèle n'apprenne une simple table de
+   correspondance bac → parcours. La série 'G' a été exclue conformément aux
+   normes nationales en vigueur.
 5. **Matières préférées** : les 3 à 5 matières aux meilleures notes du profil,
    avec 25 % de chance qu'une matière soit remplacée aléatoirement (préférence
    subjective imparfaitement corrélée aux résultats scolaires — réalisme).
@@ -62,9 +64,10 @@ Pour chaque profil :
    correspondance mention → environnements types (bureau, laboratoire,
    chantier, atelier, terrain, relation client...).
 10. **Champs de contrôle non corrélés au parcours** : `sexe`, `age`, `region`
-    sont tirés de façon totalement indépendante du parcours cible, afin
-    d'éviter d'introduire un biais démographique ou géographique exploitable
-    par le modèle (voir contrôle n°8 du rapport de validation).
+    (couverture des 23 régions de Madagascar) sont tirés de façon totalement
+    indépendante du parcours cible, afin d'éviter d'introduire un biais
+    démographique ou géographique exploitable par le modèle (voir contrôle
+    n°8 du rapport de validation).
 
 ## 2. Hypothèses utilisées
 

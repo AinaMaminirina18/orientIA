@@ -153,7 +153,7 @@ PARCOURS = {
     "CAA": {
         "nom": "Commerce et Administration des Affaires",
         "mention": "Droit et Techniques des Affaires",
-        "bac_series": ["C", "D", "A1", "A2", "G"],
+        "bac_series": ["C", "D", "A1", "A2", "OSE"],
         "debouches": [
             "Responsable Marketing", "Gestionnaire administratif et financier",
             "Responsable commercial", "Responsable export", "Analyste de marché",
@@ -167,7 +167,7 @@ PARCOURS = {
     "EMP": {
         "nom": "Économie et Management de Projet",
         "mention": "Droit et Techniques des Affaires",
-        "bac_series": ["C", "D", "A1", "A2", "G"],
+        "bac_series": ["C", "D", "A1", "A2", "OSE"],
         "debouches": [
             "Chef de projet", "Analyste économique", "Consultant en management",
             "Responsable suivi-évaluation de projets", "Planificateur stratégique",
@@ -180,7 +180,7 @@ PARCOURS = {
     "FIC": {
         "nom": "Finances et Comptabilité",
         "mention": "Droit et Techniques des Affaires",
-        "bac_series": ["C", "D", "G"],
+        "bac_series": ["C", "D", "OSE"],
         "debouches": [
             "Chef Comptable", "Directeur Administratif et Financier",
             "Auditeur financier", "Contrôleur de gestion", "Trésorier d'entreprise",
