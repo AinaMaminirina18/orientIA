@@ -155,54 +155,71 @@ tools = [
 ]
 
 
-def search_rag_context(query: str, top_k: int = 3, filter_code: Optional[str] = None):
-    """Effectue une recherche sémantique dans ChromaDB avec adaptation automatique pour les requêtes globales."""
-    query_lower = query.lower()
-    mots_cles_globaux = ["toutes", "tous", "liste", "filières", "parcours", "mentions", "qu'est-ce que l'ispm"]
-    is_global_query = any(mot in query_lower for mot in mots_cles_globaux)
-    n_results_to_fetch = 20 if is_global_query else top_k
+import re
+from rank_bm25 import BM25Okapi
 
-    where_filter = {"code_parcours": filter_code} if filter_code else None
+def clean_text(text):
+    return re.sub(r'[^a-zA-Z0-9\s]', '', text.lower()).split()
+
+def search_rag_context(query: str, top_k: int = 3, filter_code: Optional[str] = None):
+    """Effectue une recherche hybride (Sémantique + BM25) pour une efficience maximale."""
+    query_lower = query.lower()
     
+    # 1. Détection de boosting par code parcours (ex: "matières IGGLIA")
+    boosted_code = None
+    codes_ispm = ["IGGLIA", "ESIIA", "IMTICIA", "ISAIA", "EMII", "ICMP", "GCA", "IAA", "AEE", "PIP", "CAA", "EMP", "FIC", "DTJA", "TEH", "TEE"]
+    for code in codes_ispm:
+        if code.lower() in query_lower:
+            boosted_code = code
+            break
+
+    # 2. Récupération élargie pour re-ranking (Top 10)
     results = collection.query(
         query_texts=[query],
-        n_results=n_results_to_fetch,
-        where=where_filter
+        n_results=10,
+        where={"code_parcours": boosted_code} if boosted_code else None
     )
 
     if not results["documents"] or not results["documents"][0]:
         return "", []
 
+    docs = results["documents"][0]
+    metas = results["metadatas"][0]
+    
+    # 3. Re-ranking par BM25 (Exact Match Boosting)
+    tokenized_corpus = [clean_text(d) for d in docs]
+    bm25 = BM25Okapi(tokenized_corpus)
+    scores_bm25 = bm25.get_scores(clean_text(query))
+    
+    # Combinaison des scores (Vecteur + BM25)
+    combined_results = []
+    for i in range(len(docs)):
+        # Score sémantique (cosine) + Score BM25 normalisé
+        score_final = (1 - results["distances"][0][i]) + (scores_bm25[i] / 10)
+        combined_results.append((docs[i], metas[i], score_final))
+    
+    # Tri par score final et sélection du top_k
+    combined_results.sort(key=lambda x: x[2], reverse=True)
+    top_results = combined_results[:top_k]
+
     context_segments = []
     sources = []
 
-    for doc, meta, dist in zip(results["documents"][0], results["metadatas"][0], results["distances"][0]):
-        score = round(1 - dist, 3)
+    for doc, meta, score in top_results:
         code_p = meta.get('code_parcours', '')
-        
-        onto_info = get_ontology_context(code_p)
-
         context_segments.append(
-            f"--- Fiche Parcours ---\n"
-            f"Code/Nom: {code_p} - {meta.get('nom_parcours', '')}\n"
-            f"Mention: {meta.get('mention', '')}\n"
-            f"Détails pédagogiques: {doc}\n"
-            f"{onto_info}\n"
+            f"--- Fiche {meta.get('chunk_type', 'info')} {code_p} ---\n{doc}\n"
         )
-
         sources.append({
             "code_parcours": code_p,
             "nom_parcours": meta.get("nom_parcours",""),
             "mention": meta.get("mention",""),
-            "fichier_source": meta.get("fichier_source","ispm_orientation_dataset.csv"),
-            "source_titre": meta.get("source_titre","Offre de formation ISPM"),
-            "source_url": meta.get("source_url",""),
-            "statut": meta.get("statut", "officiel"),
-            "score": score
+            "fichier_source": "corpus_ispm.csv",
+            "source_titre": meta.get("source_titre","Offre ISPM"),
+            "score": round(float(score), 3)
         })
 
-    context_text = "\n".join(context_segments)
-    return context_text, sources
+    return "\n".join(context_segments), sources
 
 
 def exécuter_outil(tool_call):
