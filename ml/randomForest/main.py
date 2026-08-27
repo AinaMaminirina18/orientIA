@@ -33,11 +33,11 @@ GROQ_API_KEYS = [
 GROQ_API_KEYS = [k for k in GROQ_API_KEYS if k]
 
 if not GROQ_API_KEYS:
-    print("--> Attention: Aucune clé API Groq n'a été trouvée dans la configuration.")
+    print("--> Attention: Aucune clé randomForest Groq n'a été trouvée dans la configuration.")
 
 
 def appel_groq_avec_fallback(messages_list, tools_config=None, temperature_val=0.1):
-    """Tente d'appeler l'API Groq en basculant automatiquement sur la clé de secours en cas d'erreur."""
+    """Tente d'appeler l'randomForest Groq en basculant automatiquement sur la clé de secours en cas d'erreur."""
     dernier_erreur = None
     
     for i, current_key in enumerate(GROQ_API_KEYS):
@@ -62,7 +62,7 @@ def appel_groq_avec_fallback(messages_list, tools_config=None, temperature_val=0
             dernier_erreur = e
             continue
             
-    raise HTTPException(status_code=500, detail=f"Toutes les clés API Groq ont échoué. Dernière erreur : {str(dernier_erreur)}")
+    raise HTTPException(status_code=500, detail=f"Toutes les clés randomForest Groq ont échoué. Dernière erreur : {str(dernier_erreur)}")
 
 
 # Initialisation de ChromaDB pour le RAG
