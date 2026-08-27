@@ -7,11 +7,32 @@ les champs texte libres (ex. "prerequis") ont été relus et convertis en
 listes de séries de baccalauréat exploitables par le générateur.
 """
 
+# Référentiel d'admission consulté le 2026-08-27. L'ISPM nomme des familles
+# techniques, tandis que les examens malgaches ont des séries/spécialités
+# distinctes. Le modèle stocke donc les codes réels et dérive leur famille.
+ADMISSION_SOURCE = {
+    "titre": "ISPM — Conditions d'accès en première année",
+    "url": "https://ispm-edu.com/inscription.php",
+    "statut": "officiel",
+    "date_consultation": "2026-08-27",
+}
+
+GENERAL_BAC_SERIES = ["A1", "A2", "C", "D", "L", "OSE", "S"]
+
+# Bac technologique (T*) et baccalauréat professionnel et technique.
+# Source des codes : Wiki iRENALA (plateforme institutionnelle malgache),
+# complétée par les catégories publiées par l'ISPM et le texte CNLEGIS.
+TECH_GENIE_CIVIL = ["TGC", "CCBTP", "PCBTP"]
+TECH_INDUSTRIEL = ["TGI", "DAMB", "EN", "TPFM", "TAMB", "TMEL", "TFFI", "TMA", "MEMA", "TMF", "TOM"]
+TECH_AGRICOLE = ["TAG", "TEV"]
+TECH_TERTIAIRE = ["TTER", "ACTC", "CG", "SS"]
+BAC_SERIES_REFERENCE = GENERAL_BAC_SERIES + TECH_GENIE_CIVIL + TECH_INDUSTRIEL + TECH_AGRICOLE + TECH_TERTIAIRE
+
 PARCOURS = {
     "IGGLIA": {
         "nom": "Informatique de Gestion, Génie Logiciel et Intelligence Artificielle",
         "mention": "Informatique et Télécommunications",
-        "bac_series": ["C", "D", "S", "Technique"],
+        "bac_series": ["C", "D", "S"] + TECH_INDUSTRIEL,
         "debouches": [
             "Ingénieur en génie logiciel", "Architecte logiciel",
             "Développeur Full-Stack (Web & Mobile)", "Administrateur de bases de données",
@@ -28,7 +49,7 @@ PARCOURS = {
     "ESIIA": {
         "nom": "Électronique, Systèmes Informatiques et Intelligence Artificielle",
         "mention": "Informatique et Télécommunications",
-        "bac_series": ["C", "D", "S", "Technique"],
+        "bac_series": ["C", "D", "S"] + TECH_INDUSTRIEL,
         "debouches": [
             "Ingénieur système et réseau", "Spécialiste en maintenance de systèmes informatisés",
             "Expert en systèmes embarqués et IoT", "Ingénieur en télécommunications",
@@ -43,7 +64,7 @@ PARCOURS = {
     "IMTICIA": {
         "nom": "Informatique Multimédia, Technologie de l'Information et de la Communication et Intelligence Artificielle",
         "mention": "Informatique et Télécommunications",
-        "bac_series": ["C", "D", "S", "A2"],
+        "bac_series": ["C", "D", "S"] + TECH_INDUSTRIEL,
         "debouches": [
             "Développeur multimédia", "Webmaster", "UX/UI Designer",
             "Ingénieur en technologies de la communication",
@@ -58,7 +79,7 @@ PARCOURS = {
     "ISAIA": {
         "nom": "Informatique, Statistique Appliquée et Intelligence Artificielle",
         "mention": "Informatique et Télécommunications",
-        "bac_series": ["C", "D", "S"],
+        "bac_series": ["C", "D", "S"] + TECH_INDUSTRIEL,
         "debouches": [
             "Data Scientist", "Data Analyst", "Ingénieur Machine Learning",
             "Statisticien financier", "Analyste Big Data", "Responsable Business Intelligence",
@@ -71,7 +92,7 @@ PARCOURS = {
     "EMII": {
         "nom": "Électromécanique et Informatique Industrielle",
         "mention": "Génie Industriel",
-        "bac_series": ["C", "D", "Technique"],
+        "bac_series": ["C", "D", "S"] + TECH_INDUSTRIEL,
         "debouches": [
             "Ingénieur en maintenance industrielle", "Ingénieur en électrotechnique",
             "Responsable de production en usine", "Ingénieur en automatisation et robotique industrielle",
@@ -86,7 +107,7 @@ PARCOURS = {
     "ICMP": {
         "nom": "Industries Chimiques, Minières et Pétrolières",
         "mention": "Génie Industriel",
-        "bac_series": ["C", "D", "S"],
+        "bac_series": ["C", "D", "S"] + TECH_INDUSTRIEL,
         "debouches": [
             "Ingénieur minier", "Ingénieur pétrolier", "Ingénieur en génie des procédés chimiques",
             "Responsable HSE", "Ingénieur de laboratoire d'analyses",
@@ -100,7 +121,7 @@ PARCOURS = {
     "GCA": {
         "nom": "Génie Civil et Architecture",
         "mention": "Génie Civil et Architecture",
-        "bac_series": ["C", "D", "S", "Technique"],
+        "bac_series": ["C", "D", "S"] + TECH_GENIE_CIVIL,
         "debouches": [
             "Ingénieur en Bureau d'Études", "Architecte junior", "Conducteur de travaux",
             "Urbaniste", "Entrepreneur en BTP", "Ingénieur en génie civil",
@@ -114,7 +135,8 @@ PARCOURS = {
     "IAA": {
         "nom": "Industries Agroalimentaires",
         "mention": "Biotechnologie et Agronomie",
-        "bac_series": ["C", "D", "S"],
+        "bac_series": ["C", "D", "S", "A2"] + TECH_AGRICOLE,
+        "condition_a2": "A2 admise si note de mathématiques >= 12/20",
         "debouches": [
             "Ingénieur de production en industrie agroalimentaire", "Responsable Qualité et Hygiène",
             "Chargé de R&D alimentaire", "Chef de production", "Consultant qualité",
@@ -127,7 +149,8 @@ PARCOURS = {
     "AEE": {
         "nom": "Agriculture et Élevage",
         "mention": "Biotechnologie et Agronomie",
-        "bac_series": ["C", "D", "S", "A2"],
+        "bac_series": ["C", "D", "S", "A2"] + TECH_AGRICOLE,
+        "condition_a2": "A2 admise si note de mathématiques >= 12/20",
         "debouches": [
             "Ingénieur Agronome", "Conseiller agricole", "Responsable de projet développement rural",
             "Expert en agri-business", "Responsable de production animale", "Consultant en agroécologie",
@@ -140,7 +163,8 @@ PARCOURS = {
     "PIP": {
         "nom": "Pharmacologie et Industries Pharmaceutiques",
         "mention": "Biotechnologie et Agronomie",
-        "bac_series": ["C", "D", "S"],
+        "bac_series": ["C", "D", "S", "A2"] + TECH_AGRICOLE,
+        "condition_a2": "A2 admise si note de mathématiques >= 12/20",
         "debouches": [
             "Responsable de production pharmaceutique", "Chercheur en phyto-médicaments",
             "Ingénieur de laboratoire médical", "Délégué médical", "Responsable contrôle qualité",
@@ -153,7 +177,8 @@ PARCOURS = {
     "CAA": {
         "nom": "Commerce et Administration des Affaires",
         "mention": "Droit et Techniques des Affaires",
-        "bac_series": ["C", "D", "A1", "A2", "OSE"],
+        "bac_series": BAC_SERIES_REFERENCE,
+        "admission_toutes_series": True,
         "debouches": [
             "Responsable Marketing", "Gestionnaire administratif et financier",
             "Responsable commercial", "Responsable export", "Analyste de marché",
@@ -167,7 +192,8 @@ PARCOURS = {
     "EMP": {
         "nom": "Économie et Management de Projet",
         "mention": "Droit et Techniques des Affaires",
-        "bac_series": ["C", "D", "A1", "A2", "OSE"],
+        "bac_series": BAC_SERIES_REFERENCE,
+        "admission_toutes_series": True,
         "debouches": [
             "Chef de projet", "Analyste économique", "Consultant en management",
             "Responsable suivi-évaluation de projets", "Planificateur stratégique",
@@ -180,7 +206,8 @@ PARCOURS = {
     "FIC": {
         "nom": "Finances et Comptabilité",
         "mention": "Droit et Techniques des Affaires",
-        "bac_series": ["C", "D", "OSE"],
+        "bac_series": BAC_SERIES_REFERENCE,
+        "admission_toutes_series": True,
         "debouches": [
             "Chef Comptable", "Directeur Administratif et Financier",
             "Auditeur financier", "Contrôleur de gestion", "Trésorier d'entreprise",
@@ -193,7 +220,8 @@ PARCOURS = {
     "DTJA": {
         "nom": "Droit et Techniques Juridiques des Affaires",
         "mention": "Droit et Techniques des Affaires",
-        "bac_series": ["A1", "A2", "L", "C", "D", "S", "OSE"],
+        "bac_series": BAC_SERIES_REFERENCE,
+        "admission_toutes_series": True,
         "debouches": [
             "Juriste d'affaires", "Responsable des ressources humaines (volet juridique)",
             "Assistant juridique", "Expert en contentieux d'affaires", "Chargé de conformité",
@@ -203,10 +231,28 @@ PARCOURS = {
             "gestion des litiges commerciaux", "droit foncier et minier",
         ],
     },
+    "TEE": {
+        "nom": "Tourisme et Environnement",
+        "mention": "Tourisme",
+        "bac_series": BAC_SERIES_REFERENCE,
+        "admission_toutes_series": True,
+        # La page officielle décrit l'objectif de la filière, mais ne publie
+        # pas de maquette détaillée ; les éléments ci-dessous restent donc
+        # volontairement génériques et ne sont pas des intitulés d'UE.
+        "debouches": [
+            "Professionnel du secteur du tourisme",
+            "Chargé de valorisation touristique et environnementale",
+        ],
+        "competences": [
+            "connaissance du patrimoine environnemental et culturel malgache",
+            "sensibilisation au tourisme durable",
+        ],
+    },
     "TEH": {
         "nom": "Tourisme, Environnement et Hôtellerie",
         "mention": "Tourisme",
-        "bac_series": ["A1", "A2", "L", "C", "D"],
+        "bac_series": BAC_SERIES_REFERENCE,
+        "admission_toutes_series": True,
         "debouches": [
             "Directeur d'établissement hôtelier", "Manager d'agence de voyage",
             "Responsable écotourisme", "Organisateur d'événements (MICE)",
@@ -237,5 +283,6 @@ PASSERELLES = {
     "EMP": ["CAA", "FIC"],
     "FIC": ["CAA"],
     "DTJA": [],
-    "TEH": [],
+    "TEE": ["TEH"],
+    "TEH": ["TEE"],
 }
