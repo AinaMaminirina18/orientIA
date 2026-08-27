@@ -1,0 +1,124 @@
+@prefix orient: <http://orientia.ispm.mg/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+orient:CompetenceDisciplinaire a owl:Class ;
+    rdfs:label "Compétence disciplinaire"@fr ;
+    rdfs:subClassOf orient:Competence .
+
+orient:CompetenceTransversale a owl:Class ;
+    rdfs:label "Compétence transversale"@fr ;
+    rdfs:subClassOf orient:Competence .
+
+orient:aCentreInteret a owl:ObjectProperty ;
+    rdfs:label "a pour centre d'intérêt"@fr ;
+    rdfs:domain orient:Etudiant ;
+    rdfs:range orient:CentreInteret .
+
+orient:aCode a owl:DatatypeProperty .
+
+orient:aConditionAdmission a owl:DatatypeProperty .
+
+orient:aDateConsultation a owl:DatatypeProperty .
+
+orient:aLibelle a owl:DatatypeProperty .
+
+orient:aNiveauMatiere a owl:DatatypeProperty .
+
+orient:aSerieBac a owl:ObjectProperty ;
+    rdfs:label "a pour série de bac"@fr ;
+    rdfs:domain orient:Etudiant ;
+    rdfs:range orient:Prerequis .
+
+orient:aStatutSource a owl:DatatypeProperty .
+
+orient:aUrl a owl:DatatypeProperty .
+
+orient:appartientAMention a owl:ObjectProperty ;
+    rdfs:label "appartient à la mention"@fr ;
+    rdfs:domain orient:Parcours ;
+    rdfs:range orient:Mention .
+
+orient:estDeveloppeePar owl:inverseOf orient:developpe .
+
+orient:estEnseigneePar owl:inverseOf orient:enseigne .
+
+orient:estOrienteVers a owl:ObjectProperty ;
+    rdfs:label "est orienté vers (recommandation)"@fr ;
+    rdfs:domain orient:Etudiant ;
+    rdfs:range orient:Parcours .
+
+orient:estRequisePour a owl:ObjectProperty ;
+    rdfs:label "est requise pour"@fr ;
+    rdfs:domain orient:Competence ;
+    rdfs:range orient:Metier .
+
+orient:necessite a owl:ObjectProperty ;
+    rdfs:label "nécessite"@fr ;
+    rdfs:domain orient:Parcours ;
+    rdfs:range orient:Prerequis .
+
+orient:possede a owl:ObjectProperty ;
+    rdfs:label "possède"@fr ;
+    rdfs:domain orient:Etudiant ;
+    rdfs:range orient:Competence .
+
+orient:prefere a owl:ObjectProperty ;
+    rdfs:label "préfère"@fr ;
+    rdfs:domain orient:Etudiant ;
+    rdfs:range orient:Matiere .
+
+orient:preparePar owl:inverseOf orient:prepareA .
+
+orient:provientDeSource a owl:ObjectProperty ;
+    rdfs:label "provient de la source"@fr ;
+    rdfs:domain orient:Parcours ;
+    rdfs:range orient:Source .
+
+orient:CentreInteret a owl:Class ;
+    rdfs:label "Centre d'intérêt"@fr .
+
+orient:Mention a owl:Class ;
+    rdfs:label "Mention"@fr ;
+    rdfs:subClassOf orient:Formation .
+
+orient:Source a owl:Class ;
+    rdfs:label "Source documentaire"@fr .
+
+orient:developpe a owl:ObjectProperty ;
+    rdfs:label "développe"@fr ;
+    rdfs:domain orient:Parcours ;
+    rdfs:range orient:Competence .
+
+orient:enseigne a owl:ObjectProperty ;
+    rdfs:label "enseigne"@fr ;
+    rdfs:domain orient:Parcours ;
+    rdfs:range orient:Matiere .
+
+orient:prepareA a owl:ObjectProperty ;
+    rdfs:label "prépare à"@fr ;
+    rdfs:domain orient:Parcours ;
+    rdfs:range orient:Metier .
+
+orient:Formation a owl:Class ;
+    rdfs:label "Formation"@fr .
+
+orient:Matiere a owl:Class ;
+    rdfs:label "Matière"@fr .
+
+orient:Metier a owl:Class ;
+    rdfs:label "Métier"@fr .
+
+orient:Prerequis a owl:Class ;
+    rdfs:label "Prérequis"@fr .
+
+orient:Competence a owl:Class ;
+    rdfs:label "Compétence"@fr .
+
+orient:Etudiant a owl:Class ;
+    rdfs:label "Étudiant"@fr .
+
+orient:Parcours a owl:Class ;
+    rdfs:label "Parcours"@fr ;
+    rdfs:subClassOf orient:Formation .
+

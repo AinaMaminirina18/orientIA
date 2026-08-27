@@ -1,0 +1,42 @@
+
+=== 1. Vérifier des prérequis ===
+(8 résultat(s), colonnes : etudiantLabel, parcoursLabel, serieBacLabel, statut)
+P00014 | Agriculture et Élevage | Baccalauréat série S | OK
+P00052 | Informatique de Gestion, Génie Logiciel et Intelligence Artificielle | Baccalauréat série C | OK
+P00055 | Informatique Multimédia, Technologie de l'Information et de la Communication et Intelligence Artificielle | Baccalauréat série C | OK
+P00062 | Pharmacologie et Industries Pharmaceutiques | Baccalauréat série C | OK
+P00066 | Commerce et Administration des Affaires | Baccalauréat série D | OK
+P00179 | Commerce et Administration des Affaires | Baccalauréat série A1 | OK
+P00192 | Commerce et Administration des Affaires | Baccalauréat série S | OK
+P00210 | Tourisme, Environnement et Hôtellerie | Baccalauréat série L | OK
+
+=== 2. Expliquer une recommandation ===
+(0 résultat(s), colonnes : matiereLabel, competenceLabel)
+
+=== 3. Parcourir formations -> métiers (métier = Data Scientist / Data Analyst) ===
+(1 résultat(s), colonnes : parcoursLabel, mentionLabel)
+Informatique, Statistique Appliquée et Intelligence Artificielle | Informatique et Télécommunications
+
+=== 4. Détecter des incohérences ===
+(0 résultat(s), colonnes : etudiantLabel, serieBacLabel, parcoursLabel)
+
+=== 5. Compléter le modèle statistique (top parcours par recoupement symbolique) ===
+(5 résultat(s), colonnes : parcoursLabel, nbMatieres, nbCompetences)
+Tourisme, Environnement et Hôtellerie | 2 | 0
+Économie et Management de Projet | 1 | 0
+Finances et Comptabilité | 1 | 0
+Commerce et Administration des Affaires | 1 | 0
+Électromécanique et Informatique Industrielle | 0 | 0
+
+=== 6. Raisonnement multiétape (Étudiant -> Matière -> Parcours -> Métier) ===
+(10 résultat(s), colonnes : matiereLabel, parcoursLabel, metierLabel)
+Anglais | Tourisme, Environnement et Hôtellerie | Chef de produit touristique / Concepteur de circuits
+Anglais | Tourisme, Environnement et Hôtellerie | Directeur ou gestionnaire d'établissement hôtelier / Restaurant
+Anglais | Tourisme, Environnement et Hôtellerie | Gestionnaire de sites protégés ou de parcs naturels
+Anglais | Tourisme, Environnement et Hôtellerie | Manager d'agence de voyage / Tour-opérateur
+Anglais | Tourisme, Environnement et Hôtellerie | Organisateur d'événements, congrès et séjours (MICE)
+Anglais | Tourisme, Environnement et Hôtellerie | Responsable écotourisme / Consultant en développement durable
+Francais | Tourisme, Environnement et Hôtellerie | Chef de produit touristique / Concepteur de circuits
+Francais | Tourisme, Environnement et Hôtellerie | Directeur ou gestionnaire d'établissement hôtelier / Restaurant
+Francais | Tourisme, Environnement et Hôtellerie | Gestionnaire de sites protégés ou de parcs naturels
+Francais | Tourisme, Environnement et Hôtellerie | Manager d'agence de voyage / Tour-opérateur
