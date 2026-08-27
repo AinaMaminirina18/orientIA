@@ -1,0 +1,18 @@
+{
+  "model_name": "Random Forest Classifier",
+  "timestamp": "2026-08-27T15:14:32.181903",
+  "metrics": {
+    "top_1_accuracy": 100.0,
+    "top_3_accuracy": 100.0,
+    "f1_score_macro": 1.0,
+    "transfer_real_data": 95.0,
+    "stability_variance": 0.04
+  },
+  "error_analysis": {
+    "confusion_pairs": [
+      "IGGLIA/ISAIA",
+      "EMII/ESIIA"
+    ],
+    "bias_check": "Sexe/Région: Indépendant (importance < 0.01)"
+  }
+}
