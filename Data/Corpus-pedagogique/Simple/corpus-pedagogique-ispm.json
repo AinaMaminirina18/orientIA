@@ -55,9 +55,33 @@
           "Gestion de projets informatiques et ingénierie logicielle",
           "Maîtrise de la programmation multi-langages (Java, C#, PHP, JavaScript)"
         ],
-        "prerequis": [
-          "Baccalauréat Scientifique (C, D, S) ou Technique"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, TGI, DAMB, EN, TPFM, TAMB, TMEL, TFFI, TMA, MEMA, TMF, TOM",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Ingénieur en génie logiciel / Architecte logiciel",
           "Développeur Full-Stack (Web & Mobile)",
@@ -94,99 +118,161 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Document de Présentation et Historique de l'ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
+            ],
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
+          },
+          {
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
+            ],
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
+          },
+          {
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
+            ],
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
             "statut": "institutionnel",
             "donnees_extraites": [
-              "Intitulé exact du parcours (IGGLIA)",
-              "Mention d'attachement (Informatique et Télécommunications)",
-              "Diplômes délivrés (Bac+3 / Bac+5)"
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
             ],
-            "limites_incertitudes": "La maquette détaillée des volumes horaires des UE n'est pas précisée dans la brochure."
-          },
-          {
-            "id": "source_2",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
-            "statut": "officiel",
-            "donnees_extraites": [
-              "Validation de l'habilitation MESUPRES et Fonction Publique",
-              "Matières et prérequis généraux",
-              "Débouchés professionnels spécifiques IGGLIA"
-            ],
-            "limites_incertitudes": "Aucune incertitude sur les diplômes et l'habilitation."
-          },
-          {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
-            "statut": "officiel",
-            "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
-            ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_diplomes"
             ],
             "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_2",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_2"
+              "source_admission"
+            ],
+            "attribution": "explicite"
+          },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
             ],
             "attribution": "explicite"
           },
           "debouches_professionnels": {
             "sources": [
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "relations_competences_metiers": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "passerelles_possibles": {
-            "sources": [
-              "source_1",
-              "source_2"
-            ],
-            "attribution": "generale_non_explicite"
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S"
+            ],
+            "technologiques": [
+              "TGI"
+            ],
+            "professionnelles_techniques": [
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       },
       {
@@ -254,10 +340,33 @@
           "Traitement du signal, automatique et robotique industrielle",
           "Intégration de solutions IoT et objets connectés"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, S, Technique recommandés",
-          "Une base en électronique, mathématique et électricité est aussi un bon atout."
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, TGI, DAMB, EN, TPFM, TAMB, TMEL, TFFI, TMA, MEMA, TMF, TOM",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Ingénieur système et réseau",
           "Spécialiste en maintenance de systèmes informatisés",
@@ -294,97 +403,161 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Présentation des filières ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Intitulé exact ESIIA",
-              "Compétences clés en réseaux, embarqué et télécoms"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Informations institutionnelles générales."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
           },
           {
-            "id": "source_2",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Débouchés en maintenance et télécommunications",
-              "Objectifs pédagogiques matériel/logiciel"
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
             ],
-            "limites_incertitudes": "Nécessite une mise à jour pour les nouveaux modules IA."
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
           },
           {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
             ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_2",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_admission"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
+          },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
           },
           "debouches_professionnels": {
             "sources": [
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "relations_competences_metiers": {
             "sources": [
-              "source_1"
-            ],
-            "attribution": "explicite"
-          },
-          "passerelles_possibles": {
-            "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S"
+            ],
+            "technologiques": [
+              "TGI"
+            ],
+            "professionnelles_techniques": [
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       },
       {
@@ -447,9 +620,33 @@
           "Gestion de projets de communication digitale et PAO",
           "Utilisation de l'IA appliquée aux contenus multimédias"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, S, A2"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, TGI, DAMB, EN, TPFM, TAMB, TMEL, TFFI, TMA, MEMA, TMF, TOM",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Développeur multimédia / Webmaster",
           "UX/UI Designer",
@@ -486,94 +683,161 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Présentation des filières ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Dénomination exacte du parcours IMTICIA",
-              "Habilitation Bac+3/Bac+5",
-              "Postes cibles en communication et web"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Certains détails sur les matières optionnelles nécessitent une confirmation."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
           },
           {
-            "id": "source_2",
-            "titre": "Brochure officielle ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Objectifs pédagogiques",
-              "Débouchés professionnels"
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
             ],
-            "limites_incertitudes": "Maquette à jour."
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
           },
           {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
             ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1"
+              "source_diplomes"
             ],
             "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
-          },
-          "debouches_professionnels": {
-            "sources": [
-              "source_1"
+              "source_admission"
             ],
             "attribution": "explicite"
           },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
           "relations_competences_metiers": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "passerelles_possibles": {
-            "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S"
+            ],
+            "technologiques": [
+              "TGI"
+            ],
+            "professionnelles_techniques": [
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       },
       {
@@ -629,9 +893,33 @@
           "Gestion, stockage et traitement de données massives (Big Data)",
           "Analyse de données économiques et financières pour la décision"
         ],
-        "prerequis": [
-          "Baccalauréat Scientifique (C, D, S)"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, TGI, DAMB, EN, TPFM, TAMB, TMEL, TFFI, TMA, MEMA, TMF, TOM",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Data Scientist / Data Analyst",
           "Ingénieur Machine Learning / Consultant IA",
@@ -668,99 +956,161 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Dénomination ISAIA",
-              "Spécialisation en Statistique et IA"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Maquette de cours détaillée à compléter avec le secrétariat académique."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
           },
           {
-            "id": "source_2",
-            "titre": "Brochure officielle ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Débouchés Big Data et Finance",
-              "Objectifs ISAIA"
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
             ],
-            "limites_incertitudes": "Le marché de la Data Science à Madagascar est en pleine expansion."
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
           },
           {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
             ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_2",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1",
-              "source_2"
-            ],
-            "attribution": "generale_non_explicite"
-          },
-          "debouches_professionnels": {
-            "sources": [
-              "source_2"
+              "source_admission"
             ],
             "attribution": "explicite"
           },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
           "relations_competences_metiers": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "passerelles_possibles": {
-            "sources": [
-              "source_1",
-              "source_2"
-            ],
-            "attribution": "generale_non_explicite"
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S"
+            ],
+            "technologiques": [
+              "TGI"
+            ],
+            "professionnelles_techniques": [
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       }
     ]
@@ -816,10 +1166,33 @@
           "Expertise en électronique de puissance et microcontrôleurs",
           "Conception assistée par ordinateur (AutoCAD) et dimensionnement mécanique"
         ],
-        "prerequis": [
-          "Baccalauréat C, D et Technique Scientifique récommandés",
-          "Une bonne base en "
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, TGI, DAMB, EN, TPFM, TAMB, TMEL, TFFI, TMA, MEMA, TMF, TOM",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Ingénieur en maintenance industrielle / Responsable Maintenance",
           "Ingénieur en électrotechnique / Électromécanicien",
@@ -855,95 +1228,161 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Référentiel des formations Génie Industriel ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Intitulé du parcours EMII",
-              "Débouchés en maintenance et robotique",
-              "Secteurs d'activité"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Aucune."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
           },
           {
-            "id": "source_2",
-            "titre": "Brochure officielle ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Objectifs pédagogiques",
-              "Compétences développées"
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
             ],
-            "limites_incertitudes": "Maquette à jour."
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
           },
           {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
             ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
-          },
-          "debouches_professionnels": {
-            "sources": [
-              "source_1"
+              "source_admission"
             ],
             "attribution": "explicite"
           },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
           "relations_competences_metiers": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "passerelles_possibles": {
-            "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S"
+            ],
+            "technologiques": [
+              "TGI"
+            ],
+            "professionnelles_techniques": [
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       },
       {
@@ -997,9 +1436,33 @@
           "Gestion des risques industriels, sécurité (HSE) et environnementaux",
           "Maîtrise du droit minier et de la réglementation sectorielle"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, S"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, TGI, DAMB, EN, TPFM, TAMB, TMEL, TFFI, TMA, MEMA, TMF, TOM",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Ingénieur minier (supervision d'extraction/traitement)",
           "Ingénieur pétrolier (prospection, forage, raffinage)",
@@ -1035,101 +1498,161 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Brochure officielle ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
+            ],
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
+          },
+          {
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
+            ],
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
+          },
+          {
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
+            ],
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
             "statut": "institutionnel",
             "donnees_extraites": [
-              "Intitulé du parcours ICMP",
-              "Débouchés miniers et pétroliers",
-              "Secteurs extractifs"
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
             ],
-            "limites_incertitudes": "Programme détaillé du Master 2 à confirmer."
-          },
-          {
-            "id": "source_2",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
-            "statut": "officiel",
-            "donnees_extraites": [
-              "Parcours ICMP",
-              "Métiers de l'extraction et transformation"
-            ],
-            "limites_incertitudes": "Lien fort avec les projets Ambatovy et QMM."
-          },
-          {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
-            "statut": "officiel",
-            "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
-            ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_2",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_admission"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
+          },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
           },
           "debouches_professionnels": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "relations_competences_metiers": {
             "sources": [
-              "source_2"
-            ],
-            "attribution": "explicite"
-          },
-          "passerelles_possibles": {
-            "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGI",
+            "DAMB",
+            "EN",
+            "TPFM",
+            "TAMB",
+            "TMEL",
+            "TFFI",
+            "TMA",
+            "MEMA",
+            "TMF",
+            "TOM"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S"
+            ],
+            "technologiques": [
+              "TGI"
+            ],
+            "professionnelles_techniques": [
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       }
     ]
@@ -1193,9 +1716,25 @@
           "Ingénierie des infrastructures routières, hydrauliques et portuaires",
           "Expertise en géotechnique et mécanique des sols"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, S, Technique recommandées"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, TGC, CCBTP, PCBTP",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGC",
+            "CCBTP",
+            "PCBTP"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Ingénieur en Bureau d'Études (Structure / Dimensionnement)",
           "Architecte junior / Collaborateur d'architecte",
@@ -1231,95 +1770,145 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Intitulé GCA",
-              "Niveaux de formation",
-              "Débouchés en architecture et construction"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Aucune."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
           },
           {
-            "id": "source_2",
-            "titre": "Brochure officielle ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Compétences BTP",
-              "Objectifs pédagogiques"
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
             ],
-            "limites_incertitudes": "Maquette à jour."
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
           },
           {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
             ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1"
+              "source_diplomes"
             ],
             "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
-          },
-          "debouches_professionnels": {
-            "sources": [
-              "source_1"
+              "source_admission"
             ],
             "attribution": "explicite"
           },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
           "relations_competences_metiers": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "passerelles_possibles": {
-            "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "TGC",
+            "CCBTP",
+            "PCBTP"
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S"
+            ],
+            "technologiques": [
+              "TGC"
+            ],
+            "professionnelles_techniques": [
+              "CCBTP",
+              "PCBTP"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       }
     ]
@@ -1391,9 +1980,25 @@
           "Recherche et Développement (R&D) de nouveaux produits alimentaires",
           "Gestion de la production industrielle et emballage alimentaire"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, S"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, A2, TAG, TEV",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "A2",
+            "TAG",
+            "TEV"
+          ],
+          "types_bac": [
+            "Général",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales",
+          "condition_particuliere": "A2 admise avec une note de mathématiques >= 12/20."
+        },
         "debouches_professionnels": [
           "Ingénieur de production en industrie agroalimentaire",
           "Responsable Qualité et Hygiène (HACCP)",
@@ -1429,99 +2034,143 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Brochure Biotechnologie ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
+            ],
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
+          },
+          {
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
+            ],
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
+          },
+          {
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
+            ],
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
             "statut": "institutionnel",
             "donnees_extraites": [
-              "Intitulé IAA",
-              "Débouchés agroalimentaires",
-              "Secteurs industriels"
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
             ],
-            "limites_incertitudes": "Nécessite la mise à jour des maquettes récentes."
-          },
-          {
-            "id": "source_2",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
-            "statut": "officiel",
-            "donnees_extraites": [
-              "Métiers de la transformation et qualité",
-              "Objectifs IAA"
-            ],
-            "limites_incertitudes": "Focus sur les normes internationales d'exportation."
-          },
-          {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
-            "statut": "officiel",
-            "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
-            ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_admission"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
+          },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
           },
           "debouches_professionnels": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "relations_competences_metiers": {
             "sources": [
-              "source_2"
-            ],
-            "attribution": "explicite"
-          },
-          "passerelles_possibles": {
-            "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "A2",
+            "TAG",
+            "TEV"
+          ],
+          "types_bac": [
+            "Général",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S",
+              "A2"
+            ],
+            "technologiques": [],
+            "professionnelles_techniques": [
+              "TAG",
+              "TEV"
+            ]
+          },
+          "condition_particuliere": "A2 admise avec une note de mathématiques >= 12/20.",
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       },
       {
@@ -1593,9 +2242,25 @@
           "Optimisation des rendements agricoles et gestion durable des sols",
           "Expertise en zootechnie, pisciculture et élevage spécialisé"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, S, A2 (selon profil)"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, A2, TAG, TEV",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "A2",
+            "TAG",
+            "TEV"
+          ],
+          "types_bac": [
+            "Général",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales",
+          "condition_particuliere": "A2 admise avec une note de mathématiques >= 12/20."
+        },
         "debouches_professionnels": [
           "Ingénieur Agronome / Gestionnaire d'exploitation agricole",
           "Conseiller agricole / Technicien de vulgarisation",
@@ -1631,93 +2296,143 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Intitulé AEE",
-              "Débouchés en agrobusiness et développement rural"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Aucune."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
           },
           {
-            "id": "source_2",
-            "titre": "Brochure officielle ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Objectifs agroécologie",
-              "Compétences élevage"
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
             ],
-            "limites_incertitudes": "Maquette à jour."
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
           },
           {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
             ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
-          },
-          "debouches_professionnels": {
-            "sources": [
-              "source_1"
+              "source_admission"
             ],
             "attribution": "explicite"
           },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
           "relations_competences_metiers": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "passerelles_possibles": {
-            "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "A2",
+            "TAG",
+            "TEV"
+          ],
+          "types_bac": [
+            "Général",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S",
+              "A2"
+            ],
+            "technologiques": [],
+            "professionnelles_techniques": [
+              "TAG",
+              "TEV"
+            ]
+          },
+          "condition_particuliere": "A2 admise avec une note de mathématiques >= 12/20.",
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       },
       {
@@ -1789,9 +2504,25 @@
           "Maîtrise de la pharmacologie moléculaire, cellulaire et des grandes fonctions",
           "Contrôle qualité, réglementation et pharmacotechnie"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, S"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : C, D, S, A2, TAG, TEV",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "A2",
+            "TAG",
+            "TEV"
+          ],
+          "types_bac": [
+            "Général",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales",
+          "condition_particuliere": "A2 admise avec une note de mathématiques >= 12/20."
+        },
         "debouches_professionnels": [
           "Responsable de production pharmaceutique / Ingénieur formulation",
           "Spécialiste en valorisation des ressources naturelles (Phyto-médicaments)",
@@ -1827,99 +2558,143 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Intitulé PIP",
-              "Valorisation de la biodiversité malgache",
-              "Postes en pharmacie"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Préciser la maquette détaillée avec les enseignants du département."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
           },
           {
-            "id": "source_2",
-            "titre": "Brochure officielle ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Métiers de l'industrie pharmaceutique",
-              "Spécificités PIP"
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
             ],
-            "limites_incertitudes": "Filière très sélective."
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
           },
           {
-            "id": "source_3",
-            "titre": "Groupe Facebook Promotion M2 2025-2026 (Communiqués et Emplois du temps)",
-            "origine_url": "https://www.facebook.com/groups/2eme.annee.ispm.2021.2022/?ref=share&mibextid=NSMWBT",
-            "date_consultation": "2026-08-26",
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Matières enseignées par promotion",
-              "Calendrier académique",
-              "Communiqués de la direction"
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
             ],
-            "limites_incertitudes": "Informations dynamiques sujettes aux changements de planning par promotion."
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_3"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_admission"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
+          },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
           },
           "debouches_professionnels": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "relations_competences_metiers": {
             "sources": [
-              "source_2"
-            ],
-            "attribution": "explicite"
-          },
-          "passerelles_possibles": {
-            "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "C",
+            "D",
+            "S",
+            "A2",
+            "TAG",
+            "TEV"
+          ],
+          "types_bac": [
+            "Général",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "C",
+              "D",
+              "S",
+              "A2"
+            ],
+            "technologiques": [],
+            "professionnelles_techniques": [
+              "TAG",
+              "TEV"
+            ]
+          },
+          "condition_particuliere": "A2 admise avec une note de mathématiques >= 12/20.",
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       }
     ]
@@ -1974,9 +2749,21 @@
           "Gestion administrative, organisationnelle et management d'entreprise",
           "Analyse des marchés et économie monétaire/internationale"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, A1, A2, G"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : Toutes séries de baccalauréat, Y compris les séries techniques ; vérification administrative sur dossier.",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Responsable Marketing / Chef de produit commercial",
           "Gestionnaire administratif et financier",
@@ -2012,67 +2799,162 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Présentation des parcours Droit et Affaires",
-            "origine_url": "https://ispm-edu.com/",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Intitulé CAA",
-              "Débouchés en marketing et administration"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Aucune."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
+          },
+          {
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
+            ],
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
+          },
+          {
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
+            ],
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
-          },
-          "debouches_professionnels": {
-            "sources": [
-              "source_1"
+              "source_admission"
             ],
             "attribution": "explicite"
           },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
           "relations_competences_metiers": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "passerelles_possibles": {
-            "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "A1",
+              "A2",
+              "C",
+              "D",
+              "L",
+              "OSE",
+              "S"
+            ],
+            "technologiques": [
+              "TGC",
+              "TGI",
+              "TTER"
+            ],
+            "professionnelles_techniques": [
+              "CCBTP",
+              "PCBTP",
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM",
+              "TAG",
+              "TEV",
+              "ACTC",
+              "CG",
+              "SS"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       },
       {
@@ -2122,9 +3004,21 @@
           "Management d'équipe and planification stratégique",
           "Analyse socio-économique et management de projet de développement"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, A1, A2, G"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : Toutes séries de baccalauréat, Y compris les séries techniques ; vérification administrative sur dossier.",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Chef de projet (BTP, services, industrie, public/privé)",
           "Analyste économique / Chargé d'études économiques",
@@ -2160,84 +3054,162 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Guide des étudiants ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Intitulé EMP",
-              "Débouchés en analyse économique et projets"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Vérifier la liste exacte des certifications proposées en cours de Cursus."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
           },
           {
-            "id": "source_2",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Métiers du management de projet",
-              "Compétences économiques"
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
             ],
-            "limites_incertitudes": "Forte orientation vers les ONG."
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
+          },
+          {
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
+            ],
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_admission"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
+          },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
           },
           "debouches_professionnels": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "relations_competences_metiers": {
             "sources": [
-              "source_2"
-            ],
-            "attribution": "explicite"
-          },
-          "passerelles_possibles": {
-            "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "A1",
+              "A2",
+              "C",
+              "D",
+              "L",
+              "OSE",
+              "S"
+            ],
+            "technologiques": [
+              "TGC",
+              "TGI",
+              "TTER"
+            ],
+            "professionnelles_techniques": [
+              "CCBTP",
+              "PCBTP",
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM",
+              "TAG",
+              "TEV",
+              "ACTC",
+              "CG",
+              "SS"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       },
       {
@@ -2287,9 +3259,21 @@
           "Gestion de trésorerie, ingénierie financière et technique bancaire",
           "Analyse des états financiers et aide à la décision d'investissement"
         ],
-        "prerequis": [
-          "Baccalauréat C, D, G"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : Toutes séries de baccalauréat, Y compris les séries techniques ; vérification administrative sur dossier.",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Comptable / Chef Comptable / Expert-comptable (after stage)",
           "Directeur Administratif et Financier (DAF)",
@@ -2325,67 +3309,162 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Fiche de filière FIC ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Intitulé FIC",
-              "Débouchés en audit et direction financière"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Aucune."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
+          },
+          {
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
+            ],
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
+          },
+          {
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
+            ],
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
-          },
-          "debouches_professionnels": {
-            "sources": [
-              "source_1"
+              "source_admission"
             ],
             "attribution": "explicite"
           },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
           "relations_competences_metiers": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "passerelles_possibles": {
-            "sources": [
-              "source_1"
-            ],
-            "attribution": "generale_non_explicite"
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "A1",
+              "A2",
+              "C",
+              "D",
+              "L",
+              "OSE",
+              "S"
+            ],
+            "technologiques": [
+              "TGC",
+              "TGI",
+              "TTER"
+            ],
+            "professionnelles_techniques": [
+              "CCBTP",
+              "PCBTP",
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM",
+              "TAG",
+              "TEV",
+              "ACTC",
+              "CG",
+              "SS"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       },
       {
@@ -2425,9 +3504,21 @@
           "Expertise en droit foncier, minier, de la communication et des douanes",
           "Veille réglementaire et sécurisation contractuelle des affaires"
         ],
-        "prerequis": [
-          "Baccalauréat A1,A2 et L recommandés, mais accessible aussi pour les bacheliers C, D, S et OSE"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : Toutes séries de baccalauréat, Y compris les séries techniques ; vérification administrative sur dossier.",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Conseiller juridique en entreprise / Juriste d'affaires",
           "Responsable des ressources humaines (Volet juridique/Droit du travail)",
@@ -2463,85 +3554,162 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Site officiel de l'ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Intitulé DTJA",
-              "Débouchés en conseil juridique et contentieux"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Consulter le département Droit pour la maquette exacte de M2."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
           },
           {
-            "id": "source_2",
-            "titre": "Brochure officielle ISPM",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Filière DTJA",
-              "Métiers du droit des affaires à Madagascar"
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
             ],
-            "limites_incertitudes": "Particularité logicielle appliquée au droit à l'ISPM."
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
+          },
+          {
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
+            ],
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_admission"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
+          },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
           },
           "debouches_professionnels": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "relations_competences_metiers": {
             "sources": [
-              "source_2"
-            ],
-            "attribution": "explicite"
-          },
-          "passerelles_possibles": {
-            "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "A1",
+              "A2",
+              "C",
+              "D",
+              "L",
+              "OSE",
+              "S"
+            ],
+            "technologiques": [
+              "TGC",
+              "TGI",
+              "TTER"
+            ],
+            "professionnelles_techniques": [
+              "CCBTP",
+              "PCBTP",
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM",
+              "TAG",
+              "TEV",
+              "ACTC",
+              "CG",
+              "SS"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       }
     ]
@@ -2549,6 +3717,198 @@
   {
     "mention": "Tourisme",
     "filières_parcours": [
+      {
+        "code_parcours": "TEE",
+        "nom_parcours": "Tourisme et Environnement",
+        "niveaux_diplomes": [
+          "Licence (Bac+3) — trois années de formation suivies d'un stage de trois mois et d'une soutenance.",
+          "Master/Ingéniorat (Bac+5) — deux années d'approfondissement suivies d'un stage de recherche et d'une soutenance."
+        ],
+        "matieres_principales": [],
+        "competences_developpees": [
+          "Connaissance du patrimoine environnemental et culturel malgache",
+          "Sensibilisation au tourisme durable"
+        ],
+        "prerequis": {
+          "texte": "Séries admises : Toutes séries de baccalauréat, Y compris les séries techniques ; vérification administrative sur dossier.",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [],
+          "series_par_voie": {
+            "generales": [
+              "A1",
+              "A2",
+              "C",
+              "D",
+              "L",
+              "OSE",
+              "S"
+            ],
+            "technologiques": [
+              "TGC",
+              "TGI",
+              "TTER"
+            ],
+            "professionnelles_techniques": [
+              "CCBTP",
+              "PCBTP",
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM",
+              "TAG",
+              "TEV",
+              "ACTC",
+              "CG",
+              "SS"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
+        "debouches_professionnels": [
+          "Professionnel du secteur du tourisme"
+        ],
+        "relations_competences_metiers": [],
+        "passerelles_possibles": [],
+        "sources": [
+          {
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
+            ],
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
+          },
+          {
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
+            ],
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
+          },
+          {
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
+            ],
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
+          }
+        ],
+        "references_par_champ": {
+          "nom_parcours": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "explicite"
+          },
+          "niveaux_diplomes": {
+            "sources": [
+              "source_diplomes"
+            ],
+            "attribution": "explicite"
+          },
+          "matieres_principales": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "partielle"
+          },
+          "competences_developpees": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "prerequis": {
+            "sources": [
+              "source_admission"
+            ],
+            "attribution": "explicite"
+          },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
+          },
+          "debouches_professionnels": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "relations_competences_metiers": {
+            "sources": [
+              "source_offre"
+            ],
+            "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [],
+            "attribution": "non_verifie"
+          }
+        }
+      },
       {
         "code_parcours": "TEH",
         "nom_parcours": "Tourisme, Environnement et Hôtellerie",
@@ -2587,10 +3947,25 @@
           "Gestion environnementale des sites touristiques et éco-marine",
           "Communication touristique et pratique des langues étrangères (Anglais, Allemand, Français)"
         ],
-        "prerequis": [
-          "Baccalauréat A1, A2, L, C, D",
-          "Une bonne base en langues (Français, Anglais) est recommandée"
-        ],
+        "prerequis": {
+          "texte": "Séries admises : Toutes séries de baccalauréat, Y compris les séries techniques ; vérification administrative sur dossier.",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [
+            "Anglais",
+            "Allemand",
+            "Français"
+          ],
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
+        },
         "debouches_professionnels": [
           "Directeur ou gestionnaire d'établissement hôtelier / Restaurant",
           "Manager d'agence de voyage / Tour-opérateur",
@@ -2626,86 +4001,166 @@
         ],
         "sources": [
           {
-            "id": "source_1",
-            "titre": "Présentation officielle de la Mention Tourisme",
-            "origine_url": "Brochure officielle ISPM",
-            "date_consultation": "2026-08-26",
-            "statut": "institutionnel",
-            "donnees_extraites": [
-              "Intitulé TEH",
-              "Débouchés en hôtellerie et écotourisme"
-            ],
-            "limites_incertitudes": "Informations de la brochure de présentation globale."
-          },
-          {
-            "id": "source_2",
-            "titre": "Mention Tourisme - ISPM",
-            "origine_url": "https://ispm-edu.com",
-            "date_consultation": "2026-08-26",
+            "id": "source_offre",
+            "titre": "ISPM — Les différents départements et filières",
+            "origine_url": "https://ispm-edu.com/filieres.php",
+            "date_consultation": "2026-08-27",
             "statut": "officiel",
             "donnees_extraites": [
-              "Parcours TEH",
-              "Métiers du tourisme durable"
+              "Intitulé et code du parcours",
+              "Présentation générale de la filière"
             ],
-            "limites_incertitudes": "Secteur très dépendant de la conjoncture économique."
+            "limites_incertitudes": "La page ne publie pas de maquette détaillée par UE ni de volumes horaires."
+          },
+          {
+            "id": "source_admission",
+            "titre": "ISPM — Conditions d'accès en première année",
+            "origine_url": "https://ispm-edu.com/inscription.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Séries de baccalauréat admises",
+              "Spécialités techniques admises",
+              "Condition A2 en biotechnologie/agronomie"
+            ],
+            "limites_incertitudes": "Les conditions sont présentées par département : les règles sont appliquées à tous les parcours du département."
+          },
+          {
+            "id": "source_diplomes",
+            "titre": "ISPM — Présentation générale",
+            "origine_url": "https://ispm-edu.com/presentation.php",
+            "date_consultation": "2026-08-27",
+            "statut": "officiel",
+            "donnees_extraites": [
+              "Licence Bac+3",
+              "Master/Ingéniorat Bac+5",
+              "Stages et soutenances"
+            ],
+            "limites_incertitudes": "La présentation est institutionnelle ; elle ne remplace pas une décision administrative individuelle."
+          },
+          {
+            "id": "source_series_nationales",
+            "titre": "Wiki iRENALA — Série Bacc",
+            "origine_url": "https://wiki.irenala.edu.mg/wiki/S%C3%A9rie_Bacc",
+            "date_consultation": "2026-08-27",
+            "statut": "institutionnel",
+            "donnees_extraites": [
+              "Codes des séries générales",
+              "Baccalauréats technologiques",
+              "Spécialités du baccalauréat professionnel et technique"
+            ],
+            "limites_incertitudes": "Le référentiel de codes est institutionnel mais sa date de dernière révision doit être confirmée par l'administration avant une décision d'admission."
           }
         ],
         "references_par_champ": {
           "nom_parcours": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "explicite"
           },
           "niveaux_diplomes": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_diplomes"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
           },
           "matieres_principales": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "partielle"
           },
           "competences_developpees": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
           },
           "prerequis": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_admission"
             ],
-            "attribution": "generale_non_explicite"
+            "attribution": "explicite"
+          },
+          "admission_conditions": {
+            "sources": [
+              "source_admission",
+              "source_series_nationales"
+            ],
+            "attribution": "explicite"
           },
           "debouches_professionnels": {
             "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
-            "attribution": "explicite"
+            "attribution": "generale_non_explicite"
           },
           "relations_competences_metiers": {
             "sources": [
-              "source_2"
-            ],
-            "attribution": "explicite"
-          },
-          "passerelles_possibles": {
-            "sources": [
-              "source_1",
-              "source_2"
+              "source_offre"
             ],
             "attribution": "generale_non_explicite"
+          },
+          "passerelles_possibles": {
+            "sources": [],
+            "attribution": "non_verifie"
           }
+        },
+        "admission_conditions": {
+          "niveau": "Première année",
+          "series_admises": [
+            "Toutes séries de baccalauréat",
+            "Y compris les séries techniques ; vérification administrative sur dossier."
+          ],
+          "types_bac": [
+            "Général",
+            "Technologique",
+            "Professionnel et technique"
+          ],
+          "langues": [
+            "Anglais",
+            "Allemand",
+            "Français"
+          ],
+          "series_par_voie": {
+            "generales": [
+              "A1",
+              "A2",
+              "C",
+              "D",
+              "L",
+              "OSE",
+              "S"
+            ],
+            "technologiques": [
+              "TGC",
+              "TGI",
+              "TTER"
+            ],
+            "professionnelles_techniques": [
+              "CCBTP",
+              "PCBTP",
+              "DAMB",
+              "EN",
+              "TPFM",
+              "TAMB",
+              "TMEL",
+              "TFFI",
+              "TMA",
+              "MEMA",
+              "TMF",
+              "TOM",
+              "TAG",
+              "TEV",
+              "ACTC",
+              "CG",
+              "SS"
+            ]
+          },
+          "condition_particuliere": null,
+          "source": "source_admission",
+          "source_referentiel_series": "source_series_nationales"
         }
       }
     ]

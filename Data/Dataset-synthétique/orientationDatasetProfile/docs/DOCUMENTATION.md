@@ -2,13 +2,15 @@
 
 Ce jeu de données a été **entièrement généré de façon synthétique** afin d'entraîner
 un modèle d'aide à l'orientation reliant un profil de candidat (bachelier) à un
-parcours parmi les 15 parcours de l'ISPM décrits dans le document de référence
-fourni (brochures officielles, site ispm-edu.com, groupe Facebook des promotions).
+parcours parmi les 16 parcours de l'ISPM publiés par l'établissement.
 
 Aucune donnée réelle d'élève n'a été utilisée. Le document source a servi
 uniquement de **base de connaissance** pour dériver, pour chaque parcours :
 la mention de rattachement, les débouchés professionnels, les compétences
-développées et les séries de baccalauréat conseillées.
+développées et les conditions d'admission publiées. Les sources primaires sont
+précisées dans le corpus pédagogique :
+`https://ispm-edu.com/inscription.php`, `https://ispm-edu.com/filieres.php`
+et `https://ispm-edu.com/presentation.php` (consultées le 2026-08-27).
 
 ## Fichiers livrés
 
@@ -28,7 +30,7 @@ graine aléatoire fixe (`seed = 42`) pour la reproductibilité.
 
 Pour chaque profil :
 
-1. **Tirage du parcours cible** (`parcours_recommande`) parmi les 15 codes,
+1. **Tirage du parcours cible** (`parcours_recommande`) parmi les 16 codes,
    pondéré par une popularité relative supposée (voir *Hypothèses*).
 2. **Tirage d'un statut « ambigu »** (~20 % des profils) : le profil est alors
    construit à cheval entre le parcours cible et un parcours proche (passerelle
@@ -42,12 +44,16 @@ Pour chaque profil :
    gaussien additionnel. ~15 % des profils sont générés « généralistes »
    (sans rehaussement) pour représenter des candidats sans dominante nette.
    Toutes les notes sont bornées à [0, 20].
-4. **Série de baccalauréat** : tirée dans la liste des séries associées au
-   parcours cible dans le document source (L, A1, A2, C, D, Technique, S, OSE),
-   avec ~12 % de tirage **hors famille** (candidats en réorientation ou cas
-   limites), pour éviter que le modèle n'apprenne une simple table de
-   correspondance bac → parcours. La série 'G' a été exclue conformément aux
-   normes nationales en vigueur.
+4. **Série de baccalauréat** : tirée parmi les séries explicitement admises
+   par l'ISPM. Les données conservent le code réel de la série (`serie_bac`) et
+   sa voie (`voie_bac`) : général (A1, A2, C, D, L, OSE, S), technologique
+   (TGC, TGI, TTER) ou professionnel et technique (dont CCBTP, PCBTP, EN,
+   TAG, TEV). Les familles demandées par l'ISPM sont appliquées ensuite :
+   industriel pour informatique/génie industriel, génie civil/BTP pour GCA,
+   agricole pour biotechnologie/agronomie. Pour IAA, AEE et
+   PIP, une série A2 n'est générée que si la note de mathématiques atteint
+   12/20, conformément à la condition publiée. Aucun profil d'entraînement
+   n'est étiqueté vers un parcours auquel il n'est pas administrativement admis.
 5. **Matières préférées** : les 3 à 5 matières aux meilleures notes du profil,
    avec 25 % de chance qu'une matière soit remplacée aléatoirement (préférence
    subjective imparfaitement corrélée aux résultats scolaires — réalisme).
@@ -92,8 +98,8 @@ avant tout usage en production :
   volontaire (contrôle anti-biais) — dans la réalité, certaines disparités
   démographiques peuvent exister par filière, mais les reproduire dans un
   jeu d'entraînement risquerait de les enraciner dans le modèle.
-- **Taux cibles de bruit** : 20 % de profils ambigus, 12 % de bac « hors
-  famille », 15 % de profils « généralistes » — valeurs choisies pour obtenir
+- **Taux cibles de bruit** : 20 % de profils ambigus, 15 % de profils
+  « généralistes » — valeurs choisies pour obtenir
   un jeu ni trivialement séparable, ni ingérable, mais **arbitraires**.
 - **Grades générés par loi normale indépendante par matière** : simplification
   qui ignore les corrélations réelles entre matières (ex. un bon niveau en
@@ -153,8 +159,9 @@ suivants (résultats complets dans `dataset_validation_report.txt`) :
 8. **Contrôle anti-biais** : vérification que la proportion homme/femme par
    parcours reste proche de la parité (aucune corrélation injectée entre le
    sexe et le parcours recommandé).
-9. Mesure du taux effectif de séries de bac « hors famille » par rapport au
-   parcours recommandé (réorientation / cas limites).
+9. Vérification de l'admissibilité de chaque profil selon la série déclarée,
+   la voie technique concernée et, pour A2 en biotechnologie/agronomie, la
+   note minimale de mathématiques.
 10. Mesure (proxy statistique, écart-type des notes) du taux de profils au
     profil scolaire globalement plat, à titre indicatif.
 
@@ -172,7 +179,9 @@ taux de bruit effectifs, etc.) est disponible dans
 | `sexe` | string | F/M — tiré indépendamment du parcours (contrôle anti-biais) |
 | `region` | string | Région de Madagascar simulée — indépendante du parcours |
 | `serie_bac` | string | Série de baccalauréat simulée |
-| `moyenne_generale` | float | Moyenne des 11 notes de lycée |
+| `voie_bac` | string | Voie nationale : Général, Technologique ou Professionnel et technique |
+| `domaine_technique_bac` | string | Domaine de la série technique, vide pour la voie générale |
+| `moyenne_generale` | float | Moyenne des 12 notes de lycée |
 | `note_<matiere>` | float | Note simulée /20 pour chaque matière de lycée |
 | `matieres_preferees` | liste | Matières déclarées préférées par le candidat |
 | `competences_declarees` | liste | Compétences (domaine + transversales) déclarées |

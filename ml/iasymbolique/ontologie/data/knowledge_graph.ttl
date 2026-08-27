@@ -377,714 +377,692 @@ orient:Competence_Transformation_agroalimentaire a orient:CompetenceDisciplinair
     orient:aLibelle "Transformation agroalimentaire" ;
     orient:estRequisePour orient:Metier_Ingenieur_de_production .
 
-orient:Etudiant_P00014 a orient:Etudiant ;
-    rdfs:label "P00014"@fr ;
-    orient:aCentreInteret orient:Interet_Bricolage,
-        orient:Interet_Industrie ;
-    orient:aLibelle "P00014" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Electromecanique_et_Informatique_Industrielle ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_curiosite,
-        orient:Competence_perseverance,
-        orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Francais,
-        orient:Matiere_Malgache,
-        orient:Matiere_Mathematiques,
-        orient:Matiere_Physique_Chimie .
-
-orient:Etudiant_P00052 a orient:Etudiant ;
-    rdfs:label "P00052"@fr ;
-    orient:aCentreInteret orient:Interet_Debat_et_droit,
-        orient:Interet_Gestion ;
-    orient:aLibelle "P00052" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
-    orient:estOrienteVers orient:Parcours_Finances_et_Comptabilite ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_esprit_d_equipe ;
-    orient:prefere orient:Matiere_Economie,
-        orient:Matiere_Mathematiques,
-        orient:Matiere_Physique_Chimie,
-        orient:Matiere_SVT .
-
-orient:Etudiant_P00055 a orient:Etudiant ;
-    rdfs:label "P00055"@fr ;
-    orient:aCentreInteret orient:Interet_Debat_et_droit,
-        orient:Interet_Gestion ;
-    orient:aLibelle "P00055" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Finances_et_Comptabilite ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_autonomie,
-        orient:Competence_esprit_d_analyse,
-        orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_EPS,
-        orient:Matiere_Economie,
-        orient:Matiere_Francais,
-        orient:Matiere_Malgache,
-        orient:Matiere_Mathematiques .
-
-orient:Etudiant_P00062 a orient:Etudiant ;
-    rdfs:label "P00062"@fr ;
-    orient:aCentreInteret orient:Interet_Sante ;
-    orient:aLibelle "P00062" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Agriculture_et_Elevage ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_esprit_d_analyse,
-        orient:Competence_sens_de_l_observation ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_Francais,
-        orient:Matiere_Histoire_Geo .
-
-orient:Etudiant_P00066 a orient:Etudiant ;
-    rdfs:label "P00066"@fr ;
-    orient:aCentreInteret orient:Interet_Technologie ;
-    orient:aLibelle "P00066" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_Technique ;
-    orient:estOrienteVers orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Communication_et_I ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_autonomie,
-        orient:Competence_curiosite,
-        orient:Competence_esprit_d_analyse ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_Arts,
-        orient:Matiere_Informatique,
-        orient:Matiere_Malgache,
-        orient:Matiere_Philosophie .
-
-orient:Etudiant_P00179 a orient:Etudiant ;
-    rdfs:label "P00179"@fr ;
-    orient:aCentreInteret orient:Interet_Musique,
-        orient:Interet_Technologie ;
-    orient:aLibelle "P00179" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Communication_et_I ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_creativite ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_Francais,
-        orient:Matiere_Malgache,
-        orient:Matiere_SVT .
-
-orient:Etudiant_P00192 a orient:Etudiant ;
-    rdfs:label "P00192"@fr ;
-    orient:aCentreInteret orient:Interet_Cultures_du_monde,
-        orient:Interet_Gastronomie,
-        orient:Interet_Sport ;
-    orient:aLibelle "P00192" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A2 ;
-    orient:estOrienteVers orient:Parcours_Tourisme_Environnement_et_Hotellerie ;
-    orient:possede orient:Competence_curiosite,
-        orient:Competence_esprit_d_analyse,
-        orient:Competence_sens_de_l_observation ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_Arts,
-        orient:Matiere_Philosophie .
-
-orient:Etudiant_P00210 a orient:Etudiant ;
-    rdfs:label "P00210"@fr ;
+orient:Etudiant_P00003 a orient:Etudiant ;
+    rdfs:label "P00003"@fr ;
     orient:aCentreInteret orient:Interet_Entrepreneuriat,
-        orient:Interet_Gestion ;
-    orient:aLibelle "P00210" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A2 ;
-    orient:estOrienteVers orient:Parcours_Economie_et_Management_de_Projet ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_esprit_d_analyse,
-        orient:Competence_perseverance,
-        orient:Competence_rigueur ;
-    orient:prefere orient:Matiere_Arts,
-        orient:Matiere_Malgache,
-        orient:Matiere_Physique_Chimie .
-
-orient:Etudiant_P00229 a orient:Etudiant ;
-    rdfs:label "P00229"@fr ;
-    orient:aCentreInteret orient:Interet_Actualite_et_politique,
-        orient:Interet_Reseaux_sociaux ;
-    orient:aLibelle "P00229" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Droit_et_Techniques_Juridiques_des_Affaires ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_creativite,
-        orient:Competence_perseverance,
-        orient:Competence_rigueur ;
-    orient:prefere orient:Matiere_EPS,
-        orient:Matiere_Economie,
-        orient:Matiere_Francais,
-        orient:Matiere_Histoire_Geo,
-        orient:Matiere_Physique_Chimie .
-
-orient:Etudiant_P00286 a orient:Etudiant ;
-    rdfs:label "P00286"@fr ;
-    orient:aCentreInteret orient:Interet_Economie,
-        orient:Interet_Entrepreneuriat,
+        orient:Interet_Gestion,
         orient:Interet_Musique ;
-    orient:aLibelle "P00286" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Finances_et_Comptabilite ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_autonomie,
-        orient:Competence_rigueur,
-        orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Economie,
-        orient:Matiere_Francais,
-        orient:Matiere_Informatique,
-        orient:Matiere_Philosophie,
-        orient:Matiere_SVT .
-
-orient:Etudiant_P00327 a orient:Etudiant ;
-    rdfs:label "P00327"@fr ;
-    orient:aCentreInteret orient:Interet_Debat_et_droit,
-        orient:Interet_Reseaux_sociaux ;
-    orient:aLibelle "P00327" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
+    orient:aLibelle "P00003" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TMA ;
     orient:estOrienteVers orient:Parcours_Economie_et_Management_de_Projet ;
-    orient:possede orient:Competence_perseverance,
-        orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Economie,
-        orient:Matiere_Histoire_Geo,
-        orient:Matiere_Malgache,
-        orient:Matiere_Philosophie .
-
-orient:Etudiant_P00408 a orient:Etudiant ;
-    rdfs:label "P00408"@fr ;
-    orient:aCentreInteret orient:Interet_Programmation,
-        orient:Interet_Technologie ;
-    orient:aLibelle "P00408" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_S ;
-    orient:estOrienteVers orient:Parcours_Informatique_Statistique_Appliquee_et_Intelligence_Artificielle ;
     orient:possede orient:Competence_esprit_d_analyse,
         orient:Competence_esprit_d_equipe,
-        orient:Competence_rigueur,
-        orient:Competence_sens_de_l_observation ;
-    orient:prefere orient:Matiere_EPS,
+        orient:Competence_rigueur ;
+    orient:prefere orient:Matiere_Arts,
         orient:Matiere_Economie,
         orient:Matiere_Histoire_Geo,
-        orient:Matiere_Philosophie .
+        orient:Matiere_Mathematiques,
+        orient:Matiere_SVT .
 
-orient:Etudiant_P00448 a orient:Etudiant ;
-    rdfs:label "P00448"@fr ;
-    orient:aCentreInteret orient:Interet_Actualite_et_politique,
-        orient:Interet_Gestion ;
-    orient:aLibelle "P00448" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A1 ;
-    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
-    orient:possede orient:Competence_curiosite,
-        orient:Competence_esprit_d_equipe,
-        orient:Competence_rigueur ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_EPS,
+orient:Etudiant_P00047 a orient:Etudiant ;
+    rdfs:label "P00047"@fr ;
+    orient:aCentreInteret orient:Interet_Economie ;
+    orient:aLibelle "P00047" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TTER ;
+    orient:estOrienteVers orient:Parcours_Finances_et_Comptabilite ;
+    orient:possede orient:Competence_creativite,
+        orient:Competence_esprit_d_equipe ;
+    orient:prefere orient:Matiere_Economie,
         orient:Matiere_Francais,
-        orient:Matiere_Malgache,
-        orient:Matiere_Mathematiques .
+        orient:Matiere_Mathematiques,
+        orient:Matiere_SVT .
 
-orient:Etudiant_P00452 a orient:Etudiant ;
-    rdfs:label "P00452"@fr ;
-    orient:aCentreInteret orient:Interet_Debat_et_droit ;
-    orient:aLibelle "P00452" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A2 ;
-    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_autonomie,
+orient:Etudiant_P00156 a orient:Etudiant ;
+    rdfs:label "P00156"@fr ;
+    orient:aCentreInteret orient:Interet_Animaux,
+        orient:Interet_Nature ;
+    orient:aLibelle "P00156" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TAG ;
+    orient:estOrienteVers orient:Parcours_Industries_Agroalimentaires ;
+    orient:possede orient:Competence_autonomie,
+        orient:Competence_creativite,
         orient:Competence_curiosite,
+        orient:Competence_esprit_d_equipe ;
+    orient:prefere orient:Matiere_Informatique,
+        orient:Matiere_Mathematiques,
+        orient:Matiere_Physique_Chimie .
+
+orient:Etudiant_P00199 a orient:Etudiant ;
+    rdfs:label "P00199"@fr ;
+    orient:aCentreInteret orient:Interet_Sante ;
+    orient:aLibelle "P00199" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
+    orient:estOrienteVers orient:Parcours_Pharmacologie_et_Industries_Pharmaceutiques ;
+    orient:possede orient:Competence_autonomie,
+        orient:Competence_creativite,
+        orient:Competence_rigueur,
         orient:Competence_sens_de_l_observation ;
     orient:prefere orient:Matiere_Anglais,
         orient:Matiere_Arts,
-        orient:Matiere_Francais,
-        orient:Matiere_Informatique,
         orient:Matiere_SVT .
 
-orient:Etudiant_P00458 a orient:Etudiant ;
-    rdfs:label "P00458"@fr ;
+orient:Etudiant_P00218 a orient:Etudiant ;
+    rdfs:label "P00218"@fr ;
     orient:aCentreInteret orient:Interet_Economie,
-        orient:Interet_Gestion,
+        orient:Interet_Entrepreneuriat,
         orient:Interet_Lecture ;
-    orient:aLibelle "P00458" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
-    orient:estOrienteVers orient:Parcours_Finances_et_Comptabilite ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_esprit_d_analyse,
+    orient:aLibelle "P00218" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_S ;
+    orient:estOrienteVers orient:Parcours_Economie_et_Management_de_Projet ;
+    orient:possede orient:Competence_curiosite,
         orient:Competence_esprit_d_equipe,
         orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Anglais,
+    orient:prefere orient:Matiere_Economie,
+        orient:Matiere_Malgache,
+        orient:Matiere_Mathematiques .
+
+orient:Etudiant_P00278 a orient:Etudiant ;
+    rdfs:label "P00278"@fr ;
+    orient:aCentreInteret orient:Interet_Jeux_video,
+        orient:Interet_Robotique ;
+    orient:aLibelle "P00278" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TGI ;
+    orient:estOrienteVers orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Communication_et_I ;
+    orient:possede orient:Competence_autonomie,
+        orient:Competence_curiosite,
+        orient:Competence_perseverance ;
+    orient:prefere orient:Matiere_Arts,
         orient:Matiere_Mathematiques,
         orient:Matiere_Philosophie,
-        orient:Matiere_SVT .
+        orient:Matiere_Physique_Chimie .
 
-orient:Etudiant_P00477 a orient:Etudiant ;
-    rdfs:label "P00477"@fr ;
-    orient:aCentreInteret orient:Interet_Entrepreneuriat,
-        orient:Interet_Gestion,
-        orient:Interet_Lecture ;
-    orient:aLibelle "P00477" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
+orient:Etudiant_P00305 a orient:Etudiant ;
+    rdfs:label "P00305"@fr ;
+    orient:aCentreInteret orient:Interet_Actualite_et_politique,
+        orient:Interet_Sport ;
+    orient:aLibelle "P00305" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TOM ;
     orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_rigueur,
-        orient:Competence_sens_de_l_observation ;
-    orient:prefere orient:Matiere_Economie,
+    orient:possede orient:Competence_creativite,
+        orient:Competence_perseverance,
+        orient:Competence_sens_de_l_organisation ;
+    orient:prefere orient:Matiere_EPS,
+        orient:Matiere_Economie,
         orient:Matiere_Francais,
         orient:Matiere_Informatique .
 
-orient:Etudiant_P00502 a orient:Etudiant ;
-    rdfs:label "P00502"@fr ;
-    orient:aCentreInteret orient:Interet_Reseaux_sociaux,
-        orient:Interet_Robotique ;
-    orient:aLibelle "P00502" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_S ;
-    orient:estOrienteVers orient:Parcours_Informatique_Statistique_Appliquee_et_Intelligence_Artificielle ;
-    orient:possede orient:Competence_esprit_d_analyse,
-        orient:Competence_rigueur,
-        orient:Competence_sens_de_l_observation ;
-    orient:prefere orient:Matiere_Arts,
-        orient:Matiere_Informatique,
-        orient:Matiere_Mathematiques .
-
-orient:Etudiant_P00564 a orient:Etudiant ;
-    rdfs:label "P00564"@fr ;
-    orient:aCentreInteret orient:Interet_Animaux,
-        orient:Interet_Musique,
-        orient:Interet_Nature ;
-    orient:aLibelle "P00564" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
-    orient:estOrienteVers orient:Parcours_Agriculture_et_Elevage ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_autonomie,
-        orient:Competence_esprit_d_analyse,
+orient:Etudiant_P00382 a orient:Etudiant ;
+    rdfs:label "P00382"@fr ;
+    orient:aCentreInteret orient:Interet_Actualite_et_politique,
+        orient:Interet_Economie ;
+    orient:aLibelle "P00382" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TAG ;
+    orient:estOrienteVers orient:Parcours_Finances_et_Comptabilite ;
+    orient:possede orient:Competence_esprit_d_equipe,
+        orient:Competence_perseverance,
         orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_Arts,
-        orient:Matiere_Physique_Chimie,
-        orient:Matiere_SVT .
-
-orient:Etudiant_P00570 a orient:Etudiant ;
-    rdfs:label "P00570"@fr ;
-    orient:aCentreInteret orient:Interet_Architecture,
-        orient:Interet_Urbanisme ;
-    orient:aLibelle "P00570" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A2 ;
-    orient:estOrienteVers orient:Parcours_Genie_Civil_et_Architecture ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_curiosite ;
     orient:prefere orient:Matiere_Arts,
-        orient:Matiere_Malgache,
-        orient:Matiere_Mathematiques,
-        orient:Matiere_Physique_Chimie .
-
-orient:Etudiant_P00697 a orient:Etudiant ;
-    rdfs:label "P00697"@fr ;
-    orient:aCentreInteret orient:Interet_Lecture,
-        orient:Interet_Nature,
-        orient:Interet_Sante ;
-    orient:aLibelle "P00697" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A1 ;
-    orient:estOrienteVers orient:Parcours_Industries_Agroalimentaires ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_esprit_d_analyse ;
-    orient:prefere orient:Matiere_EPS,
         orient:Matiere_Economie,
-        orient:Matiere_Informatique,
-        orient:Matiere_Mathematiques,
-        orient:Matiere_SVT .
-
-orient:Etudiant_P00860 a orient:Etudiant ;
-    rdfs:label "P00860"@fr ;
-    orient:aCentreInteret orient:Interet_Cultures_du_monde,
-        orient:Interet_Reseaux_sociaux ;
-    orient:aLibelle "P00860" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_L ;
-    orient:estOrienteVers orient:Parcours_Tourisme_Environnement_et_Hotellerie ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_creativite,
-        orient:Competence_esprit_d_analyse ;
-    orient:prefere orient:Matiere_EPS,
         orient:Matiere_Histoire_Geo,
         orient:Matiere_Informatique,
         orient:Matiere_Physique_Chimie .
 
-orient:Etudiant_P00865 a orient:Etudiant ;
-    rdfs:label "P00865"@fr ;
-    orient:aCentreInteret orient:Interet_Gestion,
-        orient:Interet_Sport ;
-    orient:aLibelle "P00865" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_autonomie,
-        orient:Competence_creativite,
+orient:Etudiant_P00402 a orient:Etudiant ;
+    rdfs:label "P00402"@fr ;
+    orient:aCentreInteret orient:Interet_Electronique,
+        orient:Interet_Mecanique ;
+    orient:aLibelle "P00402" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TFFI ;
+    orient:estOrienteVers orient:Parcours_Electromecanique_et_Informatique_Industrielle ;
+    orient:possede orient:Competence_esprit_d_analyse,
+        orient:Competence_rigueur,
+        orient:Competence_sens_de_l_observation,
         orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Economie,
-        orient:Matiere_Francais,
-        orient:Matiere_Histoire_Geo .
-
-orient:Etudiant_P00866 a orient:Etudiant ;
-    rdfs:label "P00866"@fr ;
-    orient:aCentreInteret orient:Interet_Benevolat_associatif,
-        orient:Interet_Technologie ;
-    orient:aLibelle "P00866" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
-    orient:estOrienteVers orient:Parcours_Informatique_de_Gestion_Genie_Logiciel_et_Intelligence_Artificielle ;
-    orient:possede orient:Competence_curiosite,
-        orient:Competence_esprit_d_analyse,
-        orient:Competence_rigueur ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_Informatique,
-        orient:Matiere_Malgache,
-        orient:Matiere_Mathematiques .
-
-orient:Etudiant_P00920 a orient:Etudiant ;
-    rdfs:label "P00920"@fr ;
-    orient:aCentreInteret orient:Interet_Langues_etrangeres ;
-    orient:aLibelle "P00920" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A2 ;
-    orient:estOrienteVers orient:Parcours_Tourisme_Environnement_et_Hotellerie ;
-    orient:possede orient:Competence_creativite,
-        orient:Competence_curiosite,
-        orient:Competence_esprit_d_analyse,
-        orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Arts,
-        orient:Matiere_Francais,
+    orient:prefere orient:Matiere_Informatique,
+        orient:Matiere_Mathematiques,
+        orient:Matiere_Philosophie,
         orient:Matiere_Physique_Chimie .
 
-orient:Etudiant_P01035 a orient:Etudiant ;
-    rdfs:label "P01035"@fr ;
+orient:Etudiant_P00410 a orient:Etudiant ;
+    rdfs:label "P00410"@fr ;
     orient:aCentreInteret orient:Interet_Economie ;
-    orient:aLibelle "P01035" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
-    orient:estOrienteVers orient:Parcours_Economie_et_Management_de_Projet ;
-    orient:possede orient:Competence_esprit_d_equipe,
+    orient:aLibelle "P00410" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_S ;
+    orient:estOrienteVers orient:Parcours_Droit_et_Techniques_Juridiques_des_Affaires ;
+    orient:possede orient:Competence_aisance_relationnelle,
+        orient:Competence_curiosite,
+        orient:Competence_esprit_d_equipe ;
+    orient:prefere orient:Matiere_Economie,
+        orient:Matiere_Francais,
+        orient:Matiere_Histoire_Geo,
+        orient:Matiere_Malgache,
+        orient:Matiere_Philosophie .
+
+orient:Etudiant_P00433 a orient:Etudiant ;
+    rdfs:label "P00433"@fr ;
+    orient:aCentreInteret orient:Interet_Benevolat_associatif,
+        orient:Interet_Debat_et_droit,
+        orient:Interet_Gestion ;
+    orient:aLibelle "P00433" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TGC ;
+    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
+    orient:possede orient:Competence_autonomie,
         orient:Competence_sens_de_l_observation,
         orient:Competence_sens_de_l_organisation ;
     orient:prefere orient:Matiere_Economie,
+        orient:Matiere_Philosophie,
+        orient:Matiere_Physique_Chimie .
+
+orient:Etudiant_P00460 a orient:Etudiant ;
+    rdfs:label "P00460"@fr ;
+    orient:aCentreInteret orient:Interet_Cultures_du_monde,
+        orient:Interet_Langues_etrangeres ;
+    orient:aLibelle "P00460" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_SS ;
+    orient:estOrienteVers orient:Parcours_Tourisme_Environnement_et_Hotellerie ;
+    orient:possede orient:Competence_perseverance,
+        orient:Competence_sens_de_l_organisation ;
+    orient:prefere orient:Matiere_Francais,
         orient:Matiere_Histoire_Geo,
+        orient:Matiere_Malgache .
+
+orient:Etudiant_P00464 a orient:Etudiant ;
+    rdfs:label "P00464"@fr ;
+    orient:aCentreInteret orient:Interet_Reseaux_sociaux_et_numerique,
+        orient:Interet_Sport,
+        orient:Interet_Technologie ;
+    orient:aLibelle "P00464" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TPFM ;
+    orient:estOrienteVers orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Communication_et_I ;
+    orient:possede orient:Competence_creativite,
+        orient:Competence_esprit_d_equipe,
+        orient:Competence_perseverance,
+        orient:Competence_sens_de_l_observation ;
+    orient:prefere orient:Matiere_Anglais,
+        orient:Matiere_EPS,
+        orient:Matiere_Francais .
+
+orient:Etudiant_P00475 a orient:Etudiant ;
+    rdfs:label "P00475"@fr ;
+    orient:aCentreInteret orient:Interet_Economie,
+        orient:Interet_Gestion,
+        orient:Interet_Musique ;
+    orient:aLibelle "P00475" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
+    orient:estOrienteVers orient:Parcours_Droit_et_Techniques_Juridiques_des_Affaires ;
+    orient:possede orient:Competence_autonomie,
+        orient:Competence_curiosite ;
+    orient:prefere orient:Matiere_Anglais,
+        orient:Matiere_Philosophie,
+        orient:Matiere_SVT .
+
+orient:Etudiant_P00488 a orient:Etudiant ;
+    rdfs:label "P00488"@fr ;
+    orient:aCentreInteret orient:Interet_Benevolat_associatif,
+        orient:Interet_Entrepreneuriat ;
+    orient:aLibelle "P00488" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_SS ;
+    orient:estOrienteVers orient:Parcours_Droit_et_Techniques_Juridiques_des_Affaires ;
+    orient:possede orient:Competence_creativite,
+        orient:Competence_perseverance ;
+    orient:prefere orient:Matiere_Arts,
+        orient:Matiere_Francais,
+        orient:Matiere_Philosophie .
+
+orient:Etudiant_P00493 a orient:Etudiant ;
+    rdfs:label "P00493"@fr ;
+    orient:aCentreInteret orient:Interet_Debat_et_droit,
+        orient:Interet_Gestion ;
+    orient:aLibelle "P00493" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A1 ;
+    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
+    orient:possede orient:Competence_perseverance,
+        orient:Competence_sens_de_l_observation ;
+    orient:prefere orient:Matiere_Anglais,
+        orient:Matiere_Economie,
+        orient:Matiere_Francais .
+
+orient:Etudiant_P00495 a orient:Etudiant ;
+    rdfs:label "P00495"@fr ;
+    orient:aCentreInteret orient:Interet_Benevolat_associatif,
+        orient:Interet_Entrepreneuriat,
+        orient:Interet_Gestion ;
+    orient:aLibelle "P00495" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TMF ;
+    orient:estOrienteVers orient:Parcours_Droit_et_Techniques_Juridiques_des_Affaires ;
+    orient:possede orient:Competence_rigueur,
+        orient:Competence_sens_de_l_observation ;
+    orient:prefere orient:Matiere_Malgache,
+        orient:Matiere_Philosophie .
+
+orient:Etudiant_P00515 a orient:Etudiant ;
+    rdfs:label "P00515"@fr ;
+    orient:aCentreInteret orient:Interet_Technologie ;
+    orient:aLibelle "P00515" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TOM ;
+    orient:estOrienteVers orient:Parcours_Electromecanique_et_Informatique_Industrielle ;
+    orient:possede orient:Competence_autonomie,
+        orient:Competence_esprit_d_analyse,
+        orient:Competence_perseverance,
+        orient:Competence_sens_de_l_observation ;
+    orient:prefere orient:Matiere_Histoire_Geo,
+        orient:Matiere_Informatique,
         orient:Matiere_Malgache,
         orient:Matiere_Mathematiques .
 
-orient:Etudiant_P01117 a orient:Etudiant ;
-    rdfs:label "P01117"@fr ;
-    orient:aCentreInteret orient:Interet_Programmation,
-        orient:Interet_Reseaux_sociaux,
-        orient:Interet_Reseaux_sociaux_et_numerique ;
-    orient:aLibelle "P01117" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
+orient:Etudiant_P00550 a orient:Etudiant ;
+    rdfs:label "P00550"@fr ;
+    orient:aCentreInteret orient:Interet_Environnement,
+        orient:Interet_Musique,
+        orient:Interet_Sante ;
+    orient:aLibelle "P00550" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
+    orient:estOrienteVers orient:Parcours_Agriculture_et_Elevage ;
+    orient:possede orient:Competence_aisance_relationnelle,
+        orient:Competence_curiosite,
+        orient:Competence_perseverance ;
+    orient:prefere orient:Matiere_Anglais,
+        orient:Matiere_Histoire_Geo,
+        orient:Matiere_Physique_Chimie,
+        orient:Matiere_SVT .
+
+orient:Etudiant_P00630 a orient:Etudiant ;
+    rdfs:label "P00630"@fr ;
+    orient:aCentreInteret orient:Interet_Economie,
+        orient:Interet_Gestion ;
+    orient:aLibelle "P00630" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_SS ;
+    orient:estOrienteVers orient:Parcours_Droit_et_Techniques_Juridiques_des_Affaires ;
+    orient:possede orient:Competence_curiosite,
+        orient:Competence_sens_de_l_observation ;
+    orient:prefere orient:Matiere_Economie,
+        orient:Matiere_Mathematiques,
+        orient:Matiere_Philosophie,
+        orient:Matiere_Physique_Chimie .
+
+orient:Etudiant_P00803 a orient:Etudiant ;
+    rdfs:label "P00803"@fr ;
+    orient:aCentreInteret orient:Interet_Robotique,
+        orient:Interet_Technologie ;
+    orient:aLibelle "P00803" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TAMB ;
     orient:estOrienteVers orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Communication_et_I ;
-    orient:possede orient:Competence_esprit_d_analyse,
-        orient:Competence_esprit_d_equipe,
+    orient:possede orient:Competence_creativite,
+        orient:Competence_perseverance,
+        orient:Competence_rigueur ;
+    orient:prefere orient:Matiere_Arts,
+        orient:Matiere_Economie,
+        orient:Matiere_Informatique,
+        orient:Matiere_SVT .
+
+orient:Etudiant_P00826 a orient:Etudiant ;
+    rdfs:label "P00826"@fr ;
+    orient:aCentreInteret orient:Interet_Programmation,
+        orient:Interet_Reseaux_sociaux_et_numerique,
+        orient:Interet_Sport ;
+    orient:aLibelle "P00826" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TMEL ;
+    orient:estOrienteVers orient:Parcours_Informatique_de_Gestion_Genie_Logiciel_et_Intelligence_Artificielle ;
+    orient:possede orient:Competence_aisance_relationnelle,
+        orient:Competence_autonomie ;
+    orient:prefere orient:Matiere_Anglais,
+        orient:Matiere_Arts,
+        orient:Matiere_Informatique,
+        orient:Matiere_Mathematiques,
+        orient:Matiere_Physique_Chimie .
+
+orient:Etudiant_P00957 a orient:Etudiant ;
+    rdfs:label "P00957"@fr ;
+    orient:aCentreInteret orient:Interet_Gastronomie,
+        orient:Interet_Hotellerie,
+        orient:Interet_Sport ;
+    orient:aLibelle "P00957" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_L ;
+    orient:estOrienteVers orient:Parcours_Tourisme_Environnement_et_Hotellerie ;
+    orient:possede orient:Competence_curiosite,
         orient:Competence_perseverance,
         orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Informatique,
-        orient:Matiere_Malgache,
-        orient:Matiere_Philosophie .
-
-orient:Etudiant_P01150 a orient:Etudiant ;
-    rdfs:label "P01150"@fr ;
-    orient:aCentreInteret orient:Interet_Agriculture,
-        orient:Interet_Musique,
-        orient:Interet_Nature ;
-    orient:aLibelle "P01150" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_S ;
-    orient:estOrienteVers orient:Parcours_Industries_Agroalimentaires ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_autonomie,
-        orient:Competence_perseverance ;
-    orient:prefere orient:Matiere_Economie,
+    orient:prefere orient:Matiere_Anglais,
+        orient:Matiere_Arts,
         orient:Matiere_Francais,
+        orient:Matiere_Histoire_Geo .
+
+orient:Etudiant_P00975 a orient:Etudiant ;
+    rdfs:label "P00975"@fr ;
+    orient:aCentreInteret orient:Interet_Agriculture,
+        orient:Interet_Animaux ;
+    orient:aLibelle "P00975" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
+    orient:estOrienteVers orient:Parcours_Industries_Agroalimentaires ;
+    orient:possede orient:Competence_esprit_d_equipe,
+        orient:Competence_sens_de_l_organisation ;
+    orient:prefere orient:Matiere_Economie,
         orient:Matiere_Malgache,
         orient:Matiere_Physique_Chimie,
         orient:Matiere_SVT .
 
-orient:Etudiant_P01207 a orient:Etudiant ;
-    rdfs:label "P01207"@fr ;
+orient:Etudiant_P00978 a orient:Etudiant ;
+    rdfs:label "P00978"@fr ;
+    orient:aCentreInteret orient:Interet_Programmation,
+        orient:Interet_Sport,
+        orient:Interet_Technologie ;
+    orient:aLibelle "P00978" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TMA ;
+    orient:estOrienteVers orient:Parcours_Electromecanique_et_Informatique_Industrielle ;
+    orient:possede orient:Competence_esprit_d_equipe,
+        orient:Competence_perseverance,
+        orient:Competence_sens_de_l_organisation ;
+    orient:prefere orient:Matiere_Anglais,
+        orient:Matiere_EPS,
+        orient:Matiere_Informatique,
+        orient:Matiere_Physique_Chimie .
+
+orient:Etudiant_P01067 a orient:Etudiant ;
+    rdfs:label "P01067"@fr ;
+    orient:aCentreInteret orient:Interet_Programmation ;
+    orient:aLibelle "P01067" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TPFM ;
+    orient:estOrienteVers orient:Parcours_Electronique_Systemes_Informatiques_et_Intelligence_Artificielle ;
+    orient:possede orient:Competence_creativite,
+        orient:Competence_esprit_d_equipe,
+        orient:Competence_perseverance,
+        orient:Competence_rigueur ;
+    orient:prefere orient:Matiere_Histoire_Geo,
+        orient:Matiere_Informatique,
+        orient:Matiere_Mathematiques,
+        orient:Matiere_Physique_Chimie .
+
+orient:Etudiant_P01127 a orient:Etudiant ;
+    rdfs:label "P01127"@fr ;
     orient:aCentreInteret orient:Interet_Actualite_et_politique,
         orient:Interet_Gestion ;
-    orient:aLibelle "P01207" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
-    orient:estOrienteVers orient:Parcours_Finances_et_Comptabilite ;
-    orient:possede orient:Competence_autonomie,
+    orient:aLibelle "P01127" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_S ;
+    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
+    orient:possede orient:Competence_curiosite,
         orient:Competence_esprit_d_equipe,
         orient:Competence_sens_de_l_observation ;
-    orient:prefere orient:Matiere_Arts,
-        orient:Matiere_EPS,
-        orient:Matiere_Economie,
-        orient:Matiere_Mathematiques,
-        orient:Matiere_Philosophie .
-
-orient:Etudiant_P01210 a orient:Etudiant ;
-    rdfs:label "P01210"@fr ;
-    orient:aCentreInteret orient:Interet_Debat_et_droit,
-        orient:Interet_Gestion,
-        orient:Interet_Musique ;
-    orient:aLibelle "P01210" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Droit_et_Techniques_Juridiques_des_Affaires ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_esprit_d_equipe,
-        orient:Competence_rigueur,
-        orient:Competence_sens_de_l_observation ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_Arts,
+    orient:prefere orient:Matiere_EPS,
         orient:Matiere_Economie,
         orient:Matiere_Francais,
         orient:Matiere_Malgache .
 
-orient:Etudiant_P01233 a orient:Etudiant ;
-    rdfs:label "P01233"@fr ;
-    orient:aCentreInteret orient:Interet_Animaux,
-        orient:Interet_Benevolat_associatif ;
-    orient:aLibelle "P01233" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Agriculture_et_Elevage ;
-    orient:possede orient:Competence_creativite,
-        orient:Competence_rigueur ;
-    orient:prefere orient:Matiere_Histoire_Geo,
-        orient:Matiere_Malgache,
-        orient:Matiere_Mathematiques,
-        orient:Matiere_SVT .
-
-orient:Etudiant_P01310 a orient:Etudiant ;
-    rdfs:label "P01310"@fr ;
-    orient:aCentreInteret orient:Interet_Reseaux_sociaux_et_numerique ;
-    orient:aLibelle "P01310" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
-    orient:estOrienteVers orient:Parcours_Informatique_de_Gestion_Genie_Logiciel_et_Intelligence_Artificielle ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_esprit_d_analyse,
-        orient:Competence_esprit_d_equipe,
-        orient:Competence_perseverance ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_Francais,
-        orient:Matiere_Informatique,
-        orient:Matiere_Mathematiques .
-
-orient:Etudiant_P01331 a orient:Etudiant ;
-    rdfs:label "P01331"@fr ;
-    orient:aCentreInteret orient:Interet_Agriculture,
-        orient:Interet_Animaux ;
-    orient:aLibelle "P01331" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_S ;
-    orient:estOrienteVers orient:Parcours_Industries_Agroalimentaires ;
-    orient:possede orient:Competence_autonomie,
-        orient:Competence_esprit_d_equipe ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_EPS,
-        orient:Matiere_Mathematiques,
-        orient:Matiere_Physique_Chimie,
-        orient:Matiere_SVT .
-
-orient:Etudiant_P01386 a orient:Etudiant ;
-    rdfs:label "P01386"@fr ;
-    orient:aCentreInteret orient:Interet_Benevolat_associatif,
-        orient:Interet_Dessin_et_design ;
-    orient:aLibelle "P01386" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_S ;
-    orient:estOrienteVers orient:Parcours_Genie_Civil_et_Architecture ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_curiosite,
-        orient:Competence_esprit_d_analyse,
-        orient:Competence_esprit_d_equipe ;
-    orient:prefere orient:Matiere_Francais,
-        orient:Matiere_Malgache,
-        orient:Matiere_Mathematiques,
-        orient:Matiere_Physique_Chimie .
-
-orient:Etudiant_P01430 a orient:Etudiant ;
-    rdfs:label "P01430"@fr ;
-    orient:aCentreInteret orient:Interet_Musique,
-        orient:Interet_Robotique ;
-    orient:aLibelle "P01430" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A2 ;
-    orient:estOrienteVers orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Communication_et_I ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_creativite ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_Arts,
-        orient:Matiere_Informatique .
-
-orient:Etudiant_P01437 a orient:Etudiant ;
-    rdfs:label "P01437"@fr ;
-    orient:aCentreInteret orient:Interet_Benevolat_associatif,
+orient:Etudiant_P01139 a orient:Etudiant ;
+    rdfs:label "P01139"@fr ;
+    orient:aCentreInteret orient:Interet_Reseaux_sociaux_et_numerique,
         orient:Interet_Technologie ;
-    orient:aLibelle "P01437" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_A2 ;
-    orient:estOrienteVers orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Communication_et_I ;
-    orient:possede orient:Competence_curiosite,
-        orient:Competence_esprit_d_analyse ;
-    orient:prefere orient:Matiere_Arts,
-        orient:Matiere_Economie,
-        orient:Matiere_Francais,
-        orient:Matiere_Informatique,
-        orient:Matiere_Philosophie .
-
-orient:Etudiant_P01467 a orient:Etudiant ;
-    rdfs:label "P01467"@fr ;
-    orient:aCentreInteret orient:Interet_Hotellerie ;
-    orient:aLibelle "P01467" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_L ;
-    orient:estOrienteVers orient:Parcours_Tourisme_Environnement_et_Hotellerie ;
-    orient:possede orient:Competence_aisance_relationnelle,
-        orient:Competence_autonomie,
-        orient:Competence_rigueur,
+    orient:aLibelle "P01139" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TMEL ;
+    orient:estOrienteVers orient:Parcours_Informatique_Statistique_Appliquee_et_Intelligence_Artificielle ;
+    orient:possede orient:Competence_esprit_d_equipe,
+        orient:Competence_perseverance,
         orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Anglais,
-        orient:Matiere_EPS,
-        orient:Matiere_Malgache,
+    orient:prefere orient:Matiere_Economie,
+        orient:Matiere_Francais,
+        orient:Matiere_Philosophie,
         orient:Matiere_SVT .
 
-orient:Etudiant_P01509 a orient:Etudiant ;
-    rdfs:label "P01509"@fr ;
-    orient:aCentreInteret orient:Interet_Benevolat_associatif,
-        orient:Interet_Sante ;
-    orient:aLibelle "P01509" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_D ;
-    orient:estOrienteVers orient:Parcours_Industries_Agroalimentaires ;
+orient:Etudiant_P01160 a orient:Etudiant ;
+    rdfs:label "P01160"@fr ;
+    orient:aCentreInteret orient:Interet_Debat_et_droit,
+        orient:Interet_Economie,
+        orient:Interet_Sport ;
+    orient:aLibelle "P01160" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
+    orient:estOrienteVers orient:Parcours_Economie_et_Management_de_Projet ;
     orient:possede orient:Competence_autonomie,
         orient:Competence_creativite,
-        orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_Histoire_Geo,
-        orient:Matiere_Malgache,
+        orient:Competence_perseverance,
+        orient:Competence_sens_de_l_observation ;
+    orient:prefere orient:Matiere_Economie,
+        orient:Matiere_Francais,
+        orient:Matiere_Histoire_Geo,
+        orient:Matiere_Mathematiques,
+        orient:Matiere_SVT .
+
+orient:Etudiant_P01185 a orient:Etudiant ;
+    rdfs:label "P01185"@fr ;
+    orient:aCentreInteret orient:Interet_Gestion ;
+    orient:aLibelle "P01185" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_DAMB ;
+    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
+    orient:possede orient:Competence_autonomie,
+        orient:Competence_esprit_d_equipe ;
+    orient:prefere orient:Matiere_Anglais,
+        orient:Matiere_Economie,
+        orient:Matiere_Francais,
+        orient:Matiere_Physique_Chimie .
+
+orient:Etudiant_P01210 a orient:Etudiant ;
+    rdfs:label "P01210"@fr ;
+    orient:aCentreInteret orient:Interet_Nature,
+        orient:Interet_Sante ;
+    orient:aLibelle "P01210" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
+    orient:estOrienteVers orient:Parcours_Pharmacologie_et_Industries_Pharmaceutiques ;
+    orient:possede orient:Competence_autonomie,
+        orient:Competence_esprit_d_equipe,
+        orient:Competence_sens_de_l_observation ;
+    orient:prefere orient:Matiere_Francais,
+        orient:Matiere_Mathematiques,
         orient:Matiere_Physique_Chimie,
         orient:Matiere_SVT .
 
-orient:Etudiant_P01517 a orient:Etudiant ;
-    rdfs:label "P01517"@fr ;
-    orient:aCentreInteret orient:Interet_Agriculture ;
-    orient:aLibelle "P01517" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_S ;
-    orient:estOrienteVers orient:Parcours_Pharmacologie_et_Industries_Pharmaceutiques ;
+orient:Etudiant_P01225 a orient:Etudiant ;
+    rdfs:label "P01225"@fr ;
+    orient:aCentreInteret orient:Interet_Automobile_et_aeronautique,
+        orient:Interet_Electronique ;
+    orient:aLibelle "P01225" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TPFM ;
+    orient:estOrienteVers orient:Parcours_Electromecanique_et_Informatique_Industrielle ;
+    orient:possede orient:Competence_aisance_relationnelle,
+        orient:Competence_autonomie,
+        orient:Competence_esprit_d_equipe ;
+    orient:prefere orient:Matiere_Mathematiques,
+        orient:Matiere_Physique_Chimie,
+        orient:Matiere_SVT .
+
+orient:Etudiant_P01247 a orient:Etudiant ;
+    rdfs:label "P01247"@fr ;
+    orient:aCentreInteret orient:Interet_Lecture,
+        orient:Interet_Programmation ;
+    orient:aLibelle "P01247" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_DAMB ;
+    orient:estOrienteVers orient:Parcours_Informatique_de_Gestion_Genie_Logiciel_et_Intelligence_Artificielle ;
     orient:possede orient:Competence_esprit_d_analyse,
+        orient:Competence_sens_de_l_observation,
         orient:Competence_sens_de_l_organisation ;
     orient:prefere orient:Matiere_Malgache,
         orient:Matiere_Mathematiques,
-        orient:Matiere_Physique_Chimie,
-        orient:Matiere_SVT .
+        orient:Matiere_Philosophie,
+        orient:Matiere_Physique_Chimie .
 
-orient:Etudiant_P01519 a orient:Etudiant ;
-    rdfs:label "P01519"@fr ;
-    orient:aCentreInteret orient:Interet_Programmation,
-        orient:Interet_Robotique,
-        orient:Interet_Sport ;
-    orient:aLibelle "P01519" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Informatique_de_Gestion_Genie_Logiciel_et_Intelligence_Artificielle ;
+orient:Etudiant_P01296 a orient:Etudiant ;
+    rdfs:label "P01296"@fr ;
+    orient:aCentreInteret orient:Interet_Jeux_video,
+        orient:Interet_Reseaux_sociaux ;
+    orient:aLibelle "P01296" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TGI ;
+    orient:estOrienteVers orient:Parcours_Informatique_Statistique_Appliquee_et_Intelligence_Artificielle ;
     orient:possede orient:Competence_autonomie,
-        orient:Competence_creativite,
+        orient:Competence_perseverance,
+        orient:Competence_sens_de_l_observation,
+        orient:Competence_sens_de_l_organisation ;
+    orient:prefere orient:Matiere_Economie,
+        orient:Matiere_Francais,
+        orient:Matiere_Mathematiques .
+
+orient:Etudiant_P01317 a orient:Etudiant ;
+    rdfs:label "P01317"@fr ;
+    orient:aCentreInteret orient:Interet_Cultures_du_monde,
+        orient:Interet_Sport ;
+    orient:aLibelle "P01317" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TMEL ;
+    orient:estOrienteVers orient:Parcours_Tourisme_Environnement_et_Hotellerie ;
+    orient:possede orient:Competence_creativite,
+        orient:Competence_curiosite,
+        orient:Competence_esprit_d_equipe,
+        orient:Competence_sens_de_l_observation ;
+    orient:prefere orient:Matiere_Francais,
+        orient:Matiere_Informatique,
+        orient:Matiere_Malgache .
+
+orient:Etudiant_P01335 a orient:Etudiant ;
+    rdfs:label "P01335"@fr ;
+    orient:aCentreInteret orient:Interet_Economie,
+        orient:Interet_Entrepreneuriat,
+        orient:Interet_Lecture ;
+    orient:aLibelle "P01335" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TTER ;
+    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
+    orient:possede orient:Competence_curiosite,
+        orient:Competence_esprit_d_analyse,
         orient:Competence_perseverance ;
-    orient:prefere orient:Matiere_Informatique,
+    orient:prefere orient:Matiere_Malgache,
+        orient:Matiere_Mathematiques,
+        orient:Matiere_Philosophie,
+        orient:Matiere_Physique_Chimie .
+
+orient:Etudiant_P01348 a orient:Etudiant ;
+    rdfs:label "P01348"@fr ;
+    orient:aCentreInteret orient:Interet_Entrepreneuriat,
+        orient:Interet_Musique ;
+    orient:aLibelle "P01348" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TFFI ;
+    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
+    orient:possede orient:Competence_aisance_relationnelle,
+        orient:Competence_curiosite,
+        orient:Competence_esprit_d_equipe,
+        orient:Competence_perseverance ;
+    orient:prefere orient:Matiere_Anglais,
+        orient:Matiere_Economie,
+        orient:Matiere_Mathematiques .
+
+orient:Etudiant_P01479 a orient:Etudiant ;
+    rdfs:label "P01479"@fr ;
+    orient:aCentreInteret orient:Interet_Benevolat_associatif,
+        orient:Interet_Technologie ;
+    orient:aLibelle "P01479" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_TFFI ;
+    orient:estOrienteVers orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Communication_et_I ;
+    orient:possede orient:Competence_aisance_relationnelle,
+        orient:Competence_curiosite,
+        orient:Competence_esprit_d_analyse,
+        orient:Competence_rigueur ;
+    orient:prefere orient:Matiere_Arts,
+        orient:Matiere_Francais,
+        orient:Matiere_Histoire_Geo,
+        orient:Matiere_Informatique,
+        orient:Matiere_Philosophie .
+
+orient:Etudiant_P01545 a orient:Etudiant ;
+    rdfs:label "P01545"@fr ;
+    orient:aCentreInteret orient:Interet_Jeux_video,
+        orient:Interet_Musique ;
+    orient:aLibelle "P01545" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_EN ;
+    orient:estOrienteVers orient:Parcours_Electronique_Systemes_Informatiques_et_Intelligence_Artificielle ;
+    orient:possede orient:Competence_creativite,
+        orient:Competence_curiosite,
+        orient:Competence_sens_de_l_organisation ;
+    orient:prefere orient:Matiere_Histoire_Geo,
         orient:Matiere_Mathematiques,
         orient:Matiere_Physique_Chimie .
 
-orient:Etudiant_P01555 a orient:Etudiant ;
-    rdfs:label "P01555"@fr ;
-    orient:aCentreInteret orient:Interet_Debat_et_droit,
-        orient:Interet_Entrepreneuriat,
-        orient:Interet_Sport ;
-    orient:aLibelle "P01555" ;
-    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_C ;
-    orient:estOrienteVers orient:Parcours_Commerce_et_Administration_des_Affaires ;
+orient:Etudiant_P01592 a orient:Etudiant ;
+    rdfs:label "P01592"@fr ;
+    orient:aCentreInteret orient:Interet_Programmation ;
+    orient:aLibelle "P01592" ;
+    orient:aSerieBac orient:Prerequis_Baccalaureat_serie_EN ;
+    orient:estOrienteVers orient:Parcours_Informatique_Statistique_Appliquee_et_Intelligence_Artificielle ;
     orient:possede orient:Competence_creativite,
-        orient:Competence_esprit_d_analyse,
-        orient:Competence_sens_de_l_observation,
-        orient:Competence_sens_de_l_organisation ;
-    orient:prefere orient:Matiere_EPS,
+        orient:Competence_esprit_d_equipe,
+        orient:Competence_sens_de_l_observation ;
+    orient:prefere orient:Matiere_Anglais,
         orient:Matiere_Economie,
-        orient:Matiere_Informatique .
+        orient:Matiere_Informatique,
+        orient:Matiere_Malgache,
+        orient:Matiere_Mathematiques .
 
-orient:Interet_Automobile_et_aeronautique a orient:CentreInteret ;
-    rdfs:label "Automobile et aéronautique"@fr ;
-    orient:aLibelle "Automobile et aéronautique" .
+orient:Interet_Architecture a orient:CentreInteret ;
+    rdfs:label "Architecture"@fr ;
+    orient:aLibelle "Architecture" .
+
+orient:Interet_Bricolage a orient:CentreInteret ;
+    rdfs:label "Bricolage"@fr ;
+    orient:aLibelle "Bricolage" .
 
 orient:Interet_Construction a orient:CentreInteret ;
     rdfs:label "Construction"@fr ;
     orient:aLibelle "Construction" .
 
-orient:Interet_Electronique a orient:CentreInteret ;
-    rdfs:label "Électronique"@fr ;
-    orient:aLibelle "Électronique" .
+orient:Interet_Dessin_et_design a orient:CentreInteret ;
+    rdfs:label "Dessin et design"@fr ;
+    orient:aLibelle "Dessin et design" .
 
-orient:Interet_Environnement a orient:CentreInteret ;
-    rdfs:label "Environnement"@fr ;
-    orient:aLibelle "Environnement" .
+orient:Interet_Industrie a orient:CentreInteret ;
+    rdfs:label "Industrie"@fr ;
+    orient:aLibelle "Industrie" .
 
-orient:Interet_Jeux_video a orient:CentreInteret ;
-    rdfs:label "Jeux vidéo"@fr ;
-    orient:aLibelle "Jeux vidéo" .
-
-orient:Interet_Mecanique a orient:CentreInteret ;
-    rdfs:label "Mécanique"@fr ;
-    orient:aLibelle "Mécanique" .
+orient:Interet_Urbanisme a orient:CentreInteret ;
+    rdfs:label "Urbanisme"@fr ;
+    orient:aLibelle "Urbanisme" .
 
 orient:Interet_Voyage a orient:CentreInteret ;
     rdfs:label "Voyage"@fr ;
     orient:aLibelle "Voyage" .
 
-orient:Parcours_Electronique_Systemes_Informatiques_et_Intelligence_Artificielle a orient:Parcours ;
-    rdfs:label "Électronique, Systèmes Informatiques et Intelligence Artificielle"@fr ;
-    orient:aCode "ESIIA" ;
-    orient:aLibelle "Électronique, Systèmes Informatiques et Intelligence Artificielle" ;
-    orient:appartientAMention orient:Mention_Informatique_et_Telecommunications ;
-    orient:developpe orient:Competence_Architecture_et_administration_de_reseaux_informatiques_GSM_TCP_IP,
-        orient:Competence_Conception_et_programmation_de_systemes_embarques_Microcontroleurs,
-        orient:Competence_Integration_de_solutions_IoT_et_objets_connectes,
-        orient:Competence_Maintenance_avancee_de_systemes_electroniques_et_hardware,
-        orient:Competence_Traitement_du_signal_automatique_et_robotique_industrielle ;
-    orient:enseigne orient:Matiere_Algorithme,
-        orient:Matiere_Algorithme_Avance,
-        orient:Matiere_Assembleur,
-        orient:Matiere_Automatique,
-        orient:Matiere_Base_de_Donnees,
-        orient:Matiere_C,
-        orient:Matiere_Capteurs,
-        orient:Matiere_Codage,
-        orient:Matiere_Cryptographie,
-        orient:Matiere_Cybersecurite,
-        orient:Matiere_Deep_Learning,
-        orient:Matiere_Electricite,
-        orient:Matiere_Electronique,
-        orient:Matiere_GLCIA,
-        orient:Matiere_GPI,
-        orient:Matiere_Geometrie_appliquee_aux_Formes_et_Images,
-        orient:Matiere_Gestion_de_Projet,
-        orient:Matiere_Global_System_for_Mobile_Communication,
-        orient:Matiere_HTML_CSS,
-        orient:Matiere_Informatique_Decisionnelle,
-        orient:Matiere_Informatique_Quantique,
-        orient:Matiere_Intelligence_Artificielle,
-        orient:Matiere_Java,
-        orient:Matiere_JavaScript,
-        orient:Matiere_Langage_C,
-        orient:Matiere_Linux,
-        orient:Matiere_Machine_Learning,
-        orient:Matiere_Maintenance_des_Systemes_Electroniques,
-        orient:Matiere_Maintenance_des_Systemes_Informatiques,
-        orient:Matiere_Maintenance_des_Systemes_Informatiques_Hardware,
+orient:Parcours_Genie_Civil_et_Architecture a orient:Parcours ;
+    rdfs:label "Génie Civil et Architecture"@fr ;
+    orient:aCode "GCA" ;
+    orient:aLibelle "Génie Civil et Architecture" ;
+    orient:appartientAMention orient:Mention_Genie_Civil_et_Architecture ;
+    orient:developpe orient:Competence_Conception_architecturale_et_dessin_technique_assiste_AutoCAD_ArchiCAD,
+        orient:Competence_Dimensionnement_et_calcul_de_structures_RDM_Elements_finis,
+        orient:Competence_Expertise_en_geotechnique_et_mecanique_des_sols,
+        orient:Competence_Gestion_technique_et_administrative_de_chantiers_BTP,
+        orient:Competence_Ingenierie_des_infrastructures_routieres_hydrauliques_et_portuaires ;
+    orient:enseigne orient:Matiere_ARCHICAD,
+        orient:Matiere_AUTOCAD,
+        orient:Matiere_Acoustique,
+        orient:Matiere_Amenagement_aeroportuaire,
+        orient:Matiere_Amenagement_hydroagricole,
+        orient:Matiere_Amenagement_hydrogricole,
+        orient:Matiere_Amenagement_portuaire,
+        orient:Matiere_Architecture,
+        orient:Matiere_Assainissement,
+        orient:Matiere_Calcul_des_structures,
+        orient:Matiere_Constructions_Metalliques,
+        orient:Matiere_Dessin,
+        orient:Matiere_Elasticite_et_plasticite,
+        orient:Matiere_Electricite_des_batiments,
+        orient:Matiere_Elements_finis,
+        orient:Matiere_Fondation,
+        orient:Matiere_Geologie_Appliquee,
+        orient:Matiere_Geometrie_Analytique,
+        orient:Matiere_Geotechnie,
+        orient:Matiere_Gestion_de_chantier,
+        orient:Matiere_Hydraulique,
+        orient:Matiere_Hydraulique_routiere,
+        orient:Matiere_Hydrologie,
+        orient:Matiere_Maintenance_des_batiments,
         orient:Matiere_Management,
-        orient:Matiere_Merise,
-        orient:Matiere_Microcontroleur,
-        orient:Matiere_PHP,
-        orient:Matiere_Pascal,
-        orient:Matiere_Processus_Stochastique,
-        orient:Matiere_Programmation_Logique,
-        orient:Matiere_Recherche_Operationnelle,
-        orient:Matiere_Reseaux_de_Neurones_Artificiels,
-        orient:Matiere_Reseaux_informatiques,
-        orient:Matiere_SGBDR,
-        orient:Matiere_Structure_de_donnees,
-        orient:Matiere_Structures_des_ordinateurs,
-        orient:Matiere_Systemes_Multi_Agents,
-        orient:Matiere_Theorie_des_Signals,
-        orient:Matiere_Theorie_des_jeux,
-        orient:Matiere_UI_UX,
-        orient:Matiere_Unified_Modeling_Language ;
+        orient:Matiere_Mecanique_analytique,
+        orient:Matiere_Mecanique_des_fluides,
+        orient:Matiere_Mecanique_des_sols,
+        orient:Matiere_Metier_des_batiments,
+        orient:Matiere_Metre,
+        orient:Matiere_Ossatures_bois,
+        orient:Matiere_Port,
+        orient:Matiere_Resistance_des_materiaux,
+        orient:Matiere_Route,
+        orient:Matiere_Technique_des_batiments,
+        orient:Matiere_Technologie_des_batiments,
+        orient:Matiere_Thermodynamique,
+        orient:Matiere_Topographie ;
     orient:necessite orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
         orient:Prerequis_Baccalaureat_serie_S,
-        orient:Prerequis_Baccalaureat_serie_Technique ;
-    orient:prepareA orient:Metier_Architecte_Hardware_Responsable_maintenance,
-        orient:Metier_Expert_en_systemes_embarques_et_IoT,
-        orient:Metier_Ingenieur_en_telecommunications,
-        orient:Metier_Ingenieur_systeme_et_reseau,
-        orient:Metier_Specialiste_en_maintenance_de_systemes_informatises,
-        orient:Metier_Specialiste_en_robotique_et_domotique .
+        orient:Prerequis_Technique_genie_civil_BTP ;
+    orient:prepareA orient:Metier_Architecte_junior_Collaborateur_d_architecte,
+        orient:Metier_Conducteur_de_travaux_Chef_de_chantier,
+        orient:Metier_Entrepreneur_en_BTP_Maitre_d_uvre,
+        orient:Metier_Ingenieur_en_Bureau_d_Etudes_Structure_Dimensionnement,
+        orient:Metier_Ingenieur_en_genie_civil_specialise_routes_ponts_hydraulique,
+        orient:Metier_Urbaniste_Expert_en_amenagement_du_territoire ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
 
 orient:Parcours_Industries_Chimiques_Minieres_et_Petrolieres a orient:Parcours ;
     rdfs:label "Industries Chimiques, Minières et Pétrolières"@fr ;
@@ -1103,6 +1081,7 @@ orient:Parcours_Industries_Chimiques_Minieres_et_Petrolieres a orient:Parcours ;
         orient:Matiere_Chimie_Organique,
         orient:Matiere_Chimie_analytique,
         orient:Matiere_Chimie_industrielle,
+        orient:Matiere_Chimie_minerale,
         orient:Matiere_Chimie_verte,
         orient:Matiere_Dessin,
         orient:Matiere_Droit_minier,
@@ -1127,13 +1106,63 @@ orient:Parcours_Industries_Chimiques_Minieres_et_Petrolieres a orient:Parcours ;
         orient:Matiere_Thermophysique ;
     orient:necessite orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_S ;
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_industrielle ;
     orient:prepareA orient:Metier_Expert_en_controle_qualite_dans_l_industrie_lourde,
         orient:Metier_Ingenieur_en_genie_des_procedes_chimiques,
         orient:Metier_Ingenieur_minier_supervision_d_extraction_traitement,
         orient:Metier_Ingenieur_petrolier_prospection_forage_raffinage,
         orient:Metier_Responsable_HSE_Hygiene_Securite_Environnement_industriel,
-        orient:Metier_Technicien_superieur_Ingenieur_de_laboratoire_d_analyses .
+        orient:Metier_Technicien_superieur_Ingenieur_de_laboratoire_d_analyses ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
+
+orient:Parcours_Tourisme_et_Environnement a orient:Parcours ;
+    rdfs:label "Tourisme et Environnement"@fr ;
+    orient:aCode "TEE" ;
+    orient:aLibelle "Tourisme et Environnement" ;
+    orient:appartientAMention orient:Mention_Tourisme ;
+    orient:developpe orient:Competence_Connaissance_du_patrimoine_environnemental_et_culturel_malgache,
+        orient:Competence_Sensibilisation_au_tourisme_durable ;
+    orient:necessite orient:Prerequis_Baccalaureat_serie_A1,
+        orient:Prerequis_Baccalaureat_serie_A2,
+        orient:Prerequis_Baccalaureat_serie_C,
+        orient:Prerequis_Baccalaureat_serie_D,
+        orient:Prerequis_Baccalaureat_serie_L,
+        orient:Prerequis_Baccalaureat_serie_OSE,
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_agricole_elevage,
+        orient:Prerequis_Technique_genie_civil_BTP,
+        orient:Prerequis_Technique_industrielle ;
+    orient:prepareA orient:Metier_Professionnel_du_secteur_du_tourisme ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
+
+orient:Prerequis_Baccalaureat_serie_ACTC a orient:Prerequis ;
+    rdfs:label "Baccalauréat série ACTC"@fr ;
+    orient:aLibelle "Baccalauréat série ACTC" .
+
+orient:Prerequis_Baccalaureat_serie_CCBTP a orient:Prerequis ;
+    rdfs:label "Baccalauréat série CCBTP"@fr ;
+    orient:aLibelle "Baccalauréat série CCBTP" .
+
+orient:Prerequis_Baccalaureat_serie_CG a orient:Prerequis ;
+    rdfs:label "Baccalauréat série CG"@fr ;
+    orient:aLibelle "Baccalauréat série CG" .
+
+orient:Prerequis_Baccalaureat_serie_MEMA a orient:Prerequis ;
+    rdfs:label "Baccalauréat série MEMA"@fr ;
+    orient:aLibelle "Baccalauréat série MEMA" .
+
+orient:Prerequis_Baccalaureat_serie_PCBTP a orient:Prerequis ;
+    rdfs:label "Baccalauréat série PCBTP"@fr ;
+    orient:aLibelle "Baccalauréat série PCBTP" .
+
+orient:Prerequis_Baccalaureat_serie_TEV a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TEV"@fr ;
+    orient:aLibelle "Baccalauréat série TEV" .
 
 orient:aCentreInteret a owl:ObjectProperty ;
     rdfs:label "a pour centre d'intérêt"@fr ;
@@ -1141,6 +1170,10 @@ orient:aCentreInteret a owl:ObjectProperty ;
     rdfs:range orient:CentreInteret .
 
 orient:aCode a owl:DatatypeProperty .
+
+orient:aConditionAdmission a owl:DatatypeProperty .
+
+orient:aDateConsultation a owl:DatatypeProperty .
 
 orient:aLibelle a owl:DatatypeProperty .
 
@@ -1150,6 +1183,10 @@ orient:aSerieBac a owl:ObjectProperty ;
     rdfs:label "a pour série de bac"@fr ;
     rdfs:domain orient:Etudiant ;
     rdfs:range orient:Prerequis .
+
+orient:aStatutSource a owl:DatatypeProperty .
+
+orient:aUrl a owl:DatatypeProperty .
 
 orient:appartientAMention a owl:ObjectProperty ;
     rdfs:label "appartient à la mention"@fr ;
@@ -1186,6 +1223,11 @@ orient:prefere a owl:ObjectProperty ;
     rdfs:range orient:Matiere .
 
 orient:preparePar owl:inverseOf orient:prepareA .
+
+orient:provientDeSource a owl:ObjectProperty ;
+    rdfs:label "provient de la source"@fr ;
+    rdfs:domain orient:Parcours ;
+    rdfs:range orient:Source .
 
 orient:Competence_Administration_et_optimisation_de_bases_de_donnees_SGBDR a orient:CompetenceDisciplinaire ;
     rdfs:label "Administration et optimisation de bases de données (SGBDR)"@fr ;
@@ -1270,6 +1312,10 @@ orient:Competence_Conception_promotion_et_vente_de_produits_touristiques_et_ecot
 orient:Competence_Conduite_de_systemes_de_productions_vegetales_et_animales_modernes a orient:CompetenceDisciplinaire ;
     rdfs:label "Conduite de systèmes de productions végétales et animales modernes"@fr ;
     orient:aLibelle "Conduite de systèmes de productions végétales et animales modernes" .
+
+orient:Competence_Connaissance_du_patrimoine_environnemental_et_culturel_malgache a orient:CompetenceDisciplinaire ;
+    rdfs:label "Connaissance du patrimoine environnemental et culturel malgache"@fr ;
+    orient:aLibelle "Connaissance du patrimoine environnemental et culturel malgache" .
 
 orient:Competence_Conseil_juridique_strategique_et_defense_des_interets_de_l_entreprise a orient:CompetenceDisciplinaire ;
     rdfs:label "Conseil juridique stratégique et défense des intérêts de l'entreprise"@fr ;
@@ -1435,9 +1481,9 @@ orient:Competence_Maitrise_du_droit_minier_et_de_la_reglementation_sectorielle a
     rdfs:label "Maîtrise du droit minier et de la réglementation sectorielle"@fr ;
     orient:aLibelle "Maîtrise du droit minier et de la réglementation sectorielle" .
 
-orient:Competence_Management_d_equipe_et_planification_strategique a orient:CompetenceDisciplinaire ;
-    rdfs:label "Management d'équipe et planification stratégique"@fr ;
-    orient:aLibelle "Management d'équipe et planification stratégique" .
+orient:Competence_Management_d_equipe_and_planification_strategique a orient:CompetenceDisciplinaire ;
+    rdfs:label "Management d'équipe and planification stratégique"@fr ;
+    orient:aLibelle "Management d'équipe and planification stratégique" .
 
 orient:Competence_Management_operationnel_et_strategique_en_hotellerie_et_restauration a orient:CompetenceDisciplinaire ;
     rdfs:label "Management opérationnel et stratégique en hôtellerie et restauration"@fr ;
@@ -1475,6 +1521,10 @@ orient:Competence_Redaction_d_actes_juridiques_de_contrats_commerciaux_et_sociau
     rdfs:label "Rédaction d'actes juridiques, de contrats commerciaux et sociaux"@fr ;
     orient:aLibelle "Rédaction d'actes juridiques, de contrats commerciaux et sociaux" .
 
+orient:Competence_Sensibilisation_au_tourisme_durable a orient:CompetenceDisciplinaire ;
+    rdfs:label "Sensibilisation au tourisme durable"@fr ;
+    orient:aLibelle "Sensibilisation au tourisme durable" .
+
 orient:Competence_Traitement_du_signal_automatique_et_robotique_industrielle a orient:CompetenceDisciplinaire ;
     rdfs:label "Traitement du signal, automatique et robotique industrielle"@fr ;
     orient:aLibelle "Traitement du signal, automatique et robotique industrielle" .
@@ -1487,17 +1537,17 @@ orient:Competence_Veille_reglementaire_et_securisation_contractuelle_des_affaire
     rdfs:label "Veille réglementaire et sécurisation contractuelle des affaires"@fr ;
     orient:aLibelle "Veille réglementaire et sécurisation contractuelle des affaires" .
 
-orient:Interet_Architecture a orient:CentreInteret ;
-    rdfs:label "Architecture"@fr ;
-    orient:aLibelle "Architecture" .
+orient:Interet_Agriculture a orient:CentreInteret ;
+    rdfs:label "Agriculture"@fr ;
+    orient:aLibelle "Agriculture" .
 
-orient:Interet_Bricolage a orient:CentreInteret ;
-    rdfs:label "Bricolage"@fr ;
-    orient:aLibelle "Bricolage" .
+orient:Interet_Automobile_et_aeronautique a orient:CentreInteret ;
+    rdfs:label "Automobile et aéronautique"@fr ;
+    orient:aLibelle "Automobile et aéronautique" .
 
-orient:Interet_Dessin_et_design a orient:CentreInteret ;
-    rdfs:label "Dessin et design"@fr ;
-    orient:aLibelle "Dessin et design" .
+orient:Interet_Environnement a orient:CentreInteret ;
+    rdfs:label "Environnement"@fr ;
+    orient:aLibelle "Environnement" .
 
 orient:Interet_Gastronomie a orient:CentreInteret ;
     rdfs:label "Gastronomie"@fr ;
@@ -1507,17 +1557,17 @@ orient:Interet_Hotellerie a orient:CentreInteret ;
     rdfs:label "Hôtellerie"@fr ;
     orient:aLibelle "Hôtellerie" .
 
-orient:Interet_Industrie a orient:CentreInteret ;
-    rdfs:label "Industrie"@fr ;
-    orient:aLibelle "Industrie" .
-
 orient:Interet_Langues_etrangeres a orient:CentreInteret ;
     rdfs:label "Langues étrangères"@fr ;
     orient:aLibelle "Langues étrangères" .
 
-orient:Interet_Urbanisme a orient:CentreInteret ;
-    rdfs:label "Urbanisme"@fr ;
-    orient:aLibelle "Urbanisme" .
+orient:Interet_Mecanique a orient:CentreInteret ;
+    rdfs:label "Mécanique"@fr ;
+    orient:aLibelle "Mécanique" .
+
+orient:Interet_Reseaux_sociaux a orient:CentreInteret ;
+    rdfs:label "Réseaux sociaux"@fr ;
+    orient:aLibelle "Réseaux sociaux" .
 
 orient:Matiere_ARCHICAD a orient:Matiere ;
     rdfs:label "ARCHICAD"@fr ;
@@ -1567,6 +1617,11 @@ orient:Matiere_Allemand a orient:Matiere ;
 orient:Matiere_Amenagement_aeroportuaire a orient:Matiere ;
     rdfs:label "Aménagement aéroportuaire"@fr ;
     orient:aLibelle "Aménagement aéroportuaire" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Matiere_Amenagement_hydroagricole a orient:Matiere ;
+    rdfs:label "Amenagement hydroagricole"@fr ;
+    orient:aLibelle "Amenagement hydroagricole" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Amenagement_hydrogricole a orient:Matiere ;
@@ -1662,6 +1717,11 @@ orient:Matiere_Chimie_Organique a orient:Matiere ;
 orient:Matiere_Chimie_industrielle a orient:Matiere ;
     rdfs:label "Chimie industrielle"@fr ;
     orient:aLibelle "Chimie industrielle" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Matiere_Chimie_minerale a orient:Matiere ;
+    rdfs:label "Chimie minerale"@fr ;
+    orient:aLibelle "Chimie minerale" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Chimie_verte a orient:Matiere ;
@@ -1825,8 +1885,8 @@ orient:Matiere_Econometrie a orient:Matiere ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Economie_de_developpement a orient:Matiere ;
-    rdfs:label "Economie de developpement"@fr ;
-    orient:aLibelle "Economie de developpement" ;
+    rdfs:label " Economie de developpement"@fr ;
+    orient:aLibelle " Economie de developpement" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Economie_industrielle a orient:Matiere ;
@@ -1854,11 +1914,6 @@ orient:Matiere_Elements_finis a orient:Matiere ;
     orient:aLibelle "Elements finis" ;
     orient:aNiveauMatiere "universite" .
 
-orient:Matiere_Emballage_alimentaire a orient:Matiere ;
-    rdfs:label "Emballage alimentaire"@fr ;
-    orient:aLibelle "Emballage alimentaire" ;
-    orient:aNiveauMatiere "universite" .
-
 orient:Matiere_Environnement a orient:Matiere ;
     rdfs:label "Environnement"@fr ;
     orient:aLibelle "Environnement" ;
@@ -1877,6 +1932,11 @@ orient:Matiere_Etude_d_impact_environnemental a orient:Matiere ;
 orient:Matiere_Experimentation_biometrique a orient:Matiere ;
     rdfs:label "Experimentation biometrique"@fr ;
     orient:aLibelle "Experimentation biometrique" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Matiere_Fabrication_Mecanique a orient:Matiere ;
+    rdfs:label "Fabrication Mécanique"@fr ;
+    orient:aLibelle "Fabrication Mécanique" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Fabrication_mecanique a orient:Matiere ;
@@ -2055,8 +2115,8 @@ orient:Matiere_Maintenance_des_batiments a orient:Matiere ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Marketing_international a orient:Matiere ;
-    rdfs:label "Marketing international"@fr ;
-    orient:aLibelle "Marketing international" ;
+    rdfs:label " Marketing international"@fr ;
+    orient:aLibelle " Marketing international" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Matieres_grasses a orient:Matiere ;
@@ -2082,6 +2142,11 @@ orient:Matiere_Mecanique_des_sols a orient:Matiere ;
 orient:Matiere_Mecanique_rationnelle a orient:Matiere ;
     rdfs:label "Mécanique rationnelle"@fr ;
     orient:aLibelle "Mécanique rationnelle" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Matiere_Metier_des_batiments a orient:Matiere ;
+    rdfs:label "Metier des batiments"@fr ;
+    orient:aLibelle "Metier des batiments" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Metre a orient:Matiere ;
@@ -2184,6 +2249,11 @@ orient:Matiere_Pharmacologie_generale a orient:Matiere ;
     orient:aLibelle "Pharmacologie generale" ;
     orient:aNiveauMatiere "universite" .
 
+orient:Matiere_Pharmacologie_moleculaire a orient:Matiere ;
+    rdfs:label "Pharmacologie moléculaire"@fr ;
+    orient:aLibelle "Pharmacologie moléculaire" ;
+    orient:aNiveauMatiere "universite" .
+
 orient:Matiere_Pharmacologie_moleculaire_et_cellulaire a orient:Matiere ;
     rdfs:label "Pharmacologie moléculaire et cellulaire"@fr ;
     orient:aLibelle "Pharmacologie moléculaire et cellulaire" ;
@@ -2202,11 +2272,6 @@ orient:Matiere_Photo a orient:Matiere ;
 orient:Matiere_Physiologie_medicale a orient:Matiere ;
     rdfs:label "Physiologie médicale"@fr ;
     orient:aLibelle "Physiologie médicale" ;
-    orient:aNiveauMatiere "universite" .
-
-orient:Matiere_Physiologie_nutritionnelle a orient:Matiere ;
-    rdfs:label "Physiologie nutritionnelle"@fr ;
-    orient:aLibelle "Physiologie nutritionnelle" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Physiopathologie a orient:Matiere ;
@@ -2345,8 +2410,10 @@ orient:Matiere_Technologie_des_froids a orient:Matiere ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Technologie_des_materiaux a orient:Matiere ;
-    rdfs:label "Technologie des materiaux"@fr ;
-    orient:aLibelle "Technologie des materiaux" ;
+    rdfs:label "Technologie des materiaux"@fr,
+        "Technologie des matériaux"@fr ;
+    orient:aLibelle "Technologie des materiaux",
+        "Technologie des matériaux" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Technologie_des_pectines a orient:Matiere ;
@@ -2357,11 +2424,6 @@ orient:Matiere_Technologie_des_pectines a orient:Matiere ;
 orient:Matiere_Technologie_des_proteines a orient:Matiere ;
     rdfs:label "Technologie des proteines"@fr ;
     orient:aLibelle "Technologie des proteines" ;
-    orient:aNiveauMatiere "universite" .
-
-orient:Matiere_Technologie_et_transformation_du_cafe_et_cacao a orient:Matiere ;
-    rdfs:label "Technologie et transformation du café et cacao"@fr ;
-    orient:aLibelle "Technologie et transformation du café et cacao" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Technologie_ferroviaire a orient:Matiere ;
@@ -2439,13 +2501,29 @@ orient:Matiere_Zootechnie a orient:Matiere ;
     orient:aLibelle "Zootechnie" ;
     orient:aNiveauMatiere "universite" .
 
+orient:Matiere_emballage_alimentaire a orient:Matiere ;
+    rdfs:label "emballage alimentaire"@fr ;
+    orient:aLibelle "emballage alimentaire" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Matiere_physiologie_nutritionnelle a orient:Matiere ;
+    rdfs:label "physiologie nutritionnelle"@fr ;
+    orient:aLibelle "physiologie nutritionnelle" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Matiere_phytochimie a orient:Matiere ;
+    rdfs:label "phytochimie"@fr ;
+    orient:aLibelle "phytochimie" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Matiere_technologie_et_transformation_du_cafe_et_cacao a orient:Matiere ;
+    rdfs:label "technologie et transformation du café et cacao"@fr ;
+    orient:aLibelle "technologie et transformation du café et cacao" ;
+    orient:aNiveauMatiere "universite" .
+
 orient:Mention_Genie_Civil_et_Architecture a orient:Mention ;
     rdfs:label "Génie Civil et Architecture"@fr ;
     orient:aLibelle "Génie Civil et Architecture" .
-
-orient:Mention_Tourisme a orient:Mention ;
-    rdfs:label "Tourisme"@fr ;
-    orient:aLibelle "Tourisme" .
 
 orient:Metier_Administrateur_des_ventes_Responsable_export a orient:Metier ;
     rdfs:label "Administrateur des ventes / Responsable export"@fr ;
@@ -2559,9 +2637,9 @@ orient:Metier_Chercheur_en_phyto_medicaments a orient:Metier ;
     rdfs:label "Chercheur en phyto-médicaments"@fr ;
     orient:aLibelle "Chercheur en phyto-médicaments" .
 
-orient:Metier_Comptable_Chef_Comptable_Expert_comptable_apres_stage a orient:Metier ;
-    rdfs:label "Comptable / Chef Comptable / Expert-comptable (après stage)"@fr ;
-    orient:aLibelle "Comptable / Chef Comptable / Expert-comptable (après stage)" .
+orient:Metier_Comptable_Chef_Comptable_Expert_comptable_after_stage a orient:Metier ;
+    rdfs:label "Comptable / Chef Comptable / Expert-comptable (after stage)"@fr ;
+    orient:aLibelle "Comptable / Chef Comptable / Expert-comptable (after stage)" .
 
 orient:Metier_Concepteur_Collaborateur_d_architecte a orient:Metier ;
     rdfs:label "Concepteur / Collaborateur d'architecte"@fr ;
@@ -2879,6 +2957,10 @@ orient:Metier_Planificateur_strategique_Business_Analyst a orient:Metier ;
     rdfs:label "Planificateur stratégique / Business Analyst"@fr ;
     orient:aLibelle "Planificateur stratégique / Business Analyst" .
 
+orient:Metier_Professionnel_du_secteur_du_tourisme a orient:Metier ;
+    rdfs:label "Professionnel du secteur du tourisme"@fr ;
+    orient:aLibelle "Professionnel du secteur du tourisme" .
+
 orient:Metier_Responsable_HSE_Hygiene_Securite_Environnement_industriel a orient:Metier ;
     rdfs:label "Responsable HSE (Hygiène, Sécurité, Environnement) industriel"@fr ;
     orient:aLibelle "Responsable HSE (Hygiène, Sécurité, Environnement) industriel" .
@@ -3043,116 +3125,90 @@ orient:Metier_Webmaster_Developpeur_Front_end a orient:Metier ;
     rdfs:label "Webmaster / Développeur Front-end"@fr ;
     orient:aLibelle "Webmaster / Développeur Front-end" .
 
-orient:Parcours_Electromecanique_et_Informatique_Industrielle a orient:Parcours ;
-    rdfs:label "Électromécanique et Informatique Industrielle"@fr ;
-    orient:aCode "EMII" ;
-    orient:aLibelle "Électromécanique et Informatique Industrielle" ;
-    orient:appartientAMention orient:Mention_Genie_Industriel ;
-    orient:developpe orient:Competence_Conception_assistee_par_ordinateur_AutoCAD_et_dimensionnement_mecanique,
-        orient:Competence_Conception_et_programmation_de_systemes_automatises_Grafcet_Automates,
-        orient:Competence_Expertise_en_electronique_de_puissance_et_microcontroleurs,
-        orient:Competence_Gestion_de_la_production_et_supervision_de_processus_industriels,
-        orient:Competence_Maintenance_industrielle_pluridisciplinaire_mecanique_electrique_froid ;
-    orient:enseigne orient:Matiere_AUTOCAD,
-        orient:Matiere_Aeronautique,
-        orient:Matiere_Automatique,
-        orient:Matiere_Capteurs,
-        orient:Matiere_Dessin,
-        orient:Matiere_Elasticite_et_plasticite,
-        orient:Matiere_Electricite,
-        orient:Matiere_Electricite_Industrielle,
-        orient:Matiere_Electronique,
-        orient:Matiere_Electronique_de_puissance,
-        orient:Matiere_Fabrication_mecanique,
-        orient:Matiere_Geometrie_analytique,
-        orient:Matiere_Grafcet,
-        orient:Matiere_Maintenance_avion,
-        orient:Matiere_Management,
-        orient:Matiere_Mecanique_Generale,
-        orient:Matiere_Mecanique_analytique,
-        orient:Matiere_Mecanique_appliquee,
-        orient:Matiere_Mecanique_rationnelle,
-        orient:Matiere_Metallurgie,
-        orient:Matiere_Microcontroleur,
-        orient:Matiere_Moteur_a_combustion_interne,
-        orient:Matiere_Ouvrage_metallique,
-        orient:Matiere_Resistance_des_materiaux,
-        orient:Matiere_Technologie_des_froids,
-        orient:Matiere_Technologie_ferroviaire,
-        orient:Matiere_Thermodynamique,
-        orient:Matiere_Vibration ;
-    orient:necessite orient:Prerequis_Baccalaureat_serie_C,
-        orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_Technique ;
-    orient:prepareA orient:Metier_Concepteur_de_systemes_IoT_industriels_et_supervision,
-        orient:Metier_Ingenieur_en_automatisation_et_robotique_industrielle,
-        orient:Metier_Ingenieur_en_bureau_d_etudes_mecanique,
-        orient:Metier_Ingenieur_en_electrotechnique_Electromecanicien,
-        orient:Metier_Ingenieur_en_maintenance_industrielle_Responsable_Maintenance,
-        orient:Metier_Responsable_de_production_en_usine_Gestionnaire_d_atelier .
-
-orient:Parcours_Pharmacologie_et_Industries_Pharmaceutiques a orient:Parcours ;
-    rdfs:label "Pharmacologie et Industries Pharmaceutiques"@fr ;
-    orient:aCode "PIP" ;
-    orient:aLibelle "Pharmacologie et Industries Pharmaceutiques" ;
+orient:Parcours_Agriculture_et_Elevage a orient:Parcours ;
+    rdfs:label "Agriculture et Élevage"@fr ;
+    orient:aCode "AEE" ;
+    orient:aConditionAdmission "A2 admise avec une note de mathématiques >= 12/20."@fr ;
+    orient:aLibelle "Agriculture et Élevage" ;
     orient:appartientAMention orient:Mention_Biotechnologie_et_Agronomie ;
-    orient:developpe orient:Competence_Analyse_phytochimique_et_valorisation_scientifique_des_plantes_medicinales,
-        orient:Competence_Controle_qualite_reglementation_et_pharmacotechnie,
-        orient:Competence_Formulation_fabrication_et_controle_de_produits_pharmaceutiques,
-        orient:Competence_Gestion_de_laboratoire_d_analyses_medicales_et_industrielles,
-        orient:Competence_Maitrise_de_la_pharmacologie_moleculaire_cellulaire_et_des_grandes_fonctions ;
-    orient:enseigne orient:Matiere_Anatomie_et_physiologie_humaine,
+    orient:developpe orient:Competence_Conduite_de_systemes_de_productions_vegetales_et_animales_modernes,
+        orient:Competence_Expertise_en_zootechnie_pisciculture_et_elevage_specialise,
+        orient:Competence_Gestion_et_pilotage_de_projets_de_developpement_rural_et_agrobusiness,
+        orient:Competence_Mise_en_uvre_de_pratiques_d_agroecologie_et_d_agriculture_biologique,
+        orient:Competence_Optimisation_des_rendements_agricoles_et_gestion_durable_des_sols ;
+    orient:enseigne orient:Matiere_Agriculture_biologique,
+        orient:Matiere_Agroecologie,
+        orient:Matiere_Agronomie,
+        orient:Matiere_Agronomie_tropicale,
+        orient:Matiere_Apiculture,
+        orient:Matiere_Arboriculture_fruitiere,
         orient:Matiere_Atomistique,
+        orient:Matiere_Aviculture,
         orient:Matiere_Bacteriologie,
-        orient:Matiere_Bacteriologie_medicale,
-        orient:Matiere_Bio_Informatique,
+        orient:Matiere_Bio_informatique,
         orient:Matiere_Biochimie,
-        orient:Matiere_Biochimie_medicale,
         orient:Matiere_Biologie_Animale,
         orient:Matiere_Biologie_Cellulaire,
         orient:Matiere_Biologie_Vegetale,
+        orient:Matiere_Biologie_cellulaire,
+        orient:Matiere_Biologie_vegetale,
         orient:Matiere_Biotechnologie,
-        orient:Matiere_Chimie_analytique,
         orient:Matiere_Chimie_organique,
+        orient:Matiere_Crevetticulture,
+        orient:Matiere_Culture_de_rentes,
+        orient:Matiere_Culture_des_plantes,
+        orient:Matiere_Culture_industrielle,
+        orient:Matiere_Culture_vivriere,
+        orient:Matiere_Developpement_rural,
+        orient:Matiere_Elevage,
         orient:Matiere_Enzymologie,
-        orient:Matiere_Ethnopharmacologie,
+        orient:Matiere_Experimentation_biometrique,
         orient:Matiere_Genetique,
-        orient:Matiere_Immuno_clinique,
+        orient:Matiere_Hydrobiologie,
+        orient:Matiere_Hydrologie_appliquee,
         orient:Matiere_Immunologie,
-        orient:Matiere_Immunopathologie,
-        orient:Matiere_Industrie_pharmaceutique,
         orient:Matiere_Management,
         orient:Matiere_Methodologie_des_recherches_experimentales,
         orient:Matiere_Microbiologie,
-        orient:Matiere_Microbiologie_medicale,
-        orient:Matiere_Pharmacocinetique,
-        orient:Matiere_Pharmacologie,
-        orient:Matiere_Pharmacologie_des_grandes_fonctions,
-        orient:Matiere_Pharmacologie_generale,
-        orient:Matiere_Pharmacologie_moleculaire_et_cellulaire,
-        orient:Matiere_Pharmacotechnie,
+        orient:Matiere_Nutrition_animale,
+        orient:Matiere_Petits_ruminants,
         orient:Matiere_Physiologie_Animale,
         orient:Matiere_Physiologie_Vegetale,
-        orient:Matiere_Physiologie_medicale,
-        orient:Matiere_Physiologie_nutritionnelle,
-        orient:Matiere_Physiopathologie,
-        orient:Matiere_Phytochimie,
-        orient:Matiere_Plantes_medicales,
-        orient:Matiere_Semiologie,
-        orient:Matiere_Thermo_physique,
-        orient:Matiere_Toxicologie_Generale,
+        orient:Matiere_Physiologie_animale,
+        orient:Matiere_Pisciculture,
+        orient:Matiere_Protection_integree_des_cultures_et_denrees,
+        orient:Matiere_Securite_alimentaire,
+        orient:Matiere_Serriculture,
         orient:Matiere_Traitement_des_eaux,
         orient:Matiere_Virologie,
-        orient:Matiere_Virologie_medicale ;
-    orient:necessite orient:Prerequis_Baccalaureat_serie_C,
+        orient:Matiere_Vulgarisation_agricole_et_animation_rurale,
+        orient:Matiere_Zootechnie ;
+    orient:necessite orient:Prerequis_Baccalaureat_serie_A2,
+        orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_S ;
-    orient:prepareA orient:Metier_Chercheur_en_biotechnologie_vegetale_et_sante,
-        orient:Metier_Delegue_medical_Technico_commercial_en_pharmacie,
-        orient:Metier_Responsable_controle_qualite_et_affaires_reglementaires,
-        orient:Metier_Responsable_de_production_pharmaceutique_Ingenieur_formulation,
-        orient:Metier_Specialiste_en_valorisation_des_ressources_naturelles_Phyto_medicaments,
-        orient:Metier_Technicien_ou_Ingenieur_de_laboratoire_medical_industriel .
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_agricole_elevage ;
+    orient:prepareA orient:Metier_Conseiller_agricole_Technicien_de_vulgarisation,
+        orient:Metier_Consultant_en_agroecologie_et_environnement,
+        orient:Metier_Expert_en_agri_business_Entrepreneur_agricole,
+        orient:Metier_Ingenieur_Agronome_Gestionnaire_d_exploitation_agricole,
+        orient:Metier_Responsable_de_production_animale_Elevage_Aviculture_Apiculture,
+        orient:Metier_Responsable_de_projet_developpement_rural_ONG_FAO_FIDA ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
+
+orient:Prerequis_Baccalaureat_serie_TAMB a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TAMB"@fr ;
+    orient:aLibelle "Baccalauréat série TAMB" .
+
+orient:Prerequis_Baccalaureat_serie_TGC a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TGC"@fr ;
+    orient:aLibelle "Baccalauréat série TGC" .
+
+orient:Prerequis_Baccalaureat_serie_TMF a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TMF"@fr ;
+    orient:aLibelle "Baccalauréat série TMF" .
 
 orient:developpe a owl:ObjectProperty ;
     rdfs:label "développe"@fr ;
@@ -3172,13 +3228,25 @@ orient:prepareA a owl:ObjectProperty ;
 orient:Formation a owl:Class ;
     rdfs:label "Formation"@fr .
 
+orient:Interet_Animaux a orient:CentreInteret ;
+    rdfs:label "Animaux"@fr ;
+    orient:aLibelle "Animaux" .
+
 orient:Interet_Cultures_du_monde a orient:CentreInteret ;
     rdfs:label "Cultures du monde"@fr ;
     orient:aLibelle "Cultures du monde" .
 
-orient:Interet_Reseaux_sociaux_et_numerique a orient:CentreInteret ;
-    rdfs:label "Réseaux sociaux et numérique"@fr ;
-    orient:aLibelle "Réseaux sociaux et numérique" .
+orient:Interet_Electronique a orient:CentreInteret ;
+    rdfs:label "Électronique"@fr ;
+    orient:aLibelle "Électronique" .
+
+orient:Interet_Nature a orient:CentreInteret ;
+    rdfs:label "Nature"@fr ;
+    orient:aLibelle "Nature" .
+
+orient:Interet_Robotique a orient:CentreInteret ;
+    rdfs:label "Robotique"@fr ;
+    orient:aLibelle "Robotique" .
 
 orient:Matiere_Automatique a orient:Matiere ;
     rdfs:label "Automatique"@fr ;
@@ -3306,6 +3374,10 @@ orient:Mention_Genie_Industriel a orient:Mention ;
     rdfs:label "Génie Industriel"@fr ;
     orient:aLibelle "Génie Industriel" .
 
+orient:Mention_Tourisme a orient:Mention ;
+    rdfs:label "Tourisme"@fr ;
+    orient:aLibelle "Tourisme" .
+
 orient:Metier_Administrateur_de_bases_de_donnees a orient:Metier ;
     rdfs:label "Administrateur de bases de données"@fr ;
     orient:aLibelle "Administrateur de bases de données" .
@@ -3338,123 +3410,220 @@ orient:Metier_Responsable_de_production a orient:Metier ;
     rdfs:label "Responsable de production"@fr ;
     orient:aLibelle "Responsable de production" .
 
-orient:Parcours_Droit_et_Techniques_Juridiques_des_Affaires a orient:Parcours ;
-    rdfs:label "Droit et Techniques Juridiques des Affaires"@fr ;
-    orient:aCode "DTJA" ;
-    orient:aLibelle "Droit et Techniques Juridiques des Affaires" ;
-    orient:appartientAMention orient:Mention_Droit_et_Techniques_des_Affaires ;
-    orient:developpe orient:Competence_Conseil_juridique_strategique_et_defense_des_interets_de_l_entreprise,
-        orient:Competence_Expertise_en_droit_foncier_minier_de_la_communication_et_des_douanes,
-        orient:Competence_Gestion_des_litiges_commerciaux_contentieux_et_procedures_collectives,
-        orient:Competence_Redaction_d_actes_juridiques_de_contrats_commerciaux_et_sociaux,
-        orient:Competence_Veille_reglementaire_et_securisation_contractuelle_des_affaires ;
-    orient:enseigne orient:Matiere_Contrat_d_entreprise,
-        orient:Matiere_Droit_Minier,
-        orient:Matiere_Droit_administratif,
-        orient:Matiere_Droit_civil,
-        orient:Matiere_Droit_commercial,
-        orient:Matiere_Droit_constitutionnel,
-        orient:Matiere_Droit_de_la_communication,
-        orient:Matiere_Droit_de_la_concurrence,
-        orient:Matiere_Droit_de_la_procedure_collective,
-        orient:Matiere_Droit_de_travail,
-        orient:Matiere_Droit_des_biens,
-        orient:Matiere_Droit_des_douanes,
-        orient:Matiere_Droit_des_societes,
-        orient:Matiere_Droit_des_suretes,
-        orient:Matiere_Droit_foncier,
-        orient:Matiere_Droit_penal,
-        orient:Matiere_Droit_social,
-        orient:Matiere_Introduction_au_droit,
+orient:Parcours_Electronique_Systemes_Informatiques_et_Intelligence_Artificielle a orient:Parcours ;
+    rdfs:label "Électronique, Systèmes Informatiques et Intelligence Artificielle"@fr ;
+    orient:aCode "ESIIA" ;
+    orient:aLibelle "Électronique, Systèmes Informatiques et Intelligence Artificielle" ;
+    orient:appartientAMention orient:Mention_Informatique_et_Telecommunications ;
+    orient:developpe orient:Competence_Architecture_et_administration_de_reseaux_informatiques_GSM_TCP_IP,
+        orient:Competence_Conception_et_programmation_de_systemes_embarques_Microcontroleurs,
+        orient:Competence_Integration_de_solutions_IoT_et_objets_connectes,
+        orient:Competence_Maintenance_avancee_de_systemes_electroniques_et_hardware,
+        orient:Competence_Traitement_du_signal_automatique_et_robotique_industrielle ;
+    orient:enseigne orient:Matiere_Algorithme,
+        orient:Matiere_Algorithme_Avance,
+        orient:Matiere_Assembleur,
+        orient:Matiere_Automatique,
+        orient:Matiere_Base_de_Donnees,
+        orient:Matiere_C,
+        orient:Matiere_Capteurs,
+        orient:Matiere_Codage,
+        orient:Matiere_Cryptographie,
+        orient:Matiere_Cybersecurite,
+        orient:Matiere_Deep_Learning,
+        orient:Matiere_Electricite,
+        orient:Matiere_Electronique,
+        orient:Matiere_GLCIA,
+        orient:Matiere_GPI,
+        orient:Matiere_Geometrie_appliquee_aux_Formes_et_Images,
+        orient:Matiere_Gestion_de_Projet,
+        orient:Matiere_Global_System_for_Mobile_Communication,
+        orient:Matiere_HTML_CSS,
+        orient:Matiere_Informatique_Decisionnelle,
+        orient:Matiere_Informatique_Quantique,
+        orient:Matiere_Intelligence_Artificielle,
+        orient:Matiere_Java,
+        orient:Matiere_JavaScript,
+        orient:Matiere_Langage_C,
+        orient:Matiere_Linux,
+        orient:Matiere_Machine_Learning,
+        orient:Matiere_Maintenance_des_Systemes_Electroniques,
+        orient:Matiere_Maintenance_des_Systemes_Informatiques,
+        orient:Matiere_Maintenance_des_Systemes_Informatiques_Hardware,
         orient:Matiere_Management,
-        orient:Matiere_Procedure_penale ;
+        orient:Matiere_Merise,
+        orient:Matiere_Microcontroleur,
+        orient:Matiere_PHP,
+        orient:Matiere_Pascal,
+        orient:Matiere_Processus_Stochastique,
+        orient:Matiere_Programmation_Logique,
+        orient:Matiere_Recherche_Operationnelle,
+        orient:Matiere_Reseaux_de_Neurones_Artificiels,
+        orient:Matiere_Reseaux_informatiques,
+        orient:Matiere_SGBDR,
+        orient:Matiere_Structure_de_donnees,
+        orient:Matiere_Structures_des_ordinateurs,
+        orient:Matiere_Systemes_Multi_Agents,
+        orient:Matiere_Theorie_des_Signals,
+        orient:Matiere_Theorie_des_jeux,
+        orient:Matiere_UI_UX,
+        orient:Matiere_Unified_Modeling_Language ;
+    orient:necessite orient:Prerequis_Baccalaureat_serie_C,
+        orient:Prerequis_Baccalaureat_serie_D,
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_industrielle ;
+    orient:prepareA orient:Metier_Architecte_Hardware_Responsable_maintenance,
+        orient:Metier_Expert_en_systemes_embarques_et_IoT,
+        orient:Metier_Ingenieur_en_telecommunications,
+        orient:Metier_Ingenieur_systeme_et_reseau,
+        orient:Metier_Specialiste_en_maintenance_de_systemes_informatises,
+        orient:Metier_Specialiste_en_robotique_et_domotique,
+        orient:Metier_Tous_les_metiers_du_secteur_IT_Mention_Informatique_Telecommunications ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
+
+orient:Parcours_Finances_et_Comptabilite a orient:Parcours ;
+    rdfs:label "Finances et Comptabilité"@fr ;
+    orient:aCode "FIC" ;
+    orient:aLibelle "Finances et Comptabilité" ;
+    orient:appartientAMention orient:Mention_Droit_et_Techniques_des_Affaires ;
+    orient:developpe orient:Competence_Analyse_des_etats_financiers_et_aide_a_la_decision_d_investissement,
+        orient:Competence_Audit_financier_et_controle_de_gestion_approfondi,
+        orient:Competence_Expertise_en_comptabilite_generale_analytique_et_financiere,
+        orient:Competence_Gestion_de_tresorerie_ingenierie_financiere_et_technique_bancaire,
+        orient:Competence_Maitrise_de_la_fiscalite_d_entreprise_et_du_droit_des_societes ;
+    orient:enseigne orient:Matiere_Analyse_financiere,
+        orient:Matiere_Choix_d_investissement,
+        orient:Matiere_Comptabilite_financiere,
+        orient:Matiere_Economie,
+        orient:Matiere_Economie_bleu,
+        orient:Matiere_Economie_de_l_environnement,
+        orient:Matiere_Economie_internationale,
+        orient:Matiere_Economie_mathematique,
+        orient:Matiere_Economie_monetaire,
+        orient:Matiere_Economie_rurale,
+        orient:Matiere_Finance_d_entreprise,
+        orient:Matiere_Finance_publique,
+        orient:Matiere_Fiscalite,
+        orient:Matiere_Gestion_budgetaire,
+        orient:Matiere_Gestion_d_entreprise,
+        orient:Matiere_Gestion_de_projet,
+        orient:Matiere_Gestion_de_projet_de_developpement,
+        orient:Matiere_Gestion_financiere,
+        orient:Matiere_Gestion_previsionnelle,
+        orient:Matiere_Informatique,
+        orient:Matiere_Institutions_financieres,
+        orient:Matiere_Macroeconomie,
+        orient:Matiere_Management,
+        orient:Matiere_Marketing_international,
+        orient:Matiere_Neuro_marketing,
+        orient:Matiere_Organisation,
+        orient:Matiere_Politique_economique,
+        orient:Matiere_Technique_bancaire ;
     orient:necessite orient:Prerequis_Baccalaureat_serie_A1,
         orient:Prerequis_Baccalaureat_serie_A2,
         orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
         orient:Prerequis_Baccalaureat_serie_L,
         orient:Prerequis_Baccalaureat_serie_OSE,
-        orient:Prerequis_Baccalaureat_serie_S ;
-    orient:prepareA orient:Metier_Assistant_juridique_en_cabinet_d_avocats_ou_d_huissiers,
-        orient:Metier_Charge_de_conformite_Compliance_Officer,
-        orient:Metier_Conseiller_juridique_en_entreprise_Juriste_d_affaires,
-        orient:Metier_Expert_en_contentieux_d_affaires_Agent_de_recouvrement,
-        orient:Metier_Juriste_specialise_Foncier_Minier_Douanes,
-        orient:Metier_Responsable_des_ressources_humaines_Volet_juridique_Droit_du_travail .
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_agricole_elevage,
+        orient:Prerequis_Technique_genie_civil_BTP,
+        orient:Prerequis_Technique_industrielle ;
+    orient:prepareA orient:Metier_Analyste_financier_en_banque_ou_cabinet_d_audit,
+        orient:Metier_Auditeur_financier_interne_externe,
+        orient:Metier_Comptable_Chef_Comptable_Expert_comptable_after_stage,
+        orient:Metier_Controleur_de_gestion,
+        orient:Metier_Directeur_Administratif_et_Financier_DAF,
+        orient:Metier_Gestionnaire_de_tresorerie_Tresorier_d_entreprise ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
 
-orient:Parcours_Genie_Civil_et_Architecture a orient:Parcours ;
-    rdfs:label "Génie Civil et Architecture"@fr ;
-    orient:aCode "GCA" ;
-    orient:aLibelle "Génie Civil et Architecture" ;
-    orient:appartientAMention orient:Mention_Genie_Civil_et_Architecture ;
-    orient:developpe orient:Competence_Conception_architecturale_et_dessin_technique_assiste_AutoCAD_ArchiCAD,
-        orient:Competence_Dimensionnement_et_calcul_de_structures_RDM_Elements_finis,
-        orient:Competence_Expertise_en_geotechnique_et_mecanique_des_sols,
-        orient:Competence_Gestion_technique_et_administrative_de_chantiers_BTP,
-        orient:Competence_Ingenierie_des_infrastructures_routieres_hydrauliques_et_portuaires ;
-    orient:enseigne orient:Matiere_ARCHICAD,
-        orient:Matiere_AUTOCAD,
-        orient:Matiere_Acoustique,
-        orient:Matiere_Amenagement_aeroportuaire,
-        orient:Matiere_Amenagement_hydrogricole,
-        orient:Matiere_Amenagement_portuaire,
-        orient:Matiere_Architecture,
-        orient:Matiere_Assainissement,
-        orient:Matiere_Calcul_des_structures,
-        orient:Matiere_Constructions_Metalliques,
-        orient:Matiere_Dessin,
-        orient:Matiere_Elasticite_et_plasticite,
-        orient:Matiere_Electricite_des_batiments,
-        orient:Matiere_Elements_finis,
-        orient:Matiere_Fondation,
-        orient:Matiere_Geologie_Appliquee,
-        orient:Matiere_Geometrie_Analytique,
-        orient:Matiere_Geotechnie,
-        orient:Matiere_Gestion_de_chantier,
-        orient:Matiere_Hydraulique,
-        orient:Matiere_Hydraulique_routiere,
-        orient:Matiere_Hydrologie,
-        orient:Matiere_Maintenance_des_batiments,
+orient:Parcours_Industries_Agroalimentaires a orient:Parcours ;
+    rdfs:label "Industries Agroalimentaires"@fr ;
+    orient:aCode "IAA" ;
+    orient:aConditionAdmission "A2 admise avec une note de mathématiques >= 12/20."@fr ;
+    orient:aLibelle "Industries Agroalimentaires" ;
+    orient:appartientAMention orient:Mention_Biotechnologie_et_Agronomie ;
+    orient:developpe orient:Competence_Analyse_biochimique_microbiologique_et_toxicologique_des_aliments,
+        orient:Competence_Gestion_de_la_production_industrielle_et_emballage_alimentaire,
+        orient:Competence_Maitrise_de_la_securite_sanitaire_et_normes_qualite_HACCP_ISO,
+        orient:Competence_Pilotage_des_procedes_de_transformation_agroalimentaire_cafe_cacao_lait,
+        orient:Competence_Recherche_et_Developpement_R_D_de_nouveaux_produits_alimentaires ;
+    orient:enseigne orient:Matiere_Additifs_alimentaires,
+        orient:Matiere_Atomistique,
+        orient:Matiere_Bacteriologie,
+        orient:Matiere_Bio_informatique,
+        orient:Matiere_Biochimie,
+        orient:Matiere_Biochimie_alimentaire,
+        orient:Matiere_Biologie_Animale,
+        orient:Matiere_Biologie_Cellulaire,
+        orient:Matiere_Biologie_Vegetale,
+        orient:Matiere_Biologie_cellulaire,
+        orient:Matiere_Biologie_vegetale,
+        orient:Matiere_Biotechnologie,
+        orient:Matiere_Chimie_analytique,
+        orient:Matiere_Chimie_organique,
+        orient:Matiere_Elevage,
+        orient:Matiere_Enzymologie,
+        orient:Matiere_Etude_d_impact_environnemental,
+        orient:Matiere_Fruits_et_legumes,
+        orient:Matiere_Genetique,
+        orient:Matiere_Genie_fermentaire,
+        orient:Matiere_Genie_industriel_alimentaire,
+        orient:Matiere_Lait,
         orient:Matiere_Management,
-        orient:Matiere_Mecanique_analytique,
-        orient:Matiere_Mecanique_des_fluides,
-        orient:Matiere_Mecanique_des_sols,
-        orient:Matiere_Metre,
-        orient:Matiere_Ossatures_bois,
-        orient:Matiere_Port,
-        orient:Matiere_Resistance_des_materiaux,
-        orient:Matiere_Route,
-        orient:Matiere_Technique_des_batiments,
-        orient:Matiere_Technologie_des_batiments,
-        orient:Matiere_Thermodynamique,
-        orient:Matiere_Topographie ;
-    orient:necessite orient:Prerequis_Baccalaureat_serie_C,
+        orient:Matiere_Matieres_grasses,
+        orient:Matiere_Microbiologie,
+        orient:Matiere_Microbiologie_alimentaire,
+        orient:Matiere_Nutrition_humaine,
+        orient:Matiere_Physiologie_Animale,
+        orient:Matiere_Physiologie_Vegetale,
+        orient:Matiere_Physiologie_animale,
+        orient:Matiere_Science_des_aliments,
+        orient:Matiere_Securite_alimentaire,
+        orient:Matiere_Sucre,
+        orient:Matiere_Technologie_des_pectines,
+        orient:Matiere_Technologie_des_proteines,
+        orient:Matiere_Thermo_physique,
+        orient:Matiere_Toxicologie_alimentaire,
+        orient:Matiere_Traitement_des_eaux,
+        orient:Matiere_Viandes,
+        orient:Matiere_Virologie,
+        orient:Matiere_emballage_alimentaire,
+        orient:Matiere_technologie_et_transformation_du_cafe_et_cacao ;
+    orient:necessite orient:Prerequis_Baccalaureat_serie_A2,
+        orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
         orient:Prerequis_Baccalaureat_serie_S,
-        orient:Prerequis_Baccalaureat_serie_Technique ;
-    orient:prepareA orient:Metier_Architecte_junior_Collaborateur_d_architecte,
-        orient:Metier_Conducteur_de_travaux_Chef_de_chantier,
-        orient:Metier_Entrepreneur_en_BTP_Maitre_d_uvre,
-        orient:Metier_Ingenieur_en_Bureau_d_Etudes_Structure_Dimensionnement,
-        orient:Metier_Ingenieur_en_genie_civil_specialise_routes_ponts_hydraulique,
-        orient:Metier_Urbaniste_Expert_en_amenagement_du_territoire .
+        orient:Prerequis_Technique_agricole_elevage ;
+    orient:prepareA orient:Metier_Charge_de_Recherche_et_Developpement_R_D_alimentaire,
+        orient:Metier_Expert_en_securite_alimentaire_Consultant_qualite,
+        orient:Metier_Gestionnaire_d_unites_de_transformation_Chef_de_production,
+        orient:Metier_Ingenieur_de_production_en_industrie_agroalimentaire,
+        orient:Metier_Responsable_Qualite_et_Hygiene_HACCP,
+        orient:Metier_Responsable_logistique_de_denrees_perissables ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
 
-orient:Parcours_Informatique_Statistique_Appliquee_et_Intelligence_Artificielle a orient:Parcours ;
-    rdfs:label "Informatique, Statistique Appliquée et Intelligence Artificielle"@fr ;
-    orient:aCode "ISAIA" ;
-    orient:aLibelle "Informatique, Statistique Appliquée et Intelligence Artificielle" ;
+orient:Parcours_Informatique_de_Gestion_Genie_Logiciel_et_Intelligence_Artificielle a orient:Parcours ;
+    rdfs:label "Informatique de Gestion, Génie Logiciel et Intelligence Artificielle"@fr ;
+    orient:aCode "IGGLIA" ;
+    orient:aLibelle "Informatique de Gestion, Génie Logiciel et Intelligence Artificielle" ;
     orient:appartientAMention orient:Mention_Informatique_et_Telecommunications ;
-    orient:developpe orient:Competence_Analyse_de_donnees_economiques_et_financieres_pour_la_decision,
-        orient:Competence_Analyse_statistique_complexe_et_probabilites_appliquees,
-        orient:Competence_Conception_et_mise_en_uvre_de_solutions_de_Business_Intelligence,
-        orient:Competence_Gestion_stockage_et_traitement_de_donnees_massives_Big_Data,
-        orient:Competence_Modelisation_predictive_Machine_Learning_Deep_Learning ;
+    orient:developpe orient:Competence_Administration_et_optimisation_de_bases_de_donnees_SGBDR,
+        orient:Competence_Conception_et_modelisation_logicielle_avancee_UML_Merise,
+        orient:Competence_Developpement_d_architectures_logicielles_et_integration_d_IA,
+        orient:Competence_Gestion_de_projets_informatiques_et_ingenierie_logicielle,
+        orient:Competence_Maitrise_de_la_programmation_multi_langages_Java_C_PHP_JavaScript ;
     orient:enseigne orient:Matiere_Algorithme,
         orient:Matiere_Algorithme_Avance,
         orient:Matiere_Base_de_Donnees,
         orient:Matiere_C,
         orient:Matiere_Codage,
-        orient:Matiere_Combinatoire_et_probabilites,
         orient:Matiere_Cryptographie,
         orient:Matiere_Cybersecurite,
         orient:Matiere_Deep_Learning,
@@ -3478,54 +3647,150 @@ orient:Parcours_Informatique_Statistique_Appliquee_et_Intelligence_Artificielle 
         orient:Matiere_Processus_Stochastique,
         orient:Matiere_Programmation_Logique,
         orient:Matiere_Recherche_Operationnelle,
+        orient:Matiere_Reseaux_de_Neurones_Artificiels,
         orient:Matiere_Reseaux_informatiques,
         orient:Matiere_SGBDR,
-        orient:Matiere_Statistiques_appliquees,
         orient:Matiere_Structure_de_donnees,
         orient:Matiere_Systemes_Multi_Agents,
         orient:Matiere_Theorie_des_jeux,
-        orient:Matiere_UI_UX ;
+        orient:Matiere_UI_UX,
+        orient:Matiere_Unified_Modeling_Language ;
     orient:necessite orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_S ;
-    orient:prepareA orient:Metier_Analyste_Big_Data_Data_Architect,
-        orient:Metier_Data_Scientist_Data_Analyst,
-        orient:Metier_Ingenieur_Machine_Learning_Consultant_IA,
-        orient:Metier_Responsable_Business_Intelligence,
-        orient:Metier_Responsable_de_planification_strategique_et_economique,
-        orient:Metier_Statisticien_financier_Actuaire .
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_industrielle ;
+    orient:prepareA orient:Metier_Administrateur_de_bases_de_donnees,
+        orient:Metier_Chef_de_projet_informatique,
+        orient:Metier_Consultant_en_systemes_d_information_et_IA,
+        orient:Metier_Developpeur_Full_Stack_Web_Mobile,
+        orient:Metier_Expert_en_transformation_digitale,
+        orient:Metier_Ingenieur_en_genie_logiciel_Architecte_logiciel,
+        orient:Metier_Tous_les_metiers_du_secteur_IT_Mention_Informatique_Telecommunications ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
+
+orient:Parcours_Pharmacologie_et_Industries_Pharmaceutiques a orient:Parcours ;
+    rdfs:label "Pharmacologie et Industries Pharmaceutiques"@fr ;
+    orient:aCode "PIP" ;
+    orient:aConditionAdmission "A2 admise avec une note de mathématiques >= 12/20."@fr ;
+    orient:aLibelle "Pharmacologie et Industries Pharmaceutiques" ;
+    orient:appartientAMention orient:Mention_Biotechnologie_et_Agronomie ;
+    orient:developpe orient:Competence_Analyse_phytochimique_et_valorisation_scientifique_des_plantes_medicinales,
+        orient:Competence_Controle_qualite_reglementation_et_pharmacotechnie,
+        orient:Competence_Formulation_fabrication_et_controle_de_produits_pharmaceutiques,
+        orient:Competence_Gestion_de_laboratoire_d_analyses_medicales_et_industrielles,
+        orient:Competence_Maitrise_de_la_pharmacologie_moleculaire_cellulaire_et_des_grandes_fonctions ;
+    orient:enseigne orient:Matiere_Anatomie_et_physiologie_humaine,
+        orient:Matiere_Atomistique,
+        orient:Matiere_Bacteriologie,
+        orient:Matiere_Bacteriologie_medicale,
+        orient:Matiere_Bio_Informatique,
+        orient:Matiere_Biochimie,
+        orient:Matiere_Biochimie_medicale,
+        orient:Matiere_Biologie_Animale,
+        orient:Matiere_Biologie_Cellulaire,
+        orient:Matiere_Biologie_Vegetale,
+        orient:Matiere_Biologie_cellulaire,
+        orient:Matiere_Biologie_vegetale,
+        orient:Matiere_Biotechnologie,
+        orient:Matiere_Chimie_analytique,
+        orient:Matiere_Chimie_organique,
+        orient:Matiere_Enzymologie,
+        orient:Matiere_Ethnopharmacologie,
+        orient:Matiere_Genetique,
+        orient:Matiere_Immuno_clinique,
+        orient:Matiere_Immunologie,
+        orient:Matiere_Immunopathologie,
+        orient:Matiere_Industrie_pharmaceutique,
+        orient:Matiere_Management,
+        orient:Matiere_Methodologie_des_recherches_experimentales,
+        orient:Matiere_Microbiologie,
+        orient:Matiere_Microbiologie_medicale,
+        orient:Matiere_Pharmacocinetique,
+        orient:Matiere_Pharmacologie,
+        orient:Matiere_Pharmacologie_des_grandes_fonctions,
+        orient:Matiere_Pharmacologie_generale,
+        orient:Matiere_Pharmacologie_moleculaire,
+        orient:Matiere_Pharmacologie_moleculaire_et_cellulaire,
+        orient:Matiere_Pharmacotechnie,
+        orient:Matiere_Physiologie_Animale,
+        orient:Matiere_Physiologie_Vegetale,
+        orient:Matiere_Physiologie_animale,
+        orient:Matiere_Physiologie_medicale,
+        orient:Matiere_Physiopathologie,
+        orient:Matiere_Phytochimie,
+        orient:Matiere_Plantes_medicales,
+        orient:Matiere_Semiologie,
+        orient:Matiere_Thermo_physique,
+        orient:Matiere_Toxicologie_Generale,
+        orient:Matiere_Traitement_des_eaux,
+        orient:Matiere_Virologie,
+        orient:Matiere_Virologie_medicale,
+        orient:Matiere_physiologie_nutritionnelle,
+        orient:Matiere_phytochimie ;
+    orient:necessite orient:Prerequis_Baccalaureat_serie_A2,
+        orient:Prerequis_Baccalaureat_serie_C,
+        orient:Prerequis_Baccalaureat_serie_D,
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_agricole_elevage ;
+    orient:prepareA orient:Metier_Chercheur_en_biotechnologie_vegetale_et_sante,
+        orient:Metier_Delegue_medical_Technico_commercial_en_pharmacie,
+        orient:Metier_Responsable_controle_qualite_et_affaires_reglementaires,
+        orient:Metier_Responsable_de_production_pharmaceutique_Ingenieur_formulation,
+        orient:Metier_Specialiste_en_valorisation_des_ressources_naturelles_Phyto_medicaments,
+        orient:Metier_Technicien_ou_Ingenieur_de_laboratoire_medical_industriel ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
+
+orient:Prerequis_Baccalaureat_serie_DAMB a orient:Prerequis ;
+    rdfs:label "Baccalauréat série DAMB"@fr ;
+    orient:aLibelle "Baccalauréat série DAMB" .
+
+orient:Prerequis_Baccalaureat_serie_EN a orient:Prerequis ;
+    rdfs:label "Baccalauréat série EN"@fr ;
+    orient:aLibelle "Baccalauréat série EN" .
+
+orient:Prerequis_Baccalaureat_serie_TAG a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TAG"@fr ;
+    orient:aLibelle "Baccalauréat série TAG" .
+
+orient:Prerequis_Baccalaureat_serie_TGI a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TGI"@fr ;
+    orient:aLibelle "Baccalauréat série TGI" .
+
+orient:Prerequis_Baccalaureat_serie_TMA a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TMA"@fr ;
+    orient:aLibelle "Baccalauréat série TMA" .
+
+orient:Prerequis_Baccalaureat_serie_TOM a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TOM"@fr ;
+    orient:aLibelle "Baccalauréat série TOM" .
+
+orient:Prerequis_Baccalaureat_serie_TTER a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TTER"@fr ;
+    orient:aLibelle "Baccalauréat série TTER" .
 
 orient:Interet_Actualite_et_politique a orient:CentreInteret ;
     rdfs:label "Actualité et politique"@fr ;
     orient:aLibelle "Actualité et politique" .
 
-orient:Interet_Agriculture a orient:CentreInteret ;
-    rdfs:label "Agriculture"@fr ;
-    orient:aLibelle "Agriculture" .
+orient:Interet_Debat_et_droit a orient:CentreInteret ;
+    rdfs:label "Débat et droit"@fr ;
+    orient:aLibelle "Débat et droit" .
 
-orient:Interet_Animaux a orient:CentreInteret ;
-    rdfs:label "Animaux"@fr ;
-    orient:aLibelle "Animaux" .
-
-orient:Interet_Economie a orient:CentreInteret ;
-    rdfs:label "Économie"@fr ;
-    orient:aLibelle "Économie" .
+orient:Interet_Jeux_video a orient:CentreInteret ;
+    rdfs:label "Jeux vidéo"@fr ;
+    orient:aLibelle "Jeux vidéo" .
 
 orient:Interet_Lecture a orient:CentreInteret ;
     rdfs:label "Lecture"@fr ;
     orient:aLibelle "Lecture" .
 
-orient:Interet_Nature a orient:CentreInteret ;
-    rdfs:label "Nature"@fr ;
-    orient:aLibelle "Nature" .
-
-orient:Interet_Programmation a orient:CentreInteret ;
-    rdfs:label "Programmation"@fr ;
-    orient:aLibelle "Programmation" .
-
-orient:Interet_Robotique a orient:CentreInteret ;
-    rdfs:label "Robotique"@fr ;
-    orient:aLibelle "Robotique" .
+orient:Interet_Reseaux_sociaux_et_numerique a orient:CentreInteret ;
+    rdfs:label "Réseaux sociaux et numérique"@fr ;
+    orient:aLibelle "Réseaux sociaux et numérique" .
 
 orient:Interet_Sante a orient:CentreInteret ;
     rdfs:label "Santé"@fr ;
@@ -3566,6 +3831,16 @@ orient:Matiere_Biologie_Cellulaire a orient:Matiere ;
 orient:Matiere_Biologie_Vegetale a orient:Matiere ;
     rdfs:label "Biologie Vegetale"@fr ;
     orient:aLibelle "Biologie Vegetale" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Matiere_Biologie_cellulaire a orient:Matiere ;
+    rdfs:label "Biologie cellulaire"@fr ;
+    orient:aLibelle "Biologie cellulaire" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Matiere_Biologie_vegetale a orient:Matiere ;
+    rdfs:label "Biologie végétale"@fr ;
+    orient:aLibelle "Biologie végétale" ;
     orient:aNiveauMatiere "universite" .
 
 orient:Matiere_Biotechnologie a orient:Matiere ;
@@ -3707,6 +3982,11 @@ orient:Matiere_Physiologie_Vegetale a orient:Matiere ;
     orient:aLibelle "Physiologie Vegetale" ;
     orient:aNiveauMatiere "universite" .
 
+orient:Matiere_Physiologie_animale a orient:Matiere ;
+    rdfs:label "Physiologie animale"@fr ;
+    orient:aLibelle "Physiologie animale" ;
+    orient:aNiveauMatiere "universite" .
+
 orient:Matiere_Politique_economique a orient:Matiere ;
     rdfs:label "Politique economique"@fr ;
     orient:aLibelle "Politique economique" ;
@@ -3738,71 +4018,6 @@ orient:Mention_Biotechnologie_et_Agronomie a orient:Mention ;
     rdfs:label "Biotechnologie et Agronomie"@fr ;
     orient:aLibelle "Biotechnologie et Agronomie" .
 
-orient:Parcours_Agriculture_et_Elevage a orient:Parcours ;
-    rdfs:label "Agriculture et Élevage"@fr ;
-    orient:aCode "AEE" ;
-    orient:aLibelle "Agriculture et Élevage" ;
-    orient:appartientAMention orient:Mention_Biotechnologie_et_Agronomie ;
-    orient:developpe orient:Competence_Conduite_de_systemes_de_productions_vegetales_et_animales_modernes,
-        orient:Competence_Expertise_en_zootechnie_pisciculture_et_elevage_specialise,
-        orient:Competence_Gestion_et_pilotage_de_projets_de_developpement_rural_et_agrobusiness,
-        orient:Competence_Mise_en_uvre_de_pratiques_d_agroecologie_et_d_agriculture_biologique,
-        orient:Competence_Optimisation_des_rendements_agricoles_et_gestion_durable_des_sols ;
-    orient:enseigne orient:Matiere_Agriculture_biologique,
-        orient:Matiere_Agroecologie,
-        orient:Matiere_Agronomie,
-        orient:Matiere_Agronomie_tropicale,
-        orient:Matiere_Apiculture,
-        orient:Matiere_Arboriculture_fruitiere,
-        orient:Matiere_Atomistique,
-        orient:Matiere_Aviculture,
-        orient:Matiere_Bacteriologie,
-        orient:Matiere_Bio_informatique,
-        orient:Matiere_Biochimie,
-        orient:Matiere_Biologie_Animale,
-        orient:Matiere_Biologie_Cellulaire,
-        orient:Matiere_Biologie_Vegetale,
-        orient:Matiere_Biotechnologie,
-        orient:Matiere_Chimie_organique,
-        orient:Matiere_Crevetticulture,
-        orient:Matiere_Culture_de_rentes,
-        orient:Matiere_Culture_des_plantes,
-        orient:Matiere_Culture_industrielle,
-        orient:Matiere_Culture_vivriere,
-        orient:Matiere_Developpement_rural,
-        orient:Matiere_Elevage,
-        orient:Matiere_Enzymologie,
-        orient:Matiere_Experimentation_biometrique,
-        orient:Matiere_Genetique,
-        orient:Matiere_Hydrobiologie,
-        orient:Matiere_Hydrologie_appliquee,
-        orient:Matiere_Immunologie,
-        orient:Matiere_Management,
-        orient:Matiere_Methodologie_des_recherches_experimentales,
-        orient:Matiere_Microbiologie,
-        orient:Matiere_Nutrition_animale,
-        orient:Matiere_Petits_ruminants,
-        orient:Matiere_Physiologie_Animale,
-        orient:Matiere_Physiologie_Vegetale,
-        orient:Matiere_Pisciculture,
-        orient:Matiere_Protection_integree_des_cultures_et_denrees,
-        orient:Matiere_Securite_alimentaire,
-        orient:Matiere_Serriculture,
-        orient:Matiere_Traitement_des_eaux,
-        orient:Matiere_Virologie,
-        orient:Matiere_Vulgarisation_agricole_et_animation_rurale,
-        orient:Matiere_Zootechnie ;
-    orient:necessite orient:Prerequis_Baccalaureat_serie_A2,
-        orient:Prerequis_Baccalaureat_serie_C,
-        orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_S ;
-    orient:prepareA orient:Metier_Conseiller_agricole_Technicien_de_vulgarisation,
-        orient:Metier_Consultant_en_agroecologie_et_environnement,
-        orient:Metier_Expert_en_agri_business_Entrepreneur_agricole,
-        orient:Metier_Ingenieur_Agronome_Gestionnaire_d_exploitation_agricole,
-        orient:Metier_Responsable_de_production_animale_Elevage_Aviculture_Apiculture,
-        orient:Metier_Responsable_de_projet_developpement_rural_ONG_FAO_FIDA .
-
 orient:Parcours_Economie_et_Management_de_Projet a orient:Parcours ;
     rdfs:label "Économie et Management de Projet"@fr ;
     orient:aCode "EMP" ;
@@ -3811,7 +4026,7 @@ orient:Parcours_Economie_et_Management_de_Projet a orient:Parcours ;
     orient:developpe orient:Competence_Analyse_socio_economique_et_management_de_projet_de_developpement,
         orient:Competence_Gestion_financiere_et_previsionnelle_de_projets,
         orient:Competence_Maitrise_des_outils_d_analyse_economique_et_econometrie,
-        orient:Competence_Management_d_equipe_et_planification_strategique,
+        orient:Competence_Management_d_equipe_and_planification_strategique,
         orient:Competence_Pilotage_planification_et_evaluation_de_projets_complexes ;
     orient:enseigne orient:Matiere_Analyse_financiere,
         orient:Matiere_Econometrie,
@@ -3844,29 +4059,38 @@ orient:Parcours_Economie_et_Management_de_Projet a orient:Parcours ;
         orient:Prerequis_Baccalaureat_serie_A2,
         orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_OSE ;
+        orient:Prerequis_Baccalaureat_serie_L,
+        orient:Prerequis_Baccalaureat_serie_OSE,
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_agricole_elevage,
+        orient:Prerequis_Technique_genie_civil_BTP,
+        orient:Prerequis_Technique_industrielle ;
     orient:prepareA orient:Metier_Analyste_economique_Charge_d_etudes_economiques,
         orient:Metier_Chef_de_projet_BTP_services_industrie_public_prive,
         orient:Metier_Consultant_en_management_et_developpement,
         orient:Metier_Planificateur_strategique_Business_Analyst,
         orient:Metier_Responsable_de_projet_de_developpement_ONG_International,
-        orient:Metier_Responsable_suivi_evaluation_de_projets .
+        orient:Metier_Responsable_suivi_evaluation_de_projets ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
 
-orient:Parcours_Informatique_de_Gestion_Genie_Logiciel_et_Intelligence_Artificielle a orient:Parcours ;
-    rdfs:label "Informatique de Gestion, Génie Logiciel et Intelligence Artificielle"@fr ;
-    orient:aCode "IGGLIA" ;
-    orient:aLibelle "Informatique de Gestion, Génie Logiciel et Intelligence Artificielle" ;
+orient:Parcours_Informatique_Statistique_Appliquee_et_Intelligence_Artificielle a orient:Parcours ;
+    rdfs:label "Informatique, Statistique Appliquée et Intelligence Artificielle"@fr ;
+    orient:aCode "ISAIA" ;
+    orient:aLibelle "Informatique, Statistique Appliquée et Intelligence Artificielle" ;
     orient:appartientAMention orient:Mention_Informatique_et_Telecommunications ;
-    orient:developpe orient:Competence_Administration_et_optimisation_de_bases_de_donnees_SGBDR,
-        orient:Competence_Conception_et_modelisation_logicielle_avancee_UML_Merise,
-        orient:Competence_Developpement_d_architectures_logicielles_et_integration_d_IA,
-        orient:Competence_Gestion_de_projets_informatiques_et_ingenierie_logicielle,
-        orient:Competence_Maitrise_de_la_programmation_multi_langages_Java_C_PHP_JavaScript ;
+    orient:developpe orient:Competence_Analyse_de_donnees_economiques_et_financieres_pour_la_decision,
+        orient:Competence_Analyse_statistique_complexe_et_probabilites_appliquees,
+        orient:Competence_Conception_et_mise_en_uvre_de_solutions_de_Business_Intelligence,
+        orient:Competence_Gestion_stockage_et_traitement_de_donnees_massives_Big_Data,
+        orient:Competence_Modelisation_predictive_Machine_Learning_Deep_Learning ;
     orient:enseigne orient:Matiere_Algorithme,
         orient:Matiere_Algorithme_Avance,
         orient:Matiere_Base_de_Donnees,
         orient:Matiere_C,
         orient:Matiere_Codage,
+        orient:Matiere_Combinatoire_et_probabilites,
         orient:Matiere_Cryptographie,
         orient:Matiere_Cybersecurite,
         orient:Matiere_Deep_Learning,
@@ -3890,32 +4114,98 @@ orient:Parcours_Informatique_de_Gestion_Genie_Logiciel_et_Intelligence_Artificie
         orient:Matiere_Processus_Stochastique,
         orient:Matiere_Programmation_Logique,
         orient:Matiere_Recherche_Operationnelle,
-        orient:Matiere_Reseaux_de_Neurones_Artificiels,
         orient:Matiere_Reseaux_informatiques,
         orient:Matiere_SGBDR,
+        orient:Matiere_Statistiques_appliquees,
         orient:Matiere_Structure_de_donnees,
         orient:Matiere_Systemes_Multi_Agents,
         orient:Matiere_Theorie_des_jeux,
-        orient:Matiere_UI_UX,
-        orient:Matiere_Unified_Modeling_Language ;
+        orient:Matiere_UI_UX ;
     orient:necessite orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
         orient:Prerequis_Baccalaureat_serie_S,
-        orient:Prerequis_Baccalaureat_serie_Technique ;
-    orient:prepareA orient:Metier_Administrateur_de_bases_de_donnees,
-        orient:Metier_Chef_de_projet_informatique,
-        orient:Metier_Consultant_en_systemes_d_information_et_IA,
-        orient:Metier_Developpeur_Full_Stack_Web_Mobile,
-        orient:Metier_Expert_en_transformation_digitale,
-        orient:Metier_Ingenieur_en_genie_logiciel_Architecte_logiciel .
+        orient:Prerequis_Technique_industrielle ;
+    orient:prepareA orient:Metier_Analyste_Big_Data_Data_Architect,
+        orient:Metier_Data_Scientist_Data_Analyst,
+        orient:Metier_Ingenieur_Machine_Learning_Consultant_IA,
+        orient:Metier_Responsable_Business_Intelligence,
+        orient:Metier_Responsable_de_planification_strategique_et_economique,
+        orient:Metier_Statisticien_financier_Actuaire,
+        orient:Metier_Tous_les_metiers_du_secteur_IT_Mention_Informatique_Telecommunications ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
 
-orient:Interet_Entrepreneuriat a orient:CentreInteret ;
-    rdfs:label "Entrepreneuriat"@fr ;
-    orient:aLibelle "Entrepreneuriat" .
+orient:Parcours_Tourisme_Environnement_et_Hotellerie a orient:Parcours ;
+    rdfs:label "Tourisme, Environnement et Hôtellerie"@fr ;
+    orient:aCode "TEH" ;
+    orient:aLibelle "Tourisme, Environnement et Hôtellerie" ;
+    orient:appartientAMention orient:Mention_Tourisme ;
+    orient:developpe orient:Competence_Communication_touristique_et_pratique_des_langues_etrangeres_Anglais_Allemand_Fr,
+        orient:Competence_Conception_promotion_et_vente_de_produits_touristiques_et_ecotouristiques,
+        orient:Competence_Gestion_environnementale_des_sites_touristiques_et_eco_marine,
+        orient:Competence_Maitrise_de_l_accueil_de_l_hygiene_et_de_la_relation_client_de_luxe,
+        orient:Competence_Management_operationnel_et_strategique_en_hotellerie_et_restauration ;
+    orient:enseigne orient:Matiere_Allemand,
+        orient:Matiere_Anglais,
+        orient:Matiere_Art_culinaire,
+        orient:Matiere_Civilisation_appliquee,
+        orient:Matiere_Eco_marine,
+        orient:Matiere_Ecologie_animale,
+        orient:Matiere_Economie_rurale,
+        orient:Matiere_Ecotourisme,
+        orient:Matiere_Environnement,
+        orient:Matiere_Francais,
+        orient:Matiere_Geographie_Rurale,
+        orient:Matiere_Gestion_hoteliere,
+        orient:Matiere_Hygiene,
+        orient:Matiere_Management,
+        orient:Matiere_Marketing_International,
+        orient:Matiere_Nutrition_humaine,
+        orient:Matiere_Science_des_aliments,
+        orient:Matiere_Sites_touristiques,
+        orient:Matiere_Technique_d_accueil,
+        orient:Matiere_Technique_d_agence,
+        orient:Matiere_Techno_Restau ;
+    orient:necessite orient:Prerequis_Baccalaureat_serie_A1,
+        orient:Prerequis_Baccalaureat_serie_A2,
+        orient:Prerequis_Baccalaureat_serie_C,
+        orient:Prerequis_Baccalaureat_serie_D,
+        orient:Prerequis_Baccalaureat_serie_L,
+        orient:Prerequis_Baccalaureat_serie_OSE,
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_agricole_elevage,
+        orient:Prerequis_Technique_genie_civil_BTP,
+        orient:Prerequis_Technique_industrielle ;
+    orient:prepareA orient:Metier_Chef_de_produit_touristique_Concepteur_de_circuits,
+        orient:Metier_Directeur_ou_gestionnaire_d_etablissement_hotelier_Restaurant,
+        orient:Metier_Gestionnaire_de_sites_proteges_ou_de_parcs_naturels,
+        orient:Metier_Manager_d_agence_de_voyage_Tour_operateur,
+        orient:Metier_Organisateur_d_evenements_congres_et_sejours_MICE,
+        orient:Metier_Responsable_ecotourisme_Consultant_en_developpement_durable ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
 
-orient:Interet_Sport a orient:CentreInteret ;
-    rdfs:label "Sport"@fr ;
-    orient:aLibelle "Sport" .
+orient:Prerequis_Baccalaureat_serie_SS a orient:Prerequis ;
+    rdfs:label "Baccalauréat série SS"@fr ;
+    orient:aLibelle "Baccalauréat série SS" .
+
+orient:Prerequis_Baccalaureat_serie_TFFI a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TFFI"@fr ;
+    orient:aLibelle "Baccalauréat série TFFI" .
+
+orient:Prerequis_Baccalaureat_serie_TMEL a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TMEL"@fr ;
+    orient:aLibelle "Baccalauréat série TMEL" .
+
+orient:Prerequis_Baccalaureat_serie_TPFM a orient:Prerequis ;
+    rdfs:label "Baccalauréat série TPFM"@fr ;
+    orient:aLibelle "Baccalauréat série TPFM" .
+
+orient:Interet_Benevolat_associatif a orient:CentreInteret ;
+    rdfs:label "Bénévolat associatif"@fr ;
+    orient:aLibelle "Bénévolat associatif" .
 
 orient:Matiere_Algorithme a orient:Matiere ;
     rdfs:label "Algorithme"@fr ;
@@ -3961,6 +4251,11 @@ orient:Matiere_Deep_Learning a orient:Matiere ;
     rdfs:label "Deep Learning"@fr ;
     orient:aLibelle "Deep Learning" ;
     orient:aNiveauMatiere "universite" .
+
+orient:Matiere_EPS a orient:Matiere ;
+    rdfs:label "EPS"@fr ;
+    orient:aLibelle "EPS" ;
+    orient:aNiveauMatiere "lycee" .
 
 orient:Matiere_Economie_rurale a orient:Matiere ;
     rdfs:label "Economie rurale"@fr ;
@@ -4095,228 +4390,62 @@ orient:Mention_Informatique_et_Telecommunications a orient:Mention ;
     rdfs:label "Informatique et Télécommunications"@fr ;
     orient:aLibelle "Informatique et Télécommunications" .
 
-orient:Parcours_Industries_Agroalimentaires a orient:Parcours ;
-    rdfs:label "Industries Agroalimentaires"@fr ;
-    orient:aCode "IAA" ;
-    orient:aLibelle "Industries Agroalimentaires" ;
-    orient:appartientAMention orient:Mention_Biotechnologie_et_Agronomie ;
-    orient:developpe orient:Competence_Analyse_biochimique_microbiologique_et_toxicologique_des_aliments,
-        orient:Competence_Gestion_de_la_production_industrielle_et_emballage_alimentaire,
-        orient:Competence_Maitrise_de_la_securite_sanitaire_et_normes_qualite_HACCP_ISO,
-        orient:Competence_Pilotage_des_procedes_de_transformation_agroalimentaire_cafe_cacao_lait,
-        orient:Competence_Recherche_et_Developpement_R_D_de_nouveaux_produits_alimentaires ;
-    orient:enseigne orient:Matiere_Additifs_alimentaires,
-        orient:Matiere_Atomistique,
-        orient:Matiere_Bacteriologie,
-        orient:Matiere_Bio_informatique,
-        orient:Matiere_Biochimie,
-        orient:Matiere_Biochimie_alimentaire,
-        orient:Matiere_Biologie_Animale,
-        orient:Matiere_Biologie_Cellulaire,
-        orient:Matiere_Biologie_Vegetale,
-        orient:Matiere_Biotechnologie,
-        orient:Matiere_Chimie_analytique,
-        orient:Matiere_Chimie_organique,
-        orient:Matiere_Elevage,
-        orient:Matiere_Emballage_alimentaire,
-        orient:Matiere_Enzymologie,
-        orient:Matiere_Etude_d_impact_environnemental,
-        orient:Matiere_Fruits_et_legumes,
-        orient:Matiere_Genetique,
-        orient:Matiere_Genie_fermentaire,
-        orient:Matiere_Genie_industriel_alimentaire,
-        orient:Matiere_Lait,
+orient:Metier_Tous_les_metiers_du_secteur_IT_Mention_Informatique_Telecommunications a orient:Metier ;
+    rdfs:label "Tous les métiers du secteur IT (Mention Informatique & Télécommunications)"@fr ;
+    orient:aLibelle "Tous les métiers du secteur IT (Mention Informatique & Télécommunications)" .
+
+orient:Parcours_Electromecanique_et_Informatique_Industrielle a orient:Parcours ;
+    rdfs:label "Électromécanique et Informatique Industrielle"@fr ;
+    orient:aCode "EMII" ;
+    orient:aLibelle "Électromécanique et Informatique Industrielle" ;
+    orient:appartientAMention orient:Mention_Genie_Industriel ;
+    orient:developpe orient:Competence_Conception_assistee_par_ordinateur_AutoCAD_et_dimensionnement_mecanique,
+        orient:Competence_Conception_et_programmation_de_systemes_automatises_Grafcet_Automates,
+        orient:Competence_Expertise_en_electronique_de_puissance_et_microcontroleurs,
+        orient:Competence_Gestion_de_la_production_et_supervision_de_processus_industriels,
+        orient:Competence_Maintenance_industrielle_pluridisciplinaire_mecanique_electrique_froid ;
+    orient:enseigne orient:Matiere_AUTOCAD,
+        orient:Matiere_Aeronautique,
+        orient:Matiere_Automatique,
+        orient:Matiere_Capteurs,
+        orient:Matiere_Dessin,
+        orient:Matiere_Elasticite_et_plasticite,
+        orient:Matiere_Electricite,
+        orient:Matiere_Electricite_Industrielle,
+        orient:Matiere_Electronique,
+        orient:Matiere_Electronique_de_puissance,
+        orient:Matiere_Fabrication_Mecanique,
+        orient:Matiere_Fabrication_mecanique,
+        orient:Matiere_Geometrie_analytique,
+        orient:Matiere_Grafcet,
+        orient:Matiere_Maintenance_avion,
         orient:Matiere_Management,
-        orient:Matiere_Matieres_grasses,
-        orient:Matiere_Microbiologie,
-        orient:Matiere_Microbiologie_alimentaire,
-        orient:Matiere_Nutrition_humaine,
-        orient:Matiere_Physiologie_Animale,
-        orient:Matiere_Physiologie_Vegetale,
-        orient:Matiere_Science_des_aliments,
-        orient:Matiere_Securite_alimentaire,
-        orient:Matiere_Sucre,
-        orient:Matiere_Technologie_des_pectines,
-        orient:Matiere_Technologie_des_proteines,
-        orient:Matiere_Technologie_et_transformation_du_cafe_et_cacao,
-        orient:Matiere_Thermo_physique,
-        orient:Matiere_Toxicologie_alimentaire,
-        orient:Matiere_Traitement_des_eaux,
-        orient:Matiere_Viandes,
-        orient:Matiere_Virologie ;
+        orient:Matiere_Mecanique_Generale,
+        orient:Matiere_Mecanique_analytique,
+        orient:Matiere_Mecanique_appliquee,
+        orient:Matiere_Mecanique_rationnelle,
+        orient:Matiere_Metallurgie,
+        orient:Matiere_Microcontroleur,
+        orient:Matiere_Moteur_a_combustion_interne,
+        orient:Matiere_Ouvrage_metallique,
+        orient:Matiere_Resistance_des_materiaux,
+        orient:Matiere_Technologie_des_froids,
+        orient:Matiere_Technologie_ferroviaire,
+        orient:Matiere_Thermodynamique,
+        orient:Matiere_Vibration ;
     orient:necessite orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_S ;
-    orient:prepareA orient:Metier_Charge_de_Recherche_et_Developpement_R_D_alimentaire,
-        orient:Metier_Expert_en_securite_alimentaire_Consultant_qualite,
-        orient:Metier_Gestionnaire_d_unites_de_transformation_Chef_de_production,
-        orient:Metier_Ingenieur_de_production_en_industrie_agroalimentaire,
-        orient:Metier_Responsable_Qualite_et_Hygiene_HACCP,
-        orient:Metier_Responsable_logistique_de_denrees_perissables .
-
-orient:Parcours_Tourisme_Environnement_et_Hotellerie a orient:Parcours ;
-    rdfs:label "Tourisme, Environnement et Hôtellerie"@fr ;
-    orient:aCode "TEH" ;
-    orient:aLibelle "Tourisme, Environnement et Hôtellerie" ;
-    orient:appartientAMention orient:Mention_Tourisme ;
-    orient:developpe orient:Competence_Communication_touristique_et_pratique_des_langues_etrangeres_Anglais_Allemand_Fr,
-        orient:Competence_Conception_promotion_et_vente_de_produits_touristiques_et_ecotouristiques,
-        orient:Competence_Gestion_environnementale_des_sites_touristiques_et_eco_marine,
-        orient:Competence_Maitrise_de_l_accueil_de_l_hygiene_et_de_la_relation_client_de_luxe,
-        orient:Competence_Management_operationnel_et_strategique_en_hotellerie_et_restauration ;
-    orient:enseigne orient:Matiere_Allemand,
-        orient:Matiere_Anglais,
-        orient:Matiere_Art_culinaire,
-        orient:Matiere_Civilisation_appliquee,
-        orient:Matiere_Eco_marine,
-        orient:Matiere_Ecologie_animale,
-        orient:Matiere_Economie_rurale,
-        orient:Matiere_Ecotourisme,
-        orient:Matiere_Environnement,
-        orient:Matiere_Francais,
-        orient:Matiere_Geographie_Rurale,
-        orient:Matiere_Gestion_hoteliere,
-        orient:Matiere_Hygiene,
-        orient:Matiere_Management,
-        orient:Matiere_Marketing_International,
-        orient:Matiere_Nutrition_humaine,
-        orient:Matiere_Science_des_aliments,
-        orient:Matiere_Sites_touristiques,
-        orient:Matiere_Technique_d_accueil,
-        orient:Matiere_Technique_d_agence,
-        orient:Matiere_Techno_Restau ;
-    orient:necessite orient:Prerequis_Baccalaureat_serie_A1,
-        orient:Prerequis_Baccalaureat_serie_A2,
-        orient:Prerequis_Baccalaureat_serie_C,
-        orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_L ;
-    orient:prepareA orient:Metier_Chef_de_produit_touristique_Concepteur_de_circuits,
-        orient:Metier_Directeur_ou_gestionnaire_d_etablissement_hotelier_Restaurant,
-        orient:Metier_Gestionnaire_de_sites_proteges_ou_de_parcs_naturels,
-        orient:Metier_Manager_d_agence_de_voyage_Tour_operateur,
-        orient:Metier_Organisateur_d_evenements_congres_et_sejours_MICE,
-        orient:Metier_Responsable_ecotourisme_Consultant_en_developpement_durable .
-
-orient:Prerequis_Baccalaureat_serie_L a orient:Prerequis ;
-    rdfs:label "Baccalauréat série L"@fr ;
-    orient:aLibelle "Baccalauréat série L" .
-
-orient:Prerequis_Baccalaureat_serie_OSE a orient:Prerequis ;
-    rdfs:label "Baccalauréat série OSE"@fr ;
-    orient:aLibelle "Baccalauréat série OSE" .
-
-orient:Competence a owl:Class ;
-    rdfs:label "Compétence"@fr .
-
-orient:Interet_Benevolat_associatif a orient:CentreInteret ;
-    rdfs:label "Bénévolat associatif"@fr ;
-    orient:aLibelle "Bénévolat associatif" .
-
-orient:Interet_Reseaux_sociaux a orient:CentreInteret ;
-    rdfs:label "Réseaux sociaux"@fr ;
-    orient:aLibelle "Réseaux sociaux" .
-
-orient:Interet_Technologie a orient:CentreInteret ;
-    rdfs:label "Technologie"@fr ;
-    orient:aLibelle "Technologie" .
-
-orient:Parcours_Commerce_et_Administration_des_Affaires a orient:Parcours ;
-    rdfs:label "Commerce et Administration des Affaires"@fr ;
-    orient:aCode "CAA" ;
-    orient:aLibelle "Commerce et Administration des Affaires" ;
-    orient:appartientAMention orient:Mention_Droit_et_Techniques_des_Affaires ;
-    orient:developpe orient:Competence_Analyse_des_marches_et_economie_monetaire_internationale,
-        orient:Competence_Analyse_financiere_gestion_budgetaire_et_comptabilite_financiere,
-        orient:Competence_Elaboration_et_mise_en_uvre_de_strategies_marketing_et_commerciales,
-        orient:Competence_Gestion_administrative_organisationnelle_et_management_d_entreprise,
-        orient:Competence_Maitrise_des_techniques_de_negociation_et_de_vente_internationale ;
-    orient:enseigne orient:Matiere_Analyse_financiere,
-        orient:Matiere_Comptabilite_financiere,
-        orient:Matiere_Economie,
-        orient:Matiere_Economie_bleu,
-        orient:Matiere_Economie_de_l_environnement,
-        orient:Matiere_Economie_internationale,
-        orient:Matiere_Economie_mathematique,
-        orient:Matiere_Economie_monetaire,
-        orient:Matiere_Economie_rurale,
-        orient:Matiere_Finance_mathematique,
-        orient:Matiere_Finance_publique,
-        orient:Matiere_Fiscalite,
-        orient:Matiere_Gestion_budgetaire,
-        orient:Matiere_Gestion_d_entreprise,
-        orient:Matiere_Gestion_de_projet,
-        orient:Matiere_Gestion_de_projet_de_developpement,
-        orient:Matiere_Gestion_financiere,
-        orient:Matiere_Gestion_previsionnelle,
-        orient:Matiere_Informatique,
-        orient:Matiere_Macroeconomie,
-        orient:Matiere_Marketing,
-        orient:Matiere_Marketing_International,
-        orient:Matiere_Mathematique_financiere,
-        orient:Matiere_Negociaiton_commerciale,
-        orient:Matiere_Neuro_marketing,
-        orient:Matiere_Organisation,
-        orient:Matiere_Politique_economique,
-        orient:Matiere_Technique_de_vente ;
-    orient:necessite orient:Prerequis_Baccalaureat_serie_A1,
-        orient:Prerequis_Baccalaureat_serie_A2,
-        orient:Prerequis_Baccalaureat_serie_C,
-        orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_OSE ;
-    orient:prepareA orient:Metier_Administrateur_des_ventes_Responsable_export,
-        orient:Metier_Analyste_de_marche_Consultant_en_strategie_commerciale,
-        orient:Metier_Gestionnaire_administratif_et_financier,
-        orient:Metier_Manager_de_PME_PMI,
-        orient:Metier_Responsable_Marketing_Chef_de_produit_commercial,
-        orient:Metier_Responsable_commercial_Business_Developer .
-
-orient:Parcours_Finances_et_Comptabilite a orient:Parcours ;
-    rdfs:label "Finances et Comptabilité"@fr ;
-    orient:aCode "FIC" ;
-    orient:aLibelle "Finances et Comptabilité" ;
-    orient:appartientAMention orient:Mention_Droit_et_Techniques_des_Affaires ;
-    orient:developpe orient:Competence_Analyse_des_etats_financiers_et_aide_a_la_decision_d_investissement,
-        orient:Competence_Audit_financier_et_controle_de_gestion_approfondi,
-        orient:Competence_Expertise_en_comptabilite_generale_analytique_et_financiere,
-        orient:Competence_Gestion_de_tresorerie_ingenierie_financiere_et_technique_bancaire,
-        orient:Competence_Maitrise_de_la_fiscalite_d_entreprise_et_du_droit_des_societes ;
-    orient:enseigne orient:Matiere_Analyse_financiere,
-        orient:Matiere_Choix_d_investissement,
-        orient:Matiere_Comptabilite_financiere,
-        orient:Matiere_Economie,
-        orient:Matiere_Economie_bleu,
-        orient:Matiere_Economie_de_l_environnement,
-        orient:Matiere_Economie_internationale,
-        orient:Matiere_Economie_mathematique,
-        orient:Matiere_Economie_monetaire,
-        orient:Matiere_Economie_rurale,
-        orient:Matiere_Finance_d_entreprise,
-        orient:Matiere_Finance_publique,
-        orient:Matiere_Fiscalite,
-        orient:Matiere_Gestion_budgetaire,
-        orient:Matiere_Gestion_d_entreprise,
-        orient:Matiere_Gestion_de_projet,
-        orient:Matiere_Gestion_de_projet_de_developpement,
-        orient:Matiere_Gestion_financiere,
-        orient:Matiere_Gestion_previsionnelle,
-        orient:Matiere_Informatique,
-        orient:Matiere_Institutions_financieres,
-        orient:Matiere_Macroeconomie,
-        orient:Matiere_Management,
-        orient:Matiere_Marketing_international,
-        orient:Matiere_Neuro_marketing,
-        orient:Matiere_Organisation,
-        orient:Matiere_Politique_economique,
-        orient:Matiere_Technique_bancaire ;
-    orient:necessite orient:Prerequis_Baccalaureat_serie_C,
-        orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_OSE ;
-    orient:prepareA orient:Metier_Analyste_financier_en_banque_ou_cabinet_d_audit,
-        orient:Metier_Auditeur_financier_interne_externe,
-        orient:Metier_Comptable_Chef_Comptable_Expert_comptable_apres_stage,
-        orient:Metier_Controleur_de_gestion,
-        orient:Metier_Directeur_Administratif_et_Financier_DAF,
-        orient:Metier_Gestionnaire_de_tresorerie_Tresorier_d_entreprise .
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_industrielle ;
+    orient:prepareA orient:Metier_Concepteur_de_systemes_IoT_industriels_et_supervision,
+        orient:Metier_Ingenieur_en_automatisation_et_robotique_industrielle,
+        orient:Metier_Ingenieur_en_bureau_d_etudes_mecanique,
+        orient:Metier_Ingenieur_en_electrotechnique_Electromecanicien,
+        orient:Metier_Ingenieur_en_maintenance_industrielle_Responsable_Maintenance,
+        orient:Metier_Responsable_de_production_en_usine_Gestionnaire_d_atelier ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
 
 orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Communication_et_I a orient:Parcours ;
     rdfs:label "Informatique Multimédia, Technologie de l'Information et de la Communication et Intelligence Artificielle"@fr ;
@@ -4371,124 +4500,323 @@ orient:Parcours_Informatique_Multimedia_Technologie_de_l_Information_et_de_la_Co
         orient:Matiere_Theorie_des_jeux,
         orient:Matiere_Travail_Audiovisuel,
         orient:Matiere_UI_UX ;
-    orient:necessite orient:Prerequis_Baccalaureat_serie_A2,
-        orient:Prerequis_Baccalaureat_serie_C,
+    orient:necessite orient:Prerequis_Baccalaureat_serie_C,
         orient:Prerequis_Baccalaureat_serie_D,
-        orient:Prerequis_Baccalaureat_serie_S ;
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_industrielle ;
     orient:prepareA orient:Metier_Developpeur_multimedia_Webmaster,
         orient:Metier_Directeur_artistique_numerique_Motion_Designer,
         orient:Metier_Expert_en_reseaux_de_transmission_et_nouveaux_medias,
         orient:Metier_Ingenieur_en_technologies_de_la_communication,
         orient:Metier_Specialiste_en_communication_digitale_Community_Manager,
-        orient:Metier_UX_UI_Designer .
+        orient:Metier_Tous_les_metiers_du_secteur_IT_Mention_Informatique_Telecommunications,
+        orient:Metier_UX_UI_Designer ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
 
-orient:Prerequis_Baccalaureat_serie_Technique a orient:Prerequis ;
-    rdfs:label "Baccalauréat série Technique"@fr ;
-    orient:aLibelle "Baccalauréat série Technique" .
+orient:Source a owl:Class ;
+    rdfs:label "Source documentaire"@fr .
 
-orient:Interet_Debat_et_droit a orient:CentreInteret ;
-    rdfs:label "Débat et droit"@fr ;
-    orient:aLibelle "Débat et droit" .
+orient:Competence a owl:Class ;
+    rdfs:label "Compétence"@fr .
 
 orient:Interet_Musique a orient:CentreInteret ;
     rdfs:label "Musique"@fr ;
     orient:aLibelle "Musique" .
 
-orient:Prerequis_Baccalaureat_serie_A1 a orient:Prerequis ;
-    rdfs:label "Baccalauréat série A1"@fr ;
-    orient:aLibelle "Baccalauréat série A1" .
+orient:Interet_Programmation a orient:CentreInteret ;
+    rdfs:label "Programmation"@fr ;
+    orient:aLibelle "Programmation" .
+
+orient:Parcours_Droit_et_Techniques_Juridiques_des_Affaires a orient:Parcours ;
+    rdfs:label "Droit et Techniques Juridiques des Affaires"@fr ;
+    orient:aCode "DTJA" ;
+    orient:aLibelle "Droit et Techniques Juridiques des Affaires" ;
+    orient:appartientAMention orient:Mention_Droit_et_Techniques_des_Affaires ;
+    orient:developpe orient:Competence_Conseil_juridique_strategique_et_defense_des_interets_de_l_entreprise,
+        orient:Competence_Expertise_en_droit_foncier_minier_de_la_communication_et_des_douanes,
+        orient:Competence_Gestion_des_litiges_commerciaux_contentieux_et_procedures_collectives,
+        orient:Competence_Redaction_d_actes_juridiques_de_contrats_commerciaux_et_sociaux,
+        orient:Competence_Veille_reglementaire_et_securisation_contractuelle_des_affaires ;
+    orient:enseigne orient:Matiere_Contrat_d_entreprise,
+        orient:Matiere_Droit_Minier,
+        orient:Matiere_Droit_administratif,
+        orient:Matiere_Droit_civil,
+        orient:Matiere_Droit_commercial,
+        orient:Matiere_Droit_constitutionnel,
+        orient:Matiere_Droit_de_la_communication,
+        orient:Matiere_Droit_de_la_concurrence,
+        orient:Matiere_Droit_de_la_procedure_collective,
+        orient:Matiere_Droit_de_travail,
+        orient:Matiere_Droit_des_biens,
+        orient:Matiere_Droit_des_douanes,
+        orient:Matiere_Droit_des_societes,
+        orient:Matiere_Droit_des_suretes,
+        orient:Matiere_Droit_foncier,
+        orient:Matiere_Droit_penal,
+        orient:Matiere_Droit_social,
+        orient:Matiere_Introduction_au_droit,
+        orient:Matiere_Management,
+        orient:Matiere_Procedure_penale ;
+    orient:necessite orient:Prerequis_Baccalaureat_serie_A1,
+        orient:Prerequis_Baccalaureat_serie_A2,
+        orient:Prerequis_Baccalaureat_serie_C,
+        orient:Prerequis_Baccalaureat_serie_D,
+        orient:Prerequis_Baccalaureat_serie_L,
+        orient:Prerequis_Baccalaureat_serie_OSE,
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_agricole_elevage,
+        orient:Prerequis_Technique_genie_civil_BTP,
+        orient:Prerequis_Technique_industrielle ;
+    orient:prepareA orient:Metier_Assistant_juridique_en_cabinet_d_avocats_ou_d_huissiers,
+        orient:Metier_Charge_de_conformite_Compliance_Officer,
+        orient:Metier_Conseiller_juridique_en_entreprise_Juriste_d_affaires,
+        orient:Metier_Expert_en_contentieux_d_affaires_Agent_de_recouvrement,
+        orient:Metier_Juriste_specialise_Foncier_Minier_Douanes,
+        orient:Metier_Responsable_des_ressources_humaines_Volet_juridique_Droit_du_travail ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
+
+orient:Competence_aisance_relationnelle a orient:CompetenceTransversale ;
+    rdfs:label "aisance relationnelle"@fr ;
+    orient:aLibelle "aisance relationnelle" .
+
+orient:Competence_esprit_d_analyse a orient:CompetenceTransversale ;
+    rdfs:label "esprit d'analyse"@fr ;
+    orient:aLibelle "esprit d'analyse" .
+
+orient:Interet_Entrepreneuriat a orient:CentreInteret ;
+    rdfs:label "Entrepreneuriat"@fr ;
+    orient:aLibelle "Entrepreneuriat" .
+
+orient:Interet_Technologie a orient:CentreInteret ;
+    rdfs:label "Technologie"@fr ;
+    orient:aLibelle "Technologie" .
+
+orient:Prerequis_Baccalaureat_serie_OSE a orient:Prerequis ;
+    rdfs:label "Baccalauréat série OSE"@fr ;
+    orient:aLibelle "Baccalauréat série OSE" .
+
+orient:Competence_rigueur a orient:CompetenceTransversale ;
+    rdfs:label "rigueur"@fr ;
+    orient:aLibelle "rigueur" .
+
+orient:Interet_Sport a orient:CentreInteret ;
+    rdfs:label "Sport"@fr ;
+    orient:aLibelle "Sport" .
 
 orient:Mention a owl:Class ;
     rdfs:label "Mention"@fr ;
     rdfs:subClassOf orient:Formation .
 
-orient:Competence_perseverance a orient:CompetenceTransversale ;
-    rdfs:label "persévérance"@fr ;
-    orient:aLibelle "persévérance" .
+orient:Parcours_Commerce_et_Administration_des_Affaires a orient:Parcours ;
+    rdfs:label "Commerce et Administration des Affaires"@fr ;
+    orient:aCode "CAA" ;
+    orient:aLibelle "Commerce et Administration des Affaires" ;
+    orient:appartientAMention orient:Mention_Droit_et_Techniques_des_Affaires ;
+    orient:developpe orient:Competence_Analyse_des_marches_et_economie_monetaire_internationale,
+        orient:Competence_Analyse_financiere_gestion_budgetaire_et_comptabilite_financiere,
+        orient:Competence_Elaboration_et_mise_en_uvre_de_strategies_marketing_et_commerciales,
+        orient:Competence_Gestion_administrative_organisationnelle_et_management_d_entreprise,
+        orient:Competence_Maitrise_des_techniques_de_negociation_et_de_vente_internationale ;
+    orient:enseigne orient:Matiere_Analyse_financiere,
+        orient:Matiere_Comptabilite_financiere,
+        orient:Matiere_Economie,
+        orient:Matiere_Economie_bleu,
+        orient:Matiere_Economie_de_l_environnement,
+        orient:Matiere_Economie_internationale,
+        orient:Matiere_Economie_mathematique,
+        orient:Matiere_Economie_monetaire,
+        orient:Matiere_Economie_rurale,
+        orient:Matiere_Finance_mathematique,
+        orient:Matiere_Finance_publique,
+        orient:Matiere_Fiscalite,
+        orient:Matiere_Gestion_budgetaire,
+        orient:Matiere_Gestion_d_entreprise,
+        orient:Matiere_Gestion_de_projet,
+        orient:Matiere_Gestion_de_projet_de_developpement,
+        orient:Matiere_Gestion_financiere,
+        orient:Matiere_Gestion_previsionnelle,
+        orient:Matiere_Informatique,
+        orient:Matiere_Macroeconomie,
+        orient:Matiere_Marketing,
+        orient:Matiere_Marketing_International,
+        orient:Matiere_Mathematique_financiere,
+        orient:Matiere_Negociaiton_commerciale,
+        orient:Matiere_Neuro_marketing,
+        orient:Matiere_Organisation,
+        orient:Matiere_Politique_economique,
+        orient:Matiere_Technique_de_vente ;
+    orient:necessite orient:Prerequis_Baccalaureat_serie_A1,
+        orient:Prerequis_Baccalaureat_serie_A2,
+        orient:Prerequis_Baccalaureat_serie_C,
+        orient:Prerequis_Baccalaureat_serie_D,
+        orient:Prerequis_Baccalaureat_serie_L,
+        orient:Prerequis_Baccalaureat_serie_OSE,
+        orient:Prerequis_Baccalaureat_serie_S,
+        orient:Prerequis_Technique_agricole_elevage,
+        orient:Prerequis_Technique_genie_civil_BTP,
+        orient:Prerequis_Technique_industrielle ;
+    orient:prepareA orient:Metier_Administrateur_des_ventes_Responsable_export,
+        orient:Metier_Analyste_de_marche_Consultant_en_strategie_commerciale,
+        orient:Metier_Gestionnaire_administratif_et_financier,
+        orient:Metier_Manager_de_PME_PMI,
+        orient:Metier_Responsable_Marketing_Chef_de_produit_commercial,
+        orient:Metier_Responsable_commercial_Business_Developer ;
+    orient:provientDeSource orient:Source_ISPM_Conditions_d_acces_en_premiere_annee,
+        orient:Source_ISPM_Les_differents_departements_et_filieres,
+        orient:Source_ISPM_Presentation_generale .
+
+orient:Prerequis_Baccalaureat_serie_A1 a orient:Prerequis ;
+    rdfs:label "Baccalauréat série A1"@fr ;
+    orient:aLibelle "Baccalauréat série A1" .
+
+orient:Prerequis_Baccalaureat_serie_L a orient:Prerequis ;
+    rdfs:label "Baccalauréat série L"@fr ;
+    orient:aLibelle "Baccalauréat série L" .
+
+orient:Prerequis_Technique_genie_civil_BTP a orient:Prerequis ;
+    rdfs:label "Technique génie civil / BTP"@fr ;
+    orient:aLibelle "Technique génie civil / BTP" .
+
+orient:Interet_Economie a orient:CentreInteret ;
+    rdfs:label "Économie"@fr ;
+    orient:aLibelle "Économie" .
 
 orient:Interet_Gestion a orient:CentreInteret ;
     rdfs:label "Gestion"@fr ;
     orient:aLibelle "Gestion" .
-
-orient:Matiere_Histoire_Geo a orient:Matiere ;
-    rdfs:label "Histoire Geo"@fr ;
-    orient:aLibelle "Histoire Geo" ;
-    orient:aNiveauMatiere "lycee" .
-
-orient:Matiere_Philosophie a orient:Matiere ;
-    rdfs:label "Philosophie"@fr ;
-    orient:aLibelle "Philosophie" ;
-    orient:aNiveauMatiere "lycee" .
-
-orient:CompetenceTransversale a owl:Class ;
-    rdfs:label "Compétence transversale"@fr ;
-    rdfs:subClassOf orient:Competence .
-
-orient:Competence_creativite a orient:CompetenceTransversale ;
-    rdfs:label "créativité"@fr ;
-    orient:aLibelle "créativité" .
-
-orient:Competence_curiosite a orient:CompetenceTransversale ;
-    rdfs:label "curiosité"@fr ;
-    orient:aLibelle "curiosité" .
-
-orient:Competence_sens_de_l_observation a orient:CompetenceTransversale ;
-    rdfs:label "sens de l'observation"@fr ;
-    orient:aLibelle "sens de l'observation" .
-
-orient:Matiere_EPS a orient:Matiere ;
-    rdfs:label "EPS"@fr ;
-    orient:aLibelle "EPS" ;
-    orient:aNiveauMatiere "lycee" .
-
-orient:Prerequis a owl:Class ;
-    rdfs:label "Prérequis"@fr .
-
-orient:Competence_esprit_d_equipe a orient:CompetenceTransversale ;
-    rdfs:label "esprit d'équipe"@fr ;
-    orient:aLibelle "esprit d'équipe" .
-
-orient:Competence_rigueur a orient:CompetenceTransversale ;
-    rdfs:label "rigueur"@fr ;
-    orient:aLibelle "rigueur" .
 
 orient:Matiere_Arts a orient:Matiere ;
     rdfs:label "Arts"@fr ;
     orient:aLibelle "Arts" ;
     orient:aNiveauMatiere "lycee" .
 
-orient:Competence_aisance_relationnelle a orient:CompetenceTransversale ;
-    rdfs:label "aisance relationnelle"@fr ;
-    orient:aLibelle "aisance relationnelle" .
+orient:Prerequis_Baccalaureat_serie_A2 a orient:Prerequis ;
+    rdfs:label "Baccalauréat série A2"@fr ;
+    orient:aLibelle "Baccalauréat série A2" .
+
+orient:Prerequis_Technique_agricole_elevage a orient:Prerequis ;
+    rdfs:label "Technique agricole / élevage"@fr ;
+    orient:aLibelle "Technique agricole / élevage" .
+
+orient:CompetenceTransversale a owl:Class ;
+    rdfs:label "Compétence transversale"@fr ;
+    rdfs:subClassOf orient:Competence .
+
+orient:Matiere_Histoire_Geo a orient:Matiere ;
+    rdfs:label "Histoire Geo"@fr ;
+    orient:aLibelle "Histoire Geo" ;
+    orient:aNiveauMatiere "lycee" .
+
+orient:Matiere_Malgache a orient:Matiere ;
+    rdfs:label "Malgache"@fr ;
+    orient:aLibelle "Malgache" ;
+    orient:aNiveauMatiere "lycee" .
 
 orient:Matiere_SVT a orient:Matiere ;
     rdfs:label "SVT"@fr ;
     orient:aLibelle "SVT" ;
     orient:aNiveauMatiere "lycee" .
 
-orient:Prerequis_Baccalaureat_serie_A2 a orient:Prerequis ;
-    rdfs:label "Baccalauréat série A2"@fr ;
-    orient:aLibelle "Baccalauréat série A2" .
+orient:Competence_autonomie a orient:CompetenceTransversale ;
+    rdfs:label "autonomie"@fr ;
+    orient:aLibelle "autonomie" .
 
-orient:Competence_sens_de_l_organisation a orient:CompetenceTransversale ;
-    rdfs:label "sens de l'organisation"@fr ;
-    orient:aLibelle "sens de l'organisation" .
-
-orient:Matiere_Management a orient:Matiere ;
-    rdfs:label "Management"@fr ;
-    orient:aLibelle "Management" ;
-    orient:aNiveauMatiere "universite" .
-
-orient:Matiere_Physique_Chimie a orient:Matiere ;
-    rdfs:label "Physique Chimie"@fr ;
-    orient:aLibelle "Physique Chimie" ;
-    orient:aNiveauMatiere "lycee" .
+orient:Competence_creativite a orient:CompetenceTransversale ;
+    rdfs:label "créativité"@fr ;
+    orient:aLibelle "créativité" .
 
 orient:Matiere_Anglais a orient:Matiere ;
     rdfs:label "Anglais"@fr ;
     orient:aLibelle "Anglais" ;
     orient:aNiveauMatiere "lycee",
         "universite" .
+
+orient:Matiere_Philosophie a orient:Matiere ;
+    rdfs:label "Philosophie"@fr ;
+    orient:aLibelle "Philosophie" ;
+    orient:aNiveauMatiere "lycee" .
+
+orient:Prerequis_Technique_industrielle a orient:Prerequis ;
+    rdfs:label "Technique industrielle"@fr ;
+    orient:aLibelle "Technique industrielle" .
+
+orient:Competence_sens_de_l_organisation a orient:CompetenceTransversale ;
+    rdfs:label "sens de l'organisation"@fr ;
+    orient:aLibelle "sens de l'organisation" .
+
+orient:Competence_curiosite a orient:CompetenceTransversale ;
+    rdfs:label "curiosité"@fr ;
+    orient:aLibelle "curiosité" .
+
+orient:Matiere_Management a orient:Matiere ;
+    rdfs:label "Management"@fr ;
+    orient:aLibelle "Management" ;
+    orient:aNiveauMatiere "universite" .
+
+orient:Competence_sens_de_l_observation a orient:CompetenceTransversale ;
+    rdfs:label "sens de l'observation"@fr ;
+    orient:aLibelle "sens de l'observation" .
+
+orient:Matiere_Informatique a orient:Matiere ;
+    rdfs:label "Informatique"@fr ;
+    orient:aLibelle "Informatique" ;
+    orient:aNiveauMatiere "lycee",
+        "universite" .
+
+orient:Source_ISPM_Conditions_d_acces_en_premiere_annee a orient:Source ;
+    rdfs:label "ISPM — Conditions d'accès en première année"@fr ;
+    orient:aDateConsultation "2026-08-27" ;
+    orient:aLibelle "ISPM — Conditions d'accès en première année" ;
+    orient:aStatutSource "officiel" ;
+    orient:aUrl "https://ispm-edu.com/inscription.php" .
+
+orient:Source_ISPM_Les_differents_departements_et_filieres a orient:Source ;
+    rdfs:label "ISPM — Les différents départements et filières"@fr ;
+    orient:aDateConsultation "2026-08-27" ;
+    orient:aLibelle "ISPM — Les différents départements et filières" ;
+    orient:aStatutSource "officiel" ;
+    orient:aUrl "https://ispm-edu.com/filieres.php" .
+
+orient:Source_ISPM_Presentation_generale a orient:Source ;
+    rdfs:label "ISPM — Présentation générale"@fr ;
+    orient:aDateConsultation "2026-08-27" ;
+    orient:aLibelle "ISPM — Présentation générale" ;
+    orient:aStatutSource "officiel" ;
+    orient:aUrl "https://ispm-edu.com/presentation.php" .
+
+orient:Matiere_Francais a orient:Matiere ;
+    rdfs:label "Francais"@fr,
+        "Français"@fr ;
+    orient:aLibelle "Francais",
+        "Français" ;
+    orient:aNiveauMatiere "lycee",
+        "universite" .
+
+orient:Matiere_Physique_Chimie a orient:Matiere ;
+    rdfs:label "Physique Chimie"@fr ;
+    orient:aLibelle "Physique Chimie" ;
+    orient:aNiveauMatiere "lycee" .
+
+orient:Competence_esprit_d_equipe a orient:CompetenceTransversale ;
+    rdfs:label "esprit d'équipe"@fr ;
+    orient:aLibelle "esprit d'équipe" .
+
+orient:Competence_perseverance a orient:CompetenceTransversale ;
+    rdfs:label "persévérance"@fr ;
+    orient:aLibelle "persévérance" .
+
+orient:Prerequis_Baccalaureat_serie_D a orient:Prerequis ;
+    rdfs:label "Baccalauréat série D"@fr ;
+    orient:aLibelle "Baccalauréat série D" .
+
+orient:Matiere_Mathematiques a orient:Matiere ;
+    rdfs:label "Mathematiques"@fr ;
+    orient:aLibelle "Mathematiques" ;
+    orient:aNiveauMatiere "lycee" .
 
 orient:Prerequis_Baccalaureat_serie_S a orient:Prerequis ;
     rdfs:label "Baccalauréat série S"@fr ;
@@ -4500,49 +4828,16 @@ orient:Matiere_Economie a orient:Matiere ;
     orient:aNiveauMatiere "lycee",
         "universite" .
 
-orient:Matiere_Francais a orient:Matiere ;
-    rdfs:label "Francais"@fr,
-        "Français"@fr ;
-    orient:aLibelle "Francais",
-        "Français" ;
-    orient:aNiveauMatiere "lycee",
-        "universite" .
-
-orient:Matiere_Informatique a orient:Matiere ;
-    rdfs:label "Informatique"@fr ;
-    orient:aLibelle "Informatique" ;
-    orient:aNiveauMatiere "lycee",
-        "universite" .
-
-orient:Matiere_Mathematiques a orient:Matiere ;
-    rdfs:label "Mathematiques"@fr ;
-    orient:aLibelle "Mathematiques" ;
-    orient:aNiveauMatiere "lycee" .
-
-orient:Matiere_Malgache a orient:Matiere ;
-    rdfs:label "Malgache"@fr ;
-    orient:aLibelle "Malgache" ;
-    orient:aNiveauMatiere "lycee" .
-
-orient:Competence_esprit_d_analyse a orient:CompetenceTransversale ;
-    rdfs:label "esprit d'analyse"@fr ;
-    orient:aLibelle "esprit d'analyse" .
+orient:Prerequis_Baccalaureat_serie_C a orient:Prerequis ;
+    rdfs:label "Baccalauréat série C"@fr ;
+    orient:aLibelle "Baccalauréat série C" .
 
 orient:Parcours a owl:Class ;
     rdfs:label "Parcours"@fr ;
     rdfs:subClassOf orient:Formation .
 
-orient:Competence_autonomie a orient:CompetenceTransversale ;
-    rdfs:label "autonomie"@fr ;
-    orient:aLibelle "autonomie" .
-
-orient:Prerequis_Baccalaureat_serie_D a orient:Prerequis ;
-    rdfs:label "Baccalauréat série D"@fr ;
-    orient:aLibelle "Baccalauréat série D" .
-
-orient:Prerequis_Baccalaureat_serie_C a orient:Prerequis ;
-    rdfs:label "Baccalauréat série C"@fr ;
-    orient:aLibelle "Baccalauréat série C" .
+orient:Prerequis a owl:Class ;
+    rdfs:label "Prérequis"@fr .
 
 orient:CentreInteret a owl:Class ;
     rdfs:label "Centre d'intérêt"@fr .

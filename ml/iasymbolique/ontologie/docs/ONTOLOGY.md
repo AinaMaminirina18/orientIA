@@ -48,8 +48,11 @@ Choix de modélisation :
   niveaux cohabitent dans la même classe `Matiere` pour permettre la
   relation `Etudiant prefere Matiere` sans créer une classe séparée non
   demandée par le sujet.
-- `Prerequis` est peuplée par les séries de baccalauréat (C, D, S, A1, A2,
-  L, G, Technique, OSE) extraites des champs `prerequis` du document.
+- `Prerequis` est peuplée par les séries de baccalauréat et les voies
+  techniques explicitement distinguées par l'ISPM : `Technique industrielle`,
+  `Technique génie civil / BTP` et `Technique agricole / élevage`. Les règles
+  viennent de `https://ispm-edu.com/inscription.php` (consultée le
+  2026-08-27), et non d'une catégorie générique « Technique ».
 
 ## 2. Relations retenues
 
@@ -79,31 +82,30 @@ relier un Étudiant à une recommandation, ou un Parcours à sa Mention) :
 | `aSerieBac` | Étudiant → Prérequis | indispensable pour le cas d'usage "vérifier des prérequis" (comparer le bac de l'étudiant aux prérequis du parcours) |
 | `estOrienteVers` | Étudiant → Parcours | matérialise la sortie du modèle statistique dans le graphe, pour "expliquer une recommandation" et "compléter les résultats du modèle statistique" |
 | `estEnseigneePar`, `estDeveloppeePar`, `preparePar` | inverses de `enseigne`, `developpe`, `prepareA` | facilitent le raisonnement multiétape en remontant d'un Métier ou d'une Matière vers les Parcours concernés |
+| `provientDeSource` | Parcours → Source | rend chaque parcours traçable vers les pages officielles exactes ; l'URL, le statut et la date sont des propriétés de `Source` |
 
 ## 3. Peuplement du graphe (ABox)
 
-- **6 Mentions**, **15 Parcours** (avec leur `appartientAMention`,
+- **6 Mentions**, **16 Parcours** (avec leur `appartientAMention`,
   `enseigne`, `developpe`, `prepareA`, `necessite`) directement dérivés de
   `full_kb.json`.
-- **9 Prérequis** (séries de bac), **302 Matières** (11 de lycée + 291
-  universitaires dédupliquées par correspondance exacte de libellé), **160
-  Compétences**, **157 Métiers**, **34 Centres d'intérêt** — tous dérivés du
-  document source (débouchés, matières, compétences) ou des banques de
-  catégories utilisées pour générer le dataset synthétique (afin que les
-  individus `CentreInteret` du graphe correspondent exactement aux valeurs
-  du champ `centres_interet` des profils).
-- **`estRequisePour`** (Compétence → Métier) : peuplée directement à partir
-  du champ `relations_competences_metiers` de chaque parcours dans le
-  document source.
-- **40 Étudiants** échantillonnés dans le dataset synthétique généré à
-  l'étape précédente (`ispm_orientation_dataset.jsonl`), avec leurs
+- Les parcours sont reliés aux trois pages ISPM suivantes :
+  `https://ispm-edu.com/inscription.php`,
+  `https://ispm-edu.com/filieres.php` et
+  `https://ispm-edu.com/presentation.php` (consultées le 2026-08-27).
+- Les effectifs détaillés de matières, compétences et métiers sont générés et
+  affichés par `build_ontology.py` ; ils évoluent avec le corpus source.
+- **`estRequisePour`** (Compétence → Métier) est peuplée à partir des
+  relations compétence → métier du corpus.
+- **40 Étudiants** sont échantillonnés dans le dataset synthétique
+  (`ispm_orientation_dataset.jsonl`), avec leurs
   relations `aSerieBac`, `estOrienteVers`, `prefere`, `possede`,
   `aCentreInteret`. Ce sous-échantillon sert de **démonstration** ; le
   graphe peut être repeuplé avec l'intégralité des 1600 profils en modifiant
   `random.sample(students, 40)` dans `build_ontology.py`.
 
-Statistiques de la dernière génération : **3800 triplets** au total (76 pour
-le schéma seul).
+Les statistiques exactes sont affichées à chaque exécution de
+`build_ontology.py`.
 
 ## 4. Couverture des 6 cas d'usage (voir `example_queries.sparql`)
 
@@ -128,20 +130,10 @@ le schéma seul).
    suggérer des métiers non directement présents dans les préférences
    déclarées de l'étudiant.
 
-Exemple réel obtenu lors de l'exécution (`query_results_demo.txt`), cas
-d'usage n°4 :
-```
-P00408 | Baccalauréat série A1 | Informatique de Gestion, Génie Logiciel et Intelligence Artificielle
-P00860 | Baccalauréat série A2 | Électronique, Systèmes Informatiques et Intelligence Artificielle
-P01035 | Baccalauréat série G  | Pharmacologie et Industries Pharmaceutiques
-P01331 | Baccalauréat série OSE| Électromécanique et Informatique Industrielle
-```
-Ces 4 étudiants ont un bac qui ne figure pas dans les prérequis du parcours
-qui leur a été assigné dans le dataset synthétique — ce qui est *attendu*
-puisque ~12% des profils ont volontairement une série "hors famille" (voir
-la documentation du dataset). Le graphe permet de retrouver ces cas
-automatiquement, exactement comme il le ferait sur des recommandations
-réelles à vérifier par un conseiller.
+Le dataset d'entraînement est désormais généré de façon à respecter ces règles
+d'admission. Les cas volontairement non admissibles doivent appartenir au jeu
+d'évaluation de sécurité, séparé du jeu d'entraînement : le graphe peut alors
+les signaler au conseiller sans apprendre à les recommander.
 
 ## 5. Comment le graphe complète le modèle statistique
 

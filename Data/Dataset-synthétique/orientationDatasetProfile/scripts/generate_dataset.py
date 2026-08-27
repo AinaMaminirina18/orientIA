@@ -13,13 +13,15 @@ import json
 import random
 import csv
 import statistics as stats
-from reference_parcours import PARCOURS, PASSERELLES
+from reference_parcours import (
+    BAC_SERIES_REFERENCE, GENERAL_BAC_SERIES, PARCOURS, PASSERELLES,
+    TECH_AGRICOLE, TECH_GENIE_CIVIL, TECH_INDUSTRIEL, TECH_TERTIAIRE,
+)
 
 random.seed(42)  # reproductibilité
 
 N_PROFILES = 1600
 AMBIGUOUS_RATE = 0.20   # profils "à cheval" entre deux parcours proches
-OUTOF_FAMILY_BAC_RATE = 0.12  # candidats avec une série de bac hors du profil-type (réorientation / cas limites)
 GENERALIST_RATE = 0.15  # profils sans préférence marquée (notes plates)
 
 LYCEE_SUBJECTS = [
@@ -44,6 +46,7 @@ AFFINITY = {
     "EMP":    {"Economie": 4, "Mathematiques": 2, "Histoire_Geo": 1},
     "FIC":    {"Economie": 4, "Mathematiques": 3},
     "DTJA":   {"Francais": 3, "Malgache": 2, "Philosophie": 3, "Histoire_Geo": 2},
+    "TEE":    {"Anglais": 3, "Francais": 2, "Malgache": 1, "Histoire_Geo": 2},
     "TEH":    {"Anglais": 3, "Francais": 2, "Malgache": 1, "Histoire_Geo": 2, "Arts": 1},
 }
 
@@ -123,7 +126,7 @@ REGIONS = [
     "Melaky", "Menabe", "Sava", "Sofia", "Vakinankaratra", "Vatovavy", "Fitovinany",
 ]
 
-ALL_BAC_SERIES = ["C", "D", "S", "A1", "A2", "L", "Technique", "OSE"]
+ALL_BAC_SERIES = BAC_SERIES_REFERENCE
 
 CODES = list(PARCOURS.keys())
 
@@ -135,7 +138,7 @@ POPULARITY_WEIGHT = {
     "EMII": 0.9, "ICMP": 0.6, "GCA": 1.0,
     "IAA": 0.9, "AEE": 0.8, "PIP": 0.6,
     "CAA": 1.2, "EMP": 1.0, "FIC": 1.1, "DTJA": 0.9,
-    "TEH": 1.0,
+    "TEE": 0.7, "TEH": 1.0,
 }
 
 
@@ -157,11 +160,36 @@ def gen_grades(target_code, generalist):
     return grades
 
 
-def pick_bac_serie(target_code):
+def pick_bac_serie(target_code, grades):
+    """Choisit uniquement une série admise selon la règle ISPM publiée.
+
+    A2 est admise en Biotechnologie/Agronomie sous condition de note de
+    mathématiques >= 12/20 ; cette condition est appliquée ici afin de ne pas
+    apprendre au modèle à recommander un parcours administrativement invalide.
+    """
     allowed = PARCOURS[target_code]["bac_series"]
-    if random.random() < OUTOF_FAMILY_BAC_RATE:
-        return random.choice(ALL_BAC_SERIES)
+    if "condition_a2" in PARCOURS[target_code] and grades["Mathematiques"] < 12:
+        allowed = [serie for serie in allowed if serie != "A2"]
     return random.choice(allowed)
+
+
+def classify_bac(serie):
+    """Conserve la voie nationale à côté du code de série exact."""
+    if serie in GENERAL_BAC_SERIES:
+        return "Général", "Enseignement général"
+    if serie in {"TGC", "TGI", "TTER"}:
+        return "Technologique", {
+            "TGC": "Génie civil", "TGI": "Industriel", "TTER": "Tertiaire",
+        }[serie]
+    if serie in TECH_GENIE_CIVIL:
+        return "Professionnel et technique", "Génie civil / BTP"
+    if serie in TECH_INDUSTRIEL:
+        return "Professionnel et technique", "Industriel"
+    if serie in TECH_AGRICOLE:
+        return "Professionnel et technique", "Agricole"
+    if serie in TECH_TERTIAIRE:
+        return "Professionnel et technique", "Tertiaire"
+    raise ValueError(f"Série de baccalauréat inconnue : {serie}")
 
 
 def top_subjects_from_grades(grades, k=(3, 5)):
@@ -248,13 +276,17 @@ def build_profile(idx):
     generalist = random.random() < GENERALIST_RATE
     grades = gen_grades(target, generalist)
     moyenne = round(stats.mean(grades.values()), 2)
+    serie_bac = pick_bac_serie(target, grades)
+    voie_bac, domaine_technique = classify_bac(serie_bac)
 
     profile = {
         "profil_id": f"P{idx:05d}",
         "age": random.choice([17, 18, 19, 20]),
         "sexe": random.choice(["F", "M"]),  # indépendant du parcours (contrôle anti-biais)
         "region": random.choice(REGIONS),   # indépendant du parcours (contrôle anti-biais)
-        "serie_bac": pick_bac_serie(target),
+        "voie_bac": voie_bac,
+        "serie_bac": serie_bac,
+        "domaine_technique_bac": domaine_technique if voie_bac != "Général" else "",
         "moyenne_generale": moyenne,
         **{f"note_{k.lower()}": v for k, v in grades.items()},
         "matieres_preferees": top_subjects_from_grades(grades),
