@@ -12,11 +12,15 @@ import {
   User,
   Bot,
   ChevronRight,
+  FileText,
+  Activity,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useAssistantChat, useUserProfile } from "@/lib/useStore";
 import { ChatMessage } from "@/lib/types";
+import { checkApiHealth } from "@/lib/services/api/health";
+import { ApiStatusState } from "@/lib/types/api/health";
 
 // Suggested starter questions
 const SUGGESTED_QUESTIONS = [
@@ -29,7 +33,6 @@ const SUGGESTED_QUESTIONS = [
 
 // Helper function to format inline markdown (bolding **text**, code `text`)
 function renderInlineMarkdown(text: string): React.ReactNode[] {
-  // Split by code snippet first `code`
   const codeParts = text.split(/(`.*?`)/g);
 
   return codeParts.map((part, codeIdx) => {
@@ -44,7 +47,6 @@ function renderInlineMarkdown(text: string): React.ReactNode[] {
       );
     }
 
-    // Split by bold **text** or __text__
     const boldParts = part.split(/(\*\*.*?\*\*|__.*?__)/g);
     return (
       <React.Fragment key={codeIdx}>
@@ -167,6 +169,8 @@ export default function AssistantChatPage() {
   const [inputQuery, setInputQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [apiStatus, setApiStatus] = useState<ApiStatusState | null>(null);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -177,6 +181,19 @@ export default function AssistantChatPage() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, isLoading]);
+
+  // Check FastAPI Health Status on mount (Phase 1 of SKILL-3)
+  useEffect(() => {
+    let isSubscribed = true;
+    checkApiHealth().then((status) => {
+      if (isSubscribed) {
+        setApiStatus(status);
+      }
+    });
+    return () => {
+      isSubscribed = false;
+    };
+  }, []);
 
   // Auto-resize textarea
   useEffect(() => {
@@ -210,8 +227,12 @@ export default function AssistantChatPage() {
         body: JSON.stringify({
           messages: history,
           profile: {
+            name: profile.name,
             currentLevel: profile.currentLevel,
             preferredSubjects: profile.preferredSubjects,
+            academicGrades: profile.academicGrades,
+            declaredSkills: profile.declaredSkills,
+            interests: profile.interests,
             preferredWorkEnvironment: profile.preferredWorkEnvironment,
             completenessPercentage: profile.completenessPercentage,
           },
@@ -221,7 +242,7 @@ export default function AssistantChatPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Erreur de connexion au modèle.");
+        throw new Error(data.error || "Erreur de connexion au service d'orientation.");
       }
 
       sendMessage({
@@ -235,7 +256,7 @@ export default function AssistantChatPage() {
       setError(errorMsg);
       sendMessage({
         sender: "assistant",
-        content: `Désolé, une erreur s'est produite : ${errorMsg}`,
+        content: `Désolé, le service d'orientation est momentanément indisponible : ${errorMsg}`,
         confidence: "low",
       });
     } finally {
@@ -258,17 +279,28 @@ export default function AssistantChatPage() {
   return (
     <div className="flex flex-col max-w-4xl mx-auto h-[calc(100vh-8.5rem)] sm:h-[calc(100vh-9.5rem)] min-h-0">
       {/* Header */}
-      <div className="flex items-center justify-between bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-2xs mb-3 shrink-0">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-3.5 sm:p-4 rounded-xl border border-slate-200 shadow-2xs mb-3 shrink-0">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center border border-emerald-200 shrink-0">
             <MessageSquareCode className="w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-base font-bold text-slate-900 flex items-center gap-2">
-              ORIENT&apos;IA Assistant Chat
-              <Badge variant="emerald" size="sm">
-                llama3-70b · Groq
-              </Badge>
+            <h1 className="text-base font-bold text-slate-900 flex items-center gap-2 flex-wrap">
+              <span>ORIENT&apos;IA Assistant Chat</span>
+              
+              {/* Discrete Health Badge (Phase 1 of SKILL-3) */}
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium border bg-slate-50 border-slate-200">
+                <span
+                  className={`w-2 h-2 rounded-full ${
+                    apiStatus?.isOnline ? "bg-emerald-500 animate-pulse" : "bg-amber-500"
+                  }`}
+                />
+                <span className="text-slate-700">
+                  {apiStatus?.isOnline
+                    ? `FastAPI Render (${apiStatus.modelStatus})`
+                    : "Mode Local (Groq Engine)"}
+                </span>
+              </span>
             </h1>
             <p className="text-xs text-slate-500">
               Posez vos questions sur les 16 formations ISPM, prérequis et débouchés.
@@ -338,11 +370,23 @@ export default function AssistantChatPage() {
                 </div>
               )}
 
-              {/* Confidence badge */}
-              {msg.sender === "assistant" && msg.confidence && (
-                <div className="pt-1 flex items-center gap-1 text-[10px] text-slate-400 font-semibold border-t border-slate-100">
-                  <ShieldCheck className="w-3 h-3 text-emerald-600 shrink-0" />
-                  <span>Réponse générée par Groq · Confiance Élevée</span>
+              {/* Confidence & Source Badge */}
+              {msg.sender === "assistant" && (
+                <div className="pt-1 flex items-center justify-between gap-2 text-[10px] text-slate-400 font-semibold border-t border-slate-100">
+                  <span className="flex items-center gap-1">
+                    <ShieldCheck className="w-3 h-3 text-emerald-600 shrink-0" />
+                    <span>Réponse ORIENT&apos;IA · Confiance Élevée</span>
+                  </span>
+                  
+                  <a
+                    href="/Brochure%20officielle%20ISPM"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-emerald-700 hover:underline"
+                  >
+                    <FileText className="w-3 h-3" />
+                    <span>Brochure officielle ISPM</span>
+                  </a>
                 </div>
               )}
             </div>
@@ -355,9 +399,9 @@ export default function AssistantChatPage() {
             <div className="w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center shrink-0">
               <Bot className="w-4 h-4 text-emerald-700" />
             </div>
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl rounded-tl-none px-4 py-3 flex items-center gap-2 text-xs text-slate-500">
-              <Cpu className="w-4 h-4 text-emerald-600 animate-spin" />
-              <span>ORIENT&apos;IA consulte le référentiel pédagogique ISPM...</span>
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl rounded-tl-none px-4 py-3 flex items-center gap-2 text-xs text-slate-600">
+              <Cpu className="w-4 h-4 text-emerald-600 animate-spin shrink-0" />
+              <span>ORIENT&apos;IA interroge l&apos;API ... Le modèle ML prépare la réponse.</span>
             </div>
           </div>
         )}
@@ -366,7 +410,10 @@ export default function AssistantChatPage() {
         {error && (
           <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 flex items-start gap-2">
             <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
-            <span>{error}</span>
+            <div className="space-y-1">
+              <span className="font-semibold block">Service momentanément indisponible</span>
+              <span>{error}</span>
+            </div>
           </div>
         )}
 
@@ -422,7 +469,7 @@ export default function AssistantChatPage() {
         {/* Mandatory Disclaimer */}
         <p className="text-[10px] text-slate-400 text-center leading-relaxed">
           ORIENT&apos;IA est un outil d&apos;aide à l&apos;orientation. Ses réponses ne constituent pas une décision officielle d&apos;admission. ·{" "}
-          <span className="font-mono">llama3-70b-8192 · Groq Cloud</span>
+          <span className="font-mono">https://fastapifororientia.onrender.com</span>
         </p>
       </div>
     </div>

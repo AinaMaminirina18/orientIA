@@ -8,6 +8,7 @@ import {
   ExecutionTrace,
   RecommendationFactor,
 } from "./types";
+import { calculateAdequacyScore } from "./adequacyCalculator";
 import {
   ISPM_FORMATIONS,
   INITIAL_USER_PROFILE,
@@ -19,13 +20,13 @@ import {
 } from "./mockData";
 
 const KEYS = {
-  PROFILE: "orientia_user_profile_v7",
-  FORMATIONS: "orientia_formations_v7",
-  SOURCES: "orientia_sources_v7",
-  RECOMMENDATION: "orientia_recommendation_v7",
-  CHAT: "orientia_chat_messages_v7",
-  EVALUATION: "orientia_evaluation_tests_v7",
-  TRACES: "orientia_execution_traces_v7",
+  PROFILE: "orientia_user_profile_v8",
+  FORMATIONS: "orientia_formations_v8",
+  SOURCES: "orientia_sources_v8",
+  RECOMMENDATION: "orientia_recommendation_v8",
+  CHAT: "orientia_chat_messages_v8",
+  EVALUATION: "orientia_evaluation_tests_v8",
+  TRACES: "orientia_execution_traces_v8",
 };
 
 type Listener = () => void;
@@ -169,92 +170,21 @@ export const StorageRepository = {
   recomputeRecommendation(): RecommendationResult {
     const profile = this.getUserProfile();
     const formations = ISPM_FORMATIONS; // Use full baseline formations list for fresh score computation
-
     const userSubjects = (profile.preferredSubjects || []).map((s) => s.toLowerCase());
-    const userSkills = (profile.declaredSkills || []).map((s) => s.toLowerCase());
-    const userGrades = profile.academicGrades || [];
-    const targetEnvFormations = ENV_TO_FORMATIONS[profile.preferredWorkEnvironment] || [];
 
-    // Score every formation dynamically based on candidate profile inputs
+    // Score every formation dynamically using centralized Adequacy Calculator Engine
     const scoredFormations = formations.map((formation) => {
-      const formationText = [
-        formation.code,
-        formation.title,
-        formation.mention,
-        formation.description,
-        ...formation.keySubjects,
-        ...formation.skillsDeveloped,
-        ...formation.prerequisites,
-        ...formation.careerOutcomes,
-      ]
-        .join(" ")
-        .toLowerCase();
-
-      // 1. Subject Alignment Score (0 - 40 points)
-      let subjectHits = 0;
-      userSubjects.forEach((sub) => {
-        if (!sub) return;
-        // Check exact or partial match with formation key subjects or text
-        const isDirectSubjectMatch = formation.keySubjects.some((ks) => ks.toLowerCase().includes(sub) || sub.includes(ks.toLowerCase()));
-        if (isDirectSubjectMatch) {
-          subjectHits += 2;
-        } else if (formationText.includes(sub)) {
-          subjectHits += 1;
-        }
-      });
-      const subjectScore = Math.min(40, subjectHits * 15);
-
-      // 2. Technical Skills Alignment Score (0 - 30 points)
-      let skillHits = 0;
-      userSkills.forEach((sk) => {
-        if (!sk) return;
-        const isDirectSkillMatch = formation.skillsDeveloped.some((sd) => sd.toLowerCase().includes(sk) || sk.includes(sd.toLowerCase()));
-        if (isDirectSkillMatch) {
-          skillHits += 2;
-        } else if (formationText.includes(sk)) {
-          skillHits += 1;
-        }
-      });
-      const skillScore = Math.min(30, skillHits * 12);
-
-      // 3. Academic Grade Score (0 - 20 points)
-      let gradeScore = 10;
-      let matchingGradeSum = 0;
-      let matchingGradeCount = 0;
-
-      userGrades.forEach((g) => {
-        const gradeSub = g.subject.toLowerCase();
-        if (formationText.includes(gradeSub) || formation.keySubjects.some((ks) => ks.toLowerCase().includes(gradeSub))) {
-          matchingGradeSum += g.grade;
-          matchingGradeCount++;
-        }
-      });
-
-      if (matchingGradeCount > 0) {
-        const avgGrade = matchingGradeSum / matchingGradeCount;
-        gradeScore = Math.min(20, Math.round((avgGrade / 20) * 20));
-      }
-
-      // 4. Work Environment Alignment Bonus (0 - 10 points)
-      let envBonus = 0;
-      if (targetEnvFormations.includes(formation.id)) {
-        const rankIndex = targetEnvFormations.indexOf(formation.id);
-        envBonus = Math.max(4, 10 - rankIndex * 2);
-      }
-
-      // Calculate Total Score (Range 30 - 95%)
-      const rawTotal = subjectScore + skillScore + gradeScore + envBonus;
-      const totalScore = Math.min(96, Math.max(35, Math.round(rawTotal)));
-
+      const breakdown = calculateAdequacyScore(formation, profile);
       return {
         formation: {
           ...formation,
-          matchScore: totalScore,
+          matchScore: breakdown.totalScore,
+          matchReasons: breakdown.reasons,
         },
-        totalScore,
-        subjectScore,
-        skillScore,
-        gradeScore,
+        totalScore: breakdown.totalScore,
+        subjectScore: breakdown.subjectsScore,
+        skillScore: breakdown.skillsScore,
+        gradeScore: breakdown.gradesScore,
       };
     });
 

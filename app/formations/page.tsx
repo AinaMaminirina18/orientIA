@@ -18,8 +18,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { EmptyState } from "@/components/ui/empty-state";
-import { useFormations } from "@/lib/useStore";
+import { useFormations, useUserProfile } from "@/lib/useStore";
 import { ISPMFormation } from "@/lib/types";
+import { computeFormationsWithMatch } from "@/lib/adequacyCalculator";
 
 // Icon & color per mention
 const MENTION_CONFIG: Record<string, { icon: React.ElementType; color: string; bg: string; border: string }> = {
@@ -63,14 +64,18 @@ const MENTION_CONFIG: Record<string, { icon: React.ElementType; color: string; b
 
 export default function FormationsCataloguePage() {
   const { formations } = useFormations();
+  const { profile } = useUserProfile();
   const [searchQuery, setSearchQuery] = useState("");
   const [activeMention, setActiveMention] = useState<string>("all");
 
+  // Dynamically evaluate adequacy score & match reasons for each formation against candidate's profile
+  const evaluatedFormations = computeFormationsWithMatch(formations, profile);
+
   // Build unique mentions list preserving order
-  const mentions = Array.from(new Set(formations.map((f) => f.mention)));
+  const mentions = Array.from(new Set(evaluatedFormations.map((f) => f.mention)));
 
   // Filter
-  const filtered = formations.filter((f) => {
+  const filtered = evaluatedFormations.filter((f) => {
     const matchesMention = activeMention === "all" || f.mention === activeMention;
     const q = searchQuery.toLowerCase();
     const matchesSearch =
@@ -229,6 +234,12 @@ export default function FormationsCataloguePage() {
                         <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
                           {f.description}
                         </p>
+
+                        {f.matchReasons && f.matchReasons.length > 0 && (
+                          <p className="text-[11px] text-emerald-800 bg-emerald-50/80 border border-emerald-200/80 rounded px-2 py-1 leading-snug font-medium">
+                            💡 {f.matchReasons[0]}
+                          </p>
+                        )}
 
                         <div className="flex flex-wrap gap-1.5">
                           {f.keySubjects.slice(0, 3).map((sub, i) => (

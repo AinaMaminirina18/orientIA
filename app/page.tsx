@@ -66,14 +66,14 @@ export default function DashboardPage() {
               </BorderMagicButton>
             </Link>
 
-            <Link href="/orientation">
+            <Link href="/assistant">
               <Button
                 variant="outline"
                 size="sm"
                 className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
                 leftIcon={<Compass className="w-4 h-4 text-emerald-400" />}
               >
-                Voir mes matchs ({recommendation.overallMatchScore}%)
+                Lancer l'assistant virtuel
               </Button>
             </Link>
           </div>
