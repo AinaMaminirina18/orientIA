@@ -189,11 +189,16 @@ export function Sidebar({ onOpenGlobalSearch }: SidebarProps) {
 
         {/* Footer info */}
         {!isCollapsed && (
-          <div className="p-3 border-t border-slate-800 text-[10px] text-slate-400 flex flex-col gap-1">
-            <span className="font-semibold text-slate-300">ISPM Orientation System</span>
-            <span className="text-[9px] text-slate-400 leading-normal">
-              Recommandations explicables & traçables
-            </span>
+          <div className="p-3 border-t border-slate-800 text-[10px] text-slate-400 flex flex-col gap-2">
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold text-slate-300 uppercase tracking-wider text-[8px]">Notice Légale</span>
+              <p className="text-[9px] text-slate-500 leading-tight italic">
+                ORIENT’IA constitue un outil d’aide à l’orientation. Ses recommandations ne remplacent ni l’avis d’un conseiller pédagogique ni une décision officielle d’admission.
+              </p>
+            </div>
+            <div className="pt-2 border-t border-slate-800/50">
+              <span className="font-semibold text-slate-400">ISPM Orientation System</span>
+            </div>
           </div>
         )}
       </aside>
