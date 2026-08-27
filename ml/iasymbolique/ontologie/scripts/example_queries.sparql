@@ -1,0 +1,121 @@
+PREFIX orient: <http://orientia.ispm.mg/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# ============================================================================
+# 1. VÉRIFIER DES PRÉREQUIS
+# Pour un étudiant donné, vérifier si sa série de bac fait bien partie des
+# prérequis du parcours vers lequel il est orienté.
+# ============================================================================
+SELECT ?etudiant ?parcoursLabel ?serieBacLabel
+       (IF(BOUND(?ok), "OK", "INCOHERENT") AS ?statutPrerequis)
+WHERE {
+  ?etudiant a orient:Etudiant ;
+            rdfs:label ?etudiantLabel ;
+            orient:aSerieBac ?serieBac ;
+            orient:estOrienteVers ?parcours .
+  ?parcours rdfs:label ?parcoursLabel .
+  ?serieBac rdfs:label ?serieBacLabel .
+  OPTIONAL { ?parcours orient:necessite ?serieBac . BIND(true AS ?ok) }
+}
+ORDER BY ?etudiant
+LIMIT 20
+
+# ============================================================================
+# 2. EXPLIQUER UNE RECOMMANDATION
+# Pour un étudiant précis, retrouver les points de convergence entre son
+# profil (matières préférées, compétences déclarées) et le parcours qui lui
+# est recommandé : c'est la base d'une explication "pourquoi ce parcours ?".
+# ============================================================================
+SELECT ?matiereLabel ?competenceLabel
+WHERE {
+  BIND(orient:Etudiant_P00001 AS ?etudiant)
+  ?etudiant orient:estOrienteVers ?parcours .
+
+  OPTIONAL {
+    ?etudiant orient:prefere ?matiere .
+    ?parcours orient:enseigne ?matiere .
+    ?matiere rdfs:label ?matiereLabel .
+  }
+  OPTIONAL {
+    ?etudiant orient:possede ?competence .
+    ?parcours orient:developpe ?competence .
+    ?competence rdfs:label ?competenceLabel .
+  }
+  FILTER(BOUND(?matiereLabel) || BOUND(?competenceLabel))
+}
+
+# ============================================================================
+# 3. PARCOURIR LES RELATIONS ENTRE FORMATIONS ET MÉTIERS
+# Pour un métier donné, retrouver tous les parcours qui y préparent, ainsi
+# que leur mention de rattachement.
+# ============================================================================
+SELECT ?parcoursLabel ?mentionLabel
+WHERE {
+  ?metier rdfs:label "Data Scientist / Data Analyst"@fr .
+  ?parcours orient:prepareA ?metier ;
+            orient:appartientAMention ?mention ;
+            rdfs:label ?parcoursLabel .
+  ?mention rdfs:label ?mentionLabel .
+}
+
+# ============================================================================
+# 4. DÉTECTER DES INCOHÉRENCES
+# Lister tous les étudiants dont la série de bac déclarée NE correspond PAS
+# aux prérequis du parcours qui leur est recommandé (incohérence à corriger
+# ou à faire vérifier par un conseiller).
+# ============================================================================
+SELECT ?etudiantLabel ?serieBacLabel ?parcoursLabel
+WHERE {
+  ?etudiant a orient:Etudiant ;
+            rdfs:label ?etudiantLabel ;
+            orient:aSerieBac ?serieBac ;
+            orient:estOrienteVers ?parcours .
+  ?serieBac rdfs:label ?serieBacLabel .
+  ?parcours rdfs:label ?parcoursLabel .
+  FILTER NOT EXISTS { ?parcours orient:necessite ?serieBac }
+}
+
+# ============================================================================
+# 5. COMPLÉTER LES RÉSULTATS DU MODÈLE STATISTIQUE
+# Pour un étudiant, calculer un score symbolique de correspondance à CHAQUE
+# parcours (nombre de matières préférées enseignées + compétences possédées
+# développées par ce parcours), afin de proposer un "top 3" explicable en
+# complément de la prédiction du modèle statistique.
+# ============================================================================
+SELECT ?parcoursLabel (COUNT(DISTINCT ?matiere) AS ?nbMatieresCommunes)
+                       (COUNT(DISTINCT ?competence) AS ?nbCompetencesCommunes)
+WHERE {
+  BIND(orient:Etudiant_P00001 AS ?etudiant)
+  ?parcours a orient:Parcours ; rdfs:label ?parcoursLabel .
+  OPTIONAL {
+    ?etudiant orient:prefere ?matiere .
+    ?parcours orient:enseigne ?matiere .
+  }
+  OPTIONAL {
+    ?etudiant orient:possede ?competence .
+    ?parcours orient:developpe ?competence .
+  }
+}
+GROUP BY ?parcoursLabel
+ORDER BY DESC(?nbMatieresCommunes) DESC(?nbCompetencesCommunes)
+LIMIT 5
+
+# ============================================================================
+# 6. RAISONNEMENT MULTIÉTAPE
+# Partir d'un étudiant, remonter à ses matières préférées, retrouver les
+# parcours qui les enseignent, puis les métiers auxquels ces parcours
+# préparent : une chaîne à 3 sauts (Étudiant -> Matière -> Parcours -> Métier)
+# qui va au-delà d'une simple table de correspondance directe.
+# ============================================================================
+SELECT DISTINCT ?matiereLabel ?parcoursLabel ?metierLabel
+WHERE {
+  BIND(orient:Etudiant_P00001 AS ?etudiant)
+  ?etudiant orient:prefere ?matiere .
+  ?matiere rdfs:label ?matiereLabel .
+  ?parcours orient:enseigne ?matiere ;
+            orient:prepareA ?metier ;
+            rdfs:label ?parcoursLabel .
+  ?metier rdfs:label ?metierLabel .
+}
+ORDER BY ?matiereLabel
+LIMIT 30
