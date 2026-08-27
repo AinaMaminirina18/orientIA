@@ -6,15 +6,29 @@ export interface ISPMFormation {
   mention: string; // e.g. "Informatique et Télécommunications", "Génie Industriel"
   title: string;
   degreeLevel: DegreeLevel;
+  degreeLevelsText?: string[]; // e.g. ["Licence (Bac+3)", "Master (Bac+5)"]
   durationYears: number;
   description: string;
   keySubjects: string[];
   skillsDeveloped: string[];
   prerequisites: string[];
   careerOutcomes: string[];
+  careerCompetenceRelations?: { competence: string; metier_cible: string }[];
+  passerelles?: string[];
   sourceRefs: string[]; // IDs of RAGSource
   matchScore?: number; // 0 - 100
 }
+
+export type WorkEnvironment =
+  | "data_ia"
+  | "developpement"
+  | "reseaux_cloud"
+  | "multimedia_digital"
+  | "industrial"
+  | "civil_archi"
+  | "management_finance"
+  | "biotech_agri"
+  | "tourisme";
 
 export interface UserProfile {
   id: string;
@@ -25,7 +39,7 @@ export interface UserProfile {
   declaredSkills: string[];
   interests: string[];
   completedProjects: string[];
-  preferredWorkEnvironment: "recherche" | "developpement" | "reseaux_cloud" | "management" | "data_ia";
+  preferredWorkEnvironment: WorkEnvironment;
   completenessPercentage: number; // 0 - 100
   missingInfo: string[];
   updatedAt: string;

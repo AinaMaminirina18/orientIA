@@ -56,9 +56,9 @@ Ton rôle exclusif est d'aider les candidats à choisir la meilleure filière de
 
 ## Format de tes réponses :
 
-- Réponses concises et structurées (max 300 mots sauf si comparaison détaillée demandée).
-- Utilise des listes à puces pour les prérequis, matières et débouchés.
-- Mets en gras les codes et noms des formations (**ISAIA**, **IGGLIA**, etc.).
+- Réponses structurées, complètes et détaillées sans coupure.
+- Utilise Markdown (titres ###, listes à puces, texte en gras **...**).
+- Mets en gras les codes et noms des formations (**ISAIA**, **IGGLIA**, **ESIIA**, etc.).
 - En fin de recommandation, inclus toujours la mention légale.`;
 
 export async function POST(req: NextRequest) {
@@ -89,7 +89,7 @@ export async function POST(req: NextRequest) {
       model: "openai/gpt-oss-120b",
       messages: groqMessages,
       temperature: 0.4,
-      max_tokens: 600,
+      max_tokens: 4096,
     });
 
     const content =

@@ -22,7 +22,7 @@ export function Marquee() {
   const items = [
     { label: "ISAIA — Informatique Statistique Appliquée & IA", icon: Brain },
     { label: "IGGLIA — Génie Logiciel & Intelligence Artificielle", icon: Cpu },
-    { label: "ESIIA — Electronique, Systèmes Embarqués & IA", icon: Network },
+    { label: "ESIIA — Electronique, Systèmes Informatiques & IA", icon: Network },
     { label: "IMTICIA — Multimédia, TIC & Intelligence Artificielle", icon: GraduationCap },
     { label: "EMII — Electro-Mécanique & Informatique Industrielle", icon: Hammer },
     { label: "ICMP — Industries Chimiques, Minières & Pétrolières", icon: Microscope },

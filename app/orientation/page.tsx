@@ -45,11 +45,11 @@ export default function OrientationPage() {
   const getConfidenceBadge = (level: string) => {
     switch (level) {
       case "high":
-        return <Badge variant="emerald">Confiance Élevée (87%)</Badge>;
+        return <Badge variant="emerald">Confiance Élevée ({recommendation.overallMatchScore}%)</Badge>;
       case "medium":
-        return <Badge variant="amber">Confiance Modérée</Badge>;
+        return <Badge variant="amber">Confiance Modérée ({recommendation.overallMatchScore}%)</Badge>;
       case "low":
-        return <Badge variant="slate">Confiance Faible</Badge>;
+        return <Badge variant="slate">Confiance Faible ({recommendation.overallMatchScore}%)</Badge>;
       default:
         return <Badge variant="rose">Informations Insuffisantes</Badge>;
     }
@@ -92,7 +92,15 @@ export default function OrientationPage() {
       {activeTab === "recommendation" && (
         <div className="space-y-6">
           {/* Main Recommended Hero Card */}
-          <div className="bg-emerald-950 text-white rounded-2xl p-6 sm:p-8 border border-emerald-900 shadow-lg relative overflow-hidden">
+          <div
+            className="rounded-2xl text-white p-6 sm:p-8 border border-slate-800 shadow-lg relative overflow-hidden bg-cover bg-center"
+            style={{
+              backgroundImage: `url('/abstract-dark-blue-vector-futuristic-digital-grid-background_53876-110562.avif')`,
+            }}
+          >
+            {/* Dark Overlay for contrast */}
+            <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-[2px]" aria-hidden="true" />
+
             <div className="relative z-10 space-y-4">
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
@@ -109,13 +117,13 @@ export default function OrientationPage() {
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                     {primary.title}
                   </h2>
-                  <p className="text-xs sm:text-sm text-emerald-100/90 mt-2 max-w-2xl leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-200 mt-2 max-w-2xl leading-relaxed">
                     {primary.description}
                   </p>
                 </div>
 
-                <div className="bg-emerald-900/80 p-4 rounded-xl border border-emerald-700 text-center shrink-0 min-w-[140px]">
-                  <span className="text-[10px] text-emerald-300 font-semibold block uppercase">
+                <div className="bg-slate-900/80 p-4 rounded-xl border border-slate-700 text-center shrink-0 min-w-[140px] backdrop-blur-sm">
+                  <span className="text-[10px] text-emerald-400 font-semibold block uppercase">
                     Score d'adéquation ML
                   </span>
                   <span className="text-3xl font-extrabold text-white mt-1 block">
@@ -125,19 +133,15 @@ export default function OrientationPage() {
               </div>
 
               {/* Quick Matching Factors Summary */}
-              <div className="pt-4 border-t border-emerald-800/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Mathématiques & Data : <strong>92% de match</strong></span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Python & Algorithmique : <strong>95% de match</strong></span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Prérequis L3 : <strong>Validés (16.5/20)</strong></span>
-                </div>
+              <div className="pt-4 border-t border-slate-800 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                {recommendation.matchingFactors.slice(0, 3).map((factor, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>
+                      {factor.category} ({factor.label}) : <strong>{factor.score}%</strong>
+                    </span>
+                  </div>
+                ))}
               </div>
 
               <div className="pt-2 flex flex-wrap gap-3">
@@ -148,7 +152,7 @@ export default function OrientationPage() {
                 </Link>
                 <Button
                   variant="outline"
-                  className="bg-emerald-900/40 text-white border-emerald-700 hover:bg-emerald-800/50"
+                  className="bg-slate-900/60 text-white border-slate-700 hover:bg-slate-800/80"
                   onClick={() => setActiveTab("explicability")}
                 >
                   Pourquoi cette recommandation ?

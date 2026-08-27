@@ -29,7 +29,10 @@ export function Header({ onOpenGlobalSearch }: HeaderProps) {
 
     // If segment is a formation ID
     if (index > 0 && segments[index - 1] === "formations") {
-      const form = formations.find((f: ISPMFormation) => f.id === seg || f.code.toLowerCase() === seg.toLowerCase());
+      const form = formations.find(
+        (f: ISPMFormation) =>
+          f.id === seg || f.code.toLowerCase() === seg.toLowerCase(),
+      );
       return form ? `${form.code} — ${form.title}` : seg;
     }
     return seg;
@@ -38,8 +41,14 @@ export function Header({ onOpenGlobalSearch }: HeaderProps) {
   return (
     <header className="h-14 bg-white border-b border-slate-200 px-4 sm:px-6 flex items-center justify-between shrink-0 z-10 sticky top-0">
       {/* Breadcrumb Navigation */}
-      <nav aria-label="Fil d'Ariane" className="flex items-center gap-1.5 text-xs text-slate-500 overflow-x-auto pl-10 lg:pl-0">
-        <Link href="/" className="hover:text-slate-900 transition-colors font-medium">
+      <nav
+        aria-label="Fil d'Ariane"
+        className="flex items-center gap-1.5 text-xs text-slate-500 overflow-x-auto pl-10 lg:pl-0"
+      >
+        <Link
+          href="/"
+          className="hover:text-slate-900 transition-colors font-medium"
+        >
           Accueil ORIENT'IA
         </Link>
         {segments.map((seg, i) => {
@@ -55,7 +64,10 @@ export function Header({ onOpenGlobalSearch }: HeaderProps) {
                   {label}
                 </span>
               ) : (
-                <Link href={href} className="hover:text-slate-900 transition-colors truncate max-w-[150px]">
+                <Link
+                  href={href}
+                  className="hover:text-slate-900 transition-colors truncate max-w-[150px]"
+                >
                   {label}
                 </Link>
               )}
@@ -78,10 +90,10 @@ export function Header({ onOpenGlobalSearch }: HeaderProps) {
           </kbd>
         </button>
 
-        <div className="flex items-center gap-2 px-2.5 py-1 bg-emerald-50 rounded-full border border-emerald-200 text-emerald-800 text-xs">
+        {/* <div className="flex items-center gap-2 px-2.5 py-1 bg-emerald-50 rounded-full border border-emerald-200 text-emerald-800 text-xs">
           <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
           <span className="font-semibold hidden md:inline">ORIENT'IA ISPM M2</span>
-        </div>
+        </div> */}
       </div>
     </header>
   );

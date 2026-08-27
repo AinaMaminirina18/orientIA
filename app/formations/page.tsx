@@ -109,8 +109,8 @@ export default function FormationsCataloguePage() {
       </div>
 
       {/* Search + Mention Filter Bar */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
-        <div className="relative w-full sm:w-80 shrink-0">
+      <div className="w-full max-w-full min-w-0 overflow-hidden flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 bg-white p-3 sm:p-3.5 rounded-xl border border-slate-200 shadow-2xs">
+        <div className="relative w-full lg:w-72 shrink-0">
           <Search className="w-4 h-4 absolute left-3 top-2.5 text-slate-400 pointer-events-none" />
           <input
             type="text"
@@ -121,8 +121,8 @@ export default function FormationsCataloguePage() {
           />
         </div>
 
-        {/* Mention filter pills — scrollable on mobile */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 flex-1 no-scrollbar">
+        {/* Mention filter pills — contained scrollable container */}
+        <div className="min-w-0 flex-1 w-full max-w-full overflow-x-auto py-1 flex items-center gap-1.5 no-scrollbar">
           <button
             onClick={() => setActiveMention("all")}
             className={`shrink-0 px-3 py-1 text-xs font-semibold rounded-full border transition-colors ${
@@ -135,7 +135,6 @@ export default function FormationsCataloguePage() {
           </button>
           {mentions.map((m) => {
             const count = formations.filter((f) => f.mention === m).length;
-            const cfg = MENTION_CONFIG[m];
             return (
               <button
                 key={m}
@@ -152,7 +151,7 @@ export default function FormationsCataloguePage() {
           })}
         </div>
 
-        <span className="text-xs text-slate-500 font-medium shrink-0">
+        <span className="text-xs text-slate-500 font-medium shrink-0 self-end lg:self-center font-mono">
           {filtered.length} parcours
         </span>
       </div>
