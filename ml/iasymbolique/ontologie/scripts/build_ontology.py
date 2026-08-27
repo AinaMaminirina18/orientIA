@@ -10,11 +10,16 @@ Produit :
 """
 import json
 import re
+import sys
 import unicodedata
 import random
+from pathlib import Path
 from rdflib import Graph, Namespace, RDF, RDFS, OWL, XSD, Literal, URIRef
 
-random.seed(42)
+SCRIPT_DIR = Path(__file__).resolve().parent
+REFERENCE_DIR = SCRIPT_DIR.parents[3] / "Data" / "Dataset-synthétique" / "orientationDatasetProfile" / "scripts"
+sys.path.insert(0, str(REFERENCE_DIR))
+from reference_parcours import BAC_SERIES_REFERENCE
 
 KB = json.load(open("../data/full_kb.json", encoding="utf-8"))
 
@@ -49,6 +54,7 @@ CLASSES = {
     "Prerequis": "Prérequis",
     "Metier": "Métier",
     "CentreInteret": "Centre d'intérêt",
+    "Source": "Source documentaire",
 }
 for cls, label_fr in CLASSES.items():
     g.add((ORIENT[cls], RDF.type, OWL.Class))
@@ -89,6 +95,7 @@ EXTENSION_PROPS = [
     ("aCentreInteret", "Etudiant", "CentreInteret", "a pour centre d'intérêt"),
     ("aSerieBac", "Etudiant", "Prerequis", "a pour série de bac"),
     ("estOrienteVers", "Etudiant", "Parcours", "est orienté vers (recommandation)"),
+    ("provientDeSource", "Parcours", "Source", "provient de la source"),
 ]
 
 for pname, dom, rng, label_fr in CORE_PROPS + EXTENSION_PROPS:
@@ -110,6 +117,10 @@ DATA_PROPS = [
     ("aLibelle", "rdfs:label utilisé pour tous types"),
     ("aNiveauMatiere", "'lycee' ou 'universite' — niveau d'enseignement d'une Matiere"),
     ("aCode", "code officiel du Parcours (ex. IGGLIA)"),
+    ("aUrl", "URL précise de la source"),
+    ("aDateConsultation", "date de consultation de la source"),
+    ("aStatutSource", "statut de la source"),
+    ("aConditionAdmission", "condition particulière d'admission"),
 ]
 for pname, _comment in DATA_PROPS:
     g.add((ORIENT[pname], RDF.type, OWL.DatatypeProperty))
@@ -141,7 +152,7 @@ INTERESTS_BY_MENTION = {
     "Tourisme": ["Voyage", "Cultures du monde", "Langues étrangères", "Gastronomie", "Hôtellerie"],
 }
 GENERIC_INTERESTS = ["Sport", "Musique", "Lecture", "Bénévolat associatif", "Réseaux sociaux"]
-BAC_SERIES = ["C", "D", "S", "A1", "A2", "L", "Technique", "OSE"]
+BAC_SERIES = BAC_SERIES_REFERENCE
 
 def add_individual(cls_prefix, cls_name, label):
     ind = uri(cls_prefix, label)
@@ -155,10 +166,13 @@ mention_uri = {}
 for m in KB["mentions"]:
     mention_uri[m] = add_individual("Mention", "Mention", m)
 
-# -- Prérequis (séries de bac)
+# -- Prérequis (séries de bac + familles techniques textuelles du KB)
 bac_uri = {}
 for b in BAC_SERIES:
     bac_uri[b] = add_individual("Prerequis", "Prerequis", f"Baccalauréat série {b}")
+
+for label in sorted({b for p in KB["parcours"] for b in p.get("prerequis_bac", []) if b not in bac_uri}):
+    bac_uri[label] = add_individual("Prerequis", "Prerequis", label)
 
 # -- Centres d'intérêt
 interet_uri = {}
@@ -216,6 +230,18 @@ for p in KB["parcours"]:
 for m in sorted(all_metiers):
     metier_uri[m] = add_individual("Metier", "Metier", m)
 
+# -- Sources documentaires : ressources distinctes, avec URL et date précises.
+source_uri = {}
+for p in KB["parcours"]:
+    for source in p.get("sources", []):
+        key = source["origine_url"]
+        if key not in source_uri:
+            ind = add_individual("Source", "Source", source["titre"])
+            source_uri[key] = ind
+            g.add((ind, ORIENT.aUrl, Literal(key)))
+            g.add((ind, ORIENT.aDateConsultation, Literal(source["date_consultation"])))
+            g.add((ind, ORIENT.aStatutSource, Literal(source["statut"])))
+
 # -- Parcours + toutes leurs relations
 parcours_uri = {}
 for p in KB["parcours"]:
@@ -223,6 +249,10 @@ for p in KB["parcours"]:
     g.add((ind, ORIENT.aCode, Literal(p["code"])))
     parcours_uri[p["code"]] = ind
     g.add((ind, ORIENT.appartientAMention, mention_uri[p["mention"]]))
+    for source in p.get("sources", []):
+        g.add((ind, ORIENT.provientDeSource, source_uri[source["origine_url"]]))
+    if p.get("condition_admission"):
+        g.add((ind, ORIENT.aConditionAdmission, Literal(p["condition_admission"], lang="fr")))
     for m in p["matieres_principales"]:
         g.add((ind, ORIENT.enseigne, matiere_uri[("universite", m)]))
     for c in p["competences_developpees"]:
