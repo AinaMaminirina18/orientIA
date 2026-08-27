@@ -67,3 +67,9 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
+ml/.idea/misc.xml
+ml/.idea/workspace.xml
+ml/.idea/modules.xml
+ml/.idea/vcs.xml
+ml/.idea/ml.iml
+ml/.idea/inspectionProfiles/profiles_settings.xml
