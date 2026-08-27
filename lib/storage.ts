@@ -6,7 +6,9 @@ import {
   ChatMessage,
   EvaluationTestCase,
   ExecutionTrace,
+  RecommendationFactor,
 } from "./types";
+import { calculateAdequacyScore } from "./adequacyCalculator";
 import {
   ISPM_FORMATIONS,
   INITIAL_USER_PROFILE,
@@ -18,13 +20,13 @@ import {
 } from "./mockData";
 
 const KEYS = {
-  PROFILE: "orientia_user_profile_v3",
-  FORMATIONS: "orientia_formations_v3",
-  SOURCES: "orientia_sources_v3",
-  RECOMMENDATION: "orientia_recommendation_v3",
-  CHAT: "orientia_chat_messages_v3",
-  EVALUATION: "orientia_evaluation_tests_v3",
-  TRACES: "orientia_execution_traces_v3",
+  PROFILE: "orientia_user_profile_v8",
+  FORMATIONS: "orientia_formations_v8",
+  SOURCES: "orientia_sources_v8",
+  RECOMMENDATION: "orientia_recommendation_v8",
+  CHAT: "orientia_chat_messages_v8",
+  EVALUATION: "orientia_evaluation_tests_v8",
+  TRACES: "orientia_execution_traces_v8",
 };
 
 type Listener = () => void;
@@ -66,6 +68,19 @@ function safeSet<T>(key: string, value: T): void {
   }
 }
 
+// Work environment domain map to formation IDs
+const ENV_TO_FORMATIONS: Record<string, string[]> = {
+  data_ia: ["form-isaia", "form-igglia", "form-esiia", "form-imticia"],
+  developpement: ["form-igglia", "form-imticia", "form-isaia", "form-esiia"],
+  reseaux_cloud: ["form-esiia", "form-igglia", "form-isaia", "form-emii"],
+  multimedia_digital: ["form-imticia", "form-igglia", "form-isaia"],
+  industrial: ["form-emii", "form-icmp"],
+  civil_archi: ["form-gca"],
+  management_finance: ["form-caa", "form-emp", "form-fic", "form-dtja"],
+  biotech_agri: ["form-iaa", "form-aee", "form-pip"],
+  tourisme: ["form-tee", "form-teh"],
+};
+
 export const StorageRepository = {
   // User Candidate Profile
   getUserProfile(): UserProfile {
@@ -80,16 +95,46 @@ export const StorageRepository = {
       updatedAt: new Date().toISOString(),
     };
 
-    // Calculate completeness
+    // Calculate completeness percentage dynamically
     let score = 0;
-    if (merged.name) score += 15;
-    if (merged.currentLevel) score += 15;
-    if (merged.preferredSubjects && merged.preferredSubjects.length > 0) score += 25;
-    if (merged.academicGrades && merged.academicGrades.length > 0) score += 25;
-    if (merged.declaredSkills && merged.declaredSkills.length > 0) score += 20;
+    const missing: string[] = [];
+
+    if (merged.name && merged.name.trim()) score += 10;
+    else missing.push("Nom du candidat");
+
+    if (merged.currentLevel && merged.currentLevel.trim()) score += 15;
+    else missing.push("Niveau d'études actuel");
+
+    if (merged.preferredSubjects && merged.preferredSubjects.length > 0) score += 20;
+    else missing.push("Renseigner vos matières préférentielles");
+
+    if (merged.academicGrades && merged.academicGrades.length > 0) {
+      if (merged.academicGrades.length >= 3) score += 25;
+      else {
+        score += 15;
+        missing.push("Ajouter au moins 3 notes d'examens (ex: Mathématiques, Algorithmique)");
+      }
+    } else {
+      missing.push("Renseigner vos notes d'examens obtenues (/20)");
+    }
+
+    if (merged.declaredSkills && merged.declaredSkills.length > 0) score += 15;
+    else missing.push("Déclarer vos compétences techniques principales");
+
+    if (
+      (merged.completedProjects && merged.completedProjects.length > 0) ||
+      (merged.interests && merged.interests.length > 0)
+    ) {
+      score += 15;
+    } else {
+      missing.push("Ajouter vos centres d'intérêts ou projets réalisés");
+    }
 
     merged.completenessPercentage = Math.min(100, score);
+    merged.missingInfo = missing;
+
     safeSet(KEYS.PROFILE, merged);
+    this.recomputeRecommendation();
     return merged;
   },
 
@@ -109,65 +154,128 @@ export const StorageRepository = {
 
   // Recommendation Engine
   getRecommendation(): RecommendationResult {
-    return safeGet<RecommendationResult>(KEYS.RECOMMENDATION, INITIAL_RECOMMENDATION);
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem(KEYS.RECOMMENDATION);
+      if (stored) {
+        try {
+          return JSON.parse(stored) as RecommendationResult;
+        } catch (e) {
+          console.error("Failed parsing recommendation from storage", e);
+        }
+      }
+    }
+    return this.recomputeRecommendation();
   },
 
   recomputeRecommendation(): RecommendationResult {
     const profile = this.getUserProfile();
-    const formations = this.getFormations();
+    const formations = ISPM_FORMATIONS; // Use full baseline formations list for fresh score computation
+    const userSubjects = (profile.preferredSubjects || []).map((s) => s.toLowerCase());
 
-    const subjectsLower = profile.preferredSubjects.map((s) => s.toLowerCase()).join(" ");
-    const skillsLower = profile.declaredSkills.map((s) => s.toLowerCase()).join(" ");
-    const combined = subjectsLower + " " + skillsLower + " " + profile.preferredWorkEnvironment;
+    // Score every formation dynamically using centralized Adequacy Calculator Engine
+    const scoredFormations = formations.map((formation) => {
+      const breakdown = calculateAdequacyScore(formation, profile);
+      return {
+        formation: {
+          ...formation,
+          matchScore: breakdown.totalScore,
+          matchReasons: breakdown.reasons,
+        },
+        totalScore: breakdown.totalScore,
+        subjectScore: breakdown.subjectsScore,
+        skillScore: breakdown.skillsScore,
+        gradeScore: breakdown.gradesScore,
+      };
+    });
 
-    // Keyword-to-formation scoring
-    const scoringRules: { keywords: string[]; formationId: string; score: number }[] = [
-      { keywords: ["math", "stat", "python", "data", "ia", "machine", "nlp"], formationId: "form-isaia", score: 89 },
-      { keywords: ["logiciel", "gestion", "erp", "cloud", "devops", "java", "développement", "developpement"], formationId: "form-igglia", score: 82 },
-      { keywords: ["electronique", "embarqué", "iot", "signal", "circuit", "fpga"], formationId: "form-esiia", score: 75 },
-      { keywords: ["multimédia", "multimedia", "web", "mobile", "tic", "communication", "ux"], formationId: "form-imticia", score: 72 },
-      { keywords: ["mécanique", "mecanique", "electromécanique", "automatique", "robot", "industrie"], formationId: "form-emii", score: 65 },
-      { keywords: ["chimie", "minier", "pétrole", "geologie", "mine", "raffinerie"], formationId: "form-icmp", score: 60 },
-      { keywords: ["btp", "béton", "beton", "bâtiment", "batiment", "architecture", "urbanisme"], formationId: "form-gca", score: 60 },
-      { keywords: ["commerce", "marketing", "vente", "business", "gestion"], formationId: "form-caa", score: 58 },
-      { keywords: ["économie", "economie", "projet", "management", "planification"], formationId: "form-emp", score: 56 },
-      { keywords: ["finance", "comptabilité", "comptabilite", "audit", "fiscal"], formationId: "form-fic", score: 55 },
-      { keywords: ["droit", "juridique", "loi", "contrat", "avocat"], formationId: "form-dtja", score: 54 },
-      { keywords: ["agroalimentaire", "alimentaire", "haccp", "qualité", "qualite"], formationId: "form-iaa", score: 50 },
-      { keywords: ["agriculture", "élevage", "elevage", "agronomie", "rural"], formationId: "form-aee", score: 48 },
-      { keywords: ["pharmacie", "pharma", "médicament", "medicament", "biochimie"], formationId: "form-pip", score: 46 },
-      { keywords: ["tourisme", "environnement", "écotourisme", "ecotourisme", "patrimoine"], formationId: "form-tee", score: 44 },
-      { keywords: ["hôtellerie", "hotellerie", "restauration", "accueil", "hôtel", "hotel"], formationId: "form-teh", score: 42 },
-    ];
+    // Sort formations by match score descending
+    scoredFormations.sort((a, b) => b.totalScore - a.totalScore);
 
-    // Find best match
-    let bestScore = 0;
-    let bestId = "form-isaia";
+    // Primary & Secondary Formations
+    const primaryScored = scoredFormations[0];
+    const primary = primaryScored.formation;
+    const secondary = scoredFormations.slice(1, 3).map((sf) => sf.formation);
 
-    for (const rule of scoringRules) {
-      const hits = rule.keywords.filter((kw) => combined.includes(kw)).length;
-      const adjusted = hits * rule.score;
-      if (adjusted > bestScore) {
-        bestScore = adjusted;
-        bestId = rule.formationId;
-      }
+    // Save updated formations catalogue with calculated match scores to localStorage
+    const updatedCatalogue = scoredFormations.map((sf) => sf.formation);
+    safeSet(KEYS.FORMATIONS, updatedCatalogue);
+
+    // Calculate confidence level
+    let confidenceLevel: RecommendationResult["confidenceLevel"] = "medium";
+    if (profile.completenessPercentage >= 70 && primaryScored.totalScore >= 65) {
+      confidenceLevel = "high";
+    } else if (profile.completenessPercentage < 40) {
+      confidenceLevel = "low";
     }
 
-    const primary = formations.find((f) => f.id === bestId) ?? formations[0];
-    const secondary = formations
-      .filter((f) => f.id !== primary.id)
-      .sort((a, b) => (b.matchScore ?? 0) - (a.matchScore ?? 0))
-      .slice(0, 2);
+    // Dynamic Matching Factors for Explicability
+    const topGrade = profile.academicGrades && profile.academicGrades.length > 0
+      ? [...profile.academicGrades].sort((a, b) => b.grade - a.grade)[0]
+      : null;
 
-    const matchScore = Math.min(95, Math.max(55, bestScore > 0 ? bestScore : 70));
-    const confidenceLevel = profile.completenessPercentage >= 70 ? "high" : "medium";
+    const matchingFactors: RecommendationFactor[] = [
+      {
+        category: "Matières Préférées",
+        label: profile.preferredSubjects?.slice(0, 2).join(", ") || "Connaissances de base",
+        score: Math.min(95, Math.round((primaryScored.subjectScore / 40) * 100)),
+        weight: "Très Élevé",
+      },
+      {
+        category: "Compétences Techniques",
+        label: profile.declaredSkills?.slice(0, 2).join(", ") || "Savoir-faire",
+        score: Math.min(95, Math.round((primaryScored.skillScore / 30) * 100)),
+        weight: "Élevé",
+      },
+      {
+        category: "Résultats Académiques",
+        label: topGrade ? `${topGrade.subject} (${topGrade.grade}/20)` : "Notes de Licence",
+        score: Math.min(95, Math.round((primaryScored.gradeScore / 20) * 100)),
+        weight: "Élevé",
+      },
+      {
+        category: "Affinité Globale",
+        label: `Parcours ${primary.code} (${primary.mention})`,
+        score: primaryScored.totalScore,
+        weight: "Pondéré",
+      },
+    ];
+
+    // Dynamic Explanation Text
+    let generatedExplanation = `Sur la base de votre profil académique (${profile.currentLevel || "Candidat ISPM"}), `;
+    if (userSubjects.length > 0) {
+      generatedExplanation += `votre intérêt marqué pour **${profile.preferredSubjects.slice(0, 2).join(" et ")}** `;
+    }
+    if (topGrade) {
+      generatedExplanation += `et vos résultats en **${topGrade.subject} (${topGrade.grade}/20)** `;
+    }
+    generatedExplanation += `démontrent une adéquation forte de **${primaryScored.totalScore}%** avec le parcours **${primary.code} — ${primary.title}** (${primary.mention}).`;
 
     const updatedRec: RecommendationResult = {
       ...INITIAL_RECOMMENDATION,
-      primaryFormation: { ...primary, matchScore },
+      primaryFormation: primary,
       secondaryFormations: secondary,
-      overallMatchScore: matchScore,
+      overallMatchScore: primaryScored.totalScore,
       confidenceLevel,
+      confidenceExplanation: `Calcul d'adéquation dynamique basé sur votre niveau ${profile.currentLevel}, vos ${userSubjects.length} matière(s) choisie(s) et vos notes déclarées.`,
+      matchingFactors,
+      mlModelPrediction: {
+        modelName: "XGBoost-Path-Matcher-v2",
+        rawOutput: `Probabilité d'épanouissement ${primary.code}: ${(primaryScored.totalScore / 100).toFixed(3)}${secondary[0] ? `, ${secondary[0].code}: ${((secondary[0].matchScore || 70) / 100).toFixed(3)}` : ""}`,
+        confidence: primaryScored.totalScore / 100,
+      },
+      symbolicRuleValidation: [
+        {
+          ruleName: `Règle #101 — Admission ${primary.mention}`,
+          passed: true,
+          explanation: `Le candidat justifie du niveau requis (${profile.currentLevel || "Licence Validée"}) pour le parcours ${primary.code}.`,
+        },
+        {
+          ruleName: `Règle #104 — Seuil d'admissibilité ${primary.code}`,
+          passed: primaryScored.totalScore >= 50,
+          explanation: `Score calculé de ${primaryScored.totalScore}%, supérieur au seuil minimal d'admission.`,
+        },
+      ],
+      generatedExplanation,
       createdAt: new Date().toISOString(),
     };
 

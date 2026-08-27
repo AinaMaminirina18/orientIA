@@ -17,17 +17,21 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { EmptyState } from "@/components/ui/empty-state";
-import { useFormations, useSources } from "@/lib/useStore";
+import { useFormations, useSources, useUserProfile } from "@/lib/useStore";
+import { calculateAdequacyScore } from "@/lib/adequacyCalculator";
 
 export default function FormationDetailPage() {
   const params = useParams();
   const id = params.id as string;
-  const { getFormation } = useFormations();
+  const { getFormation, isMounted } = useFormations();
   const { sources } = useSources();
+  const { profile } = useUserProfile();
 
-  const formation = getFormation(id);
+  if (!isMounted) return null;
 
-  if (!formation) {
+  const rawFormation = getFormation(id);
+
+  if (!rawFormation) {
     return (
       <div className="space-y-6">
         <Link href="/formations">
@@ -39,6 +43,14 @@ export default function FormationDetailPage() {
       </div>
     );
   }
+
+  // Calculate dynamic adequacy score & breakdown against live candidate profile
+  const breakdown = calculateAdequacyScore(rawFormation, profile);
+  const formation = {
+    ...rawFormation,
+    matchScore: breakdown.totalScore,
+    matchReasons: breakdown.reasons,
+  };
 
   const linkedSources = sources.filter((s) => formation.sourceRefs.includes(s.id));
 
@@ -70,6 +82,20 @@ export default function FormationDetailPage() {
               {formation.title}
             </h1>
             <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">{formation.description}</p>
+
+            {formation.matchReasons && formation.matchReasons.length > 0 && (
+              <div className="mt-3 p-3 bg-emerald-50/80 border border-emerald-200 rounded-lg text-xs space-y-1.5 text-emerald-950 font-medium">
+                <span className="font-bold flex items-center gap-1 text-emerald-900">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                  Justification de l'adéquation calculée d'après votre profil :
+                </span>
+                <ul className="list-disc pl-4 space-y-1">
+                  {formation.matchReasons.map((reason, idx) => (
+                    <li key={idx}>{reason}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           <div className="shrink-0 flex flex-col items-end gap-2">
@@ -158,6 +184,17 @@ export default function FormationDetailPage() {
                 {out}
               </div>
             ))}
+
+            {formation.passerelles && formation.passerelles.length > 0 && (
+              <div className="mt-3 pt-3 border-t border-slate-200">
+                <span className="text-[11px] font-bold text-slate-700 block mb-1">Passerelles Académiques :</span>
+                {formation.passerelles.map((pass, i) => (
+                  <p key={i} className="text-[11px] text-emerald-800 bg-emerald-50 p-2 rounded border border-emerald-200">
+                    {pass}
+                  </p>
+                ))}
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>

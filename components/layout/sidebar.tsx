@@ -132,10 +132,9 @@ export function Sidebar({ onOpenGlobalSearch }: SidebarProps) {
               )}
             >
               <div className="flex items-center gap-2 truncate">
-                <Sparkles className="w-4 h-4 text-emerald-400 shrink-0" />
                 {!isCollapsed && (
                   <div className="flex flex-col text-left truncate">
-                    <span className="font-semibold text-white truncate">Mon Profil Candidate</span>
+                    <span className="font-semibold text-white truncate">Mon Profil Candidat</span>
                     <span className="text-[10px] text-emerald-400">
                       Complété à {profile.completenessPercentage}%
                     </span>
